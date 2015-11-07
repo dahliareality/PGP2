@@ -1,0 +1,34 @@
+--- Character Animations ---
+1. Equip Backpack
+a. Player grabs backpack from behind and takes it in front of him
+b. Player Opens the backpack (Allow free - unobstructed vision to the inside at the last keyframe)
+
+2. Put Backpack Away
+a. Player closes backpack
+b. Player grabs backpack and puts it on his back
+
+3. Player Idle, Standing position
+
+4. Player Right hand, Grab Object 
+
+5. Player Severed Hand, Grab item in inventory
+
+--- Notes ---
+The game is a First Person VR game, so weird artifacts and animation issues, which
+cannot be seen from the first person perspective, are okay.
+
+The first 2 animations require individual animation of 2 objects;
+Player model and backpack. The animations should be exported for each object.
+
+The last animation is on a new model, the players arm which has been cut off
+
+The only type of animation which is supported is Bone / Joint animation and only
+animations which can be baked onto the bones. This means that: Derformers, Muscles. etc
+are not supported. 
+IK is partially supported, it works when the IK animation is baked onto the bones, but the
+IK rig and IK Handle animations cannot be exported to Unity.
+
+The backpack currently has a open / close animation, delete these as you see fit.
+
+Export the animations as FBX with the model.
+Only enable: Smoothing groups, Include Geometry, Include Animation
