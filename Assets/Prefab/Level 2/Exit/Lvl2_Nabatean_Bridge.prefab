@@ -9,7 +9,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 461782}
   - 137: {fileID: 13797048}
-  - 64: {fileID: 6441624}
   m_Layer: 0
   m_Name: Box013
   m_TagString: Untagged
@@ -86,18 +85,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 449514}
   m_RootOrder: 1
---- !u!64 &6441624
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 131000}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_Mesh: {fileID: 0}
 --- !u!95 &9570268
 Animator:
   serializedVersion: 3
@@ -106,7 +93,7 @@ Animator:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 169964}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 7605677f21dbf55448bbdc2753a782f7, type: 3}
+  m_Avatar: {fileID: 9000000, guid: ed51de8a1c7b443469f9bb7e5ed0de5a, type: 3}
   m_Controller: {fileID: 0}
   m_CullingMode: 1
   m_UpdateMode: 0
@@ -142,7 +129,7 @@ SkinnedMeshRenderer:
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
-  m_Mesh: {fileID: 4300000, guid: 7605677f21dbf55448bbdc2753a782f7, type: 3}
+  m_Mesh: {fileID: 4300000, guid: ed51de8a1c7b443469f9bb7e5ed0de5a, type: 3}
   m_Bones:
   - {fileID: 463812}
   m_BlendShapeWeights: []
@@ -162,6 +149,14 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 9147bbdbf2aa6c841883743ee0419f2f, type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: ed51de8a1c7b443469f9bb7e5ed0de5a, type: 3}
+    - target: {fileID: 0}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: ed51de8a1c7b443469f9bb7e5ed0de5a, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 169964}
