@@ -6,7 +6,7 @@ using System.Collections;
 
 public class InventorySystem : MonoBehaviour {
 	
-	private GameObject[] bagSlots;
+	public GameObject[] bagSlots;
 	
 	private ArmsScript arms;
 	private Movement3D M3;
@@ -65,15 +65,32 @@ public class InventorySystem : MonoBehaviour {
 		}
 	}
 	
-	public void AddItemFromHandToBag(GameObject obj, GameObject bagPos)
+	public void AddItemFromHandToBag(GameObject obj)
 	{
 		if (hasBagOpen && arms.IsCarryingItem)
 		{
+            for ( int i = 0; i < bagSlots.Length; i++)
+            {
+                if (bagSlots[i].GetComponent<BagSlot>().HasOpenSpot == true)
+                {
+                    obj.GetComponent<Pickable>().IsInInventory = true;
+                    obj.transform.parent = bagSlots[i].transform;
+                    obj.transform.position = bagSlots[i].transform.position;
+                    obj.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+                    obj.layer = 0;
+                    bagSlots[i].GetComponent<BagSlot>().HasOpenSpot = false;
+                    arms.IsCarryingItem = false;
+                    storeSound.GetComponent<SECTR_PointSource>().Play();
+                }
+            }
+
+            /*
             obj.GetComponent<Pickable>().IsInInventory = true;
 			obj.transform.parent = bagPos.transform;
 			obj.transform.position = bagPos.transform.position;
 			arms.IsCarryingItem = false;
 			storeSound.GetComponent<SECTR_PointSource>().Play();
+            */
 		}
 		else
 		{
