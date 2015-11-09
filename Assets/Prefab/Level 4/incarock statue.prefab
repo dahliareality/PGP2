@@ -11,9 +11,12 @@ GameObject:
   - 33: {fileID: 3389584}
   - 23: {fileID: 2385542}
   - 95: {fileID: 9590932}
+  - 65: {fileID: 6516932}
+  - 65: {fileID: 6596014}
+  - 114: {fileID: 11491704}
   m_Layer: 0
   m_Name: incarock statue
-  m_TagString: Untagged
+  m_TagString: Light Trigger Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24,8 +27,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 129422}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: -.999884307, z: 0, w: .0152138434}
+  m_LocalPosition: {x: 276.137207, y: 133.298431, z: -223.249771}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -61,6 +64,30 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 129422}
   m_Mesh: {fileID: 4300000, guid: 7f89d77bab0ea404bbc8f98523d59f1f, type: 3}
+--- !u!65 &6516932
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 129422}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.99064207, y: 5.14921474, z: 1.21239233}
+  m_Center: {x: .0136033641, y: .0489054918, z: .293665081}
+--- !u!65 &6596014
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 129422}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 14.1032896, y: 5.66101265, z: 3.39763093}
+  m_Center: {x: .142711058, y: .239395142, z: -7.43093777}
 --- !u!95 &9590932
 Animator:
   serializedVersion: 3
@@ -78,6 +105,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11491704
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 129422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc5d0bf2051d4d7499df91940dcdfa61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

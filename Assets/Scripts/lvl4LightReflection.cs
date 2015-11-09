@@ -50,11 +50,11 @@ public class lvl4LightReflection : MonoBehaviour {
                     else if (distance < 50 && hit.collider.gameObject.tag == "Light Trigger Object")
                     {
                         storedObject = hit.collider.gameObject;
-                        hit.collider.gameObject.GetComponent<LightTriggerScript>().IsLite = true;
+                        hit.collider.gameObject.GetComponent<lvl4LightTriggerScript>().IsLite = true;
                     }
                     else if (hit.collider.gameObject == null)
                     {
-                        storedObject.GetComponent<LightTriggerScript>().IsLite = false;
+                        storedObject.GetComponent<lvl4LightTriggerScript>().IsLite = false;
                     }
 
                     //this whole thing draws the lines to show how the light bounces.

@@ -73,7 +73,7 @@ public class InventorySystem : MonoBehaviour {
 			obj.transform.parent = bagPos.transform;
 			obj.transform.position = bagPos.transform.position;
 			arms.IsCarryingItem = false;
-			storeSound.GetComponent<SECTR_PointSource>().Play ();
+			storeSound.GetComponent<SECTR_PointSource>().Play();
 		}
 		else
 		{
@@ -87,7 +87,7 @@ public class InventorySystem : MonoBehaviour {
 		this.transform.position = heldBagpackSpace.transform.position;
 		this.transform.rotation = heldBagpackSpace.transform.rotation;
         arms.rightArm.transform.rotation = handDefaultRot;
-		openSound.GetComponent<SECTR_PointSource>().Play ();
+		openSound.GetComponent<SECTR_PointSource>().Play();
 	}
 	
 	public void CloseBag()
@@ -98,7 +98,7 @@ public class InventorySystem : MonoBehaviour {
         arms.rightArm.transform.rotation = handDefaultRot;
 		this.transform.position = equippedBagPackSpace.transform.position;
 		this.transform.rotation = equippedBagPackSpace.transform.rotation;
-		closeSound.GetComponent<SECTR_PointSource>().Play ();
+		closeSound.GetComponent<SECTR_PointSource>().Play();
 	}
 	
 	public bool HasBagOpen

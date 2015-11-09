@@ -175,7 +175,7 @@ public class RayCast : MonoBehaviour {
                 }
 
                 // Rotation
-                else if (objectHit.collider.gameObject.tag == "Rotateable")
+                else if (objectHit.collider.gameObject.tag == "Rotateable" || objectHit.collider.gameObject.tag == "Mirror")
                 {
                     if (Input.GetButtonDown("PS4_R2") || Input.GetKey(KeyCode.R))
                     {
@@ -190,7 +190,14 @@ public class RayCast : MonoBehaviour {
                         {
                             return;
                         }
-                        objectHit.collider.gameObject.GetComponent<RotateInteract>().OnInteractHold();
+                        else if (storedPickUpObject.GetComponent<lvl4RotateInteract>() != null)
+                        {
+                            storedPickUpObject.GetComponent<lvl4RotateInteract>().OnInteractHold();
+                        }
+                        else if (storedPickUpObject.GetComponent<RotateInteract>() != null) 
+                        {
+                            objectHit.collider.gameObject.GetComponent<RotateInteract>().OnInteractHold();
+                        }
                     }
                     // If the button is released while holding an object
                     else if (Input.GetButtonUp("PS4_R2") && storedPickUpObject != null || Input.GetKey(KeyCode.R) && storedPickUpObject != null)

@@ -9,35 +9,46 @@ using System.Collections;
 //in raycast and change rotateInteract of the copy into lvl4rotateInteract
 public class lvl4RotateInteract : MonoBehaviour {
 
-    private float lookSensitivity = 2f;
+    private float lookSensitivity = 1.2f;
     private float yRotation;
     private float xRotation;
     private float yRotationV;
     private float xRotationV;
     private float lookSmoothDamp = 0.1f;
     private float currentYRotation;
-    private float currentXRotation;
+    public float startxRot;
 
-    void Awake()
+    void Start()
     {
         currentYRotation = transform.rotation.y;
-        currentXRotation = transform.rotation.x;
-
     }
 
     public void OnInteractHold()
     {
-        // Getting inputs from mouse, and storing the values
-        yRotation += Input.GetAxis("Mouse X") * lookSensitivity;
-        xRotation -= Input.GetAxis("Mouse Y") * lookSensitivity;
+        // Getting inputs from mouse, and storing the values'
+        float x = 0f;
+        if (Input.GetButton("PS4_DPadVertical"))
+        {
+            x = Input.GetAxis("PS4_DPadVertical");
+        }
+        else if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            x = -1f;
+        }
+        else if (Input.GetKey(KeyCode.RightArrow))
+        {
+            x = 1f;
+        }
+
+        yRotation += x * lookSensitivity;
 
        /* xRotation = Mathf.Clamp(xRotation, -90f + startRotation.x, 90f + startRotation.x); // Clamping X
         yRotation = Mathf.Clamp(yRotation, -90f + startRotation.y, 90f + startRotation.y); // Clamping Y*/
+        
 
-        currentXRotation = Mathf.SmoothDamp(currentXRotation, xRotation, ref xRotationV, lookSmoothDamp);
         currentYRotation = Mathf.SmoothDamp(currentYRotation, yRotation, ref yRotationV, lookSmoothDamp);
 
-        transform.rotation = Quaternion.Euler(currentXRotation, currentYRotation, 0);
+        transform.rotation = Quaternion.Euler(startxRot, currentYRotation, 0f);
 		//(play sound) 
 		//this.gameObject.getComponent<SECTR_PointSource>().Play();
     }
