@@ -131,8 +131,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 176522}
-  m_LocalRotation: {x: 0, y: -.707106829, z: 0, w: .707106709}
-  m_LocalPosition: {x: -110.247147, y: 136.35939, z: -108.705025}
+  m_LocalRotation: {x: 0, y: -.998924375, z: 0, w: .0463693142}
+  m_LocalPosition: {x: -25.3798485, y: 145.832001, z: -272.359955}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 431576}
@@ -243,10 +243,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   switchScript: {fileID: 0}
-  flame: {fileID: 0}
-  smoke: {fileID: 0}
-  embers: {fileID: 0}
-  lightLight: {fileID: 0}
+  flame: {fileID: 19813310}
+  smoke: {fileID: 19828942}
+  embers: {fileID: 19809240}
+  lightLight: {fileID: 10809614}
 --- !u!114 &11496162
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3455,7 +3455,7 @@ ParticleSystemRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 98cc5ed5424c56f4fa54451ac167e2d7, type: 2}
+  - {fileID: 2100000, guid: 134ea930c89ccc14c944096a0bd877cd, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1

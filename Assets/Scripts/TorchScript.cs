@@ -18,7 +18,7 @@ public class TorchScript : MonoBehaviour
     {
 
         activatedScript = gameObject.GetComponent<Activated>();
-
+        lightLight.enabled = false;
     }
 
 
