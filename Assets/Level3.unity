@@ -4112,6 +4112,10 @@ Prefab:
       propertyPath: m_Name
       value: Cliff5 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 2353578, guid: 8f5eac3c99f82154d8876627b7fda9c7, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7f0b0069d1718834aada8914d5148678, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8f5eac3c99f82154d8876627b7fda9c7, type: 2}
   m_IsPrefabParent: 0
@@ -12365,7 +12369,7 @@ Prefab:
     - target: {fileID: 2338942, guid: cf003905e8e30f44ca21b0c86c5f02ac, type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 5f5d1c85bbba0cf43873ac01af4994a8, type: 2}
+      objectReference: {fileID: 2100000, guid: 4ccbf1fb6185cf84aab7545937f6161d, type: 2}
     - target: {fileID: 136584, guid: cf003905e8e30f44ca21b0c86c5f02ac, type: 2}
       propertyPath: m_IsActive
       value: 1
