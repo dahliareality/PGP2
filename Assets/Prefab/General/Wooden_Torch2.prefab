@@ -119,8 +119,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 176522}
-  m_LocalRotation: {x: 0, y: -.707106829, z: 0, w: .707106709}
-  m_LocalPosition: {x: -17.0418472, y: 145.684402, z: -279.955963}
+  m_LocalRotation: {x: 0, y: -.998924375, z: 0, w: .0463693142}
+  m_LocalPosition: {x: -25.3798485, y: 145.832001, z: -272.359955}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 455166}
@@ -239,14 +239,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 176522}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 317ac93aa08915c4fa3a51568d0d2f1e, type: 3}
+  m_Script: {fileID: 11500000, guid: 218593aa7820fbe4ba9f210781014d36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switchScript: {fileID: 0}
-  flame: {fileID: 19820556}
-  smoke: {fileID: 19839120}
-  embers: {fileID: 19881788}
-  lightLight: {fileID: 10843460}
+  activated: 0
 --- !u!114 &11497068
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -255,10 +251,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 176522}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 702dbd5127f9ed54bb5c45f3e24c6224, type: 3}
+  m_Script: {fileID: 11500000, guid: f04d77f77abb80f408b0b100e45d2075, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activated: 0
+  switchScript: {fileID: 0}
+  flame: {fileID: 19820556}
+  smoke: {fileID: 19839120}
+  embers: {fileID: 19881788}
+  lightLight: {fileID: 10843460}
 --- !u!198 &19820556
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -3419,7 +3419,7 @@ ParticleSystemRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 98cc5ed5424c56f4fa54451ac167e2d7, type: 2}
+  - {fileID: 2100000, guid: 134ea930c89ccc14c944096a0bd877cd, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -3455,7 +3455,7 @@ ParticleSystemRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 98cc5ed5424c56f4fa54451ac167e2d7, type: 2}
+  - {fileID: 2100000, guid: d40aee7181bc04248ad0d1ce42b617d5, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1

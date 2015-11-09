@@ -38,7 +38,7 @@ public class ArmsScript : MonoBehaviour {
             if (Physics.Raycast(rightArm.transform.position, rightArm.transform.forward, out hit, 2.2f))
             {
                 Debug.DrawLine(rightArm.transform.position, rightArm.transform.forward);
-                if (hit.collider.gameObject.tag == "BagSlot")
+                if (hit.collider.gameObject.tag == "Bagpack")
                 {
                     rightArm.GetComponent<Renderer>().material.color = clrArray[0];
                 }
@@ -51,15 +51,14 @@ public class ArmsScript : MonoBehaviour {
 
                 if (Input.GetButtonUp("PS4_X") || Input.GetKeyDown(KeyCode.E))
                 {
-                    if (hit.collider.transform.tag == "BagSlot")
+                    if (hit.collider.transform.tag == "Bagpack" || hit.collider.transform.tag == "BagSlot")
                     {
-                        if (isCarryingItem && hit.collider.GetComponent<BagSlot>().HasOpenSpot)
+                        if (isCarryingItem)
                         {
                             // Drop Item in the slot;
-                            inventory.AddItemFromHandToBag(objInRightArm, hit.collider.gameObject);
+                            inventory.AddItemFromHandToBag(objInRightArm);
 							objInRightArm.layer = 0;
                             objInRightArm = null;
-                            hit.collider.gameObject.GetComponent<BagSlot>().HasOpenSpot = false;
                             isCarryingItem = false;
                         }
                         

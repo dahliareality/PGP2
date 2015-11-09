@@ -30,14 +30,14 @@ public class TriggerFromSunLight : MonoBehaviour {
         if (rayHit.collider.gameObject.tag == "Sun"+i)
         {
 
-            //Debug.Log("Sun" + i);
+            Debug.Log("Sun" + i);
             if (sunOneActive == true)
             {
                 sunOneActive = false;
                 sunOneTriggered = true;
                 sunTwoActive = true;
                 i += 1;
-                //Debug.Log("Hitting 1");
+                Debug.Log("Hitting 1");
             }
             else if (sunTwoActive == true)
             {
@@ -52,6 +52,7 @@ public class TriggerFromSunLight : MonoBehaviour {
                 sunThreeActive = false;
                 sunThreeTriggered = true;
                 sunFourActive = true;
+                i += 1;
                 //Debug.Log("Hitting 3");
             }
             else if (sunFourActive == true)
@@ -59,7 +60,7 @@ public class TriggerFromSunLight : MonoBehaviour {
                 sunFourActive = false;
                 sunFourTriggered = true;
             }
-            if (sunOneTriggered == true && sunTwoTriggered == true && sunThreeTriggered == true && sunFourTriggered == true)
+            if (sunFourTriggered == true)
             {
 
                 /*GetComponent<Level3GateController>().*/sunPuzzleSolved = true;
