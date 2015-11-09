@@ -60,7 +60,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 132358}
-  m_Mesh: {fileID: 4300000, guid: fe7e8832b753d2b49ab368814653501b, type: 3}
+  m_Mesh: {fileID: 4300000, guid: e12bdbc8916d63c4ab1d355100b63e45, type: 3}
 --- !u!65 &6580740
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -83,7 +83,7 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 4300000, guid: fe7e8832b753d2b49ab368814653501b, type: 3}
+      objectReference: {fileID: 4300000, guid: e12bdbc8916d63c4ab1d355100b63e45, type: 3}
     - target: {fileID: 0}
       propertyPath: m_Materials.Array.data[0]
       value: 

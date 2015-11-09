@@ -1,22 +1,35 @@
 fileFormatVersion: 2
-guid: d8da46b3c83b308418be036920617d85
-timeCreated: 1446038696
+guid: 2b096083eaa9a7f45a98d45989ccb1c6
+timeCreated: 1447065649
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
     100000: Gate
-    100002: Left_Door
-    100004: //RootNode
-    100006: Right_Door
+    100002: Gate_body1
+    100004: Left_Door
+    100006: //RootNode
+    100008: polySurface1
+    100010: polySurface2
+    100012: polySurface3
+    100014: Right_Door
     400000: Gate
-    400002: Left_Door
-    400004: //RootNode
-    400006: Right_Door
-    4300000: Gate_body1
-    7400000: Chinese_Gate_Ani
+    400002: Gate_body1
+    400004: Left_Door
+    400006: //RootNode
+    400008: polySurface1
+    400010: polySurface2
+    400012: polySurface3
+    400014: Right_Door
+    4300000: polySurface2
+    4300002: polySurface3
+    4300004: polySurface1
+    7400000: Chinese_Door_Animation
     9500000: //RootNode
-    13700000: //RootNode
+    11100000: //RootNode
+    13700000: polySurface1
+    13700002: polySurface2
+    13700004: polySurface3
   materials:
     importMaterials: 1
     materialName: 0
@@ -38,10 +51,10 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: Chinese_Gate_Ani
+      name: Chinese_Door_Animation
       takeName: Take 001
-      firstFrame: 0
-      lastFrame: 380
+      firstFrame: 1
+      lastFrame: 300
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -63,18 +76,26 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
-      - path: Gate
+      - path: Gate_body1
         weight: 1
-      - path: Left_Door
+      - path: Gate_body1/Gate
         weight: 1
-      - path: Right_Door
+      - path: Gate_body1/Left_Door
+        weight: 1
+      - path: Gate_body1/polySurface2
+        weight: 1
+      - path: Gate_body1/polySurface3
+        weight: 1
+      - path: Gate_body1/Right_Door
+        weight: 1
+      - path: polySurface1
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 50
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
@@ -109,7 +130,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 1
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

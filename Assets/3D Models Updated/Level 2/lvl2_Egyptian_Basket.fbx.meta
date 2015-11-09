@@ -18,8 +18,9 @@ ModelImporter:
     400008: Egyptian_Basket:Stick_to_Rope
     400010: //RootNode
     4300000: Egyptian_Basket:Egyptian_Basket1:Egyptian_Basket
-    7400000: Take 001
+    7400000: Basket_Animation
     9500000: //RootNode
+    11100000: //RootNode
     13700000: //RootNode
   materials:
     importMaterials: 1
@@ -40,7 +41,45 @@ ModelImporter:
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Basket_Animation
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 120
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Egyptian_Basket:Rope_to_Stick
+        weight: 1
+      - path: Egyptian_Basket:Rope_to_Stick/Egyptian_Basket:Stick_to_Rope
+        weight: 1
+      - path: Egyptian_Basket:Rope_to_Stick/Egyptian_Basket:Stick_to_Rope/Egyptian_Basket:Rope_to_knot
+        weight: 1
+      - path: Egyptian_Basket:Rope_to_Stick/Egyptian_Basket:Stick_to_Rope/Egyptian_Basket:Rope_to_knot/Egyptian_Basket:Knot_to_Split
+        weight: 1
+      - path: Egyptian_Basket:Rope_to_Stick/Egyptian_Basket:Stick_to_Rope/Egyptian_Basket:Rope_to_knot/Egyptian_Basket:Knot_to_Split/Egyptian_Basket:Plit_to_bucket
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -79,7 +118,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 1
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
