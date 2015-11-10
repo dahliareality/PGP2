@@ -14,12 +14,15 @@ public class Lvl2ChineseGreatdoor : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (keyFrags == 2)
-			Destroy (gameObject);
+        {
+            Destroy(gameObject);
+            //this.gameObject.GetComponent<Animation>().Play();
+        } 
 	}
 
 	public void AddKeyFrag(GameObject keyFrag){
 
-		if (keyFrags == 0 && keyFrag.name == "lv2_Key_Fragment02") {
+		if (keyFrags == 0 && keyFrag.name == "Key Fragment 2") {
 			GameObject arm = GameObject.FindGameObjectWithTag ("Arm");
 			arm.GetComponent<ArmsScript>().RemoveItem(keyFrag);
 			Destroy(keyFrag);
