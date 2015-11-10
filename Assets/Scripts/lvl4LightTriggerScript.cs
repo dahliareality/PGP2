@@ -10,7 +10,8 @@ public class lvl4LightTriggerScript : MonoBehaviour
 
     private bool inTrigger;
     private bool isLite;
-    GameObject movingObj;
+    public GameObject movingObj;
+    public Transform endPos;
 
     void Awake()
     {
@@ -25,7 +26,8 @@ public class lvl4LightTriggerScript : MonoBehaviour
             Debug.Log("dong");
             if (movingObj.transform.position.y < 279.67)
             {
-                movingObj.transform.position = new Vector3(movingObj.transform.position.x, movingObj.transform.position.y + 0.04f, movingObj.transform.position.z);
+                //movingObj.transform.position = new Vector3(movingObj.transform.position.x, movingObj.transform.position.y + 0.04f, movingObj.transform.position.z);
+                movingObj.transform.position = Vector3.Lerp(this.movingObj.transform.position, endPos.position, 0.3f * Time.deltaTime);
             }
             isLite = false;
         }
