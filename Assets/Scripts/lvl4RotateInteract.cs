@@ -27,9 +27,9 @@ public class lvl4RotateInteract : MonoBehaviour {
     {
         // Getting inputs from mouse, and storing the values'
         float x = 0f;
-        if (Input.GetButton("PS4_DPadVertical"))
+        if (Input.GetAxis("PS4_DPadHorizontal") > 0 || Input.GetAxis("PS4_DPadHorizontal") < 0)
         {
-            x = Input.GetAxis("PS4_DPadVertical");
+            x = Input.GetAxis("PS4_DPadHorizontal");
         }
         else if (Input.GetKey(KeyCode.LeftArrow))
         {
