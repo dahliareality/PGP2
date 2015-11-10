@@ -11,7 +11,7 @@ GameObject:
   - 33: {fileID: 3398182}
   - 23: {fileID: 2309718}
   - 95: {fileID: 9532726}
-  - 65: {fileID: 6505912}
+  - 64: {fileID: 6451702}
   m_Layer: 0
   m_Name: lvl2_Chinese_Entrance_Pillared
   m_TagString: Untagged
@@ -62,8 +62,8 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 126468}
   m_Mesh: {fileID: 4300000, guid: 2154c0ae108d96048932cba33f4cea63, type: 3}
---- !u!65 &6505912
-BoxCollider:
+--- !u!64 &6451702
+MeshCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -72,8 +72,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: .198000014, y: .243084669, z: .0662343279}
-  m_Center: {x: -.000908210524, y: .120398805, z: -.00840986986}
+  m_Convex: 0
+  m_Mesh: {fileID: 4300000, guid: 2154c0ae108d96048932cba33f4cea63, type: 3}
 --- !u!95 &9532726
 Animator:
   serializedVersion: 3

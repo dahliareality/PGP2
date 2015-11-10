@@ -1,18 +1,29 @@
 fileFormatVersion: 2
-guid: c28fa8d61f81fb742b1180a6d4516625
+guid: fc3579bf053fbd64a8516eeb423a2083
+timeCreated: 1447143375
+licenseType: Free
 ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: Mesh1_Model
-    400000: //RootNode
-    400002: Mesh1_Model
-    2300000: Mesh1_Model
-    3300000: Mesh1_Model
-    4300000: Mesh1_Model
+    100000: Bell
+    100002: Bone007
+    100004: Bone008
+    100006: Bone009
+    100008: Bone010
+    100010: //RootNode
+    400000: Bell
+    400002: Bone007
+    400004: Bone008
+    400006: Bone009
+    400008: Bone010
+    400010: //RootNode
+    4300000: Bell
+    7400000: Take 001
     9500000: //RootNode
+    11100000: //RootNode
+    13700000: Bell
   materials:
-    importMaterials: 0
+    importMaterials: 1
     materialName: 0
     materialSearch: 1
   animations:
@@ -48,10 +59,10 @@ ModelImporter:
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 0
+    useFileScale: 1
   tangentSpace:
-    normalSmoothAngle: 90
-    splitTangentsAcrossUV: 0
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
     normalImportMode: 0
     tangentImportMode: 1
   importAnimation: 1
@@ -69,7 +80,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 1
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
