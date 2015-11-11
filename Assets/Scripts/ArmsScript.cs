@@ -57,9 +57,7 @@ public class ArmsScript : MonoBehaviour {
                         {
                             // Drop Item in the slot;
                             inventory.AddItemFromHandToBag(objInRightArm);
-							objInRightArm.layer = 0;
                             objInRightArm = null;
-                            isCarryingItem = false;
                         }
                         
                     }

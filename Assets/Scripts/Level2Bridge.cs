@@ -16,9 +16,6 @@ public class Level2Bridge : MonoBehaviour
     private bool soundHasPlayed = false;
     private int requiredStatues = 1;
 
-    public GameObject Bridge1;
-    public GameObject Bridge2;
-
     void Start()
     {
 
@@ -39,9 +36,7 @@ public class Level2Bridge : MonoBehaviour
 
             puzzleDone = true;
             //DestroyObject(gameObject);
-            //this.gameObject.transform.position = new Vector3(transform.position.x, transform.position.y - 1, transform.position.z);
-            Bridge1.GetComponent<Animation>().Play();
-            Bridge2.GetComponent<Animation>().Play();
+            this.gameObject.transform.position = new Vector3(transform.position.x, transform.position.y - 1, transform.position.z);
             this.gameObject.GetComponent<SECTR_PropagationSource>().Play();
         }
 

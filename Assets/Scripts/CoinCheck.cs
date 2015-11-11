@@ -14,14 +14,14 @@ public class CoinCheck : MonoBehaviour
         statue.transform.rotation = this.transform.rotation;
         curStatue = statue;
         if (curStatue.name == this.correctStatue.name)
-            GameObject.Find("Nabatean Bridge").GetComponent<Level2Bridge>().correctStatues++;
+            GameObject.Find("lv2_Nabatean_Bridge01_Slide_Out_Animation").GetComponent<Level2Bridge>().correctStatues++;
     }
 
     public void removeStatue()
     {
         Debug.Log(curStatue.ToString() + "  " + correctStatue.ToString());
         if (curStatue.name == correctStatue.name)
-            GameObject.Find("Nabatean Bridge").GetComponent<Level2Bridge>().correctStatues--;
+            GameObject.Find("lv2_Nabatean_Bridge01_Slide_Out_Animation").GetComponent<Level2Bridge>().correctStatues--;
         GameObject mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
         mainCamera.GetComponent<RayCast>().setStoredPickUpItem(curStatue);
         GameObject arm = GameObject.FindGameObjectWithTag("Arm");
@@ -34,7 +34,7 @@ public class CoinCheck : MonoBehaviour
     public GameObject switchStatue(GameObject statueIn)
     {
         if (curStatue.name == this.correctStatue.name)
-            GameObject.Find("Nabatean Bridge").GetComponent<Level2Bridge>().correctStatues--;
+            GameObject.Find("lv2_Nabatean_Bridge01_Slide_Out_Animation").GetComponent<Level2Bridge>().correctStatues--;
         GameObject temp = curStatue;
         GameObject arm = GameObject.FindGameObjectWithTag("Arm");
         arm.GetComponent<ArmsScript>().RemoveItem(statueIn);
