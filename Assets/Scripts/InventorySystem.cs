@@ -81,6 +81,7 @@ public class InventorySystem : MonoBehaviour {
                     bagSlots[i].GetComponent<BagSlot>().HasOpenSpot = false;
                     arms.IsCarryingItem = false;
                     storeSound.GetComponent<SECTR_PointSource>().Play();
+                    break;
                 }
             }
 

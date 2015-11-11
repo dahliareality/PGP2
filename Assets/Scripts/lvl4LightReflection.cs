@@ -43,6 +43,7 @@ public class lvl4LightReflection : MonoBehaviour {
                     //and then adds more "bounces" to the light
                     if (distance < 50 && hit.collider.gameObject.tag == "Mirror")
                     {
+                        Debug.Log("Hit");
                         n += 1; //increases the value of rayJumps
                         //Debug.Log(n);
                         //hit.collider.gameObject.tag = "Tagged";
@@ -77,6 +78,7 @@ public class lvl4LightReflection : MonoBehaviour {
                     lightGameObject.transform.LookAt(hit.point);
 
                     LineRenderer lineComp = lightGameObject.AddComponent<LineRenderer>();
+                    lineComp.enabled = true;
                     lineComp.receiveShadows = false;
                     lineComp.SetWidth(0.2f, 0.2f);
                     lineComp.SetPosition(0, startPoint);
