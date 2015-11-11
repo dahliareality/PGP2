@@ -1,46 +1,47 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &125788
+--- !u!1 &158928
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 495548}
-  - 33: {fileID: 3364000}
-  - 23: {fileID: 2367236}
-  - 65: {fileID: 6548096}
+  - 4: {fileID: 474606}
+  - 33: {fileID: 3337424}
+  - 23: {fileID: 2333064}
+  - 95: {fileID: 9562458}
+  - 64: {fileID: 6421028}
   m_Layer: 0
-  m_Name: lv2_Guardian_Lion_Statue
+  m_Name: lv2_Bridge_Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &495548
+--- !u!4 &474606
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 125788}
-  m_LocalRotation: {x: -.707106829, y: 0, z: -0, w: .707106829}
-  m_LocalPosition: {x: -27.615633, y: 16.7600002, z: 54.1199989}
-  m_LocalScale: {x: 787.516357, y: 787.515503, z: 787.515503}
+  m_GameObject: {fileID: 158928}
+  m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106709}
+  m_LocalPosition: {x: -117.449997, y: 127.470001, z: 251.460007}
+  m_LocalScale: {x: .637399673, y: .56550765, z: 1.18061543}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!23 &2367236
+--- !u!23 &2333064
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 125788}
+  m_GameObject: {fileID: 158928}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: e0f9bc2d5f8a8ed49bffe38900397caf, type: 2}
+  - {fileID: 2100000, guid: 1b9949553f7424e46abcf6beaf39fa32, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -54,41 +55,50 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!33 &3364000
+--- !u!33 &3337424
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 125788}
-  m_Mesh: {fileID: 4300000, guid: e5c92aecd53cd0546bdee096e114cddc, type: 3}
---- !u!65 &6548096
-BoxCollider:
+  m_GameObject: {fileID: 158928}
+  m_Mesh: {fileID: 4300000, guid: b432c70f5d6a0054bb9edbc9a39925b9, type: 3}
+--- !u!64 &6421028
+MeshCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 125788}
+  m_GameObject: {fileID: 158928}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: .367887557, y: .594651401, z: .632564783}
-  m_Center: {x: -.000390909612, y: -.0836312398, z: .318989813}
+  m_Convex: 0
+  m_Mesh: {fileID: 4300000, guid: b432c70f5d6a0054bb9edbc9a39925b9, type: 3}
+--- !u!95 &9562458
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 158928}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: b432c70f5d6a0054bb9edbc9a39925b9, type: 3}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 4300000, guid: e5c92aecd53cd0546bdee096e114cddc, type: 3}
-    - target: {fileID: 0}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: e0f9bc2d5f8a8ed49bffe38900397caf, type: 2}
+    m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 125788}
+  m_RootGameObject: {fileID: 158928}
   m_IsPrefabParent: 1

@@ -11,6 +11,7 @@ GameObject:
   - 33: {fileID: 3311066}
   - 23: {fileID: 2366124}
   - 64: {fileID: 6458172}
+  - 64: {fileID: 6442030}
   m_Layer: 0
   m_Name: lvl2_Egyptian_Sandstone_Well
   m_TagString: Untagged
@@ -60,6 +61,18 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 106960}
+  m_Mesh: {fileID: 4300000, guid: d120427f7f54df4448e9562315bd2d2f, type: 3}
+--- !u!64 &6442030
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 106960}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: d120427f7f54df4448e9562315bd2d2f, type: 3}
 --- !u!64 &6458172
 MeshCollider:

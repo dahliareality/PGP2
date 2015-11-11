@@ -11,6 +11,7 @@ GameObject:
   - 33: {fileID: 3346364}
   - 23: {fileID: 2385494}
   - 95: {fileID: 9586518}
+  - 64: {fileID: 6406032}
   m_Layer: 0
   m_Name: lvl2_Chinese_Wooden_Shrine_Small_Temple
   m_TagString: Untagged
@@ -60,6 +61,18 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 163246}
+  m_Mesh: {fileID: 4300000, guid: be011a17ece7ec84c8942b7fc1f66c54, type: 3}
+--- !u!64 &6406032
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 163246}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: be011a17ece7ec84c8942b7fc1f66c54, type: 3}
 --- !u!95 &9586518
 Animator:
