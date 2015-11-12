@@ -9,9 +9,9 @@ public class FOW : MonoBehaviour {
         fogDensity = true;
         RenderSettings.fogMode = FogMode.Linear;
         RenderSettings.fog = true;
-        RenderSettings.fogColor = Color.gray;
+        RenderSettings.fogColor = Color.yellow;
         RenderSettings.fogStartDistance = 0;
-        RenderSettings.fogEndDistance = 100;
+        RenderSettings.fogEndDistance = 400;
 
         GameObject LoS1 = GameObject.CreatePrimitive(PrimitiveType.Plane);
         GameObject LoS2 = GameObject.CreatePrimitive(PrimitiveType.Plane);
@@ -60,14 +60,14 @@ public class FOW : MonoBehaviour {
         }
         if (fogDensity == false)
         {
-            if (RenderSettings.fogEndDistance <= 300)
+            if (RenderSettings.fogEndDistance <= 1000)
             {
                 RenderSettings.fogEndDistance += 2;
             }
         }
         else
         {
-            if (RenderSettings.fogEndDistance >= 50)
+            if (RenderSettings.fogEndDistance >= 400)
             {
                 RenderSettings.fogEndDistance -= 2;
             }
