@@ -10,7 +10,7 @@ public class RayCast : MonoBehaviour {
 	private GameObject storedPickUpObject = null;
     private InventorySystem inventory;
 
-    private float distance = 3f;
+    private float distance = 4f;
     RaycastHit objectHit;
 
     //private SequencePuzzle sqnPzl;
@@ -114,7 +114,7 @@ public class RayCast : MonoBehaviour {
                     }
                     
                     // Level 2 Bridge
-                    if (storedPickUpObject != null && !GameObject.Find("lv2_Nabatean_Bridge02").GetComponent<Level2Bridge>().puzzleDone)
+                    if (storedPickUpObject != null && !GameObject.Find("Nabatean Bridge").GetComponent<Level2Bridge>().puzzleDone)
                     {
                         // Coin Puzzle
                         if (objectHit.collider.gameObject.tag == "CoinSpot" && storedPickUpObject.tag == "Coin")
