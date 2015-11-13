@@ -49689,7 +49689,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1596971852}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -56929,7 +56929,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11497776, guid: 7e066df477360004cbaa08492ddd31dc, type: 2}
       propertyPath: puzzleDone
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6568620, guid: 7e066df477360004cbaa08492ddd31dc, type: 2}
