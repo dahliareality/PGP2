@@ -8,9 +8,15 @@ public class lvl4LightReflection : MonoBehaviour {
 
     public RaycastHit hit; //for TriggerScript
     private int rayJumps = 1;
+    private int layerMask = 1 << 8;
     public int spotLightAngle; //For editorial use
 
     private GameObject storedObject;
+
+    void Start()
+    {
+        layerMask = ~layerMask;
+    }
 
     void Update()
     {
@@ -36,7 +42,7 @@ public class lvl4LightReflection : MonoBehaviour {
         for (int i = 0; i < n; i++) //goes through itself for the ammount of bounces
         {
 
-                if (Physics.Raycast(startPoint, rayDir, out hit, 10000)) //checks for collision with any object
+                if (Physics.Raycast(startPoint, rayDir, out hit, 10000, layerMask)) //checks for collision with any object
                 {
                   float distance = (hit.point - startPoint).magnitude;
                     //this if-statement checks if the light-ray hits any object with the reflection tag
