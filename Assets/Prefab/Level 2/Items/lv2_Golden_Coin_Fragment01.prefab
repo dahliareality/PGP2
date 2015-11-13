@@ -11,9 +11,10 @@ GameObject:
   - 33: {fileID: 3386540}
   - 23: {fileID: 2314930}
   - 65: {fileID: 6548380}
+  - 114: {fileID: 11407362}
   m_Layer: 0
   m_Name: lv2_Golden_Coin_Fragment01
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 131824}
   m_LocalRotation: {x: -.707106829, y: 0, z: -0, w: .707106829}
-  m_LocalPosition: {x: -6.39289236, y: 10.3999996, z: 62.846447}
+  m_LocalPosition: {x: -52.5680008, y: 129.826004, z: 213.972}
   m_LocalScale: {x: 40.0215263, y: 40.0215149, z: 40.0215149}
   m_Children: []
   m_Father: {fileID: 0}
@@ -73,6 +74,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .458996147, y: .982702017, z: .118651934}
   m_Center: {x: -1.49011612e-08, y: 0, z: 2.98023224e-08}
+--- !u!114 &11407362
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 131824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b66acd14783b3b4c9e698f6537ba358, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

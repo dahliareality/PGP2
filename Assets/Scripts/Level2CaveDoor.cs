@@ -13,7 +13,9 @@ public class Level2CaveDoor : MonoBehaviour
     private Vector3 startVector;
     private bool nowOpen = false;
     private bool soundHasPlayed = false;
-	private int requiredStatues = 2;
+	private int requiredStatues = 1;
+
+    private bool finished;
 
     void Start()
     {
@@ -34,8 +36,13 @@ public class Level2CaveDoor : MonoBehaviour
 
 			puzzleDone = true;
 			//DestroyObject(gameObject);
-			this.gameObject.transform.position = new Vector3(transform.position.x , transform.position.y-1, transform.position.z);
-			this.gameObject.GetComponent<SECTR_PropagationSource>().Play();
+			//this.gameObject.transform.position = new Vector3(transform.position.x , transform.position.y-1, transform.position.z);
+            if (!finished)
+            {
+                this.gameObject.GetComponent<Animation>().Play();
+                finished = true;
+            }
+            this.gameObject.GetComponent<SECTR_PropagationSource>().Play();
 		}
 			
 

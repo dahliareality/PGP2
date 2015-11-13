@@ -4,7 +4,8 @@ using System.Collections;
 public class Lvl2ChineseGreatdoor : MonoBehaviour {
 
 	private int keyFrags = 0;
-	public bool puzzleDone = false; 
+	public bool puzzleDone = false;
+    private bool finished;
 
 	// Use this for initialization
 	void Start () {
@@ -14,12 +15,20 @@ public class Lvl2ChineseGreatdoor : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (keyFrags == 2)
-			Destroy (gameObject);
+        {
+            Destroy (gameObject);
+            
+            /*if (!finished)
+            {
+                this.gameObject.GetComponent<Animation>().Play();
+                finished = true;
+            }*/
+        }	
 	}
 
 	public void AddKeyFrag(GameObject keyFrag){
 
-		if (keyFrags == 0 && keyFrag.name == "lv2_Key_Fragment02") {
+		if (keyFrags == 0 && keyFrag.name == "Key Fragment 2") {
 			GameObject arm = GameObject.FindGameObjectWithTag ("Arm");
 			arm.GetComponent<ArmsScript>().RemoveItem(keyFrag);
 			Destroy(keyFrag);

@@ -1332,7 +1332,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 38403958}
-    gameObjectHash: 53112
+    gameObjectHash: 7788
     member: {fileID: 38403960}
     renderer: {fileID: 0}
     renderHash: 0
@@ -3648,7 +3648,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 118901710}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -103.459999, y: 132.841995, z: 121}
+  m_LocalPosition: {x: -103.459999, y: 132.841995, z: 94.0299988}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1719181895}
@@ -4394,7 +4394,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 148758188}
-    gameObjectHash: 53330
+    gameObjectHash: 8030
     member: {fileID: 148758189}
     renderer: {fileID: 0}
     renderHash: 0
@@ -5593,6 +5593,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 178349932}
   - 114: {fileID: 178349931}
+  - 114: {fileID: 178349934}
+  - 114: {fileID: 178349933}
   m_Layer: 0
   m_Name: Nabatean Bridge
   m_TagString: Untagged
@@ -5615,6 +5617,8 @@ MonoBehaviour:
   exitObject: {fileID: 1596971852}
   correctStatues: 0
   puzzleDone: 0
+  Bridge1: {fileID: 1483188376}
+  Bridge2: {fileID: 1189612990}
 --- !u!4 &178349932
 Transform:
   m_ObjectHideFlags: 0
@@ -5627,6 +5631,96 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 70
+--- !u!114 &178349933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 178349930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da380ca0cbd5fa042b0552e74282435c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volume: 1
+  pitch: 1
+  Cue: {fileID: 0}
+  Loop: 1
+  PlayOnStart: 1
+  InterpDistance: 2
+--- !u!114 &178349934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 178349930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1612e005b9d8644ca3229b27e6dfbdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  children:
+  - gameObject: {fileID: 178349930}
+    gameObjectHash: 8112
+    member: {fileID: 178349934}
+    renderer: {fileID: 0}
+    renderHash: 0
+    light: {fileID: 0}
+    lightHash: 0
+    terrain: {fileID: 0}
+    terrainHash: 0
+    rendererBounds:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0, y: 0, z: 0}
+    lightBounds:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0, y: 0, z: 0}
+    terrainBounds:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0, y: 0, z: 0}
+    shadowLight: 0
+    rendererCastsShadows: 0
+    terrainCastsShadows: 0
+    layer:
+      serializedVersion: 2
+      m_Bits: 0
+    shadowLightPosition: {x: 0, y: 0, z: 0}
+    shadowLightRange: 0
+    shadowLightType: 3
+    shadowCullingMask: 0
+    processed: 1
+  renderers: []
+  lights: []
+  terrains: []
+  shadowLights: []
+  shadowCasters: []
+  totalBounds:
+    m_Center: {x: -105.850563, y: 132.105057, z: 387.339996}
+    m_Extent: {x: .00499999989, y: .00499999989, z: .00499999989}
+  renderBounds:
+    m_Center: {x: -105.850563, y: 132.105057, z: 387.339996}
+    m_Extent: {x: 0, y: 0, z: 0}
+  lightBounds:
+    m_Center: {x: -105.850563, y: 132.105057, z: 387.339996}
+    m_Extent: {x: 0, y: 0, z: 0}
+  hasRenderBounds: 0
+  hasLightBounds: 0
+  shadowCaster: 0
+  shadowLight: 0
+  frozen: 0
+  neverJoin: 0
+  bakedOnlyLights: []
+  PortalDetermined: 0
+  ForceStartSector: {fileID: 0}
+  BoundsUpdateMode: 2
+  ExtraBounds: .00999999978
+  OverrideBounds: 0
+  BoundsOverride:
+    m_Center: {x: -105.850563, y: 132.105057, z: 387.339996}
+    m_Extent: {x: .00499999989, y: .00499999989, z: .00499999989}
+  DirShadowCaster: {fileID: 0}
+  DirShadowDistance: 100
+  ChildCulling: 0
 --- !u!1001 &178383746
 Prefab:
   m_ObjectHideFlags: 0
@@ -7135,7 +7229,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 228390246}
-    gameObjectHash: 53548
+    gameObjectHash: 8264
     member: {fileID: 228390248}
     renderer: {fileID: 0}
     renderHash: 0
@@ -10254,6 +10348,10 @@ Prefab:
       propertyPath: m_Name
       value: lv2_Bridge_Animation (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 11137638, guid: 433b1a23520ff2448aa461d999277557, type: 2}
+      propertyPath: m_PlayAutomatically
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 433b1a23520ff2448aa461d999277557, type: 2}
   m_IsPrefabParent: 0
@@ -10793,7 +10891,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 313934548}
-    gameObjectHash: 53796
+    gameObjectHash: 8512
     member: {fileID: 313934551}
     renderer: {fileID: 0}
     renderHash: 0
@@ -10894,7 +10992,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 317087373}
-    gameObjectHash: 53804
+    gameObjectHash: 8520
     member: {fileID: 317087375}
     renderer: {fileID: 0}
     renderHash: 0
@@ -12065,7 +12163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 349770062}
-    gameObjectHash: 53886
+    gameObjectHash: 8602
     member: {fileID: 349770064}
     renderer: {fileID: 0}
     renderHash: 0
@@ -18825,7 +18923,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 485310, guid: b054209e2ceff1d4a8c597f18134a94e, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 18
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b054209e2ceff1d4a8c597f18134a94e, type: 2}
@@ -21545,7 +21643,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 684471653}
-    gameObjectHash: 54562
+    gameObjectHash: 9322
     member: {fileID: 684471655}
     renderer: {fileID: 0}
     renderHash: 0
@@ -30741,7 +30839,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 1013349229}
-    gameObjectHash: 55244
+    gameObjectHash: 10044
     member: {fileID: 1013349230}
     renderer: {fileID: 0}
     renderHash: 0
@@ -31888,7 +31986,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 1053865508}
-    gameObjectHash: 55334
+    gameObjectHash: 10134
     member: {fileID: 1053865510}
     renderer: {fileID: 0}
     renderHash: 0
@@ -34915,7 +35013,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 1141780454}
-    gameObjectHash: 55522
+    gameObjectHash: 10330
     member: {fileID: 1141780456}
     renderer: {fileID: 0}
     renderHash: 0
@@ -37047,6 +37145,10 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 492342, guid: af3b96e6a8ab01c4b855692fdc9438fc, type: 2}
   m_PrefabInternal: {fileID: 262003401}
+--- !u!1 &1189612990 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 170386, guid: 433b1a23520ff2448aa461d999277557, type: 2}
+  m_PrefabInternal: {fileID: 304165395}
 --- !u!1 &1189803605
 GameObject:
   m_ObjectHideFlags: 0
@@ -39288,7 +39390,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 1296520917}
-    gameObjectHash: 55842
+    gameObjectHash: 10666
     member: {fileID: 1296520919}
     renderer: {fileID: 0}
     renderHash: 0
@@ -41490,7 +41592,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 1361546664}
-    gameObjectHash: 56006
+    gameObjectHash: 10838
     member: {fileID: 1361546667}
     renderer: {fileID: 0}
     renderHash: 0
@@ -42273,7 +42375,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 1381589366}
-    gameObjectHash: 56090
+    gameObjectHash: 10922
     member: {fileID: 1381589368}
     renderer: {fileID: 0}
     renderHash: 0
@@ -45563,6 +45665,10 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 472806, guid: d08c83e6b813e324f894e2442c56579a, type: 2}
   m_PrefabInternal: {fileID: 301994490}
+--- !u!1 &1483188376 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 170386, guid: 433b1a23520ff2448aa461d999277557, type: 2}
+  m_PrefabInternal: {fileID: 1561805412}
 --- !u!4 &1483545803 stripped
 Transform:
   m_PrefabParentObject: {fileID: 499030, guid: 90d839ec8d50a7d448e66c53db51e3bb, type: 2}
@@ -48227,6 +48333,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 60
       objectReference: {fileID: 0}
+    - target: {fileID: 11137638, guid: 433b1a23520ff2448aa461d999277557, type: 2}
+      propertyPath: m_PlayAutomatically
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 433b1a23520ff2448aa461d999277557, type: 2}
   m_IsPrefabParent: 0
@@ -48780,7 +48890,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 1575576668}
-    gameObjectHash: 56610
+    gameObjectHash: 11458
     member: {fileID: 1575576670}
     renderer: {fileID: 0}
     renderHash: 0
@@ -48928,7 +49038,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 1576340177}
-    gameObjectHash: 56622
+    gameObjectHash: 11470
     member: {fileID: 1576340179}
     renderer: {fileID: 0}
     renderHash: 0
@@ -53322,6 +53432,21 @@ MonoBehaviour:
 Transform:
   m_PrefabParentObject: {fileID: 421062, guid: b0a270fcb5723214bb4e2e8afd973197, type: 2}
   m_PrefabInternal: {fileID: 1596718486}
+--- !u!54 &1698324578
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1698324575}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1700684728
 Prefab:
   m_ObjectHideFlags: 0
@@ -55854,7 +55979,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 1790647577}
-    gameObjectHash: 57110
+    gameObjectHash: 11996
     member: {fileID: 1790647579}
     renderer: {fileID: 0}
     renderHash: 0
@@ -56929,7 +57054,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11497776, guid: 7e066df477360004cbaa08492ddd31dc, type: 2}
       propertyPath: puzzleDone
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6568620, guid: 7e066df477360004cbaa08492ddd31dc, type: 2}
@@ -57293,7 +57418,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 1836663546}
-    gameObjectHash: 57178
+    gameObjectHash: 12064
     member: {fileID: 1836663548}
     renderer: {fileID: 0}
     renderHash: 0
