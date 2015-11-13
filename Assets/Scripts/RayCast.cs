@@ -7,7 +7,7 @@ public class RayCast : MonoBehaviour {
     // Raycast script. Put this on the MainCamera object.
 
     private GameObject arms;
-	private GameObject storedPickUpObject = null;
+	public GameObject storedPickUpObject = null;
     private InventorySystem inventory;
 
     private float distance = 4f;
@@ -233,6 +233,7 @@ public class RayCast : MonoBehaviour {
 
 	public void setStoredPickUpItem(GameObject item)
 	{
-		if(storedPickUpObject == null) storedPickUpObject = item;
+        if (storedPickUpObject == null) storedPickUpObject = item;
+        else if (item == null) storedPickUpObject = null;
 	}
 }

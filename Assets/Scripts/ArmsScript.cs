@@ -12,6 +12,7 @@ public class ArmsScript : MonoBehaviour {
 	public bool collectedThisFrame;
 
     private GameObject objInRightArm;
+    private GameObject playerObject;
     private GameObject[] bagSlots;
     private InventorySystem inventory;
 
@@ -27,7 +28,8 @@ public class ArmsScript : MonoBehaviour {
         handSpeed = 1.2f;
         inventory = GameObject.FindGameObjectWithTag("Bagpack").GetComponent<InventorySystem>();
         bagSlots = GameObject.FindGameObjectsWithTag("BagSlot");
-	}
+        playerObject = GameObject.FindGameObjectWithTag("MainCamera");
+    }
 
 	void Update () {
         // Carry object at this point.
@@ -138,6 +140,7 @@ public class ArmsScript : MonoBehaviour {
         obj.transform.position = objectSpaceInHand.transform.position;
         obj.transform.rotation = objectSpaceInHand.transform.rotation;
 		obj.layer = 2;
+        playerObject.GetComponent<RayCast>().setStoredPickUpItem(obj);
         if (obj.GetComponent<Rigidbody>() != null)
         {
             if (obj.GetComponent<Rigidbody>().useGravity)
@@ -195,6 +198,7 @@ public class ArmsScript : MonoBehaviour {
         {
             Debug.Log(item.name + ": needs a 3D BoxCollider!");
         }
+        playerObject.GetComponent<RayCast>().setStoredPickUpItem(null);
     }
 
 }

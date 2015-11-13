@@ -76,8 +76,16 @@ public class InventorySystem : MonoBehaviour {
                     obj.GetComponent<Pickable>().IsInInventory = true;
                     obj.transform.parent = bagSlots[i].transform;
                     obj.transform.position = bagSlots[i].transform.position;
-                    obj.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+                    if (obj.tag == "Statue")
+                    {
+                        obj.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+                    }
+                    else
+                    {
+                        obj.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
+                    }
                     obj.layer = 0;
+                    playerObject.GetComponent<RayCast>().setStoredPickUpItem(null);
                     bagSlots[i].GetComponent<BagSlot>().HasOpenSpot = false;
                     arms.IsCarryingItem = false;
                     storeSound.GetComponent<SECTR_PointSource>().Play();
