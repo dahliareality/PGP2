@@ -1332,7 +1332,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 38403958}
-    gameObjectHash: 386922
+    gameObjectHash: 419592
     member: {fileID: 38403960}
     renderer: {fileID: 0}
     renderHash: 0
@@ -4394,7 +4394,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 148758188}
-    gameObjectHash: 387164
+    gameObjectHash: 419834
     member: {fileID: 148758189}
     renderer: {fileID: 0}
     renderHash: 0
@@ -5661,7 +5661,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 178349930}
-    gameObjectHash: 387246
+    gameObjectHash: 419916
     member: {fileID: 178349934}
     renderer: {fileID: 0}
     renderHash: 0
@@ -7229,7 +7229,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 228390246}
-    gameObjectHash: 387402
+    gameObjectHash: 420072
     member: {fileID: 228390248}
     renderer: {fileID: 0}
     renderHash: 0
@@ -10891,7 +10891,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 313934548}
-    gameObjectHash: 387650
+    gameObjectHash: 420320
     member: {fileID: 313934551}
     renderer: {fileID: 0}
     renderHash: 0
@@ -10992,7 +10992,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 317087373}
-    gameObjectHash: 387658
+    gameObjectHash: 420328
     member: {fileID: 317087375}
     renderer: {fileID: 0}
     renderHash: 0
@@ -12163,7 +12163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 349770062}
-    gameObjectHash: 387740
+    gameObjectHash: 420410
     member: {fileID: 349770064}
     renderer: {fileID: 0}
     renderHash: 0
@@ -18940,6 +18940,25 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b054209e2ceff1d4a8c597f18134a94e, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &574125066 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 131824, guid: b054209e2ceff1d4a8c597f18134a94e, type: 2}
+  m_PrefabInternal: {fileID: 574125065}
+--- !u!54 &574125067
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 574125066}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!4 &577859368 stripped
 Transform:
   m_PrefabParentObject: {fileID: 475644, guid: 20cb46cf6801f0b4280b7f3bb224b866, type: 2}
@@ -21655,7 +21674,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 684471653}
-    gameObjectHash: 388460
+    gameObjectHash: 421130
     member: {fileID: 684471655}
     renderer: {fileID: 0}
     renderHash: 0
@@ -30851,7 +30870,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 1013349229}
-    gameObjectHash: 389182
+    gameObjectHash: 421852
     member: {fileID: 1013349230}
     renderer: {fileID: 0}
     renderHash: 0
@@ -31998,7 +32017,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 1053865508}
-    gameObjectHash: 389272
+    gameObjectHash: 421942
     member: {fileID: 1053865510}
     renderer: {fileID: 0}
     renderHash: 0
@@ -35025,7 +35044,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 1141780454}
-    gameObjectHash: 389468
+    gameObjectHash: 422138
     member: {fileID: 1141780456}
     renderer: {fileID: 0}
     renderHash: 0
@@ -39402,7 +39421,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 1296520917}
-    gameObjectHash: 389806
+    gameObjectHash: 422476
     member: {fileID: 1296520919}
     renderer: {fileID: 0}
     renderHash: 0
@@ -41604,7 +41623,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 1361546664}
-    gameObjectHash: 389978
+    gameObjectHash: 422648
     member: {fileID: 1361546667}
     renderer: {fileID: 0}
     renderHash: 0
@@ -42387,7 +42406,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 1381589366}
-    gameObjectHash: 390062
+    gameObjectHash: 422732
     member: {fileID: 1381589368}
     renderer: {fileID: 0}
     renderHash: 0
@@ -48902,7 +48921,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 1575576668}
-    gameObjectHash: 390600
+    gameObjectHash: 423270
     member: {fileID: 1575576670}
     renderer: {fileID: 0}
     renderHash: 0
@@ -49050,7 +49069,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 1576340177}
-    gameObjectHash: 390612
+    gameObjectHash: 423282
     member: {fileID: 1576340179}
     renderer: {fileID: 0}
     renderHash: 0
@@ -55991,7 +56010,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 1790647577}
-    gameObjectHash: 391140
+    gameObjectHash: 423810
     member: {fileID: 1790647579}
     renderer: {fileID: 0}
     renderHash: 0
@@ -57430,7 +57449,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 1836663546}
-    gameObjectHash: 391208
+    gameObjectHash: 423878
     member: {fileID: 1836663548}
     renderer: {fileID: 0}
     renderHash: 0
