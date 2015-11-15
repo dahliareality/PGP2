@@ -46,7 +46,8 @@ public class Level2Bridge : MonoBehaviour
                 Bridge2.GetComponent<Animation>().Play();
                 finished = true;
             }
-            this.gameObject.GetComponent<SECTR_PropagationSource>().Play();
+			//Sectr exterminatus
+			//this.gameObject.GetComponent<SECTR_PropagationSource>().Play();
         }
 
 

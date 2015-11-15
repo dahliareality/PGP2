@@ -44,7 +44,8 @@ public class Level1Door : MonoBehaviour {
             this.transform.position = Vector3.Lerp(this.transform.position, startVector, 1.45f * Time.deltaTime);
             nowOpen = false;
 			if(!doorHasClosedAgain){
-				this.GetComponent<SECTR_PropagationSource>().Play();
+				//Sectr exterminatus
+				//this.GetComponent<SECTR_PropagationSource>().Play();
 				doorHasClosedAgain = true;
             }
         }
@@ -56,7 +57,8 @@ public class Level1Door : MonoBehaviour {
 
         if (nowOpen && !soundHasPlayed)
         {
-            this.GetComponent<SECTR_PropagationSource>().Play();
+			//Sectr exterminatus
+			//this.GetComponent<SECTR_PropagationSource>().Play();
             soundHasPlayed = true;
         }
         
