@@ -15,7 +15,7 @@ public class IslandDoor : MonoBehaviour {
 
 	    if (count >= 3)
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
             this.transform.position = Vector3.Lerp(this.transform.position, endPos.position, 1.0f * Time.deltaTime);
         }
 	}

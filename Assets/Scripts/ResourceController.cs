@@ -14,7 +14,7 @@ public class ResourceController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-		allObjects = UnityEngine.Object.FindObjectsOfType<GameObject>() ;
+		/*allObjects = UnityEngine.Object.FindObjectsOfType<GameObject>() ;
 		foreach (GameObject obj in allObjects)
 			if (obj.activeInHierarchy && obj.GetComponent<Renderer> () != null) {
 				Renderer rend = obj.GetComponent<Renderer>();
@@ -24,7 +24,7 @@ public class ResourceController : MonoBehaviour {
 //			if(obj.GetComponent<MeshCollider> () != null) Destroy(obj.GetComponent<MeshCollider>());
 //			if(obj.GetComponent<BoxCollider> () != null) Destroy(obj.GetComponent<BoxCollider>());
 //			if(obj.GetComponent<Animator> () != null) Destroy(obj.GetComponent<Animator>());
-			}
+			}*/
 //
 //		allObjects = UnityEngine.Object.FindObjectsOfType<GameObject>() ;
 //		foreach (GameObject obj in allObjects)
@@ -42,7 +42,7 @@ public class ResourceController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		counter++;
+	/*	counter++;
 		if(counter >= threshold)
 		{
 		foreach (GameObject obj in allObjects)
@@ -69,7 +69,7 @@ public class ResourceController : MonoBehaviour {
 			}
 
 			counter = 0;
-		}
+		}*/
 
 //		if(counter >= 300)
 //		{

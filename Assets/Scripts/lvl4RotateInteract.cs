@@ -33,11 +33,11 @@ public class lvl4RotateInteract : MonoBehaviour {
         }
         else if (Input.GetKey(KeyCode.LeftArrow))
         {
-            x = -.15f;
+            x = -.2f;
         }
         else if (Input.GetKey(KeyCode.RightArrow))
         {
-            x = .15f;
+            x = .2f;
         }
 
         yRotation += x * lookSensitivity;
