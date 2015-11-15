@@ -6,9 +6,11 @@ public class Lvl3GateController : MonoBehaviour {
     // Put this on the first gate object on the boulder progression
     public bool sunPuzzleSolved = false;
     public bool tilePuzzleSolved = false;
-    //private int nrOfPuzzlesSolved = 0;
+    private int nrOfPuzzlesSolved = 0;
     private TriggerFromSunLight sunPuzzle;
     private TilePuzzle tilPzl;
+
+    private bool finished;
 
     void Start ()
     {
@@ -31,13 +33,24 @@ public class Lvl3GateController : MonoBehaviour {
         if (tilePuzzleSolved == true || sunPuzzleSolved == true)
         {
             Destroy(GameObject.Find("Wooden Grate 01"));
-            //nrOfPuzzlesSolved = 1;
+            nrOfPuzzlesSolved++;
         }
+
         if (tilePuzzleSolved == true && sunPuzzleSolved == true)
         {
             Destroy(GameObject.Find("Wooden Grate 02"));
-            //nrOfPuzzlesSolved = 2;
+            nrOfPuzzlesSolved++;
         }
+
+        /*if (nrOfPuzzlesSolved == 2)
+        {
+            if (!finished)
+            {
+                this.GetComponent<Animation>().Play();
+
+                finished = true;
+            }
+        }*/
         //Debug.Log(nrOfPuzzlesSolved);
 	}
 }
