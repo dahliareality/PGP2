@@ -1332,7 +1332,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 38403958}
-    gameObjectHash: 7788
+    gameObjectHash: 386922
     member: {fileID: 38403960}
     renderer: {fileID: 0}
     renderHash: 0
@@ -4394,7 +4394,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 148758188}
-    gameObjectHash: 8030
+    gameObjectHash: 387164
     member: {fileID: 148758189}
     renderer: {fileID: 0}
     renderHash: 0
@@ -4559,7 +4559,7 @@ MonoBehaviour:
   m_ShadowmapMode: 0
   m_Cameras:
   - {fileID: 1719181901}
-  m_CurrentCamera: {fileID: 0}
+  m_CurrentCamera: {fileID: 1719181901}
   m_Size: {x: 10, y: 10, z: 20}
   m_SpotNear: .0500000007
   m_SpotFar: .5
@@ -5661,7 +5661,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 178349930}
-    gameObjectHash: 8112
+    gameObjectHash: 387246
     member: {fileID: 178349934}
     renderer: {fileID: 0}
     renderHash: 0
@@ -7229,7 +7229,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 228390246}
-    gameObjectHash: 8264
+    gameObjectHash: 387402
     member: {fileID: 228390248}
     renderer: {fileID: 0}
     renderHash: 0
@@ -8138,7 +8138,7 @@ MonoBehaviour:
   m_ShadowmapMode: 0
   m_Cameras:
   - {fileID: 1719181901}
-  m_CurrentCamera: {fileID: 0}
+  m_CurrentCamera: {fileID: 1719181901}
   m_Size: {x: 10, y: 10, z: 20}
   m_SpotNear: .100000001
   m_SpotFar: 1
@@ -10891,7 +10891,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 313934548}
-    gameObjectHash: 8512
+    gameObjectHash: 387650
     member: {fileID: 313934551}
     renderer: {fileID: 0}
     renderHash: 0
@@ -10992,7 +10992,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 317087373}
-    gameObjectHash: 8520
+    gameObjectHash: 387658
     member: {fileID: 317087375}
     renderer: {fileID: 0}
     renderHash: 0
@@ -11329,7 +11329,7 @@ MonoBehaviour:
   m_ShadowmapMode: 0
   m_Cameras:
   - {fileID: 0}
-  m_CurrentCamera: {fileID: 0}
+  m_CurrentCamera: {fileID: 1719181901}
   m_Size: {x: 10, y: 10, z: 20}
   m_SpotNear: .100000001
   m_SpotFar: 1
@@ -12163,7 +12163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 349770062}
-    gameObjectHash: 8602
+    gameObjectHash: 387740
     member: {fileID: 349770064}
     renderer: {fileID: 0}
     renderHash: 0
@@ -18923,7 +18923,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 485310, guid: b054209e2ceff1d4a8c597f18134a94e, type: 2}
       propertyPath: m_RootOrder
-      value: 18
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 485310, guid: b054209e2ceff1d4a8c597f18134a94e, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 485310, guid: b054209e2ceff1d4a8c597f18134a94e, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 485310, guid: b054209e2ceff1d4a8c597f18134a94e, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b054209e2ceff1d4a8c597f18134a94e, type: 2}
@@ -21643,7 +21655,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 684471653}
-    gameObjectHash: 9322
+    gameObjectHash: 388460
     member: {fileID: 684471655}
     renderer: {fileID: 0}
     renderHash: 0
@@ -23160,7 +23172,7 @@ MonoBehaviour:
   m_ShadowmapMode: 0
   m_Cameras:
   - {fileID: 1719181901}
-  m_CurrentCamera: {fileID: 0}
+  m_CurrentCamera: {fileID: 1719181901}
   m_Size: {x: 10, y: 10, z: 20}
   m_SpotNear: .100000001
   m_SpotFar: 1
@@ -30839,7 +30851,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 1013349229}
-    gameObjectHash: 10044
+    gameObjectHash: 389182
     member: {fileID: 1013349230}
     renderer: {fileID: 0}
     renderHash: 0
@@ -31986,7 +31998,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 1053865508}
-    gameObjectHash: 10134
+    gameObjectHash: 389272
     member: {fileID: 1053865510}
     renderer: {fileID: 0}
     renderHash: 0
@@ -35013,7 +35025,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 1141780454}
-    gameObjectHash: 10330
+    gameObjectHash: 389468
     member: {fileID: 1141780456}
     renderer: {fileID: 0}
     renderHash: 0
@@ -38163,7 +38175,7 @@ MonoBehaviour:
   m_ShadowmapMode: 0
   m_Cameras:
   - {fileID: 0}
-  m_CurrentCamera: {fileID: 0}
+  m_CurrentCamera: {fileID: 1719181901}
   m_Size: {x: 10, y: 10, z: 20}
   m_SpotNear: .100000001
   m_SpotFar: 1
@@ -39390,7 +39402,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 1296520917}
-    gameObjectHash: 10666
+    gameObjectHash: 389806
     member: {fileID: 1296520919}
     renderer: {fileID: 0}
     renderHash: 0
@@ -41592,7 +41604,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 1361546664}
-    gameObjectHash: 10838
+    gameObjectHash: 389978
     member: {fileID: 1361546667}
     renderer: {fileID: 0}
     renderHash: 0
@@ -42375,7 +42387,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 1381589366}
-    gameObjectHash: 10922
+    gameObjectHash: 390062
     member: {fileID: 1381589368}
     renderer: {fileID: 0}
     renderHash: 0
@@ -48890,7 +48902,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 1575576668}
-    gameObjectHash: 11458
+    gameObjectHash: 390600
     member: {fileID: 1575576670}
     renderer: {fileID: 0}
     renderHash: 0
@@ -49038,7 +49050,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 1576340177}
-    gameObjectHash: 11470
+    gameObjectHash: 390612
     member: {fileID: 1576340179}
     renderer: {fileID: 0}
     renderHash: 0
@@ -50635,7 +50647,7 @@ MonoBehaviour:
   m_ShadowmapMode: 0
   m_Cameras:
   - {fileID: 1719181901}
-  m_CurrentCamera: {fileID: 0}
+  m_CurrentCamera: {fileID: 1719181901}
   m_Size: {x: 10, y: 10, z: 20}
   m_SpotNear: .100000001
   m_SpotFar: 1
@@ -51546,7 +51558,7 @@ MonoBehaviour:
   m_ShadowmapMode: 0
   m_Cameras:
   - {fileID: 1719181901}
-  m_CurrentCamera: {fileID: 0}
+  m_CurrentCamera: {fileID: 1719181901}
   m_Size: {x: 10, y: 10, z: 20}
   m_SpotNear: .100000001
   m_SpotFar: 1
@@ -55178,7 +55190,7 @@ MonoBehaviour:
   m_ShadowmapMode: 0
   m_Cameras:
   - {fileID: 1719181901}
-  m_CurrentCamera: {fileID: 0}
+  m_CurrentCamera: {fileID: 1719181901}
   m_Size: {x: 10, y: 10, z: 20}
   m_SpotNear: .100000001
   m_SpotFar: 1
@@ -55979,7 +55991,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 1790647577}
-    gameObjectHash: 11996
+    gameObjectHash: 391140
     member: {fileID: 1790647579}
     renderer: {fileID: 0}
     renderHash: 0
@@ -57418,7 +57430,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 1836663546}
-    gameObjectHash: 12064
+    gameObjectHash: 391208
     member: {fileID: 1836663548}
     renderer: {fileID: 0}
     renderHash: 0
@@ -57517,7 +57529,7 @@ MonoBehaviour:
   m_ShadowmapMode: 0
   m_Cameras:
   - {fileID: 0}
-  m_CurrentCamera: {fileID: 0}
+  m_CurrentCamera: {fileID: 1719181901}
   m_Size: {x: 10, y: 10, z: 20}
   m_SpotNear: .100000001
   m_SpotFar: 1
@@ -63977,7 +63989,7 @@ MonoBehaviour:
   m_ShadowmapMode: 0
   m_Cameras:
   - {fileID: 0}
-  m_CurrentCamera: {fileID: 0}
+  m_CurrentCamera: {fileID: 1719181901}
   m_Size: {x: 10, y: 10, z: 20}
   m_SpotNear: .100000001
   m_SpotFar: 1
