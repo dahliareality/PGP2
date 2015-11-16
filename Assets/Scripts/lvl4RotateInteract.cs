@@ -18,6 +18,8 @@ public class lvl4RotateInteract : MonoBehaviour {
     private float lookSmoothDamp = 0.1f;
     private float currentYRotation;
 	private Vector3 startRot = new Vector3(0,0,0);
+	private bool isSoundPlaying = false;
+	private int testInt = 0;
 
     void Start()
     {
@@ -57,7 +59,18 @@ public class lvl4RotateInteract : MonoBehaviour {
 		transform.eulerAngles = new Vector3 (xRotation,currentYRotation,zRotation);
 
 //        transform.(xRotation, currentYRotation, zRotation);
-		//(play sound) 
-		//this.gameObject.getComponent<SECTR_PointSource>().Play();
+		if (!isSoundPlaying && Input.GetAxis("PS4_DPadHorizontal")!=0) {
+			this.GetComponent<SECTR_PointSource>().Play();
+			isSoundPlaying = true;
+			Debug.Log ("Pushing this bitch round mah house "+testInt);
+		}
     }
+
+	public void Update(){
+		if (Input.GetAxis ("PS4_DPadHorizontal") == 0) {
+			//Debug.Log ("My arms are tired "+testInt);
+			this.GetComponent<SECTR_PointSource> ().Stop (true);
+			isSoundPlaying = false;
+		}
+	}
 }
