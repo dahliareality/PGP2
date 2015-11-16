@@ -7,26 +7,18 @@ public class Well : MonoBehaviour {
 
     //public GameObject spawnObject;
     //public Transform spawnPos;
-    private bool hasSpawned = false;
     private bool finished;
     public GameObject basket;
 
 	void Start () {
-        GameObject.Find("Lv2_Statue_BlackTurtle").GetComponent<Renderer>().enabled = false;
-        GameObject.Find("Lv2_Statue_BlackTurtle").GetComponent<Collider>().enabled = false;
         //spawnObject.transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
     }
 	
 	public void SpawnObject()
     {
-
-        if (!hasSpawned)
-        {
             /*Instantiate(spawnObject, spawnPos.position, Quaternion.identity);
             hasSpawned = true;
             this.gameObject.name = "totes";*/
-            GameObject.Find("Lv2_Statue_BlackTurtle").GetComponent<Renderer>().enabled = true;
-            GameObject.Find("Lv2_Statue_BlackTurtle").GetComponent<Collider>().enabled = true;
             if (!finished)
             {
                 basket.GetComponent<Animation>().Play();
@@ -34,8 +26,5 @@ public class Well : MonoBehaviour {
 
                 finished = true;
             }
-            
-            hasSpawned = true;
-        }
     }
 }

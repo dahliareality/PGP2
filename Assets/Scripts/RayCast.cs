@@ -127,6 +127,7 @@ public class RayCast : MonoBehaviour {
                                 objectHit.collider.gameObject.GetComponent<CoinCheck>().placeStatue(storedPickUpObject);
                                 arms.GetComponent<ArmsScript>().RemoveItem(storedPickUpObject);
                                 arms.GetComponent<ArmsScript>().IsCarryingItem = false;
+                                storedPickUpObject.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
                                 storedPickUpObject.GetComponent<Pickable>().CanPickUp = true;
                                 storedPickUpObject = null;
                             }
@@ -138,9 +139,12 @@ public class RayCast : MonoBehaviour {
                         }
                     }
                     // Remove Coin
-                    else if (objectHit.collider.gameObject.tag == "CoinSpot" && !GameObject.Find("lv2_Nabatean_Bridge02").GetComponent<Level2Bridge>().puzzleDone)
+                    else if (objectHit.collider.gameObject.tag == "CoinSpot" && !GameObject.Find("Nabatean Bridge").GetComponent<Level2Bridge>().puzzleDone)
                     {
-                        if (!objectHit.collider.gameObject.GetComponent<CoinCheck>().isEmpty()) objectHit.collider.gameObject.GetComponent<CoinCheck>().removeStatue();
+                        if (!objectHit.collider.gameObject.GetComponent<CoinCheck>().isEmpty()) 
+                        {
+                            objectHit.collider.gameObject.GetComponent<CoinCheck>().removeStatue();
+                        }
                     }
                 }
 

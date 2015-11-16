@@ -14,7 +14,7 @@ public class Level2Bridge : MonoBehaviour
     private Vector3 startVector;
     private bool nowOpen = false;
     private bool soundHasPlayed = false;
-    private int requiredStatues = 1;
+    private int requiredStatues = 3;
 
     public GameObject Bridge1;
     public GameObject Bridge2;

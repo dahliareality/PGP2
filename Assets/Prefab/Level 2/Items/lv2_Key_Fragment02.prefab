@@ -13,6 +13,7 @@ GameObject:
   - 65: {fileID: 6534076}
   - 114: {fileID: 11405572}
   - 54: {fileID: 5404800}
+  - 111: {fileID: 11118526}
   m_Layer: 0
   m_Name: lv2_Key_Fragment02
   m_TagString: KeyFrag
@@ -26,9 +27,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 184792}
-  m_LocalRotation: {x: .234922156, y: -.66694206, z: -.666941941, w: .234921888}
-  m_LocalPosition: {x: .0159982853, y: 1.31400001, z: 1.70299911}
-  m_LocalScale: {x: .25, y: .25, z: .25}
+  m_LocalRotation: {x: .686999977, y: -.356603742, z: -.0291215628, w: -.632468879}
+  m_LocalPosition: {x: .0330007672, y: -.151999414, z: -.0380000211}
+  m_LocalScale: {x: .24999994, y: .249999881, z: .249999911}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -88,8 +89,24 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.35468531, y: .300000101, z: 1.2967844}
-  m_Center: {x: .041712746, y: 2.86461557e-08, z: .054045435}
+  m_Size: {x: 1.56198025, y: .400497526, z: 1.2967844}
+  m_Center: {x: -.0313364156, y: .0508937463, z: .052820649}
+--- !u!111 &11118526
+Animation:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 184792}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: dcab2b7def951ed41a8afe7dd8d8ee75, type: 3}
+  m_Animations:
+  - {fileID: 7400000, guid: d157d18095af7714d91c3787c8fad143, type: 3}
+  - {fileID: 7400000, guid: dcab2b7def951ed41a8afe7dd8d8ee75, type: 3}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!114 &11405572
 MonoBehaviour:
   m_ObjectHideFlags: 1
