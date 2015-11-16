@@ -8,9 +8,15 @@ public partial class LightShafts : MonoBehaviour
 	public void Start()
 	{
 		CheckMinRequirements();
-        m_CurrentCamera = Camera.main;
-        if (m_Cameras == null || m_Cameras.Length == 0)
+
+		if (m_Cameras == null || m_Cameras.Length == 0)
 			m_Cameras = new Camera[]{Camera.main};
+//			m_Cameras [0] = Camera.main;
+//			m_Cameras = new Camera[]{Camera.main};
+
+		if (m_Cameras.Length == 1)
+			m_Cameras [0] = Camera.main;
+
 
 		UpdateCameraDepthMode();
 	}
@@ -198,7 +204,7 @@ public partial class LightShafts : MonoBehaviour
 
 	public void OnRenderObject ()
 	{
-        //GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
+		m_CurrentCamera = Camera.current;
 		if (!m_MinRequirements || !CheckCamera() || !IsVisible())
 			return;
 
