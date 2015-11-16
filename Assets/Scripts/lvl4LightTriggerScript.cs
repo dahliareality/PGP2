@@ -9,9 +9,14 @@ public class lvl4LightTriggerScript : MonoBehaviour
 {
 
     private bool inTrigger;
-    private bool isLite;
+    public bool isLite;
+	public bool simulateIsLIt = false;
     public GameObject movingObj;
     public Transform endPos;
+	public Material litMaterial;
+	public Material unLitMaterial;
+
+
 
     void Awake()
     {
@@ -20,8 +25,20 @@ public class lvl4LightTriggerScript : MonoBehaviour
 
     void Update()
     {
+
+		if (simulateIsLIt)
+			isLite = true;
+
+		if (isLite && GetComponent<Renderer> ().material != litMaterial)
+			GetComponent<Renderer> ().material = litMaterial;
+		else
+		{
+			if(GetComponent<Renderer> ().material != unLitMaterial)
+			GetComponent<Renderer> ().material = unLitMaterial;
+		}
+
         // placeholder incase of object should react to something.
-        if (isLite && inTrigger)
+        if (isLite /*&& inTrigger*/)
         {
             Debug.Log("dong");
             if (movingObj.transform.position.y < 279.67)
@@ -29,12 +46,13 @@ public class lvl4LightTriggerScript : MonoBehaviour
                 //movingObj.transform.position = new Vector3(movingObj.transform.position.x, movingObj.transform.position.y + 0.04f, movingObj.transform.position.z);
                 movingObj.transform.position = Vector3.Lerp(this.movingObj.transform.position, endPos.position, 0.3f * Time.deltaTime);
             }
-            isLite = false;
+            
         }
         else
         {
 
         }
+		isLite = false;
     }
 
     public bool IsLite

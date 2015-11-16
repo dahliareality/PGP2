@@ -12,15 +12,23 @@ public class lvl4RotateInteract : MonoBehaviour {
     private float lookSensitivity = 0.8f;
     private float yRotation;
     private float xRotation;
+	private float zRotation;
     private float yRotationV;
     private float xRotationV;
     private float lookSmoothDamp = 0.1f;
     private float currentYRotation;
-    public float startxRot;
+	private Vector3 startRot = new Vector3(0,0,0);
 
     void Start()
     {
-        currentYRotation = transform.rotation.y;
+		xRotation = transform.eulerAngles.x;
+		yRotation = transform.eulerAngles.y;
+		zRotation = transform.eulerAngles.z;
+		yRotationV = yRotation;
+		currentYRotation = yRotation;
+
+//		startRot = Quaternion.Euler(;
+//		yRotation = startRot.y;
     }
 
     public void OnInteractHold()
@@ -33,22 +41,22 @@ public class lvl4RotateInteract : MonoBehaviour {
         }
         else if (Input.GetKey(KeyCode.LeftArrow))
         {
-            x = -.2f;
+            x = -.1f;
         }
         else if (Input.GetKey(KeyCode.RightArrow))
         {
-            x = .2f;
+            x = .1f;
         }
 
         yRotation += x * lookSensitivity;
 
-       /* xRotation = Mathf.Clamp(xRotation, -90f + startRotation.x, 90f + startRotation.x); // Clamping X
-        yRotation = Mathf.Clamp(yRotation, -90f + startRotation.y, 90f + startRotation.y); // Clamping Y*/
-        
+
 
         currentYRotation = Mathf.SmoothDamp(currentYRotation, yRotation, ref yRotationV, lookSmoothDamp);
 
-        transform.rotation = Quaternion.Euler(startxRot, currentYRotation, 0f);
+		transform.eulerAngles = new Vector3 (xRotation,currentYRotation,zRotation);
+
+//        transform.(xRotation, currentYRotation, zRotation);
 		//(play sound) 
 		//this.gameObject.getComponent<SECTR_PointSource>().Play();
     }
