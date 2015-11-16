@@ -9,6 +9,7 @@ public class Pickable : MonoBehaviour {
 
     private bool canPickUp = true;
     private bool isInInventory = false;
+    public string invSpot;
 
     public bool CanPickUp
     {
@@ -26,5 +27,11 @@ public class Pickable : MonoBehaviour {
     {
         get { return this.transform.position; }
         set { this.transform.position = value; }
+    }
+
+    public string InvSpot
+    {
+        get { return invSpot; }
+        set { invSpot = value; }
     }
 }

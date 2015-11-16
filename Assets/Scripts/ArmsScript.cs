@@ -49,7 +49,7 @@ public class ArmsScript : MonoBehaviour {
                     rightArm.GetComponent<Renderer>().material.color = clrArray[1];
                 }
 
-                Debug.Log(hit.collider.gameObject.tag);
+                //Debug.Log(hit.collider.gameObject.tag);
 
                 if (Input.GetButtonUp("PS4_X") || Input.GetKeyDown(KeyCode.E))
                 {
@@ -69,7 +69,7 @@ public class ArmsScript : MonoBehaviour {
                         {
                             for (int i = 0; i < 12; i++)
                             {
-                                if (hit.collider.gameObject.transform.position == bagSlots[i].transform.position)
+                                if (hit.collider.gameObject.GetComponent<Pickable>().InvSpot == bagSlots[i].name)
                                 {
                                     hit.collider.gameObject.GetComponent<Pickable>().IsInInventory = false;
                                     bagSlots[i].GetComponent<BagSlot>().HasOpenSpot = true;
@@ -84,7 +84,7 @@ public class ArmsScript : MonoBehaviour {
                 }
                 else
                 {
-                     Debug.Log("Empty space in bag.");
+                     //Debug.Log("Empty space in bag.");
                 }
             }
             // Movement of Right Arm
@@ -136,6 +136,7 @@ public class ArmsScript : MonoBehaviour {
 		isCarryingItem = true;
         objInRightArm = obj;
         obj.GetComponent<Pickable>().IsInInventory = false;
+        obj.GetComponent<Pickable>().InvSpot = "Hand";
         obj.transform.parent = objectSpaceInHand.transform;
         obj.transform.position = objectSpaceInHand.transform.position;
         obj.transform.rotation = objectSpaceInHand.transform.rotation;
