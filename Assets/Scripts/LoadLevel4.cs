@@ -51,7 +51,7 @@ public class LoadLevel4 : MonoBehaviour {
         {
             
         }
-        Debug.Log(level4Load);
+        //Debug.Log(level4Load);
     }
 
     public void OnTriggerEnter(Collider col)
