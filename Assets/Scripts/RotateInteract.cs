@@ -49,7 +49,7 @@ public class RotateInteract : MonoBehaviour {
 
         transform.rotation = Quaternion.Euler(0, -currentYRotation*0.3f, 90);
 		if (!isSoundPlaying && Input.GetAxis("PS4_DPadHorizontal")!=0) {
-			//this.GetComponent<SECTR_PointSource>().Play();
+			this.GetComponent<SECTR_PointSource>().Play();
 			isSoundPlaying = true;
 			Debug.Log ("Pushing this bitch round mah house "+testInt);
 		}

@@ -38,6 +38,7 @@ public class TileSequence : MonoBehaviour {
             if (!steppedOnTile && !tilPzl.isCorrect)
             {
                 steppedOnTile = true;
+                this.gameObject.GetComponent<SECTR_PointSource>().Play();
                 // Check if the player steps on the correct tile, then insert the number into the sequence
                 // if it's not the correct tile, then reset the sequence
                 if (trueTile)
