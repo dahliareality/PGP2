@@ -7,10 +7,11 @@ public class RayCast : MonoBehaviour {
     // Raycast script. Put this on the MainCamera object.
 
     private GameObject arms;
-	private GameObject storedPickUpObject = null;
+	public GameObject storedPickUpObject = null;
     private InventorySystem inventory;
 
     private float distance = 4f;
+    private LayerMask layerMask = 1 << 8;
     RaycastHit objectHit;
 
     //private SequencePuzzle sqnPzl;
@@ -18,6 +19,7 @@ public class RayCast : MonoBehaviour {
 
     void Start()
     {
+        layerMask = ~layerMask;
         //sqnPzl = GameObject.Find("Sequence Puzzle Controller").GetComponent<SequencePuzzle>();
         arms = GameObject.FindGameObjectWithTag("Arm");
         inventory = GameObject.FindGameObjectWithTag("Bagpack").GetComponent<InventorySystem>();
@@ -32,7 +34,7 @@ public class RayCast : MonoBehaviour {
         // For normal interactable objects
         if (!inventory.HasBagOpen)
         {
-            if (Physics.Raycast(this.transform.position, this.transform.forward, out objectHit, distance) && objectHit.collider.gameObject.tag != "Player" && objectHit.collider.gameObject.tag != "Right Arm" && objectHit.collider.gameObject.tag != "Arm")
+            if (Physics.Raycast(this.transform.position, this.transform.forward, out objectHit, distance, layerMask) && objectHit.collider.gameObject.tag != "Player" && objectHit.collider.gameObject.tag != "Right Arm" && objectHit.collider.gameObject.tag != "Arm")
             {
                 //Debug.Log(objectHit.collider.gameObject);
                 //Debug.Log("Looking at object");
@@ -233,6 +235,7 @@ public class RayCast : MonoBehaviour {
 
 	public void setStoredPickUpItem(GameObject item)
 	{
-		if(storedPickUpObject == null) storedPickUpObject = item;
+        if (storedPickUpObject == null) storedPickUpObject = item;
+        else if (item == null) storedPickUpObject = null;
 	}
 }

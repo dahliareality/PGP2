@@ -13,7 +13,7 @@ public class Level2CaveDoor : MonoBehaviour
     private Vector3 startVector;
     private bool nowOpen = false;
     private bool soundHasPlayed = false;
-	private int requiredStatues = 1;
+	private int requiredStatues = 5;
 
     private bool finished;
 

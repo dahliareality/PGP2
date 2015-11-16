@@ -5,8 +5,8 @@ using System.Collections;
 // Lasted Edited: 29-10-2015 10:10
 
 public class InventorySystem : MonoBehaviour {
-	
-	public GameObject[] bagSlots;
+
+    public GameObject[] bagSlots;
 	
 	private ArmsScript arms;
 	private Movement3D M3;
@@ -26,9 +26,18 @@ public class InventorySystem : MonoBehaviour {
 		M3 = GameObject.FindGameObjectWithTag("Player").GetComponent<Movement3D>();
 		heldBagpackSpace = GameObject.Find("Held Bagpack Space");
 		arms = GameObject.Find("Arms").GetComponent<ArmsScript>();
-		bagSlots = GameObject.FindGameObjectsWithTag("BagSlot");
-		
-		for (int i = 0; i < bagSlots.Length; i++)
+
+        bagSlots = new GameObject[12]; //initiates bagSlots array and fills it in order.
+        bagSlots[0] = GameObject.Find("BagSlot");
+        for (int i = 1; i < bagSlots.Length; i++)
+        {
+            bagSlots[i] = GameObject.Find("BagSlot ("+i+")");
+        }
+
+        handStartPos = GameObject.Find("RightArmDefaultPosition").transform.position;
+        handDefaultRot = GameObject.Find("RightArmDefaultPosition").transform.rotation;
+
+        for (int i = 0; i < bagSlots.Length; i++)
 		{
 			if (bagSlots[i] == null)
 			{
@@ -46,14 +55,16 @@ public class InventorySystem : MonoBehaviour {
 		
 		if (M3.HasRisen)
 		{
-			handStartPos = GameObject.Find("RightArmDefaultPosition").transform.position;
-            handDefaultRot = GameObject.Find("RightArmDefaultPosition").transform.rotation;
+			
 			
 			if (Input.GetButtonDown("PS4_Triangle") || Input.GetKeyDown(KeyCode.I))
 			{
 				hasBagOpen = !hasBagOpen;
-				
-				if (!hasBagOpen)
+
+                handStartPos = GameObject.Find("RightArmDefaultPosition").transform.position;
+                handDefaultRot = GameObject.Find("RightArmDefaultPosition").transform.rotation;
+
+                if (!hasBagOpen)
 				{
 					CloseBag();
 				}
@@ -74,13 +85,22 @@ public class InventorySystem : MonoBehaviour {
                 if (bagSlots[i].GetComponent<BagSlot>().HasOpenSpot == true)
                 {
                     obj.GetComponent<Pickable>().IsInInventory = true;
+                    obj.GetComponent<Pickable>().InvSpot = bagSlots[i].name;
                     obj.transform.parent = bagSlots[i].transform;
                     obj.transform.position = bagSlots[i].transform.position;
-                    obj.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+                    if (obj.tag == "Statue")
+                    {
+                        obj.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+                    }
+                    else
+                    {
+                        obj.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
+                    }
                     obj.layer = 0;
+                    playerObject.GetComponent<RayCast>().setStoredPickUpItem(null);
                     bagSlots[i].GetComponent<BagSlot>().HasOpenSpot = false;
                     arms.IsCarryingItem = false;
-                    storeSound.GetComponent<SECTR_PointSource>().Play();
+                    //storeSound.GetComponent<SECTR_PointSource>().Play();
                     break;
                 }
             }
@@ -105,7 +125,7 @@ public class InventorySystem : MonoBehaviour {
 		this.transform.position = heldBagpackSpace.transform.position;
 		this.transform.rotation = heldBagpackSpace.transform.rotation;
         arms.rightArm.transform.rotation = handDefaultRot;
-		openSound.GetComponent<SECTR_PointSource>().Play();
+		//openSound.GetComponent<SECTR_PointSource>().Play();
 	}
 	
 	public void CloseBag()
@@ -116,7 +136,7 @@ public class InventorySystem : MonoBehaviour {
         arms.rightArm.transform.rotation = handDefaultRot;
 		this.transform.position = equippedBagPackSpace.transform.position;
 		this.transform.rotation = equippedBagPackSpace.transform.rotation;
-		closeSound.GetComponent<SECTR_PointSource>().Play();
+		//closeSound.GetComponent<SECTR_PointSource>().Play();
 	}
 	
 	public bool HasBagOpen
