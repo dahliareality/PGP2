@@ -176,6 +176,10 @@ public class Step : MonoBehaviour {
 					WData[d8].GetComponent<AudioSource>().volume=1;
 					StartCoroutine(WPlayer());
 					break;
+				case "Room1Tablet":
+					ShutUp();
+					StartCoroutine(WPlayer());
+					break;
 				default:
 					isAnythingPlaying=false;
 					break;

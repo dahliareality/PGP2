@@ -60,7 +60,7 @@ public class Level1Door : MonoBehaviour {
 
         if (nowOpen && !soundHasPlayed)
         {
-            this.GetComponent<SECTR_PropagationSource>().Play();
+            //this.GetComponent<SECTR_PropagationSource>().Play();
             this.GetComponent<AudioSource>().PlayOneShot(doorSlide, 1.0f);
             soundHasPlayed = true;
         }

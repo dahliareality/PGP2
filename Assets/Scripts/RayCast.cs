@@ -46,9 +46,13 @@ public class RayCast : MonoBehaviour {
                         if (objectHit.collider.gameObject.GetComponent<Pickable>().CanPickUp && !arms.GetComponent<ArmsScript>().IsCarryingItem)
                         {
                             storedPickUpObject = objectHit.collider.gameObject;
+							if(storedPickUpObject.tag == "Statue"){
+								storedPickUpObject.GetComponent<SECTR_PropagationSource>().Stop(true);
+							}
                             arms.GetComponent<ArmsScript>().PickUpItem(storedPickUpObject);
                             arms.GetComponent<ArmsScript>().IsCarryingItem = true;
                             storedPickUpObject.GetComponent<Pickable>().CanPickUp = false;
+							GameObject.Find("PickUpSoundSource").GetComponent<SECTR_PointSource>().Play();
                         }
                     }
 
