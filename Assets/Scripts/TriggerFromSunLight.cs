@@ -30,7 +30,7 @@ public class TriggerFromSunLight : MonoBehaviour {
         if (rayHit.collider.gameObject.tag == "Sun"+i)
         {
 
-            Debug.Log("Sun" + i);
+//            Debug.Log("Sun" + i);
             if (sunOneActive == true)
             {
                 sunOneActive = false;

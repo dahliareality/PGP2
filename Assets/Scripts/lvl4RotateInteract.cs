@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿    using UnityEngine;
 using System.Collections;
 
 //Script used by objects that needs to be rotated by the player.
@@ -9,7 +9,7 @@ using System.Collections;
 //in raycast and change rotateInteract of the copy into lvl4rotateInteract
 public class lvl4RotateInteract : MonoBehaviour {
 
-    private float lookSensitivity = 1.2f;
+    private float lookSensitivity = 0.8f;
     private float yRotation;
     private float xRotation;
     private float yRotationV;

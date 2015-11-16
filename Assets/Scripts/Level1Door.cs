@@ -34,7 +34,7 @@ public class Level1Door : MonoBehaviour {
 
         if (!level1Object.GetComponent<Pickable>().CanPickUp && !exitObject.GetComponent<ExitPoint>().HasEntered)
         {
-			GameObject.Find ("StartupMusicCue").GetComponent<SECTR_PointSource>().Volume -= 0.002f;
+			//GameObject.Find ("StartupMusicCue").GetComponent<SECTR_PointSource>().Volume -= 0.002f;
             this.transform.position = Vector3.Lerp(this.transform.position, slideVector, 1.45f * Time.deltaTime);
 			nowOpen = true;
             puzzleSolved = true;

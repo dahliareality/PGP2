@@ -9,11 +9,13 @@ public class SwitchScript : MonoBehaviour
 {
 
     public bool isActive;
-    //public bool playSound;
+    public AudioClip leverSound;
 
     public GameObject[] objectsToActivate;
 
     private bool allowSendActivation = true;
+
+    private bool hasPlayed = false;
 
     void Update()
     {
@@ -21,19 +23,8 @@ public class SwitchScript : MonoBehaviour
         {
             transform.GetComponent<Renderer>().material.color = Color.red;
             activateObjects();
-            //playSound = true;
-
+            playSound();
         }
-        else
-        {
-            transform.GetComponent<Renderer>().material.color = Color.white;
-            //playSound = true;
-        }
-
-        //if (playSound) {
-        //	this.GetComponent<SECTR_PointSource>().Play();
-        //	playSound = false;
-        //}
     }
 
     void activateObjects()
@@ -49,4 +40,12 @@ public class SwitchScript : MonoBehaviour
         }
     }
 
+    void playSound()
+    {
+        if (!hasPlayed)
+        {
+            gameObject.GetComponent<AudioSource>().PlayOneShot(leverSound, 1.0f);
+            hasPlayed = true;
+        }
+    }
 }

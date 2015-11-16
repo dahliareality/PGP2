@@ -47,7 +47,7 @@ public class MoveInteract : MonoBehaviour {
         CardianlMoveClamp();
         if (!isMovingSoundPlaying)
         {
-            this.GetComponent<SECTR_PointSource>().Play();
+            //this.GetComponent<SECTR_PointSource>().Play();
             isMovingSoundPlaying = true;
         }
     }
