@@ -14,13 +14,13 @@ public class RayCast : MonoBehaviour {
     private LayerMask layerMask = 1 << 8;
     RaycastHit objectHit;
 
-    //private SequencePuzzle sqnPzl;
+    private SequencePuzzle sqnPzl;
     private int count = 0;
 
     void Start()
     {
         layerMask = ~layerMask;
-        //sqnPzl = GameObject.Find("Sequence Puzzle Controller").GetComponent<SequencePuzzle>();
+        sqnPzl = GameObject.Find("Cogwheel Puzzle").GetComponent<SequencePuzzle>();
         arms = GameObject.FindGameObjectWithTag("Arm");
         inventory = GameObject.FindGameObjectWithTag("Bagpack").GetComponent<InventorySystem>();
     }
@@ -67,10 +67,9 @@ public class RayCast : MonoBehaviour {
                     }
 
                     // Sequece puzzle
-                    else if (objectHit.collider.gameObject.tag == "Sequence Puzzle")
+                    else if (objectHit.collider.gameObject.tag == "Sequence Switch")
                     {
-                        //sqnPzl.inputSequence[count] = objectHit.collider.gameObject.GetComponent<SequenceNumber>().NumberForSequence;
-                        count++;
+                        moveNumber = objectHit.collider.gameObject.GetComponent<SequenceNumber>().NumberForSequence;
                     }
 
                     // Well
@@ -246,4 +245,11 @@ public class RayCast : MonoBehaviour {
         if (storedPickUpObject == null) storedPickUpObject = item;
         else if (item == null) storedPickUpObject = null;
 	}
+
+    private int moveNumber = 0;
+    public int sequenceButton
+    {
+        get { return moveNumber; }
+        set { moveNumber = value; }
+    }
 }

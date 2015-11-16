@@ -1,66 +1,79 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SequencePuzzle : MonoBehaviour {
+public class SequencePuzzle : MonoBehaviour
+{
 
     // This is the controller script for the Sequence puzzle.
     // It should be put onto an empty game object. Preferably you should make the interactable buttons, which the other script is attached to, children of this empty object.
 
-    private int[] correctSequence = { 3, 2, 2, 3, 1 }; // Change this accordenly for whished input sequence.
-    public int[] inputSequence = new int[5];
     private bool isCorrect;
 
     private RayCast rc;
+    private GameObject button;
 
-    void Start ()
+    public int count = 0;
+    public int countValue
     {
-        rc = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<RayCast>();
+        get { return count; }
+        set { count = value; }
     }
 
-	void Update () {
+    private GameObject gear1, gear2, gear3;
+    private GameObject top1, bot1;
+    private GameObject top2, bot2;
+    private GameObject top3, bot3;
 
-        //Debug.Log(inputSequence[0]+" "+inputSequence[1]+" "+inputSequence[2]+" "+inputSequence[3]+" "+inputSequence[4]);
+    void Start()
+    {
+        rc = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<RayCast>();
 
-        // Run this when both arrays are the same length
-        if (inputSequence != null)
+        gear1 = GameObject.Find("Cog 1");
+        gear2 = GameObject.Find("Cog 2");
+        gear3 = GameObject.Find("Cog 3");
+        // 3 points for left lane
+        top1 = GameObject.Find("Trigger 1 - Top");
+        bot1 = GameObject.Find("Trigger 1 - Bottom");
+        // 3 points for mid lane
+        top2 = GameObject.Find("Trigger 2 - Top");
+        bot2 = GameObject.Find("Trigger 2 - Bottom");
+        // 3 points for left lane
+        top3 = GameObject.Find("Trigger 3 - Top");
+        bot3 = GameObject.Find("Trigger 3 - Bottom");
+    }
+
+    void Update()
+    {
+        Debug.Log(count);
+
+        if (rc.sequenceButton == 1)
         {
-            if (rc.countValue == inputSequence.Length)
-            {
-                // Run for loop to check each individual element in the array
-                for (int i = 0; i < inputSequence.Length; i++)
-                {
-                    if (inputSequence[i] == correctSequence[i])
-                    {
-                        // Toggle bool to true
-                        isCorrect = true;
-                    }
-                    else
-                    {
-                        // Break loop if it's not correct, and toggle bool to false
-                        isCorrect = false;
-                        break;
-                    }
-                }
-                // After the loop, execute if statements to check the sequence
-                if (isCorrect)
-                {
-                    //Debug.Log("Success!");
-                    // Proper function here, for when the sequence is correct
-                }
-                else
-                {
-                    //Debug.Log("False!");
+            // Moves gear1 up, and gear2 up
+            //gear1.transform.position = Vector3.Lerp(gear1.transform.position, top1.transform.position, Time.deltaTime * 5);
+            //gear2.transform.position = Vector3.Lerp(gear2.transform.position, top2.transform.position, Time.deltaTime * 5);
 
-                    // Proper function here, for when the sequence is incorrect
-                    
-                    // Reset all array elements back to zero'
-                    for (int j = 0; j < inputSequence.Length; j++)
-                    {
-                        inputSequence[j] = 0;
-                    }
-                    rc.countValue = 0;
-                }
-            }
+            gear1.transform.position = Vector3.Lerp(gear1.transform.position, bot1.transform.position, Time.deltaTime * 5);
+        }
+        else if (rc.sequenceButton == 2)
+        {
+            // Moves gear1 down, and gear3 up
+            //gear1.transform.position = Vector3.Lerp(gear1.transform.position, bot1.transform.position, Time.deltaTime * 5);
+            //gear3.transform.position = Vector3.Lerp(gear3.transform.position, top3.transform.position, Time.deltaTime * 5);
+
+            gear2.transform.position = Vector3.Lerp(gear2.transform.position, bot2.transform.position, Time.deltaTime * 5);
+        }
+        else if (rc.sequenceButton == 3)
+        {
+            // Moves gear2 down, and gear3 down
+            //gear2.transform.position = Vector3.Lerp(gear2.transform.position, bot2.transform.position, Time.deltaTime * 5);
+            //gear3.transform.position = Vector3.Lerp(gear3.transform.position, bot3.transform.position, Time.deltaTime * 5);
+
+            gear3.transform.position = Vector3.Lerp(gear3.transform.position, bot3.transform.position, Time.deltaTime * 5);
+        }
+
+        if (count == 3)
+        {
+            Destroy(gameObject);
         }
     }
 }

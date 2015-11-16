@@ -6,14 +6,4 @@ using System.Collections;
 public class SequenceNumber : MonoBehaviour {
 
     public int NumberForSequence;
-
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 }
