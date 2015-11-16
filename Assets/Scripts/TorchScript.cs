@@ -10,15 +10,16 @@ public class TorchScript : MonoBehaviour
     public ParticleSystem smoke;
     public ParticleSystem embers;
     public Light lightLight;
+    public AudioClip flameOn;
 
     Activated activatedScript;
 
 
     void Start()
     {
-
         activatedScript = gameObject.GetComponent<Activated>();
         lightLight.enabled = false;
+        
     }
 
 
@@ -29,6 +30,8 @@ public class TorchScript : MonoBehaviour
         {
             lightUp();
             activatedScript.deActivate();
+            playSound();
+           
         }
 
 
@@ -41,6 +44,14 @@ public class TorchScript : MonoBehaviour
         smoke.Play();
         embers.Play();
         lightLight.enabled = true;
+    }
+
+    void playSound()
+    {
+        if (!gameObject.GetComponent<AudioSource>().isPlaying)
+        {
+            gameObject.GetComponent<AudioSource>().PlayOneShot(flameOn, 1.0f);
+        }
     }
 
 }
