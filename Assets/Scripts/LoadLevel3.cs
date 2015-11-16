@@ -22,10 +22,10 @@ public class LoadLevel3 : MonoBehaviour {
     void Update()
     {
 
-        if (giantDoor.puzzleDone == true)
-        {
-            level3Load = true;
-        }
+        //if (giantDoor.puzzleDone == true)
+        //{
+        //    level3Load = true;
+        //}
 
         if (level3Load == true)
         {

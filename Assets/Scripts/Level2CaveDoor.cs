@@ -42,8 +42,7 @@ public class Level2CaveDoor : MonoBehaviour
                 this.gameObject.GetComponent<Animation>().Play();
                 finished = true;
             }
-			//Sectr exterminatus
-			//this.gameObject.GetComponent<SECTR_PropagationSource>().Play();
+			this.gameObject.GetComponent<SECTR_PropagationSource>().Play();
 		}
 			
 

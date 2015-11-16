@@ -16,6 +16,8 @@ public class MoveInteract : MonoBehaviour {
     private Rigidbody rb;
 	private bool isMovingSoundPlaying;
 
+    public AudioClip pushSound;
+
 
     // Use this for initialization
     void Start ()
@@ -47,7 +49,7 @@ public class MoveInteract : MonoBehaviour {
         CardianlMoveClamp();
         if (!isMovingSoundPlaying)
         {
-            //this.GetComponent<SECTR_PointSource>().Play();
+            this.GetComponent<AudioSource>().PlayOneShot(pushSound, 1.0f);
             isMovingSoundPlaying = true;
         }
     }
@@ -59,7 +61,7 @@ public class MoveInteract : MonoBehaviour {
         player.GetComponent<Movement3D>().SetPlayerSpeed(playerSpeed);
         transform.parent = null;
 		isMovingSoundPlaying = false;
-		this.GetComponent<SECTR_PointSource> ().Stop (true);
+        this.GetComponent<AudioSource>().Stop();
     }
 
     //Limits the diagonal velocity of the object

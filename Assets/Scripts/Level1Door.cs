@@ -18,6 +18,8 @@ public class Level1Door : MonoBehaviour {
     public bool puzzleSolved;
     private int doorClosesHopefully;
 
+    public AudioClip doorSlide;
+
 	void Start () {
 
         if (level1Object.GetComponent<Pickable>() == null)
@@ -35,17 +37,18 @@ public class Level1Door : MonoBehaviour {
         if (!level1Object.GetComponent<Pickable>().CanPickUp && !exitObject.GetComponent<ExitPoint>().HasEntered)
         {
 			//GameObject.Find ("StartupMusicCue").GetComponent<SECTR_PointSource>().Volume -= 0.002f;
-            this.transform.position = Vector3.Lerp(this.transform.position, slideVector, 1.45f * Time.deltaTime);
+            this.transform.position = Vector3.Lerp(this.transform.position, slideVector, 0.52f * Time.deltaTime);
 			nowOpen = true;
             puzzleSolved = true;
         }
         else if (exitObject.GetComponent<ExitPoint>().HasEntered)
         {
-            this.transform.position = Vector3.Lerp(this.transform.position, startVector, 1.45f * Time.deltaTime);
+            this.transform.position = Vector3.Lerp(this.transform.position, startVector, 0.52f * Time.deltaTime);
             nowOpen = false;
 			if(!doorHasClosedAgain){
-				//Sectr exterminatus
-				//this.GetComponent<SECTR_PropagationSource>().Play();
+                //Sectr exterminatus
+                //this.GetComponent<SECTR_PropagationSource>().Play();
+                this.GetComponent<AudioSource>().PlayOneShot(doorSlide, 1.0f);
 				doorHasClosedAgain = true;
             }
         }
@@ -57,8 +60,8 @@ public class Level1Door : MonoBehaviour {
 
         if (nowOpen && !soundHasPlayed)
         {
-			//Sectr exterminatus
-			//this.GetComponent<SECTR_PropagationSource>().Play();
+            this.GetComponent<SECTR_PropagationSource>().Play();
+            this.GetComponent<AudioSource>().PlayOneShot(doorSlide, 1.0f);
             soundHasPlayed = true;
         }
         
