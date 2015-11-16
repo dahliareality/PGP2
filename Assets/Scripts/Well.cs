@@ -5,8 +5,8 @@ public class Well : MonoBehaviour {
 
     // Put this script on a well, that will be used to spawn an item
 
-    public GameObject spawnObject;
-    public Transform spawnPos;
+    //public GameObject spawnObject;
+    //public Transform spawnPos;
     private bool hasSpawned = false;
     private bool finished;
     public GameObject basket;
@@ -14,7 +14,7 @@ public class Well : MonoBehaviour {
 	void Start () {
         GameObject.Find("Lv2_Statue_BlackTurtle").GetComponent<Renderer>().enabled = false;
         GameObject.Find("Lv2_Statue_BlackTurtle").GetComponent<Collider>().enabled = false;
-        spawnObject.transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
+        //spawnObject.transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
     }
 	
 	public void SpawnObject()
