@@ -23,6 +23,7 @@ public class SequencePuzzle : MonoBehaviour
     private GameObject button;
 
     public int count = 0;
+	private float delayCount;
     public int countValue
     {
         get { return count; }
@@ -38,7 +39,7 @@ public class SequencePuzzle : MonoBehaviour
 
     void Start()
     {
-        spawnObject.SetActive(true);
+        spawnObject.SetActive(false);
         rc = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<RayCast>();
         rc.SqnPzl = GameObject.Find("Cogwheel Puzzle").GetComponent<SequencePuzzle>();
         GameObject.Find("DragonEye1").GetComponent<Light>().intensity = 0.0f;
@@ -108,7 +109,10 @@ public class SequencePuzzle : MonoBehaviour
             }
             if (cog1correcet && cog2correcet && cog3correcet)
             {
-                isCorrect = true;
+				delayCount += Time.deltaTime;
+				if(delayCount >= 3f){
+					isCorrect = true;
+				}
             }
         }
 

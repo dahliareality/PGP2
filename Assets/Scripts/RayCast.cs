@@ -9,6 +9,7 @@ public class RayCast : MonoBehaviour {
     private GameObject arms;
 	public GameObject storedPickUpObject = null;
     private InventorySystem inventory;
+	private GameObject grabbedStatue;
 
     private float distance = 3f;
     private LayerMask layerMask = 1 << 8;
@@ -115,7 +116,10 @@ public class RayCast : MonoBehaviour {
                     {
                         if (!objectHit.collider.gameObject.GetComponent<StatueCheck>().isEmpty())
                         {
+							grabbedStatue = objectHit.collider.gameObject.GetComponent<StatueCheck>().getCurrentStatue();
+							grabbedStatue.GetComponent<SECTR_PropagationSource>().Stop(true);
                             objectHit.collider.gameObject.GetComponent<StatueCheck>().removeStatue();
+							GameObject.Find ("PickUpSoundSource").GetComponent<SECTR_PointSource>().Play();
                         }
                     }
                     
