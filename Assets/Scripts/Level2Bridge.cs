@@ -10,7 +10,7 @@ public class Level2Bridge : MonoBehaviour
     public int correctStatues = 0;
     public bool puzzleDone = false;
 
-    private Vector3 slideVector;
+   // private Vector3 slideVector;
     private Vector3 startVector;
     private bool nowOpen = false;
     private bool soundHasPlayed = false;
@@ -28,8 +28,8 @@ public class Level2Bridge : MonoBehaviour
             Debug.Log("Pickable.cs is missing in the GameObject!");
         }
 
-        slideVector = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z + 5f);
-        startVector = this.transform.position;
+      /*  slideVector = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z + 5f);
+        startVector = this.transform.position;*/
     }
 
 
