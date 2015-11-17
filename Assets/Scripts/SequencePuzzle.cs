@@ -51,8 +51,10 @@ public class SequencePuzzle : MonoBehaviour
             // Moves gear1 up, and gear2 up
             //gear1.transform.position = Vector3.Lerp(gear1.transform.position, top1.transform.position, Time.deltaTime * 5);
             //gear2.transform.position = Vector3.Lerp(gear2.transform.position, top2.transform.position, Time.deltaTime * 5);
+			gear1.transform.position = Vector3.Lerp(gear1.transform.position, bot1.transform.position, Time.deltaTime * 5);
+            GameObject.Find("Chinese Gong").GetComponent<SECTR_PointSource>().Play();
 
-            gear1.transform.position = Vector3.Lerp(gear1.transform.position, bot1.transform.position, Time.deltaTime * 5);
+
         }
         else if (rc.sequenceButton == 2)
         {
@@ -61,6 +63,8 @@ public class SequencePuzzle : MonoBehaviour
             //gear3.transform.position = Vector3.Lerp(gear3.transform.position, top3.transform.position, Time.deltaTime * 5);
 
             gear2.transform.position = Vector3.Lerp(gear2.transform.position, bot2.transform.position, Time.deltaTime * 5);
+			GameObject.Find("Chinese Bell").GetComponent<SECTR_PointSource>().Play();
+
         }
         else if (rc.sequenceButton == 3)
         {
@@ -69,6 +73,8 @@ public class SequencePuzzle : MonoBehaviour
             //gear3.transform.position = Vector3.Lerp(gear3.transform.position, bot3.transform.position, Time.deltaTime * 5);
 
             gear3.transform.position = Vector3.Lerp(gear3.transform.position, bot3.transform.position, Time.deltaTime * 5);
+			GameObject.Find("Chinese Windchime").GetComponent<SECTR_PointSource>().Play();
+
         }
 
         if (count == 3)
