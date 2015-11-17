@@ -25,7 +25,7 @@ public class Step : MonoBehaviour {
 	private InputRound god;
 	private GameObject[] RData, MData, AData, SData, PData, KData, WData;
 	private int d8, d8old;
-	public Texture2D kenny;
+	//public Texture2D kenny;
 
 	void Start () {
 		god = GameObject.Find ("InputRound").GetComponent<InputRound> ();
@@ -94,11 +94,11 @@ public class Step : MonoBehaviour {
 		WData[7] = GameObject.Find ("W8");
 
 	}
-	void OnGUI(){
-		if (isAnythingPlaying) {
-			GUI.DrawTexture (new Rect(0,0, Screen.width/10, Screen.height/10), kenny);
-		}
-	}
+    //void OnGUI(){
+    //    if (isAnythingPlaying) {
+    //        GUI.DrawTexture (new Rect(0,0, Screen.width/10, Screen.height/10), kenny);
+    //    }
+    //}
 	void Update () {
 
 		//Checks if player is walking

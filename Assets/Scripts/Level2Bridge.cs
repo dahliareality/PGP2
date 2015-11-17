@@ -18,6 +18,7 @@ public class Level2Bridge : MonoBehaviour
 
     public GameObject Bridge1;
     public GameObject Bridge2;
+    public GameObject invisWall;
     private bool finished;
 
     void Start()
@@ -45,6 +46,10 @@ public class Level2Bridge : MonoBehaviour
                 Bridge1.GetComponent<Animation>().Play();
                 Bridge2.GetComponent<Animation>().Play();
                 finished = true;
+            }
+            if (finished)
+            {
+                Destroy(invisWall);
             }
 			this.gameObject.GetComponent<SECTR_PropagationSource>().Play();
         }

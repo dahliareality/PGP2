@@ -27,6 +27,7 @@ GameObject:
   - 33: {fileID: 3365534}
   - 23: {fileID: 2326534}
   - 95: {fileID: 9543734}
+  - 64: {fileID: 6450772}
   m_Layer: 0
   m_Name: Metal Brazier
   m_TagString: Untagged
@@ -44,6 +45,7 @@ GameObject:
   - 4: {fileID: 401596}
   - 198: {fileID: 19889708}
   - 199: {fileID: 19948336}
+  - 114: {fileID: 11405774}
   m_Layer: 0
   m_Name: FlameLarge
   m_TagString: Untagged
@@ -131,7 +133,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 155878}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.24868011, y: -80.2489929, z: 33.9899902}
+  m_LocalPosition: {x: 32.6604385, y: -79.8600006, z: 58.9799805}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 401596}
@@ -179,6 +181,18 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 155878}
+  m_Mesh: {fileID: 4300000, guid: 501b2051542c29840b1df2d409cd7dc1, type: 3}
+--- !u!64 &6450772
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 155878}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: 501b2051542c29840b1df2d409cd7dc1, type: 3}
 --- !u!95 &9543734
 Animator:
@@ -229,6 +243,22 @@ Light:
   m_ShadowRadius: 0
   m_ShadowAngle: 0
   m_AreaSize: {x: 1, y: 1}
+--- !u!114 &11405774
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 165688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6f20b8b60dbb1046b21f167d1303601, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volume: .528999984
+  pitch: 1
+  Cue: {fileID: 11400000, guid: b051b0c68b9ea1d448da46a4364d3325, type: 2}
+  Loop: 1
+  PlayOnStart: 1
 --- !u!198 &19854942
 ParticleSystem:
   m_ObjectHideFlags: 1

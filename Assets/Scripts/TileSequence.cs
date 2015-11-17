@@ -33,12 +33,13 @@ public class TileSequence : MonoBehaviour {
         if (other.tag == "Player")
         {
             transform.position = new Vector3(transform.position.x, transform.position.y - 0.05f, transform.position.z);
+            this.gameObject.GetComponent<SECTR_PointSource>().Play();
 
             // Prevent the player from stepping on the same tile again before the puzzle has been reset
             if (!steppedOnTile && !tilPzl.isCorrect)
             {
                 steppedOnTile = true;
-                this.gameObject.GetComponent<SECTR_PointSource>().Play();
+                
                 // Check if the player steps on the correct tile, then insert the number into the sequence
                 // if it's not the correct tile, then reset the sequence
                 if (trueTile)
@@ -60,6 +61,7 @@ public class TileSequence : MonoBehaviour {
         if (other.tag == "Player")
         {
             transform.position = new Vector3(transform.position.x, transform.position.y + 0.05f, transform.position.z);
+            // Put up sound here, when player leaves the tile
         }
     }
 }
