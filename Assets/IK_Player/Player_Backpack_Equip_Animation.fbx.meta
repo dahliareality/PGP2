@@ -1,19 +1,66 @@
 fileFormatVersion: 2
-guid: 87d74bfb08b0cd1429f2b890306692c8
-timeCreated: 1430832886
-licenseType: Store
+guid: 83de8d55f41c095478ad33c5749c8a49
+timeCreated: 1447775233
+licenseType: Free
 ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
-    100000: Pebble
-    100002: //RootNode
-    400000: Pebble
-    400002: //RootNode
-    2300000: Pebble
-    3300000: Pebble
-    4300000: Pebble
+    100000: BackpackLid
+    100002: BackpackMovement
+    100004: BackpackSourceLeft
+    100006: BackpackSourceRight
+    100008: joint10
+    100010: joint10 1
+    100012: joint11
+    100014: joint11 1
+    100016: joint2
+    100018: joint3
+    100020: joint4
+    100022: joint5
+    100024: joint6
+    100026: joint7
+    100028: joint9
+    100030: joint9 1
+    100032: Left
+    100034: Lid
+    100036: Pack1
+    100038: Placeholder
+    100040: //RootNode
+    100042: Right
+    400000: BackpackLid
+    400002: BackpackMovement
+    400004: BackpackSourceLeft
+    400006: BackpackSourceRight
+    400008: joint10
+    400010: joint10 1
+    400012: joint11
+    400014: joint11 1
+    400016: joint2
+    400018: joint3
+    400020: joint4
+    400022: joint5
+    400024: joint6
+    400026: joint7
+    400028: joint9
+    400030: joint9 1
+    400032: Left
+    400034: Lid
+    400036: Pack1
+    400038: Placeholder
+    400040: //RootNode
+    400042: Right
+    4300000: Lid
+    4300002: Right
+    4300004: Left
+    4300006: Pack1
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Left
+    13700002: Lid
+    13700004: Pack1
+    13700006: Right
   materials:
-    importMaterials: 0
+    importMaterials: 1
     materialName: 0
     materialSearch: 1
   animations:
@@ -35,12 +82,12 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: .00999999978
-    meshCompression: 3
+    globalScale: 1
+    meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
@@ -70,7 +117,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
