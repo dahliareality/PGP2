@@ -24,9 +24,13 @@ public class SequencePuzzle : MonoBehaviour
     private GameObject top2, bot2;
     private GameObject top3, bot3;
 
+    public GameObject spawnObject;
+
     void Start()
     {
+        spawnObject.GetComponent<Renderer>().enabled = false;
         rc = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<RayCast>();
+        rc.SqnPzl = GameObject.Find("Cogwheel Puzzle").GetComponent<SequencePuzzle>();
 
         gear1 = GameObject.Find("Cog 1");
         gear2 = GameObject.Find("Cog 2");
@@ -45,35 +49,46 @@ public class SequencePuzzle : MonoBehaviour
     void Update()
     {
         Debug.Log(count);
-
-        if (rc.sequenceButton == 1)
+        if (!isCorrect)
         {
-            // Moves gear1 up, and gear2 up
-            //gear1.transform.position = Vector3.Lerp(gear1.transform.position, top1.transform.position, Time.deltaTime * 5);
-            //gear2.transform.position = Vector3.Lerp(gear2.transform.position, top2.transform.position, Time.deltaTime * 5);
+            if (rc.sequenceButton == 1)
+            {
+                // Moves gear1 up, and gear2 up
+                gear1.transform.position = Vector3.Lerp(gear1.transform.position, top1.transform.position, Time.deltaTime * 5);
+                gear2.transform.position = Vector3.Lerp(gear2.transform.position, top2.transform.position, Time.deltaTime * 5);
 
-            gear1.transform.position = Vector3.Lerp(gear1.transform.position, bot1.transform.position, Time.deltaTime * 5);
+                GameObject.Find("Chinese Gong").GetComponent<SECTR_PointSource>().Play();
+
+
+            }
+            else if (rc.sequenceButton == 2)
+            {
+                // Moves gear1 down, and gear3 up
+                gear1.transform.position = Vector3.Lerp(gear1.transform.position, bot1.transform.position, Time.deltaTime * 5);
+                gear3.transform.position = Vector3.Lerp(gear3.transform.position, top3.transform.position, Time.deltaTime * 5);
+
+                GameObject.Find("Chinese Bell").GetComponent<SECTR_PointSource>().Play();
+
+            }
+            else if (rc.sequenceButton == 3)
+            {
+                // Moves gear2 down, and gear3 down
+                gear2.transform.position = Vector3.Lerp(gear2.transform.position, bot2.transform.position, Time.deltaTime * 5);
+                gear3.transform.position = Vector3.Lerp(gear3.transform.position, bot3.transform.position, Time.deltaTime * 5);
+
+                GameObject.Find("Chinese Windchime").GetComponent<SECTR_PointSource>().Play();
+
+            }
+            if (gear1.transform.position == bot1.transform.position && gear2.transform.position == bot2.transform.position && gear3.transform.position == bot3.transform.position)
+            {
+                isCorrect = true;
+            }
         }
-        else if (rc.sequenceButton == 2)
-        {
-            // Moves gear1 down, and gear3 up
-            //gear1.transform.position = Vector3.Lerp(gear1.transform.position, bot1.transform.position, Time.deltaTime * 5);
-            //gear3.transform.position = Vector3.Lerp(gear3.transform.position, top3.transform.position, Time.deltaTime * 5);
 
-            gear2.transform.position = Vector3.Lerp(gear2.transform.position, bot2.transform.position, Time.deltaTime * 5);
-        }
-        else if (rc.sequenceButton == 3)
+        if (isCorrect)
         {
-            // Moves gear2 down, and gear3 down
-            //gear2.transform.position = Vector3.Lerp(gear2.transform.position, bot2.transform.position, Time.deltaTime * 5);
-            //gear3.transform.position = Vector3.Lerp(gear3.transform.position, bot3.transform.position, Time.deltaTime * 5);
-
-            gear3.transform.position = Vector3.Lerp(gear3.transform.position, bot3.transform.position, Time.deltaTime * 5);
-        }
-
-        if (count == 3)
-        {
-            Destroy(gameObject);
+            Debug.Log("Done!");
+            spawnObject.GetComponent<Renderer>().enabled = true;
         }
     }
 }

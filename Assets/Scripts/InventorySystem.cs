@@ -18,7 +18,7 @@ public class InventorySystem : MonoBehaviour {
 	private GameObject equippedBagPackSpace;
 	
 	private bool hasBagOpen = false;
-	private GameObject openSound, closeSound, retreiveSound, storeSound;
+	private GameObject openSound, closeSound,/* retreiveSound,*/ storeSound;
 	
 	void Start () {
 		equippedBagPackSpace = GameObject.Find("Equipped Bagpack Space");
@@ -46,7 +46,7 @@ public class InventorySystem : MonoBehaviour {
 		}
 		openSound = GameObject.Find ("BackpackOpenSound");
 		closeSound = GameObject.Find ("BackpackCloseSound");
-		retreiveSound = GameObject.Find ("BackpackRetreiveItemSound");
+		//retreiveSound = GameObject.Find ("BackpackRetreiveItemSound");
 		storeSound = GameObject.Find ("BackpackStoreItemSound");
 		
 	}

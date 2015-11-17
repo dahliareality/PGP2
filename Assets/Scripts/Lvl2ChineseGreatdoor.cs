@@ -16,7 +16,8 @@ public class Lvl2ChineseGreatdoor : MonoBehaviour {
 	void Update () {
 		if (keyFrags == 2)
         {
-            Destroy (gameObject);
+            //Destroy (gameObject);
+            GameObject.Find("lvl2_Chinese_Greatdoor_(Optional)").GetComponent<Collider>().enabled = false;
             
             /*if (!finished)
             {
