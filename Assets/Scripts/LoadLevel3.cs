@@ -8,24 +8,20 @@ public class LoadLevel3 : MonoBehaviour {
     private bool level3Load;
     private Level3Prep prepare3;
 
-    // Use this for initialization
     void Start()
     {
-
         giantDoor = GameObject.Find("lvl2_Chinese_Gate").GetComponent<Level2CaveDoor>();
         prepare3 = GameObject.Find("Level3Loader").GetComponent<Level3Prep>();
         prepare3.StartLoading();
-
     }
 
-    // Update is called once per frame
     void Update()
     {
 
-        //if (giantDoor.puzzleDone == true)
-        //{
-        //    level3Load = true;
-        //}
+        if (giantDoor.puzzleDone == true)
+        {
+            level3Load = true;
+        }
 
         if (level3Load == true)
         {

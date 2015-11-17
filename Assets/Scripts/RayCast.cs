@@ -10,7 +10,7 @@ public class RayCast : MonoBehaviour {
 	public GameObject storedPickUpObject = null;
     private InventorySystem inventory;
 
-    private float distance = 4f;
+    private float distance = 3f;
     private LayerMask layerMask = 1 << 8;
     RaycastHit objectHit;
 
