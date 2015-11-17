@@ -141,6 +141,10 @@ public class ArmsScript : MonoBehaviour {
         obj.transform.position = objectSpaceInHand.transform.position;
         obj.transform.rotation = objectSpaceInHand.transform.rotation;
 		obj.layer = 2;
+        if (obj.tag == "Coin")
+        {
+            obj.transform.localScale = new Vector3(5.0f, 5.0f, 5.0f);
+        }
         playerObject.GetComponent<RayCast>().setStoredPickUpItem(obj);
         if (obj.GetComponent<Rigidbody>() != null)
         {
