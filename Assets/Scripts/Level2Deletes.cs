@@ -13,7 +13,7 @@ public class Level2Deletes : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if (GameObject.Find("L2L4").GetComponent<ExitPoint>().HasEntered)
+        if (GameObject.Find("L2Deleter").GetComponent<ExitPoint>().HasEntered)
         {
             Destroy(GameObject.Find("1 to 2 transition"));
             Destroy(GameObject.Find("Entire level 2"));
