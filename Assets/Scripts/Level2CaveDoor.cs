@@ -60,7 +60,7 @@ public class Level2CaveDoor : MonoBehaviour
 
         if (nowOpen && !soundHasPlayed)
         {
-            //this.GetComponent<SECTR_PropagationSource>().Play();
+            //this.GetComponent<SECTR_PointSource>().Play();
             soundHasPlayed = true;
         }
     }
