@@ -54,6 +54,7 @@ public class TilePuzzle : MonoBehaviour {
                 if (isCorrect)
                 {
                     tilePuzzleSolved = true;
+					Debug.Log ("Tile is solved, asshole");
                 }
                 else
                 {

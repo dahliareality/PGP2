@@ -64,6 +64,7 @@ public class TriggerFromSunLight : MonoBehaviour {
             {
 
                 /*GetComponent<Level3GateController>().*/sunPuzzleSolved = true;
+				Debug.Log("Sun is all good yo");
             }
             /*Debug.Log(i);
             Debug.Log(sunOneActive);
