@@ -169,7 +169,7 @@ public class SECTR_Door : MonoBehaviour
 		{
 			Portal.SetFlag(SECTR_Portal.PortalFlags.Closed, IsClosed());
 		}
-	}
+	}*/
 
 	protected virtual void OnTriggerEnter(Collider other)
 	{

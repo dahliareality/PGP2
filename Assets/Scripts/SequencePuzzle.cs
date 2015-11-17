@@ -9,6 +9,10 @@ public class SequencePuzzle : MonoBehaviour
 
     private bool isCorrect;
 
+	private bool gongHasPlayed;
+	private bool bellHasPlayed;
+	private bool chimesHasPlayed;
+
     private RayCast rc;
     private GameObject button;
 
@@ -48,7 +52,7 @@ public class SequencePuzzle : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(count);
+        //Debug.Log(count);
         if (!isCorrect)
         {
             if (rc.sequenceButton == 1)
@@ -57,9 +61,6 @@ public class SequencePuzzle : MonoBehaviour
                 gear1.transform.position = Vector3.Lerp(gear1.transform.position, top1.transform.position, Time.deltaTime * 5);
                 gear2.transform.position = Vector3.Lerp(gear2.transform.position, top2.transform.position, Time.deltaTime * 5);
 
-                GameObject.Find("Chinese Gong").GetComponent<SECTR_PointSource>().Play();
-
-
             }
             else if (rc.sequenceButton == 2)
             {
@@ -67,7 +68,6 @@ public class SequencePuzzle : MonoBehaviour
                 gear1.transform.position = Vector3.Lerp(gear1.transform.position, bot1.transform.position, Time.deltaTime * 5);
                 gear3.transform.position = Vector3.Lerp(gear3.transform.position, top3.transform.position, Time.deltaTime * 5);
 
-                GameObject.Find("Chinese Bell").GetComponent<SECTR_PointSource>().Play();
 
             }
             else if (rc.sequenceButton == 3)
@@ -76,7 +76,6 @@ public class SequencePuzzle : MonoBehaviour
                 gear2.transform.position = Vector3.Lerp(gear2.transform.position, bot2.transform.position, Time.deltaTime * 5);
                 gear3.transform.position = Vector3.Lerp(gear3.transform.position, bot3.transform.position, Time.deltaTime * 5);
 
-                GameObject.Find("Chinese Windchime").GetComponent<SECTR_PointSource>().Play();
 
             }
             if (gear1.transform.position == bot1.transform.position && gear2.transform.position == bot2.transform.position && gear3.transform.position == bot3.transform.position)
@@ -87,7 +86,7 @@ public class SequencePuzzle : MonoBehaviour
 
         if (isCorrect)
         {
-            Debug.Log("Done!");
+            //Debug.Log("Done!");
             spawnObject.GetComponent<Renderer>().enabled = true;
         }
     }

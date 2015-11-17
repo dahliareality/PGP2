@@ -66,10 +66,11 @@ public class RayCast : MonoBehaviour {
                         objectHit.collider.gameObject.GetComponent<SwitchScript>().isActive = !objectHit.collider.gameObject.GetComponent<SwitchScript>().isActive;
                     }
 
-                    // Sequece puzzle
+                    // Sequence puzzle
                     else if (objectHit.collider.gameObject.tag == "Sequence Switch")
                     {
                         moveNumber = objectHit.collider.gameObject.GetComponent<SequenceNumber>().NumberForSequence;
+						objectHit.collider.gameObject.GetComponent<SECTR_PointSource>().Play();
                     }
 
                     // Well

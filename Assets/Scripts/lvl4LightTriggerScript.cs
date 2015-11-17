@@ -10,7 +10,7 @@ public class lvl4LightTriggerScript : MonoBehaviour
 
     private bool inTrigger;
     public bool isLite;
-	public bool simulateIsLIt = false;
+	public bool simulateIsLit = false;
     public GameObject movingObj;
     public Transform endPos;
 	public Material litMaterial;
@@ -26,7 +26,7 @@ public class lvl4LightTriggerScript : MonoBehaviour
     void Update()
     {
 
-		if (simulateIsLIt)
+		if (simulateIsLit)
 			isLite = true;
 
 		if (isLite && GetComponent<Renderer> ().material != litMaterial)
