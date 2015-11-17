@@ -116,7 +116,7 @@ public class SECTR_Door : MonoBehaviour
 		SendMessage("OnClose", SendMessageOptions.DontRequireReceiver);
 	}
 	
-	void Update()
+	/*void Update()
 	{
 		bool canOpen = CanOpen();
 		if(canOpenParam != 0)
@@ -169,7 +169,7 @@ public class SECTR_Door : MonoBehaviour
 		{
 			Portal.SetFlag(SECTR_Portal.PortalFlags.Closed, IsClosed());
 		}
-	}
+	}*/
 
 	protected virtual void OnTriggerEnter(Collider other)
 	{

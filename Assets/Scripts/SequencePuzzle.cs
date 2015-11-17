@@ -48,7 +48,7 @@ public class SequencePuzzle : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(count);
+        //Debug.Log(count);
         if (!isCorrect)
         {
             if (rc.sequenceButton == 1)
@@ -87,7 +87,7 @@ public class SequencePuzzle : MonoBehaviour
 
         if (isCorrect)
         {
-            Debug.Log("Done!");
+            //Debug.Log("Done!");
             spawnObject.GetComponent<Renderer>().enabled = true;
         }
     }
