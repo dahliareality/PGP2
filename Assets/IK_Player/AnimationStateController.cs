@@ -36,6 +36,17 @@ public class AnimationStateController : MonoBehaviour {
 			walkForwards = Input.GetKey(KeyCode.W);
 			walkBackwards = Input.GetKey(KeyCode.S);
 
+			if (Input.GetAxis("Vertical") > 0.1f)
+			{
+				walkForwards = true;
+				walkBackwards = false;
+			}
+			else if (Input.GetAxis("Vertical") < -0.1f)
+			{
+				walkForwards = false;
+				walkBackwards = true;
+			}
+
 			if(Input.GetKeyDown(KeyCode.I))
 			{
 				if (!equippedInventory)

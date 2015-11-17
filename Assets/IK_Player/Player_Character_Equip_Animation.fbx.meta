@@ -137,6 +137,7 @@ ModelImporter:
     400128: Torso
     4300000: Player_Character
     7400000: BackpackEquip
+    7400002: BackPackUnEquip
     9500000: //RootNode
     13700000: Player_Character
   materials:
@@ -166,7 +167,163 @@ ModelImporter:
       name: BackpackEquip
       takeName: Take 001
       firstFrame: 1
-      lastFrame: 30
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Player_Character
+        weight: 0
+      - path: PlayerSkeleton
+        weight: 1
+      - path: PlayerSkeleton/Back
+        weight: 1
+      - path: PlayerSkeleton/Back/Torso
+        weight: 1
+      - path: PlayerSkeleton/Back/Torso/LeftPec
+        weight: 1
+      - path: PlayerSkeleton/Back/Torso/LeftPec/LeftShoulder
+        weight: 1
+      - path: PlayerSkeleton/Back/Torso/LeftPec/LeftShoulder/LeftElbow
+        weight: 1
+      - path: PlayerSkeleton/Back/Torso/LeftPec/LeftShoulder/LeftElbow/LeftHand
+        weight: 1
+      - path: PlayerSkeleton/Back/Torso/LeftPec/LeftShoulder/LeftElbow/LeftHand/LeftIndex
+        weight: 1
+      - path: PlayerSkeleton/Back/Torso/LeftPec/LeftShoulder/LeftElbow/LeftHand/LeftIndex/joint29
+        weight: 1
+      - path: PlayerSkeleton/Back/Torso/LeftPec/LeftShoulder/LeftElbow/LeftHand/LeftIndex/joint29/joint30
+        weight: 1
+      - path: PlayerSkeleton/Back/Torso/LeftPec/LeftShoulder/LeftElbow/LeftHand/LeftIndex/joint29/joint30/joint31
+        weight: 0
+      - path: PlayerSkeleton/Back/Torso/LeftPec/LeftShoulder/LeftElbow/LeftHand/LeftMiddle
+        weight: 1
+      - path: PlayerSkeleton/Back/Torso/LeftPec/LeftShoulder/LeftElbow/LeftHand/LeftMiddle/joint25
+        weight: 1
+      - path: PlayerSkeleton/Back/Torso/LeftPec/LeftShoulder/LeftElbow/LeftHand/LeftMiddle/joint25/joint26
+        weight: 1
+      - path: PlayerSkeleton/Back/Torso/LeftPec/LeftShoulder/LeftElbow/LeftHand/LeftMiddle/joint25/joint26/joint27
+        weight: 0
+      - path: PlayerSkeleton/Back/Torso/LeftPec/LeftShoulder/LeftElbow/LeftHand/LeftPinky
+        weight: 1
+      - path: PlayerSkeleton/Back/Torso/LeftPec/LeftShoulder/LeftElbow/LeftHand/LeftPinky/joint41
+        weight: 1
+      - path: PlayerSkeleton/Back/Torso/LeftPec/LeftShoulder/LeftElbow/LeftHand/LeftPinky/joint41/joint42
+        weight: 1
+      - path: PlayerSkeleton/Back/Torso/LeftPec/LeftShoulder/LeftElbow/LeftHand/LeftPinky/joint41/joint42/joint43
+        weight: 0
+      - path: PlayerSkeleton/Back/Torso/LeftPec/LeftShoulder/LeftElbow/LeftHand/LeftRing
+        weight: 1
+      - path: PlayerSkeleton/Back/Torso/LeftPec/LeftShoulder/LeftElbow/LeftHand/LeftRing/joint37
+        weight: 1
+      - path: PlayerSkeleton/Back/Torso/LeftPec/LeftShoulder/LeftElbow/LeftHand/LeftRing/joint37/joint38
+        weight: 1
+      - path: PlayerSkeleton/Back/Torso/LeftPec/LeftShoulder/LeftElbow/LeftHand/LeftRing/joint37/joint38/joint39
+        weight: 0
+      - path: PlayerSkeleton/Back/Torso/LeftPec/LeftShoulder/LeftElbow/LeftHand/LeftThumb
+        weight: 1
+      - path: PlayerSkeleton/Back/Torso/LeftPec/LeftShoulder/LeftElbow/LeftHand/LeftThumb/joint33
+        weight: 1
+      - path: PlayerSkeleton/Back/Torso/LeftPec/LeftShoulder/LeftElbow/LeftHand/LeftThumb/joint33/joint34
+        weight: 1
+      - path: PlayerSkeleton/Back/Torso/LeftPec/LeftShoulder/LeftElbow/LeftHand/LeftThumb/joint33/joint34/joint35
+        weight: 0
+      - path: PlayerSkeleton/Back/Torso/Neck
+        weight: 1
+      - path: PlayerSkeleton/Back/Torso/Neck/Head
+        weight: 1
+      - path: PlayerSkeleton/Back/Torso/RightPec
+        weight: 1
+      - path: PlayerSkeleton/Back/Torso/RightPec/RightShoulder
+        weight: 1
+      - path: PlayerSkeleton/Back/Torso/RightPec/RightShoulder/RightElbow
+        weight: 1
+      - path: PlayerSkeleton/Back/Torso/RightPec/RightShoulder/RightElbow/RightHand
+        weight: 1
+      - path: PlayerSkeleton/Back/Torso/RightPec/RightShoulder/RightElbow/RightHand/RightIndex
+        weight: 1
+      - path: PlayerSkeleton/Back/Torso/RightPec/RightShoulder/RightElbow/RightHand/RightIndex/joint47
+        weight: 1
+      - path: PlayerSkeleton/Back/Torso/RightPec/RightShoulder/RightElbow/RightHand/RightIndex/joint47/joint48
+        weight: 1
+      - path: PlayerSkeleton/Back/Torso/RightPec/RightShoulder/RightElbow/RightHand/RightIndex/joint47/joint48/joint49
+        weight: 0
+      - path: PlayerSkeleton/Back/Torso/RightPec/RightShoulder/RightElbow/RightHand/RightMiddle
+        weight: 1
+      - path: PlayerSkeleton/Back/Torso/RightPec/RightShoulder/RightElbow/RightHand/RightMiddle/joint44
+        weight: 1
+      - path: PlayerSkeleton/Back/Torso/RightPec/RightShoulder/RightElbow/RightHand/RightMiddle/joint44/joint45
+        weight: 1
+      - path: PlayerSkeleton/Back/Torso/RightPec/RightShoulder/RightElbow/RightHand/RightMiddle/joint44/joint45/joint46
+        weight: 0
+      - path: PlayerSkeleton/Back/Torso/RightPec/RightShoulder/RightElbow/RightHand/RightPinky
+        weight: 1
+      - path: PlayerSkeleton/Back/Torso/RightPec/RightShoulder/RightElbow/RightHand/RightPinky/joint56
+        weight: 1
+      - path: PlayerSkeleton/Back/Torso/RightPec/RightShoulder/RightElbow/RightHand/RightPinky/joint56/joint57
+        weight: 1
+      - path: PlayerSkeleton/Back/Torso/RightPec/RightShoulder/RightElbow/RightHand/RightPinky/joint56/joint57/joint58
+        weight: 0
+      - path: PlayerSkeleton/Back/Torso/RightPec/RightShoulder/RightElbow/RightHand/RightRing
+        weight: 1
+      - path: PlayerSkeleton/Back/Torso/RightPec/RightShoulder/RightElbow/RightHand/RightRing/joint53
+        weight: 1
+      - path: PlayerSkeleton/Back/Torso/RightPec/RightShoulder/RightElbow/RightHand/RightRing/joint53/joint54
+        weight: 1
+      - path: PlayerSkeleton/Back/Torso/RightPec/RightShoulder/RightElbow/RightHand/RightRing/joint53/joint54/joint55
+        weight: 0
+      - path: PlayerSkeleton/Back/Torso/RightPec/RightShoulder/RightElbow/RightHand/RightThumb
+        weight: 1
+      - path: PlayerSkeleton/Back/Torso/RightPec/RightShoulder/RightElbow/RightHand/RightThumb/joint50
+        weight: 1
+      - path: PlayerSkeleton/Back/Torso/RightPec/RightShoulder/RightElbow/RightHand/RightThumb/joint50/joint51
+        weight: 1
+      - path: PlayerSkeleton/Back/Torso/RightPec/RightShoulder/RightElbow/RightHand/RightThumb/joint50/joint51/joint52
+        weight: 0
+      - path: PlayerSkeleton/LeftHip
+        weight: 1
+      - path: PlayerSkeleton/LeftHip/LeftLeg
+        weight: 1
+      - path: PlayerSkeleton/LeftHip/LeftLeg/LeftKnee
+        weight: 1
+      - path: PlayerSkeleton/LeftHip/LeftLeg/LeftKnee/LeftFoot
+        weight: 1
+      - path: PlayerSkeleton/LeftHip/LeftLeg/LeftKnee/LeftFoot/LeftSole
+        weight: 1
+      - path: PlayerSkeleton/RightHip
+        weight: 1
+      - path: PlayerSkeleton/RightHip/RightLeg
+        weight: 1
+      - path: PlayerSkeleton/RightHip/RightLeg/RightKnee
+        weight: 1
+      - path: PlayerSkeleton/RightHip/RightLeg/RightKnee/RIghtFoot
+        weight: 1
+      - path: PlayerSkeleton/RightHip/RightLeg/RightKnee/RIghtFoot/RightSole
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: BackPackUnEquip
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 31
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
