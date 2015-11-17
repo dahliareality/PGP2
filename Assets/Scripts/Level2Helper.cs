@@ -14,7 +14,7 @@ public class Level2Helper : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-	    if (GameObject.Find("FogActivater").GetComponent<ExitPoint>().HasEntered && activate == true)
+	    if (activate == true && GameObject.Find("FogActivater").GetComponent<ExitPoint>().HasEntered)
         {
             activate = false;
             GameObject.Find("LoS").AddComponent<FOW>();

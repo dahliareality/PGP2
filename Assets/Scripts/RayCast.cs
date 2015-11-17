@@ -14,13 +14,13 @@ public class RayCast : MonoBehaviour {
     private LayerMask layerMask = 1 << 8;
     RaycastHit objectHit;
 
-    private SequencePuzzle sqnPzl;
+    public SequencePuzzle sqnPzl;
     private int count = 0;
 
     void Start()
     {
         layerMask = ~layerMask;
-        sqnPzl = GameObject.Find("Cogwheel Puzzle").GetComponent<SequencePuzzle>();
+        //sqnPzl = GameObject.Find("Cogwheel Puzzle").GetComponent<SequencePuzzle>();
         arms = GameObject.FindGameObjectWithTag("Arm");
         inventory = GameObject.FindGameObjectWithTag("Bagpack").GetComponent<InventorySystem>();
     }
@@ -251,5 +251,11 @@ public class RayCast : MonoBehaviour {
     {
         get { return moveNumber; }
         set { moveNumber = value; }
+    }
+
+    public SequencePuzzle SqnPzl
+    {
+        get { return sqnPzl; }
+        set { sqnPzl = value; }
     }
 }

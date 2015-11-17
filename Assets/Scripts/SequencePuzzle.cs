@@ -27,6 +27,7 @@ public class SequencePuzzle : MonoBehaviour
     void Start()
     {
         rc = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<RayCast>();
+        rc.SqnPzl = GameObject.Find("Cogwheel Puzzle").GetComponent<SequencePuzzle>();
 
         gear1 = GameObject.Find("Cog 1");
         gear2 = GameObject.Find("Cog 2");
