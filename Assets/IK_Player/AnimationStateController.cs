@@ -30,17 +30,8 @@ public class AnimationStateController : MonoBehaviour {
 		{
 			//get the current state
 			AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
-			
-			//if we're in "Run" mode, respond to input for jump, and set the Jump parameter accordingly. 
-			/*if(stateInfo.nameHash == Animator.StringToHash("Base Layer.RunBT"))
-			{
-				if(Input.GetButton("Fire1")) 
-					animator.SetBool("Jump", true );
-			}
-			else
-			{
-				animator.SetBool("Jump", false);                
-			}*/
+
+
 
 			walkForwards = Input.GetKey(KeyCode.W);
 			walkBackwards = Input.GetKey(KeyCode.S);
@@ -87,19 +78,15 @@ public class AnimationStateController : MonoBehaviour {
 				if(animateOnce)
 				{
 					animator.SetBool ("backpackEquip",false);
-					bagAnimation["openBag"].speed = -1f;
+					bagAnimation["openBag"].time = 1.5f;
+					bagAnimation["openBag"].speed = -2f;
 					bagAnimation.Play();
 					animateOnce = false;
 				}
 
 			}
 
-			float h = Input.GetAxis("Horizontal");
-			float v = Input.GetAxis("Vertical");
-			
-			//set event parameters based on user input
-			animator.SetFloat("Speed", h*h+v*v);
-			animator.SetFloat("Direction", h, DirectionDampTime, Time.deltaTime);
+
 		}       
 	}        
 }
