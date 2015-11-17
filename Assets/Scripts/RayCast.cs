@@ -103,6 +103,7 @@ public class RayCast : MonoBehaviour {
                                 arms.GetComponent<ArmsScript>().IsCarryingItem = false;
                                 storedPickUpObject.GetComponent<Pickable>().CanPickUp = true;
                                 storedPickUpObject = null;
+								GameObject.Find("PlaceItemSoundSource").GetComponent<SECTR_PointSource>().Play();
                             }
                             // Switch Statues
                             else
@@ -138,6 +139,7 @@ public class RayCast : MonoBehaviour {
                                 storedPickUpObject.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
                                 storedPickUpObject.GetComponent<Pickable>().CanPickUp = true;
                                 storedPickUpObject = null;
+								GameObject.Find("PlaceItemSoundSource").GetComponent<SECTR_PointSource>().Play();
                             }
                             // Switch Coin
                             else
