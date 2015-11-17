@@ -116,7 +116,7 @@ public class SECTR_Door : MonoBehaviour
 		SendMessage("OnClose", SendMessageOptions.DontRequireReceiver);
 	}
 	
-	void Update()
+	/*void Update()
 	{
 		bool canOpen = CanOpen();
 		if(canOpenParam != 0)
@@ -179,7 +179,7 @@ public class SECTR_Door : MonoBehaviour
 	protected virtual void OnTriggerExit(Collider other)
 	{
 		--openCount;
-	}
+	}*/
 	#endregion
 
 	#region Door Interface
