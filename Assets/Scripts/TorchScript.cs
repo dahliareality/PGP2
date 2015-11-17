@@ -14,11 +14,15 @@ public class TorchScript : MonoBehaviour
 
     Activated activatedScript;
 
+	float timer = 0;
+	float timeTillEgnition = 0;
+
 
     void Start()
     {
         activatedScript = gameObject.GetComponent<Activated>();
         lightLight.enabled = false;
+		timeTillEgnition = Random.Range (0,3);
         
     }
 
@@ -28,9 +32,14 @@ public class TorchScript : MonoBehaviour
 
         if (activatedScript.activated)
         {
-            lightUp();
-            activatedScript.deActivate();
-            playSound();
+			timer += Time.deltaTime;
+
+			if(timer > timeTillEgnition)
+			{
+				lightUp();
+            	activatedScript.deActivate();
+            	playSound();
+			}
            
         }
 
