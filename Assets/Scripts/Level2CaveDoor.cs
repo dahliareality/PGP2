@@ -41,8 +41,8 @@ public class Level2CaveDoor : MonoBehaviour
             {
                 this.gameObject.GetComponent<Animation>().Play();
                 finished = true;
+					this.gameObject.GetComponent<SECTR_PointSource>().Play();
             }
-			this.gameObject.GetComponent<SECTR_PointSource>().Play();
 		}
 			
 
@@ -58,10 +58,6 @@ public class Level2CaveDoor : MonoBehaviour
             nowOpen = false;
         }
 
-        if (nowOpen && !soundHasPlayed)
-        {
-            //this.GetComponent<SECTR_PropagationSource>().Play();
-            soundHasPlayed = true;
-        }
+
     }
 }

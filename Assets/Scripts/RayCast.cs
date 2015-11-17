@@ -9,6 +9,7 @@ public class RayCast : MonoBehaviour {
     private GameObject arms;
 	public GameObject storedPickUpObject = null;
     private InventorySystem inventory;
+	private GameObject grabbedStatue;
 
     private float distance = 3f;
     private LayerMask layerMask = 1 << 8;
@@ -102,6 +103,7 @@ public class RayCast : MonoBehaviour {
                                 arms.GetComponent<ArmsScript>().IsCarryingItem = false;
                                 storedPickUpObject.GetComponent<Pickable>().CanPickUp = true;
                                 storedPickUpObject = null;
+								GameObject.Find("PlaceItemSoundSource").GetComponent<SECTR_PointSource>().Play();
                             }
                             // Switch Statues
                             else
@@ -115,7 +117,10 @@ public class RayCast : MonoBehaviour {
                     {
                         if (!objectHit.collider.gameObject.GetComponent<StatueCheck>().isEmpty())
                         {
+							grabbedStatue = objectHit.collider.gameObject.GetComponent<StatueCheck>().getCurrentStatue();
+							grabbedStatue.GetComponent<SECTR_PropagationSource>().Stop(true);
                             objectHit.collider.gameObject.GetComponent<StatueCheck>().removeStatue();
+							GameObject.Find ("PickUpSoundSource").GetComponent<SECTR_PointSource>().Play();
                         }
                     }
                     
@@ -134,6 +139,7 @@ public class RayCast : MonoBehaviour {
                                 storedPickUpObject.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
                                 storedPickUpObject.GetComponent<Pickable>().CanPickUp = true;
                                 storedPickUpObject = null;
+								GameObject.Find("PlaceItemSoundSource").GetComponent<SECTR_PointSource>().Play();
                             }
                             // Switch Coin
                             else

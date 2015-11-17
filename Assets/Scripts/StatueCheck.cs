@@ -62,4 +62,8 @@ public class StatueCheck : MonoBehaviour {
 		else 
 			return false;
 	}
+
+	public GameObject getCurrentStatue(){
+		return curStatue;
+	}
 }

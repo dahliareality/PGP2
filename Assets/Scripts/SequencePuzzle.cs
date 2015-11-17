@@ -12,11 +12,18 @@ public class SequencePuzzle : MonoBehaviour
 	private bool gongHasPlayed;
 	private bool bellHasPlayed;
 	private bool chimesHasPlayed;
+    private bool cog1correcet;
+    private bool cog2correcet;
+    private bool cog3correcet;
+
+    public bool cogSoundPlayed;
+    public bool magicSoundStarted;
 
     private RayCast rc;
     private GameObject button;
 
     public int count = 0;
+	private float delayCount;
     public int countValue
     {
         get { return count; }
@@ -32,9 +39,11 @@ public class SequencePuzzle : MonoBehaviour
 
     void Start()
     {
-        spawnObject.GetComponent<Renderer>().enabled = false;
+        spawnObject.SetActive(false);
         rc = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<RayCast>();
         rc.SqnPzl = GameObject.Find("Cogwheel Puzzle").GetComponent<SequencePuzzle>();
+        GameObject.Find("DragonEye1").GetComponent<Light>().intensity = 0.0f;
+        GameObject.Find("DragonEye2").GetComponent<Light>().intensity = 0.0f;
 
         gear1 = GameObject.Find("Cog 1");
         gear2 = GameObject.Find("Cog 2");
@@ -60,6 +69,14 @@ public class SequencePuzzle : MonoBehaviour
                 // Moves gear1 up, and gear2 up
                 gear1.transform.position = Vector3.Lerp(gear1.transform.position, top1.transform.position, Time.deltaTime * 5);
                 gear2.transform.position = Vector3.Lerp(gear2.transform.position, top2.transform.position, Time.deltaTime * 5);
+                cog1correcet = false;
+                cog2correcet = false;
+                if (!cogSoundPlayed)
+                {
+                    GameObject.Find("Cog1UpSound").GetComponent<SECTR_PointSource>().Play();
+                    GameObject.Find("Cog2UpSound").GetComponent<SECTR_PointSource>().Play();
+                    cogSoundPlayed = true;
+                }
 
             }
             else if (rc.sequenceButton == 2)
@@ -67,27 +84,50 @@ public class SequencePuzzle : MonoBehaviour
                 // Moves gear1 down, and gear3 up
                 gear1.transform.position = Vector3.Lerp(gear1.transform.position, bot1.transform.position, Time.deltaTime * 5);
                 gear3.transform.position = Vector3.Lerp(gear3.transform.position, top3.transform.position, Time.deltaTime * 5);
-
-
+                cog1correcet = true;
+                cog3correcet = false;
+                if (!cogSoundPlayed)
+                {
+                    GameObject.Find("Cog1DownSound").GetComponent<SECTR_PointSource>().Play();
+                    GameObject.Find("Cog3UpSound").GetComponent<SECTR_PointSource>().Play();
+                    cogSoundPlayed = true;
+                }
             }
             else if (rc.sequenceButton == 3)
             {
                 // Moves gear2 down, and gear3 down
                 gear2.transform.position = Vector3.Lerp(gear2.transform.position, bot2.transform.position, Time.deltaTime * 5);
                 gear3.transform.position = Vector3.Lerp(gear3.transform.position, bot3.transform.position, Time.deltaTime * 5);
-
-
+                cog2correcet = true;
+                cog3correcet = true;
+                if (!cogSoundPlayed)
+                {
+                    GameObject.Find("Cog2DownSound").GetComponent<SECTR_PointSource>().Play();
+                    GameObject.Find("Cog3DownSound").GetComponent<SECTR_PointSource>().Play();
+                    cogSoundPlayed = true;
+                }
             }
-            if (gear1.transform.position == bot1.transform.position && gear2.transform.position == bot2.transform.position && gear3.transform.position == bot3.transform.position)
+            if (cog1correcet && cog2correcet && cog3correcet)
             {
-                isCorrect = true;
+				delayCount += Time.deltaTime;
+				if(delayCount >= 3f){
+					isCorrect = true;
+				}
             }
         }
 
         if (isCorrect)
         {
             //Debug.Log("Done!");
-            spawnObject.GetComponent<Renderer>().enabled = true;
+            spawnObject.SetActive(true);
+            GameObject.Find("DragonEye1").GetComponent<Light>().intensity = 1.0f;
+            GameObject.Find("DragonEye2").GetComponent<Light>().intensity = 1.0f;
+            if (!magicSoundStarted)
+            {
+                spawnObject.GetComponent<SECTR_PropagationSource>().Play();
+                GameObject.Find("Dragonstatue").GetComponent<SECTR_PointSource>().Play();
+                magicSoundStarted = true;
+            }
         }
     }
 }
