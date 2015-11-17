@@ -179,7 +179,7 @@ public class SECTR_Door : MonoBehaviour
 	protected virtual void OnTriggerExit(Collider other)
 	{
 		--openCount;
-	}*/
+	}
 	#endregion
 
 	#region Door Interface

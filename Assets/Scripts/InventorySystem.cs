@@ -94,7 +94,11 @@ public class InventorySystem : MonoBehaviour {
                     }
                     else if (obj.tag == "Coin")
                     {
-                        obj.transform.localScale = new Vector3(5.0f, 5.0f, 5.0f);
+                        obj.transform.localScale = new Vector3(2.0f, 2.0f, 2.0f);
+                    }
+                    else if (obj.tag == "Room1Tablet")
+                    {
+                        obj.transform.localScale = new Vector3(30.0f, 30.0f, 30.0f);
                     }
                     else
                     {
