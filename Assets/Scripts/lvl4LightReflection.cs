@@ -16,6 +16,7 @@ public class lvl4LightReflection : MonoBehaviour {
     void Start()
     {
         layerMask = ~layerMask;
+
     }
 
     void Update()
@@ -39,10 +40,12 @@ public class lvl4LightReflection : MonoBehaviour {
             Vector3 rayDir = transform.TransformDirection(Vector3.forward);
 
 
+
+
         for (int i = 0; i < n; i++) //goes through itself for the ammount of bounces
         {
 
-                if (Physics.Raycast(startPoint, rayDir, out hit, 10000, layerMask)) //checks for collision with any object
+                if (Physics.Raycast(startPoint, rayDir, out hit, 2000, layerMask)) //checks for collision with any object
                 {
                   float distance = (hit.point - startPoint).magnitude;
                     //this if-statement checks if the light-ray hits any object with the reflection tag
@@ -84,7 +87,7 @@ public class lvl4LightReflection : MonoBehaviour {
                     lightGameObject.transform.LookAt(hit.point);
 
 
-                    LineRenderer lineComp = lightGameObject.AddComponent<LineRenderer>();
+					LineRenderer lineComp = lightGameObject.AddComponent<LineRenderer>();
                     lineComp.enabled = true;
                     lineComp.receiveShadows = false;
                     lineComp.SetWidth(0.2f, 0.2f);
@@ -95,8 +98,8 @@ public class lvl4LightReflection : MonoBehaviour {
 
                     startPoint = hit.point;
 
-
                 }
+	
             }
         
     }

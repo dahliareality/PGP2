@@ -23,9 +23,9 @@ public class lvl4RotateInteract : MonoBehaviour {
 
     void Start()
     {
-		xRotation = transform.eulerAngles.x;
-		yRotation = transform.eulerAngles.y;
-		zRotation = transform.eulerAngles.z;
+		xRotation = transform.localEulerAngles.x;
+		yRotation = transform.localEulerAngles.y;
+		zRotation = transform.localEulerAngles.z;
 		yRotationV = yRotation;
 		currentYRotation = yRotation;
 
@@ -56,7 +56,7 @@ public class lvl4RotateInteract : MonoBehaviour {
 
         currentYRotation = Mathf.SmoothDamp(currentYRotation, yRotation, ref yRotationV, lookSmoothDamp);
 
-		transform.eulerAngles = new Vector3 (xRotation,currentYRotation,zRotation);
+		transform.localEulerAngles = new Vector3 (xRotation,currentYRotation,zRotation);
 
 //        transform.(xRotation, currentYRotation, zRotation);
 		if (!isSoundPlaying && Input.GetAxis("PS4_DPadHorizontal")!=0) {
