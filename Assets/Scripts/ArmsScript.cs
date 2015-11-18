@@ -37,9 +37,11 @@ public class ArmsScript : MonoBehaviour {
         {
             // If bag is open, make rightArm select in the bag.
 
+			Debug.DrawLine(rightArm.transform.position, rightArm.transform.position + rightArm.transform.forward, Color.cyan);
+
             if (Physics.Raycast(rightArm.transform.position, rightArm.transform.forward, out hit, 2.2f))
             {
-                Debug.DrawLine(rightArm.transform.position, rightArm.transform.forward);
+                
                 if (hit.collider.gameObject.tag == "Bagpack")
                 {
                     rightArm.GetComponent<Renderer>().material.color = clrArray[0];
@@ -49,10 +51,12 @@ public class ArmsScript : MonoBehaviour {
                     rightArm.GetComponent<Renderer>().material.color = clrArray[1];
                 }
 
-                //Debug.Log(hit.collider.gameObject.tag);
+//				Debug.Log(hit.collider.gameObject.tag);
 
                 if (Input.GetButtonUp("PS4_X") || Input.GetKeyDown(KeyCode.E))
                 {
+					Debug.Log(hit.collider.gameObject.name);
+
                     if (hit.collider.transform.tag == "Bagpack" || hit.collider.transform.tag == "BagSlot")
                     {
                         if (isCarryingItem)
@@ -61,6 +65,25 @@ public class ArmsScript : MonoBehaviour {
                             inventory.AddItemFromHandToBag(objInRightArm);
                             objInRightArm = null;
                         }
+						else if (hit.collider.transform.tag == "BagSlot" && !isCarryingItem)
+						{
+							hit.collider.gameObject.GetComponent<BagSlot>().HasOpenSpot = true;
+							PickUpItem(hit.collider.gameObject.transform.GetChild(0).gameObject);
+							isCarryingItem = true;
+							hit.collider.gameObject.transform.GetChild(0).transform.parent = null;
+
+
+//							for (int i = 0; i < 12; i++)
+//							{
+//								if (hit.collider.gameObject.GetComponent<Pickable>().InvSpot == bagSlots[i].name)
+//								{
+//									hit.collider.gameObject.GetComponent<Pickable>().IsInInventory = false;
+//									bagSlots[i].GetComponent<BagSlot>().HasOpenSpot = true;
+//									break;
+//								}
+//							}
+						}
+
                         
                     }
                     else if (hit.collider.transform.tag != "BagSlot" && hit.collider.transform.tag != "Bagpack" && hit.collider.gameObject.GetComponent<Pickable>().IsInInventory)

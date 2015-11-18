@@ -47,7 +47,7 @@ public class AnimationStateController : MonoBehaviour {
 				walkBackwards = true;
 			}
 
-			if(Input.GetKeyDown(KeyCode.I))
+			if(Input.GetButtonDown("PS4_Triangle") || Input.GetKeyDown(KeyCode.I))
 			{
 				if (!equippedInventory)
 				{

@@ -27,7 +27,7 @@ public class InventorySystem : MonoBehaviour {
 		heldBagpackSpace = GameObject.Find("Held Bagpack Space");
 		arms = GameObject.Find("Arms").GetComponent<ArmsScript>();
 
-        bagSlots = new GameObject[12]; //initiates bagSlots array and fills it in order.
+        bagSlots = new GameObject[8]; //initiates bagSlots array and fills it in order.
         bagSlots[0] = GameObject.Find("BagSlot");
         for (int i = 1; i < bagSlots.Length; i++)
         {
@@ -104,7 +104,7 @@ public class InventorySystem : MonoBehaviour {
                     {
                         obj.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
                     }
-                    obj.layer = 0;
+                    obj.layer = 2;
                     playerObject.GetComponent<RayCast>().setStoredPickUpItem(null);
                     bagSlots[i].GetComponent<BagSlot>().HasOpenSpot = false;
                     arms.IsCarryingItem = false;
@@ -130,8 +130,8 @@ public class InventorySystem : MonoBehaviour {
 	public void OpenBag()
 	{
 		// Open the bag
-		this.transform.position = heldBagpackSpace.transform.position;
-		this.transform.rotation = heldBagpackSpace.transform.rotation;
+//		this.transform.position = heldBagpackSpace.transform.position;
+//		this.transform.rotation = heldBagpackSpace.transform.rotation;
 		arms.rightArm.transform.rotation = handDefaultRot;
 		//Debug.Log ("Open Inventory");
 		openSound.GetComponent<SECTR_PointSource>().Play();
@@ -143,8 +143,8 @@ public class InventorySystem : MonoBehaviour {
 		// Reset Right arm position
 		arms.rightArm.transform.position = handStartPos;
         arms.rightArm.transform.rotation = handDefaultRot;
-	this.transform.position = equippedBagPackSpace.transform.position;
-	this.transform.rotation = equippedBagPackSpace.transform.rotation;
+//	this.transform.position = equippedBagPackSpace.transform.position;
+//	this.transform.rotation = equippedBagPackSpace.transform.rotation;
 		closeSound.GetComponent<SECTR_PointSource>().Play();
 		//Debug.Log ("Close Inventory");
 	}
