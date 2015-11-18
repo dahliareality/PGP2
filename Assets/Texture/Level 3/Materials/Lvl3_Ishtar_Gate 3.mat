@@ -6,11 +6,11 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Sand Wall_type_2_diff
+  m_Name: Lvl3_Ishtar_Gate 3
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
-  m_CustomRenderQueue: 2000
+  m_CustomRenderQueue: -1
   stringTagMap: {}
   m_SavedProperties:
     serializedVersion: 2
@@ -19,9 +19,9 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: 766d65d34a840164bb5d9158bf75559a, type: 3}
-          m_Scale: {x: .769999981, y: 1}
-          m_Offset: {x: 0, y: .689999998}
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _BumpMap
@@ -55,8 +55,8 @@ Material:
           name: _EmissionMap
         second:
           m_Texture: {fileID: 0}
-          m_Scale: {x: .769999981, y: 1}
-          m_Offset: {x: 0, y: .689999998}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _DetailMask
@@ -135,4 +135,4 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: .764705896, g: .694905162, b: .511678219, a: 1}
+        second: {r: .254901975, g: .176470593, b: .149019614, a: 1}
