@@ -5461,7 +5461,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 94
+  m_RootOrder: 96
 --- !u!1001 &330488599
 Prefab:
   m_ObjectHideFlags: 0
@@ -11523,7 +11523,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 653977128}
-    gameObjectHash: 156622
+    gameObjectHash: 286074
     member: {fileID: 653977130}
     renderer: {fileID: 0}
     renderHash: 0
@@ -12935,7 +12935,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 95
+  m_RootOrder: 97
 --- !u!1001 &708094756
 Prefab:
   m_ObjectHideFlags: 0
@@ -18983,7 +18983,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 93
+  m_RootOrder: 95
 --- !u!1 &1008025629
 GameObject:
   m_ObjectHideFlags: 0
@@ -24295,7 +24295,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ShadowmapMode: 0
   m_Cameras:
-  - {fileID: 693325081}
+  - {fileID: 0}
   m_CurrentCamera: {fileID: 0}
   m_Size: {x: 10, y: 10, z: 20}
   m_SpotNear: .0500000007
@@ -28142,7 +28142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ShadowmapMode: 0
   m_Cameras:
-  - {fileID: 693325081}
+  - {fileID: 0}
   m_CurrentCamera: {fileID: 0}
   m_Size: {x: 10, y: 10, z: 20}
   m_SpotNear: .0500000007
@@ -32113,7 +32113,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 1810237605}
-    gameObjectHash: 158046
+    gameObjectHash: 289804
     member: {fileID: 1810237606}
     renderer: {fileID: 0}
     renderHash: 0
@@ -37724,7 +37724,7 @@ Transform:
   - {fileID: 309311971}
   - {fileID: 1180869171}
   m_Father: {fileID: 0}
-  m_RootOrder: 53
+  m_RootOrder: 56
 --- !u!114 &2116353656
 MonoBehaviour:
   m_ObjectHideFlags: 0
