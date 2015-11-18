@@ -78,9 +78,11 @@ public class lvl4LightReflection : MonoBehaviour {
                     lightComp.type = LightType.Spot;
                     lightComp.spotAngle = spotLightAngle;
                     lightComp.range = 25;
-                    lightComp.intensity = 8;
+                    lightComp.intensity = 1;
                     lightComp.bounceIntensity = 0;
                     lightComp.tag = "bounceLight";
+                    lightComp.renderMode = LightRenderMode.ForceVertex;
+                    
                     //and then it places the light in the physical space and gives it a direction to point at
                     //which is the next point in which rayDir looks towards to see if there is something to hit
                     lightGameObject.transform.position = startPoint;
@@ -94,9 +96,11 @@ public class lvl4LightReflection : MonoBehaviour {
                     lineComp.SetPosition(0, startPoint);
                     lineComp.SetPosition(1, hit.point);
 					lineComp.SetColors(Color.white,Color.white);
-					
+                    lineComp.material = new Material(Shader.Find("Particles/Additive"));
 
-                    startPoint = hit.point;
+
+
+                startPoint = hit.point;
 
                 }
 	
