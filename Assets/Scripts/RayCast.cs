@@ -102,6 +102,7 @@ public class RayCast : MonoBehaviour {
                                 arms.GetComponent<ArmsScript>().RemoveItem(storedPickUpObject);
                                 arms.GetComponent<ArmsScript>().IsCarryingItem = false;
                                 storedPickUpObject.GetComponent<Pickable>().CanPickUp = true;
+                                storedPickUpObject.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
                                 storedPickUpObject = null;
 								GameObject.Find("PlaceItemSoundSource").GetComponent<SECTR_PointSource>().Play();
                             }

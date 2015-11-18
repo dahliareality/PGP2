@@ -19,7 +19,7 @@ public class Level3GateController : MonoBehaviour
     {
         rollSound1 = GameObject.Find("BoulderRollingSound1");
         rollSound2 = GameObject.Find("BoulderRollingSound2");
-        Debug.Log("Starting, yo!");
+        //Debug.Log("Starting, yo!");
         tilPzl = GameObject.Find("Tile Puzzle Controller").GetComponent<TilePuzzle>();
         sunPuzzle = GameObject.Find("Sun Room").GetComponent<TriggerFromSunLight>();
     }
@@ -27,7 +27,7 @@ public class Level3GateController : MonoBehaviour
     void Update()
     {
 
-        Debug.Log("Updating this ho");
+        //Debug.Log("Updating this ho");
         if (tilPzl.tilePuzzleSolved == true)
         {
             tilePuzzleSolved = true;

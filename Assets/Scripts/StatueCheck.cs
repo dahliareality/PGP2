@@ -31,7 +31,7 @@ public class StatueCheck : MonoBehaviour {
 
 	public void removeStatue ()
 	{
-		Debug.Log (curStatue.ToString() + "  " + correctStatue.ToString());
+		//Debug.Log (curStatue.ToString() + "  " + correctStatue.ToString());
 		if (curStatue.name == correctStatue.name)
 			GameObject.Find ("lvl2_Chinese_Gate").GetComponent<Level2CaveDoor> ().correctStatues--;
 		GameObject mainCamera = GameObject.FindGameObjectWithTag ("MainCamera");
@@ -40,6 +40,7 @@ public class StatueCheck : MonoBehaviour {
 		arm.GetComponent<ArmsScript>().PickUpItem(curStatue);
 		arm.GetComponent<ArmsScript>().IsCarryingItem = true;
 		curStatue.GetComponent<Pickable>().CanPickUp = false;
+        curStatue.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
 		curStatue = null;
 	}
 
@@ -52,7 +53,9 @@ public class StatueCheck : MonoBehaviour {
 		arm.GetComponent<ArmsScript>().RemoveItem(statueIn);
 		arm.GetComponent<ArmsScript>().PickUpItem(temp);
 		placeStatue (statueIn);
-		return temp;
+        statueIn.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+        temp.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+        return temp;
 	}
 
 	public bool isEmpty()
