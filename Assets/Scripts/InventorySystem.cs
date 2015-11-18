@@ -114,14 +114,13 @@ public class InventorySystem : MonoBehaviour {
                 }
             }
 
-            /*
-            obj.GetComponent<Pickable>().IsInInventory = true;
+            
+         /*   obj.GetComponent<Pickable>().IsInInventory = true;
 			obj.transform.parent = bagPos.transform;
 			obj.transform.position = bagPos.transform.position;
 			arms.IsCarryingItem = false;
 			storeSound.GetComponent<SECTR_PointSource>().Play();
-            */
-		}
+            	*/	}
 		else
 		{
 			Debug.Log("You have to open the bag first!");
@@ -131,8 +130,8 @@ public class InventorySystem : MonoBehaviour {
 	public void OpenBag()
 	{
 		// Open the bag
-//		this.transform.position = heldBagpackSpace.transform.position;
-//		this.transform.rotation = heldBagpackSpace.transform.rotation;
+		this.transform.position = heldBagpackSpace.transform.position;
+		this.transform.rotation = heldBagpackSpace.transform.rotation;
 		arms.rightArm.transform.rotation = handDefaultRot;
 		Debug.Log ("Open Inventory");
 		openSound.GetComponent<SECTR_PointSource>().Play();
@@ -144,8 +143,8 @@ public class InventorySystem : MonoBehaviour {
 		// Reset Right arm position
 		arms.rightArm.transform.position = handStartPos;
         arms.rightArm.transform.rotation = handDefaultRot;
-//		this.transform.position = equippedBagPackSpace.transform.position;
-//		this.transform.rotation = equippedBagPackSpace.transform.rotation;
+	this.transform.position = equippedBagPackSpace.transform.position;
+	this.transform.rotation = equippedBagPackSpace.transform.rotation;
 		closeSound.GetComponent<SECTR_PointSource>().Play();
 		Debug.Log ("Close Inventory");
 	}
