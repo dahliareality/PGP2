@@ -26,10 +26,6 @@ public class LoadLevel4 : MonoBehaviour {
     void Update()
     {
 
-        if (GameObject.Find("L2L4").GetComponent<ExitPoint>().HasEntered)
-        {
-            Destroy(GameObject.Find("EntireLevel2"));
-        }
 
         if (tilPzl.tilePuzzleSolved == true)
         {
