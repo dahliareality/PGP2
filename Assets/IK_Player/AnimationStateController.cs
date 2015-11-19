@@ -34,7 +34,7 @@ public class AnimationStateController : MonoBehaviour {
 		if(animator)
 		{
 			//get the current state
-			AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+			//AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
 
 
 

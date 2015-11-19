@@ -3,8 +3,8 @@ using System.Collections;
 
 public class LoadLevel4 : MonoBehaviour {
 
-    private bool scene4Loaded = false;
-    private bool level4Load;
+    //private bool scene4Loaded = false;
+    //private bool level4Load;
     private Level4Prep prepare4;
     private TriggerFromSunLight sunPuzzle;
     private TilePuzzle tilPzl;
@@ -40,13 +40,15 @@ public class LoadLevel4 : MonoBehaviour {
         if (sunPuzzleSolved == true && tilePuzzleSolved == true)
         {
             prepare4.ActivateScene();
-            scene4Loaded = true;
+            //scene4Loaded = true;
         }
 
+        /*
         if (level4Load == true)
         {
             
         }
+        */
         //Debug.Log(level4Load);
     }
 

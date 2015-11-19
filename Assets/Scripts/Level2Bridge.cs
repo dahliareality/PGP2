@@ -10,7 +10,6 @@ public class Level2Bridge : MonoBehaviour
     public int correctStatues = 0;
     public bool puzzleDone = false;
 
-   // private Vector3 slideVector;
     private Vector3 startVector;
     private bool nowOpen = false;
     private bool soundHasPlayed = false;

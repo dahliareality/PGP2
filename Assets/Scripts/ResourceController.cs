@@ -3,8 +3,8 @@ using System.Collections;
 
 public class ResourceController : MonoBehaviour {
 
-	GameObject[] allObjects = new GameObject[999];
-	private int counter = 5;
+	//GameObject[] allObjects = new GameObject[999];
+	//private int counter = 5;
     public int threshold = 0;
 	public int renderDist = 75;
 	public Shader shader;

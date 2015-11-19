@@ -16,8 +16,9 @@ public class Level3AntiBacktrack : MonoBehaviour {
 	void Update () {
 	    
         if (GameObject.Find("L2Deleter").GetComponent<ExitPoint>().HasEntered)
-        {
+        { 
             this.transform.position = Vector3.Lerp(this.transform.position, slideVector, 0.52f * Time.deltaTime);
+            Destroy(GameObject.Find("Level1Mover"));
         }
 
     }

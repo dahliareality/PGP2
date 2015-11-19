@@ -11,7 +11,7 @@ GameObject:
   - 33: {fileID: 3359844}
   - 23: {fileID: 2323796}
   - 95: {fileID: 9589270}
-  - 65: {fileID: 6529986}
+  - 65: {fileID: 6509222}
   m_Layer: 0
   m_Name: lv4_Inca_Stone_Terrace_01
   m_TagString: Untagged
@@ -62,7 +62,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 119432}
   m_Mesh: {fileID: 4300000, guid: b8dff44fad57d1e4bada0ec3ae371171, type: 3}
---- !u!65 &6529986
+--- !u!65 &6509222
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -72,8 +72,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.9818151, y: .821915746, z: .254390299}
-  m_Center: {x: -.00880587101, y: .00295615266, z: .116237983}
+  m_Size: {x: 11.9272604, y: 3.28766298, z: 1.0175612}
+  m_Center: {x: -.035223484, y: .0118246106, z: .464951932}
 --- !u!95 &9589270
 Animator:
   serializedVersion: 3

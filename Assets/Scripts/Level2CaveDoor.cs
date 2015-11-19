@@ -9,10 +9,10 @@ public class Level2CaveDoor : MonoBehaviour
 	public int correctStatues = 0;
 	public bool puzzleDone = false;
 
-    private Vector3 slideVector;
+    //private Vector3 slideVector;
     private Vector3 startVector;
-    private bool nowOpen = false;
-    private bool soundHasPlayed = false;
+    //private bool nowOpen = false;
+    //private bool soundHasPlayed = false;
 	private int requiredStatues = 5;
 
     private bool finished;
@@ -25,7 +25,7 @@ public class Level2CaveDoor : MonoBehaviour
             Debug.Log("Pickable.cs is missing in the GameObject!");
         }
 
-        slideVector = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z + 5f);
+        //slideVector = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z + 5f);
         startVector = this.transform.position;
     }
 
@@ -50,12 +50,12 @@ public class Level2CaveDoor : MonoBehaviour
         {
             //this.transform.position = Vector3.Lerp(this.transform.position, slideVector, 1.45f * Time.deltaTime);
             //Destroy(gameObject);
-            nowOpen = true;
+            //nowOpen = true;
         }
         else if (exitObject.GetComponent<ExitPoint>().HasEntered)
         {
             this.transform.position = Vector3.Lerp(this.transform.position, startVector, 1.45f * Time.deltaTime);
-            nowOpen = false;
+            //nowOpen = false;
         }
 
 

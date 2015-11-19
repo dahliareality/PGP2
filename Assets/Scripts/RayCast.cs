@@ -213,13 +213,27 @@ public class RayCast : MonoBehaviour {
                         }
                         else if (storedPickUpObject.GetComponent<RotateInteract>() != null) 
                         {
-                            objectHit.collider.gameObject.GetComponent<RotateInteract>().OnInteractHold();
+                            //objectHit.collider.gameObject.GetComponent<RotateInteract>().OnInteractHold();
                         }
                     }
                     // If the button is released while holding an object
                     else if (Input.GetButtonUp("PS4_R2") && storedPickUpObject != null || Input.GetKey(KeyCode.R) && storedPickUpObject != null)
                     {
                         storedPickUpObject = null;
+                    }
+                }
+
+                else if (objectHit.collider.gameObject.tag == "Rotation")
+                {
+                    if (Input.GetButton("PS4_X") || Input.GetKey(KeyCode.E))
+                    {
+                        Debug.Log("Flipped");
+                        objectHit.collider.gameObject.GetComponent<RotateSwitch>().activated = true;
+                    }
+                    else
+                    {
+                        objectHit.collider.gameObject.GetComponent<RotateSwitch>().activated = false;
+                        objectHit.collider.gameObject.GetComponent<RotateSwitch>().hasPlayed = false;
                     }
                 }
 

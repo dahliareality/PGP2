@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class LoadLevel3 : MonoBehaviour {
-    private bool scene3Loaded = false;
+    //private bool scene3Loaded = false;
     //private Level1Door door;
     private Level2CaveDoor giantDoor;
     private bool level3Load;
@@ -26,7 +26,7 @@ public class LoadLevel3 : MonoBehaviour {
         if (level3Load == true)
         {
             prepare3.ActivateScene();
-            scene3Loaded = true;
+            //scene3Loaded = true;
         }
     }
 

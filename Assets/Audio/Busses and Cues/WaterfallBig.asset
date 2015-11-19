@@ -14,7 +14,7 @@ MonoBehaviour:
   template: {fileID: 0}
   bus: {fileID: 11400000, guid: 78e1166bacf7b3c4bb966f977e334da5, type: 2}
   AudioClips:
-  - clip: {fileID: 8300000, guid: 912440051ccfe82458fafac282a4c033, type: 3}
+  - clip: {fileID: 8300000, guid: 8950fba82036878438bc98fa7f8f6334, type: 3}
     playedInShuffle: 0
     volume: 1
     bakeTimestamp:
@@ -37,11 +37,11 @@ MonoBehaviour:
   FadeInTime: 0
   FadeOutTime: 0
   Spatialization: 2
-  Spread: 0
+  Spread: 75
   Pan2D: 0
   Falloff: 0
-  MaxDistance: 100
-  MinDistance: 10
+  MaxDistance: 238.5
+  MinDistance: 117.400002
   DopplerLevel: 0
   ProximityLimit: 0
   ProximityRange: 10

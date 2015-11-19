@@ -9,7 +9,6 @@ public class ArmsScript : MonoBehaviour {
     public GameObject rightArm;
     public GameObject objectSpaceInHand;
     public Color[] clrArray = new Color[2]; // Debug Coloring
-	public bool collectedThisFrame;
 
     private GameObject objInRightArm;
     private GameObject playerObject;
@@ -17,7 +16,6 @@ public class ArmsScript : MonoBehaviour {
     private InventorySystem inventory;
 
     private RaycastHit hit;
-    private RaycastHit sndHit;
     private float handSpeed;
     private bool isCarryingItem;
 
