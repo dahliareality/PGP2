@@ -12025,15 +12025,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 653977128}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f43b950e83f4c4c40b43234faed5fcd7, type: 3}
+  m_Script: {fileID: 11500000, guid: a6f20b8b60dbb1046b21f167d1303601, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volume: 1
-  pitch: 1
-  Cue: {fileID: 0}
+  volume: .579999983
+  pitch: .805000007
+  Cue: {fileID: 11400000, guid: b34af6cacd7d8fd419f823191d8f45c2, type: 2}
   Loop: 1
   PlayOnStart: 1
-  Raycast: 0
 --- !u!114 &653977130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12047,7 +12046,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 653977128}
-    gameObjectHash: 23604
+    gameObjectHash: 108528
     member: {fileID: 653977130}
     renderer: {fileID: 0}
     renderHash: 0
@@ -24939,9 +24938,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f43b950e83f4c4c40b43234faed5fcd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volume: 1
+  volume: .519999981
   pitch: 1
-  Cue: {fileID: 0}
+  Cue: {fileID: 11400000, guid: fb3790aab05d8174bbd9ba6241c0ed6e, type: 2}
   Loop: 1
   PlayOnStart: 1
   Raycast: 0
@@ -32835,7 +32834,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 1810237605}
-    gameObjectHash: 25048
+    gameObjectHash: 109972
     member: {fileID: 1810237606}
     renderer: {fileID: 0}
     renderHash: 0
