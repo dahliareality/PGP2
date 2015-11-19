@@ -18,7 +18,6 @@ public class Level1Door : MonoBehaviour {
 	private bool doorHasClosedAgain = false;
     private bool hasNotDeleted = true;
     public bool puzzleSolved;
-    private int doorClosesHopefully;
 
     public AudioClip doorSlide;
 

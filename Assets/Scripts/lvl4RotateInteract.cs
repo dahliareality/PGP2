@@ -17,7 +17,6 @@ public class lvl4RotateInteract : MonoBehaviour {
     private float xRotationV;
     private float lookSmoothDamp = 0.1f;
     private float currentYRotation;
-	private Vector3 startRot = new Vector3(0,0,0);
 	private bool isSoundPlaying = false;
 	private int testInt = 0;
 
