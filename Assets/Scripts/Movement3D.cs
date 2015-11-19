@@ -9,7 +9,13 @@ public class Movement3D : MonoBehaviour {
 
     // Player movement. Attach it to the player object.
 
+//	public Vector3 velocityShow;
+//	public float yDifShow;
+	private Vector3 oldPos = new Vector3 (0,0,0);
+
+	private float speedOriginal = 5f;
 	private float speed = 5f;
+	private float allowedFallSpeed = -0.04f;
 
 	private GameObject cameraObj;
 	private Rigidbody rb;
@@ -32,10 +38,15 @@ public class Movement3D : MonoBehaviour {
         transform.rotation = Quaternion.Euler(startRot);
 		ml = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<MouseLook>();
 		rb = GetComponent<Rigidbody>();
+		speed = speedOriginal;
     }
 
-	void FixedUpdate () {
+	void Update () {
         counter = Mathf.Clamp(counter, 0.0f, 2.0f);
+//		velocityShow = new Vector3 (0,0,0);
+
+//		controlFall ();
+		controlFall2 ();
 
         if (hasRisen)
         {
@@ -68,6 +79,9 @@ public class Movement3D : MonoBehaviour {
                 transform.Rotate(new Vector3(-1.0f, 0.0f, 0.0f) * (45 * Time.deltaTime));
             }
         }
+
+
+//		velocityShow = GetComponent<Rigidbody> ().velocity;
             //-------------------------------------
 	}
 
@@ -86,4 +100,25 @@ public class Movement3D : MonoBehaviour {
         get { return hasRisen; }
         set { hasRisen = value; }
     }
+
+	void controlFall()
+	{
+		if (GetComponent<Rigidbody> ().velocity.y < -1)
+			speed = speedOriginal * 0.5f;
+		else
+			speed = speedOriginal;
+	}
+	void controlFall2()
+	{
+		float yDif = transform.position.y - oldPos.y;
+//		yDifShow = yDif;
+
+		if (yDif < allowedFallSpeed)
+			speed = speedOriginal * 0.5f;
+		else
+			speed = speedOriginal;
+
+		oldPos = transform.position;
+	}
+
 }
