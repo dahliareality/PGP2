@@ -69,24 +69,8 @@ public class SunPuzzle : MonoBehaviour {
                 //this thing draws the lines to show how the light bounces.
                 Debug.DrawLine(startPoint, hit.point);
                 rayDir = Vector3.Reflect((hit.point - startPoint).normalized, hit.normal);
-
-
-                //this blob creates the lights which is used as the reflected light
-               /* GameObject lightGameObject = new GameObject("bounceLight");
-                Light lightComp = lightGameObject.AddComponent<Light>();
-                lightComp.color = Color.white;
-                lightComp.type = LightType.Spot;
-                lightComp.spotAngle = spotLightAngle;
-                lightComp.range = 80;
-                lightComp.intensity = 8;
-                lightComp.bounceIntensity = 0;
-                lightComp.tag = "bounceLight";
-                lightComp.shadowStrength = 1;
-                lightComp.shadows = LightShadows.Hard;
-
-                startPoint = hit.point;*/
             }
-         }      
+         }
     }
 
     public RaycastHit getRayHit()
