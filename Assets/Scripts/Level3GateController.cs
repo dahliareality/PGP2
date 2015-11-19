@@ -54,6 +54,7 @@ public class Level3GateController : MonoBehaviour
             //rollSound2.GetComponent<SECTR_PropagationSource>().Play();
             rollSound2.GetComponent<AudioSource>().Play();
             Destroy(woodenGrate2);
+            Destroy(GameObject.Find("Safeguard"));
             //nrOfPuzzlesSolved = 2;
         }
         //Debug.Log(nrOfPuzzlesSolved);

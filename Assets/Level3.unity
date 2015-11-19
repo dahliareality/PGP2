@@ -2425,7 +2425,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 234194637}
-    gameObjectHash: 47924
+    gameObjectHash: 58444
     member: {fileID: 234194639}
     renderer: {fileID: 0}
     renderHash: 0
@@ -3140,7 +3140,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 292332072}
-    gameObjectHash: 47972
+    gameObjectHash: 58492
     member: {fileID: 292332074}
     renderer: {fileID: 0}
     renderHash: 0
@@ -5291,6 +5291,18 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11102618, guid: 782d64b029ced3a48acaec9def936e7c, type: 2}
+      propertyPath: m_PlayAutomatically
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11102618, guid: 782d64b029ced3a48acaec9def936e7c, type: 2}
+      propertyPath: m_AnimatePhysics
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11102618, guid: 782d64b029ced3a48acaec9def936e7c, type: 2}
+      propertyPath: m_CullingType
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 782d64b029ced3a48acaec9def936e7c, type: 2}
   m_IsPrefabParent: 0
@@ -5502,7 +5514,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 490025330}
-    gameObjectHash: 48180
+    gameObjectHash: 58702
     member: {fileID: 490025333}
     renderer: {fileID: 0}
     renderHash: 0
@@ -5531,7 +5543,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 2088855}
-    gameObjectHash: 47752
+    gameObjectHash: 58272
     member: {fileID: 490025333}
     renderer: {fileID: 0}
     renderHash: 0
@@ -5560,7 +5572,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 136494986}
-    gameObjectHash: 47852
+    gameObjectHash: 58372
     member: {fileID: 490025333}
     renderer: {fileID: 0}
     renderHash: 0
@@ -5589,7 +5601,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 545419814}
-    gameObjectHash: 48238
+    gameObjectHash: 58760
     member: {fileID: 490025333}
     renderer: {fileID: 0}
     renderHash: 0
@@ -5618,7 +5630,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 1731602653}
-    gameObjectHash: 49562
+    gameObjectHash: 60084
     member: {fileID: 490025333}
     renderer: {fileID: 0}
     renderHash: 0
@@ -5647,7 +5659,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 648284078}
-    gameObjectHash: 48314
+    gameObjectHash: 58836
     member: {fileID: 490025333}
     renderer: {fileID: 0}
     renderHash: 0
@@ -5676,7 +5688,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 1429189884}
-    gameObjectHash: 49214
+    gameObjectHash: 59736
     member: {fileID: 490025333}
     renderer: {fileID: 0}
     renderHash: 0
@@ -5705,7 +5717,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 549058625}
-    gameObjectHash: 48246
+    gameObjectHash: 58768
     member: {fileID: 490025333}
     renderer: {fileID: 0}
     renderHash: 0
@@ -5734,7 +5746,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 647858415}
-    gameObjectHash: 48308
+    gameObjectHash: 58830
     member: {fileID: 490025333}
     renderer: {fileID: 0}
     renderHash: 0
@@ -5763,7 +5775,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 1238968334}
-    gameObjectHash: 48984
+    gameObjectHash: 59506
     member: {fileID: 490025333}
     renderer: {fileID: 0}
     renderHash: 0
@@ -5792,7 +5804,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 709092031}
-    gameObjectHash: 48398
+    gameObjectHash: 58920
     member: {fileID: 490025333}
     renderer: {fileID: 0}
     renderHash: 0
@@ -5821,7 +5833,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 990348475}
-    gameObjectHash: 48720
+    gameObjectHash: 59242
     member: {fileID: 490025333}
     renderer: {fileID: 0}
     renderHash: 0
@@ -5850,7 +5862,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 317972973}
-    gameObjectHash: 48004
+    gameObjectHash: 58524
     member: {fileID: 490025333}
     renderer: {fileID: 0}
     renderHash: 0
@@ -5879,7 +5891,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 1268367055}
-    gameObjectHash: 49004
+    gameObjectHash: 59526
     member: {fileID: 490025333}
     renderer: {fileID: 0}
     renderHash: 0
@@ -5987,7 +5999,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 497412913}
-    gameObjectHash: 48190
+    gameObjectHash: 58712
     member: {fileID: 497412915}
     renderer: {fileID: 0}
     renderHash: 0
@@ -8892,18 +8904,18 @@ Prefab:
 GameObject:
   m_PrefabParentObject: {fileID: 111890, guid: 189413c05e943564fbe87da5bfb9b7c5, type: 2}
   m_PrefabInternal: {fileID: 1300124852}
---- !u!114 &741502566
-MonoBehaviour:
+--- !u!64 &741502570
+MeshCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 741502565}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7574d290a36dd084e9f9903e82124c5d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocityThreshold: 3
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 4300000, guid: edaea87f7d4e6c74db1fb0e1982f646e, type: 3}
 --- !u!114 &741502576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13358,7 +13370,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 1125178978}
-    gameObjectHash: 48896
+    gameObjectHash: 59418
     member: {fileID: 1125178980}
     renderer: {fileID: 0}
     renderHash: 0
@@ -16075,6 +16087,54 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1348491836}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1350902891
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1350902892}
+  - 33: {fileID: 1350902895}
+  - 65: {fileID: 1350902894}
+  m_Layer: 0
+  m_Name: Safeguard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1350902892
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1350902891}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1655330471}
+  m_RootOrder: 250
+--- !u!65 &1350902894
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1350902891}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 14, y: 27, z: 5.6284256}
+  m_Center: {x: 0, y: 0, z: -.31427002}
+--- !u!33 &1350902895
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1350902891}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1365963150
 Prefab:
@@ -18887,7 +18947,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 1609499209}
-    gameObjectHash: 49386
+    gameObjectHash: 59908
     member: {fileID: 1609499211}
     renderer: {fileID: 0}
     renderHash: 0
@@ -19887,6 +19947,48 @@ Prefab:
     - {fileID: 6518750, guid: 207648134b377aa41b66fae593676495, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 207648134b377aa41b66fae593676495, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1655330470 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 190610, guid: 782d64b029ced3a48acaec9def936e7c, type: 2}
+  m_PrefabInternal: {fileID: 473859427}
+--- !u!4 &1655330471 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 492678, guid: 782d64b029ced3a48acaec9def936e7c, type: 2}
+  m_PrefabInternal: {fileID: 473859427}
+--- !u!114 &1655330473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1655330470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a6b5df33f0282b4b8246fe504edd63a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1655330474
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1655330470}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 13.8045444, y: 26.9052429, z: 4.63807964}
+  m_Center: {x: -1.05293274, y: 14.0473785, z: -.467346191}
+--- !u!114 &1655330475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1655330470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e03b614dd2c81d547985d1eceb48d193, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1658440977 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 166124, guid: d972861c91b1e4444b394d74342bf7ef, type: 2}
@@ -20256,7 +20358,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 1689410879}
-    gameObjectHash: 49516
+    gameObjectHash: 60038
     member: {fileID: 1689410884}
     renderer: {fileID: 1689410881}
     renderHash: 0
@@ -20285,7 +20387,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 2145365207}
-    gameObjectHash: 50008
+    gameObjectHash: 60530
     member: {fileID: 1689410884}
     renderer: {fileID: 2145365209}
     renderHash: 0
@@ -20314,7 +20416,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 79204898}
-    gameObjectHash: 47826
+    gameObjectHash: 58346
     member: {fileID: 1689410884}
     renderer: {fileID: 79204900}
     renderHash: 0
@@ -20343,7 +20445,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 525380528}
-    gameObjectHash: 48226
+    gameObjectHash: 58748
     member: {fileID: 1689410884}
     renderer: {fileID: 0}
     renderHash: 0
@@ -20373,7 +20475,7 @@ MonoBehaviour:
     processed: 1
   renderers:
   - gameObject: {fileID: 1689410879}
-    gameObjectHash: 49516
+    gameObjectHash: 60038
     member: {fileID: 1689410884}
     renderer: {fileID: 1689410881}
     renderHash: 0
@@ -20402,7 +20504,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 2145365207}
-    gameObjectHash: 50008
+    gameObjectHash: 60530
     member: {fileID: 1689410884}
     renderer: {fileID: 2145365209}
     renderHash: 0
@@ -20431,7 +20533,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 79204898}
-    gameObjectHash: 47826
+    gameObjectHash: 58346
     member: {fileID: 1689410884}
     renderer: {fileID: 79204900}
     renderHash: 0
@@ -20461,7 +20563,7 @@ MonoBehaviour:
     processed: 1
   lights:
   - gameObject: {fileID: 525380528}
-    gameObjectHash: 48226
+    gameObjectHash: 58748
     member: {fileID: 1689410884}
     renderer: {fileID: 0}
     renderHash: 0
@@ -22439,7 +22541,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 1835774048}
-    gameObjectHash: 49684
+    gameObjectHash: 60206
     member: {fileID: 1835774054}
     renderer: {fileID: 1835774057}
     renderHash: 0
@@ -22468,7 +22570,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 1636224919}
-    gameObjectHash: 49438
+    gameObjectHash: 59960
     member: {fileID: 1835774054}
     renderer: {fileID: 0}
     renderHash: 0
@@ -22497,7 +22599,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 2032280948}
-    gameObjectHash: 49936
+    gameObjectHash: 60458
     member: {fileID: 1835774054}
     renderer: {fileID: 0}
     renderHash: 0
@@ -22527,7 +22629,7 @@ MonoBehaviour:
     processed: 1
   renderers:
   - gameObject: {fileID: 1835774048}
-    gameObjectHash: 49684
+    gameObjectHash: 60206
     member: {fileID: 1835774054}
     renderer: {fileID: 1835774057}
     renderHash: 0
@@ -23128,7 +23230,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 1868660365}
-    gameObjectHash: 49736
+    gameObjectHash: 60258
     member: {fileID: 1868660367}
     renderer: {fileID: 0}
     renderHash: 0
@@ -25982,7 +26084,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 2105927394}
-    gameObjectHash: 49974
+    gameObjectHash: 60496
     member: {fileID: 2105927396}
     renderer: {fileID: 0}
     renderHash: 0
