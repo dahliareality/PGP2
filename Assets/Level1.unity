@@ -224,6 +224,18 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8252270, guid: f923953e49efaa842adda4537e4916f7, type: 2}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8252270, guid: f923953e49efaa842adda4537e4916f7, type: 2}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8252270, guid: f923953e49efaa842adda4537e4916f7, type: 2}
+      propertyPath: m_Volume
+      value: .971000016
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f923953e49efaa842adda4537e4916f7, type: 2}
   m_IsPrefabParent: 0
@@ -2298,6 +2310,18 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8252270, guid: f923953e49efaa842adda4537e4916f7, type: 2}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8252270, guid: f923953e49efaa842adda4537e4916f7, type: 2}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8252270, guid: f923953e49efaa842adda4537e4916f7, type: 2}
+      propertyPath: m_Volume
+      value: .971000016
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f923953e49efaa842adda4537e4916f7, type: 2}
   m_IsPrefabParent: 0
@@ -3263,6 +3287,18 @@ Prefab:
     - target: {fileID: 176522, guid: f923953e49efaa842adda4537e4916f7, type: 2}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8252270, guid: f923953e49efaa842adda4537e4916f7, type: 2}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8252270, guid: f923953e49efaa842adda4537e4916f7, type: 2}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8252270, guid: f923953e49efaa842adda4537e4916f7, type: 2}
+      propertyPath: m_Volume
+      value: .971000016
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f923953e49efaa842adda4537e4916f7, type: 2}
@@ -8528,6 +8564,18 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8252270, guid: f923953e49efaa842adda4537e4916f7, type: 2}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8252270, guid: f923953e49efaa842adda4537e4916f7, type: 2}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8252270, guid: f923953e49efaa842adda4537e4916f7, type: 2}
+      propertyPath: m_Volume
+      value: .971000016
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f923953e49efaa842adda4537e4916f7, type: 2}
   m_IsPrefabParent: 0
@@ -9733,6 +9781,18 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8252270, guid: f923953e49efaa842adda4537e4916f7, type: 2}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8252270, guid: f923953e49efaa842adda4537e4916f7, type: 2}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8252270, guid: f923953e49efaa842adda4537e4916f7, type: 2}
+      propertyPath: m_Volume
+      value: .971000016
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f923953e49efaa842adda4537e4916f7, type: 2}
   m_IsPrefabParent: 0
@@ -10746,6 +10806,49 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1303546884}
   m_RootOrder: 0
+--- !u!1 &722172700 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 185224, guid: bd4536428e563704b942a47ad0ae0acd, type: 2}
+  m_PrefabInternal: {fileID: 1363433073}
+--- !u!114 &722172701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 722172700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 932cb77abbe93bc4b9a725b4b3e6a468, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxInstances: 128
+  LowpassInstances: 32
+  MasterBus: {fileID: 11400000, guid: 957db79dd2fc40744be5e6b9926596c5, type: 2}
+  DefaultAmbience:
+    BackgroundLoop: {fileID: 0}
+    OneShots: []
+    OneShotInterval: {x: 30, y: 60}
+    Volume: 1
+    UseOneShotCuesProbability: 1
+    TotalProbability: 0
+  HDRBaseLoudness: 50
+  HDRWindowSize: 50
+  HDRDecay: 1
+  BlendNearbySounds: 1
+  NearBlendRange: {x: .25, y: .75}
+  OcclusionFlags: 0
+  OcclusionDistance: 100
+  RaycastLayers:
+    serializedVersion: 2
+    m_Bits: 4294967291
+  OcclusionVolume: .5
+  OcclusionCutoff: 2200
+  OcclusionResonanceQ: 1
+  RetestInterval: {x: .5, y: 1}
+  CullingBuffer: 10
+  ShowAudioHUD: 0
+  HUDLineMaterial: {fileID: 2100000, guid: 0a1459dd7ddef4c178cd7b88d3fc9afc, type: 2}
+  Debugging: 0
 --- !u!1001 &727248715
 Prefab:
   m_ObjectHideFlags: 0
@@ -15629,6 +15732,18 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8252270, guid: f923953e49efaa842adda4537e4916f7, type: 2}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8252270, guid: f923953e49efaa842adda4537e4916f7, type: 2}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8252270, guid: f923953e49efaa842adda4537e4916f7, type: 2}
+      propertyPath: m_Volume
+      value: .971000016
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f923953e49efaa842adda4537e4916f7, type: 2}
   m_IsPrefabParent: 0
@@ -16357,6 +16472,18 @@ Prefab:
     - target: {fileID: 176522, guid: f923953e49efaa842adda4537e4916f7, type: 2}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8252270, guid: f923953e49efaa842adda4537e4916f7, type: 2}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8252270, guid: f923953e49efaa842adda4537e4916f7, type: 2}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8252270, guid: f923953e49efaa842adda4537e4916f7, type: 2}
+      propertyPath: m_Volume
+      value: .971000016
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f923953e49efaa842adda4537e4916f7, type: 2}
@@ -24367,6 +24494,18 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8252270, guid: f923953e49efaa842adda4537e4916f7, type: 2}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8252270, guid: f923953e49efaa842adda4537e4916f7, type: 2}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8252270, guid: f923953e49efaa842adda4537e4916f7, type: 2}
+      propertyPath: m_Volume
+      value: .971000016
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f923953e49efaa842adda4537e4916f7, type: 2}
   m_IsPrefabParent: 0
@@ -26146,6 +26285,18 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8252270, guid: f923953e49efaa842adda4537e4916f7, type: 2}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8252270, guid: f923953e49efaa842adda4537e4916f7, type: 2}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8252270, guid: f923953e49efaa842adda4537e4916f7, type: 2}
+      propertyPath: m_Volume
+      value: .971000016
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f923953e49efaa842adda4537e4916f7, type: 2}
   m_IsPrefabParent: 0
@@ -27685,6 +27836,18 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8252270, guid: f923953e49efaa842adda4537e4916f7, type: 2}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8252270, guid: f923953e49efaa842adda4537e4916f7, type: 2}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8252270, guid: f923953e49efaa842adda4537e4916f7, type: 2}
+      propertyPath: m_Volume
+      value: .971000016
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f923953e49efaa842adda4537e4916f7, type: 2}
   m_IsPrefabParent: 0
@@ -29211,6 +29374,18 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8252270, guid: f923953e49efaa842adda4537e4916f7, type: 2}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8252270, guid: f923953e49efaa842adda4537e4916f7, type: 2}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8252270, guid: f923953e49efaa842adda4537e4916f7, type: 2}
+      propertyPath: m_Volume
+      value: .971000016
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f923953e49efaa842adda4537e4916f7, type: 2}
   m_IsPrefabParent: 0
@@ -29678,6 +29853,18 @@ Prefab:
     - target: {fileID: 176522, guid: f923953e49efaa842adda4537e4916f7, type: 2}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8252270, guid: f923953e49efaa842adda4537e4916f7, type: 2}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8252270, guid: f923953e49efaa842adda4537e4916f7, type: 2}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8252270, guid: f923953e49efaa842adda4537e4916f7, type: 2}
+      propertyPath: m_Volume
+      value: .971000016
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f923953e49efaa842adda4537e4916f7, type: 2}
