@@ -11,9 +11,6 @@ public class TriggerFromSunLight : MonoBehaviour {
     private bool sunTwoActive = false;
     private bool sunThreeActive = false;
     private bool sunFourActive = false;
-    private bool sunOneTriggered = false;
-    private bool sunTwoTriggered = false;
-    private bool sunThreeTriggered = false;
     private bool sunFourTriggered = false;
     public bool sunPuzzleSolved = false;
 
@@ -34,15 +31,13 @@ public class TriggerFromSunLight : MonoBehaviour {
             if (sunOneActive == true)
             {
                 sunOneActive = false;
-                sunOneTriggered = true;
                 sunTwoActive = true;
                 i += 1;
-                Debug.Log("Hitting 1");
+                //Debug.Log("Hitting 1");
             }
             else if (sunTwoActive == true)
             {
                 sunTwoActive = false;
-                sunTwoTriggered = true;
                 sunThreeActive = true;
                 i += 1;
                 //Debug.Log("Hitting 2");
@@ -50,7 +45,6 @@ public class TriggerFromSunLight : MonoBehaviour {
             else if (sunThreeActive == true)
             {
                 sunThreeActive = false;
-                sunThreeTriggered = true;
                 sunFourActive = true;
                 i += 1;
                 //Debug.Log("Hitting 3");

@@ -8,7 +8,6 @@ using System.Collections;
 public class lvl4LightTriggerScript : MonoBehaviour
 {
 
-    private bool inTrigger;
     public bool isLite;
 	public bool simulateIsLit = false;
     public GameObject movingObj;
@@ -59,26 +58,5 @@ public class lvl4LightTriggerScript : MonoBehaviour
     {
         get { return isLite; }
         set { isLite = value; }
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-        // Make sure it only triggers for the object tagged as Player
-        if (other.tag == "Player")
-        {
-            // Toggle when player is standing inside of the trigger
-            inTrigger = true;
-        }
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-        // Make sure it only triggers for the object tagged as Player
-        if (other.tag == "Player")
-        {
-            // Toggle when player leaves the trigger
-            inTrigger = false;
-            //Debug.Log("Leave");
-        }
     }
 }

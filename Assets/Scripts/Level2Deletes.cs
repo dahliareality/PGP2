@@ -3,7 +3,6 @@ using System.Collections;
 
 public class Level2Deletes : MonoBehaviour {
 
-    private bool hasNotDeleted = true;
 
     // Use this for initialization
     void Start () {
@@ -17,7 +16,6 @@ public class Level2Deletes : MonoBehaviour {
         {
             Destroy(GameObject.Find("1 to 2 transition"));
             Destroy(GameObject.Find("Entire level 2"));
-            hasNotDeleted = false;
         }
 
     }

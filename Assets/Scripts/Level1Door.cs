@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 // -----------------------
 // Add to the level 1 exit door.
@@ -17,7 +18,6 @@ public class Level1Door : MonoBehaviour {
 	private bool doorHasClosedAgain = false;
     private bool hasNotDeleted = true;
     public bool puzzleSolved;
-    private int doorClosesHopefully;
 
     public AudioClip doorSlide;
 
@@ -56,12 +56,19 @@ public class Level1Door : MonoBehaviour {
                     doorHasClosedAgain = true;
                 }
             }
-
-            if (GameObject.Find("Level1Deleter").GetComponent<ExitPoint>().HasEntered)
+            try
             {
-                Destroy(GameObject.Find("EntireLevel1"));
-                hasNotDeleted = false;
+                if (GameObject.Find("Level1Deleter").GetComponent<ExitPoint>().HasEntered)
+                {
+                    Destroy(GameObject.Find("EntireLevel1"));
+                    hasNotDeleted = false;
+                }
             }
+            catch(NullReferenceException)
+            {
+                return;
+            }
+            
 
             if (nowOpen && !soundHasPlayed)
             {

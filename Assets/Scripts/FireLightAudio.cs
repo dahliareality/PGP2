@@ -16,12 +16,4 @@ public class FireLightAudio : MonoBehaviour {
             gameObject.GetComponent<AudioSource>().Play();
         }
     }
-
-    void playSound()
-    {
-        if (!gameObject.GetComponent<AudioSource>().isPlaying)
-        {
-            gameObject.GetComponent<AudioSource>().PlayOneShot(fireSound, 1.0f);
-        }
-    }
 }
