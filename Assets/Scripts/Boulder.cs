@@ -8,7 +8,7 @@ using System.Collections;
 public class Boulder : MonoBehaviour {
 
 	private bool isIndestructible = true; //Used to set whether or not the boulder can destroy other objects
-    private bool saveMe = false;
+    private bool reCollide = false;
 	public bool getIsIndestructible()
 	{
 		return isIndestructible;
@@ -35,17 +35,17 @@ public class Boulder : MonoBehaviour {
 
         if (GameObject.Find("lv3_Breakable_Wall_animation").GetComponent<BoulderTrigger>().HasCollided)
         {
-            if (saveMe == false)
+            if (reCollide == false)
             {
                 GameObject.Find("lv3_Breakable_Wall_animation").GetComponent<Animation>().Play();
                 for (int i = 1; i < 251; i++)
                 {
                     GameObject.Find("Box006_Part_" + i).GetComponent<Collider>().enabled = false;
                 }
-                saveMe = true;
+                reCollide = true;
             }
         }
-        if (saveMe == true)
+        if (reCollide == true)
         {
             if (GameObject.Find("lv3_Breakable_Wall_animation").GetComponent<ExitPoint>().HasEntered)
             {
@@ -55,5 +55,11 @@ public class Boulder : MonoBehaviour {
                 }
             }
         }
+
+        if (GameObject.Find("Whatevernameiwillcallit").GetComponent<BoulderTrigger>().HasCollided == true)
+        {
+            Destroy(this.gameObject);
+        }
+
     }
 }
