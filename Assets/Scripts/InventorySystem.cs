@@ -14,7 +14,7 @@ public class InventorySystem : MonoBehaviour {
     private Quaternion handDefaultRot;
 	
 	private GameObject playerObject;
-	private GameObject heldBagpackSpace;
+	//private GameObject heldBagpackSpace;
 	private GameObject equippedBagPackSpace;
 	
 	private bool hasBagOpen = false;
@@ -24,7 +24,7 @@ public class InventorySystem : MonoBehaviour {
 		equippedBagPackSpace = GameObject.Find("Equipped Bagpack Space");
 		playerObject = GameObject.FindGameObjectWithTag("MainCamera");
 		M3 = GameObject.FindGameObjectWithTag("Player").GetComponent<Movement3D>();
-		heldBagpackSpace = GameObject.Find("Held Bagpack Space");
+		//heldBagpackSpace = GameObject.Find("Held Bagpack Space");
 		arms = GameObject.Find("Arms").GetComponent<ArmsScript>();
 
         bagSlots = new GameObject[8]; //initiates bagSlots array and fills it in order.
