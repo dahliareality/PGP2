@@ -24,11 +24,11 @@ public class SECTR_Door : MonoBehaviour
 	private int controlParam = 0;
 	private int canOpenParam = 0;
 	private int closedState = 0;
-	private int waitingState = 0;
-	private int openingState = 0;
+	//private int waitingState = 0;
+	//private int openingState = 0;
 	private int openState = 0;
-	private int closingState = 0;
-	private int lastState = 0;
+	//private int closingState = 0;
+	//private int lastState = 0;
 	private Animator cachedAnimator = null;
 
 	private int openCount = 0;
@@ -91,10 +91,10 @@ public class SECTR_Door : MonoBehaviour
 		controlParam = Animator.StringToHash(ControlParam);
 		canOpenParam = Animator.StringToHash(CanOpenParam);
 		closedState = Animator.StringToHash(ClosedState);
-		waitingState = Animator.StringToHash(WaitingState);
-		openingState = Animator.StringToHash(OpeningState);
+		//waitingState = Animator.StringToHash(WaitingState);
+		//openingState = Animator.StringToHash(OpeningState);
 		openState = Animator.StringToHash(OpenState);
-		closingState = Animator.StringToHash(ClosingState);
+		//closingState = Animator.StringToHash(ClosingState);
 	}
 
 	void Start()
@@ -112,7 +112,7 @@ public class SECTR_Door : MonoBehaviour
 			Portal.SetFlag(SECTR_Portal.PortalFlags.Closed, true);
 		}
 		openCount = 0;
-		lastState = closedState;
+		//lastState = closedState;
 		SendMessage("OnClose", SendMessageOptions.DontRequireReceiver);
 	}
 	
