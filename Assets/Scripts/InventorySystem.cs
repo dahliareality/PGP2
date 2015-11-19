@@ -10,7 +10,7 @@ public class InventorySystem : MonoBehaviour {
 	
 	private ArmsScript arms;
 	private Movement3D M3;
-	private Vector3 handStartPos;
+	public Vector3 handStartPos;
     private Quaternion handDefaultRot;
 	
 	private GameObject playerObject;
@@ -34,8 +34,8 @@ public class InventorySystem : MonoBehaviour {
             bagSlots[i] = GameObject.Find("BagSlot ("+i+")");
         }
 
-        handStartPos = GameObject.Find("RightArmDefaultPosition").transform.position;
-        handDefaultRot = GameObject.Find("RightArmDefaultPosition").transform.rotation;
+        handStartPos = GameObject.Find("RightArm").transform.localPosition;
+		handDefaultRot = GameObject.Find("RightArm").transform.localRotation;
 
         for (int i = 0; i < bagSlots.Length; i++)
 		{
@@ -61,8 +61,8 @@ public class InventorySystem : MonoBehaviour {
 			{
 				hasBagOpen = !hasBagOpen;
 
-                handStartPos = GameObject.Find("RightArmDefaultPosition").transform.position;
-                handDefaultRot = GameObject.Find("RightArmDefaultPosition").transform.rotation;
+//                handStartPos = GameObject.Find("RightArmDefaultPosition").transform.position;
+//                handDefaultRot = GameObject.Find("RightArmDefaultPosition").transform.rotation;
 
                 if (!hasBagOpen)
 				{
@@ -132,7 +132,7 @@ public class InventorySystem : MonoBehaviour {
 		// Open the bag
 //		this.transform.position = heldBagpackSpace.transform.position;
 //		this.transform.rotation = heldBagpackSpace.transform.rotation;
-		arms.rightArm.transform.rotation = handDefaultRot;
+		arms.rightArm.transform.localRotation = handDefaultRot;
 		//Debug.Log ("Open Inventory");
 		openSound.GetComponent<SECTR_PointSource>().Play();
 	}
@@ -141,8 +141,8 @@ public class InventorySystem : MonoBehaviour {
 	{
 		// Close the Bag
 		// Reset Right arm position
-		arms.rightArm.transform.position = handStartPos;
-        arms.rightArm.transform.rotation = handDefaultRot;
+		arms.rightArm.transform.localPosition = handStartPos;
+        arms.rightArm.transform.localRotation = handDefaultRot;
 //	this.transform.position = equippedBagPackSpace.transform.position;
 //	this.transform.rotation = equippedBagPackSpace.transform.rotation;
 		closeSound.GetComponent<SECTR_PointSource>().Play();

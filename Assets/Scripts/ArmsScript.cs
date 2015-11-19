@@ -23,6 +23,7 @@ public class ArmsScript : MonoBehaviour {
 
     private RigidbodyConstraints originalConstraints;
 
+	public AnimationStateController animState;
 
 	void Start () {
         handSpeed = 1.2f;
@@ -37,10 +38,23 @@ public class ArmsScript : MonoBehaviour {
         {
             // If bag is open, make rightArm select in the bag.
 
+
+
+
+
+
+
+
 			Debug.DrawLine(rightArm.transform.position, rightArm.transform.position + rightArm.transform.forward, Color.cyan);
 
             if (Physics.Raycast(rightArm.transform.position, rightArm.transform.forward, out hit, 2.2f))
             {
+
+				if (hit.collider.gameObject.tag == "BagSlot" && !isCarryingItem)
+				{
+					if(hit.collider.gameObject.GetComponent<BagSlot>().HasOpenSpot == false)
+					animState.handOpen = true;
+				}
                 
                 if (hit.collider.gameObject.tag == "Bagpack")
                 {
@@ -64,6 +78,7 @@ public class ArmsScript : MonoBehaviour {
                             // Drop Item in the slot;
                             inventory.AddItemFromHandToBag(objInRightArm);
                             objInRightArm = null;
+							isCarryingItem = false;
                         }
 						else if (hit.collider.transform.tag == "BagSlot" && !isCarryingItem)
 						{
@@ -73,15 +88,6 @@ public class ArmsScript : MonoBehaviour {
 							hit.collider.gameObject.transform.GetChild(0).transform.parent = null;
 
 
-//							for (int i = 0; i < 12; i++)
-//							{
-//								if (hit.collider.gameObject.GetComponent<Pickable>().InvSpot == bagSlots[i].name)
-//								{
-//									hit.collider.gameObject.GetComponent<Pickable>().IsInInventory = false;
-//									bagSlots[i].GetComponent<BagSlot>().HasOpenSpot = true;
-//									break;
-//								}
-//							}
 						}
 
                         
@@ -90,6 +96,8 @@ public class ArmsScript : MonoBehaviour {
                     {
                         if (!isCarryingItem)
                         {
+//							animState.handOpen = true;
+
                             for (int i = 0; i < 12; i++)
                             {
                                 if (hit.collider.gameObject.GetComponent<Pickable>().InvSpot == bagSlots[i].name)
@@ -109,6 +117,9 @@ public class ArmsScript : MonoBehaviour {
                 {
                      //Debug.Log("Empty space in bag.");
                 }
+
+
+
             }
             // Movement of Right Arm
             float up, right;
@@ -140,11 +151,18 @@ public class ArmsScript : MonoBehaviour {
             Vector3 armPos = rightArm.transform.localPosition;
             armPos.x = Mathf.Clamp(armPos.x, -0.5f, 1.2f);
             armPos.y = Mathf.Clamp(armPos.y, -0.25f, 1.0f);
-            armPos += new Vector3(Input.GetAxis("PS4_DPadHorizontal"), Input.GetAxis("PS4_DPadVertical"), 0.0f) * Time.deltaTime * handSpeed;
+
+			Vector3 input = new Vector3(Input.GetAxis("PS4_DPadHorizontal"), Input.GetAxis("PS4_DPadVertical"), 0.0f) * Time.deltaTime * handSpeed;
+//			input.Scale(GameObject.FindGameObjectWithTag("BagPack").transform.up);
+			armPos.x += input.x;
+			armPos.y += input.y;
+			armPos.z += input.z;
             armPos += new Vector3(right, up, 0.0f) * Time.deltaTime * handSpeed;
             rightArm.transform.localPosition = armPos;
 
         }
+		if (isCarryingItem)
+			animState.handGrab = true;
 	}
 
     public bool IsCarryingItem
