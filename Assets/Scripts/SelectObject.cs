@@ -41,7 +41,7 @@ public class SelectObject : MonoBehaviour {
                 }
             }// end if tag == "moveable"*/
 
-            if (hit.collider.gameObject.tag == "rotateable")
+            /*if (hit.collider.gameObject.tag == "rotateable")
             {
                 if (Input.GetKeyDown(KeyCode.E))
                 {
@@ -60,7 +60,7 @@ public class SelectObject : MonoBehaviour {
                 {
                     grabbedObject = null;
                 }
-            }//end if tag == "turnable"
+            }//end if tag == "turnable"*/
         }
 
         if (grabbedObject != null)//if ray no longer hits object, drop it.

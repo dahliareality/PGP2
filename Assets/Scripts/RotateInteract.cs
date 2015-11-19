@@ -16,50 +16,35 @@ public class RotateInteract : MonoBehaviour {
     private float currentYRotation;
 	private bool isSoundPlaying = false;
 	private int testInt = 0;
+    public GameObject leftSwitch;
+    public GameObject rightSwitch;
 
     void Awake()
     {
         currentYRotation = transform.rotation.y;
-
     }
 
-    public void OnInteractHold()
+    public void FixedUpdate()
     {
         float x = 0f;
-        if (Input.GetAxis("PS4_DPadHorizontal") > 0 || Input.GetAxis("PS4_DPadHorizontal") < 0)
+        if (leftSwitch.GetComponent<RotateSwitch>().activated)
         {
-            x = Input.GetAxis("PS4_DPadHorizontal");
+            x = -1;
         }
-        else if (Input.GetKey(KeyCode.LeftArrow))
+        else if (rightSwitch.GetComponent<RotateSwitch>().activated)
         {
-            x = -1f;
-        }
-        else if (Input.GetKey(KeyCode.RightArrow))
-        {
-            x = 1f;
+            x = 1;
         }
         
         // Getting inputs from mouse, and storing the values
-        yRotation += x * lookSensitivity;
+        //yRotation += x * lookSensitivity;
+        yRotation += x;
 
-       /* xRotation = Mathf.Clamp(xRotation, -90f + startRotation.x, 90f + startRotation.x); // Clamping X
-        yRotation = Mathf.Clamp(yRotation, -90f + startRotation.y, 90f + startRotation.y); // Clamping Y*/
+        /* xRotation = Mathf.Clamp(xRotation, -90f + startRotation.x, 90f + startRotation.x); // Clamping X
+         yRotation = Mathf.Clamp(yRotation, -90f + startRotation.y, 90f + startRotation.y); // Clamping Y*/
 
         currentYRotation = Mathf.SmoothDamp(currentYRotation, yRotation, ref yRotationV, lookSmoothDamp);
 
-        transform.rotation = Quaternion.Euler(0, -currentYRotation*0.3f, 90);
-		if (!isSoundPlaying && Input.GetAxis("PS4_DPadHorizontal")!=0) {
-			this.GetComponent<SECTR_PointSource>().Play();
-			isSoundPlaying = true;
-			Debug.Log ("Pushing this bitch round mah house "+testInt);
-		}
+        transform.rotation = Quaternion.Euler(0, currentYRotation * 1.5f, 90);
     }
-
-	public void Update(){
-		if (Input.GetAxis ("PS4_DPadHorizontal") == 0) {
-			//Debug.Log ("My arms are tired "+testInt);
-			this.GetComponent<SECTR_PointSource> ().Stop (true);
-			isSoundPlaying = false;
-		}
-	}
 }
