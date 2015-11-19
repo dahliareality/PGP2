@@ -15,13 +15,13 @@ public class InventorySystem : MonoBehaviour {
 	
 	private GameObject playerObject;
 	//private GameObject heldBagpackSpace;
-	private GameObject equippedBagPackSpace;
+	//private GameObject equippedBagPackSpace;
 	
 	private bool hasBagOpen = false;
 	private GameObject openSound, closeSound,/* retreiveSound,*/ storeSound;
 	
 	void Start () {
-		equippedBagPackSpace = GameObject.Find("Equipped Bagpack Space");
+		//equippedBagPackSpace = GameObject.Find("Equipped Bagpack Space");
 		playerObject = GameObject.FindGameObjectWithTag("MainCamera");
 		M3 = GameObject.FindGameObjectWithTag("Player").GetComponent<Movement3D>();
 		//heldBagpackSpace = GameObject.Find("Held Bagpack Space");
