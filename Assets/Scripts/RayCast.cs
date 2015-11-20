@@ -157,10 +157,25 @@ public class RayCast : MonoBehaviour {
                             objectHit.collider.gameObject.GetComponent<CoinCheck>().removeStatue();
                         }
                     }
-                }
+
+
+				}
+
+				//Push coffin with x-button
+				if(Input.GetButton("PS4_X") || Input.GetKey(KeyCode.E)){
+					if (objectHit.collider.gameObject.GetComponent<MoveInteract>() != null && !arms.GetComponent<ArmsScript>().IsCarryingItem){
+						if (objectHit.collider.gameObject.tag == "WoodBox"){
+							objectHit.collider.gameObject.GetComponent<MoveInteract>().OnInteractHold();
+						}
+					} 
+				} else if (!Input.GetButton("PS4_X") || !Input.GetKey(KeyCode.E)){
+					if(objectHit.collider.gameObject.GetComponent<MoveInteract>() != null){
+						objectHit.collider.gameObject.GetComponent<MoveInteract>().OnInteractExit();
+					}
+				}
 
                 // Movement of Woodbox in level 1
-                else if (objectHit.collider.gameObject.GetComponent<MoveInteract>() != null && !arms.GetComponent<ArmsScript>().IsCarryingItem)
+                /*else if (objectHit.collider.gameObject.GetComponent<MoveInteract>() != null && !arms.GetComponent<ArmsScript>().IsCarryingItem)
                 {
                     if (Input.GetAxis("PS4_R2") >= 0.1f || Input.GetKey(KeyCode.R))
                     {
@@ -221,7 +236,7 @@ public class RayCast : MonoBehaviour {
                     {
                         storedPickUpObject = null;
                     }
-                }
+                }*/
 
                 else if (objectHit.collider.gameObject.tag == "Rotation")
                 {
