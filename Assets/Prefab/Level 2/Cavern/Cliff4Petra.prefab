@@ -10,7 +10,6 @@ GameObject:
   - 4: {fileID: 412210}
   - 33: {fileID: 3394338}
   - 23: {fileID: 2376924}
-  - 95: {fileID: 9520806}
   - 64: {fileID: 6492986}
   m_Layer: 0
   m_Name: Cliff4Petra
@@ -74,23 +73,6 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: e393a0db2675fe04fa974eb66f9a5411, type: 3}
---- !u!95 &9520806
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 134590}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: e393a0db2675fe04fa974eb66f9a5411, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

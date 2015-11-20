@@ -10,7 +10,6 @@ GameObject:
   - 4: {fileID: 404920}
   - 33: {fileID: 3324750}
   - 23: {fileID: 2375092}
-  - 95: {fileID: 9511228}
   - 64: {fileID: 6468320}
   m_Layer: 0
   m_Name: Cliff7
@@ -74,23 +73,6 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: 8c5bd2632fe9b4b4eb35239d94e58f8f, type: 3}
---- !u!95 &9511228
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 165604}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 8c5bd2632fe9b4b4eb35239d94e58f8f, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
