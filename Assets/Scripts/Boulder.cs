@@ -56,7 +56,7 @@ public class Boulder : MonoBehaviour {
             }
         }
 
-        if (GameObject.Find("Whatevernameiwillcallit").GetComponent<BoulderTrigger>().HasCollided == true)
+        if (GameObject.Find("BouldBegone").GetComponent<BoulderTrigger>().HasCollided == true)
         {
             Destroy(this.gameObject);
         }
