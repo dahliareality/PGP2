@@ -11,8 +11,8 @@ public class Level1Mover : MonoBehaviour {
 	void Start () {
 
         moveIt = GameObject.Find("LoadLevel3").GetComponent<LoadLevel3Skip2>();
-        childObject = GameObject.Find("Player Oculus Animations");
-        parentObject = GameObject.FindGameObjectWithTag("Player");
+        childObject = GameObject.FindGameObjectWithTag("Player");
+        parentObject = GameObject.Find("PlayerHolder");
 
     }
 	
