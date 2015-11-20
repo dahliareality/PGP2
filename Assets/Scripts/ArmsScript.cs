@@ -150,12 +150,13 @@ public class ArmsScript : MonoBehaviour {
             armPos.x = Mathf.Clamp(armPos.x, -0.5f, 1.2f);
             armPos.y = Mathf.Clamp(armPos.y, -0.25f, 1.0f);
 
-			Vector3 input = new Vector3(Input.GetAxis("PS4_DPadHorizontal"), Input.GetAxis("PS4_DPadVertical"), 0.0f) * Time.deltaTime * handSpeed;
-//			input.Scale(GameObject.FindGameObjectWithTag("BagPack").transform.up);
-			armPos.x += input.x;
-			armPos.y += input.y;
-			armPos.z += input.z;
-            armPos += new Vector3(right, up, 0.0f) * Time.deltaTime * handSpeed;
+			Vector3 input = new Vector3(Input.GetAxis("PS4_DPadHorizontal"), Input.GetAxis("PS4_DPadVertical"), Input.GetAxis("PS4_DPadVertical")*0.9f) * Time.deltaTime * handSpeed;
+////			input.Scale(GameObject.FindGameObjectWithTag("BagPack").transform.up);
+			armPos += input;
+	
+
+//			armPos = input.Scale( transform.up.x, transform.up.y, transform.up.z );
+            armPos += new Vector3(right, up, up*0.9f) * Time.deltaTime * handSpeed;
             rightArm.transform.localPosition = armPos;
 
         }
