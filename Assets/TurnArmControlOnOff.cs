@@ -31,18 +31,38 @@ public class TurnArmControlOnOff : StateMachineBehaviour {
 	//
 	//}
 
-	public IKControl ikControl;
+	private IKControl ikControl;
 //	public bool turnOnOff;
+
+	public float fadeSpeed = 2f;
+	public float timeTillFadeDown = 2;
+
+	private float timer = 0;
 
 	override public void OnStateEnter (Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 	{
-		GameObject.FindGameObjectWithTag ("Animator").GetComponent<IKControl> ().ikActive = false;
+
+		ikControl = GameObject.FindGameObjectWithTag ("Animator").GetComponent<IKControl> ();
+		ikControl.movement = 1;
+		timer = 0;
 	}
-	
+
+	override public void OnStateUpdate (Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+	{
+		timer += Time.deltaTime;
+
+
+		if (ikControl.movement > 0 && timer < timeTillFadeDown)
+			ikControl.movement -= fadeSpeed*Time.deltaTime;
+
+		if (timer > timeTillFadeDown)
+			ikControl.movement += fadeSpeed*Time.deltaTime;
+
+	}
 	
 	override public void OnStateExit (Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 	{
-		GameObject.FindGameObjectWithTag ("Animator").GetComponent<IKControl> ().ikActive = true;
+		ikControl.movement = 1;
 	}
 
 }
