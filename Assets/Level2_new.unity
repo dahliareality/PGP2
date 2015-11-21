@@ -25,7 +25,7 @@ RenderSettings:
   m_AmbientGroundColor: {r: .256920427, g: .261484325, b: .264705896, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 3
-  m_SkyboxMaterial: {fileID: 2100000, guid: c4079abdb3ae4104998af056f1c82c54, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 7475c8c56de5b3442a15e0e4a58bac64, type: 2}
   m_HaloStrength: .5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -1339,7 +1339,7 @@ MeshRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: f8aa7dae5bfb2c54f836157760b58d2c, type: 2}
+  - {fileID: 2100000, guid: 1d3d0c8b5ea9190429d26ed445a0df97, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -6868,22 +6868,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 472806, guid: d08c83e6b813e324f894e2442c56579a, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 5.24063683
-      objectReference: {fileID: 0}
-    - target: {fileID: 472806, guid: d08c83e6b813e324f894e2442c56579a, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 7.04496002
-      objectReference: {fileID: 0}
-    - target: {fileID: 472806, guid: d08c83e6b813e324f894e2442c56579a, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 11.0347767
-      objectReference: {fileID: 0}
-    - target: {fileID: 6457334, guid: d08c83e6b813e324f894e2442c56579a, type: 2}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 4300000, guid: 4e02d800bb6fc47479355daa37665446, type: 3}
     - target: {fileID: 112720, guid: d08c83e6b813e324f894e2442c56579a, type: 2}
       propertyPath: m_Name
       value: Cliff5 (1)
@@ -8980,7 +8964,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 472806, guid: d08c83e6b813e324f894e2442c56579a, type: 2}
       propertyPath: m_RootOrder
-      value: 51
+      value: 56
       objectReference: {fileID: 0}
     - target: {fileID: 472806, guid: d08c83e6b813e324f894e2442c56579a, type: 2}
       propertyPath: m_LocalScale.x
@@ -8997,7 +8981,7 @@ Prefab:
     - target: {fileID: 2353578, guid: d08c83e6b813e324f894e2442c56579a, type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 927af7d75c75d7545894e1378ca04fd7, type: 2}
+      objectReference: {fileID: 2100000, guid: 604973e8295245d488468814fd76744a, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d08c83e6b813e324f894e2442c56579a, type: 2}
   m_IsPrefabParent: 0
@@ -9516,7 +9500,7 @@ MeshRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 537c98d2b5ac7c4489ce3f0a18842c16, type: 2}
+  - {fileID: 2100000, guid: b04e92c8d9a81794583d8ba42a0d2935, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
