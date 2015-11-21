@@ -40,6 +40,7 @@ public class AnimalAI : MonoBehaviour {
 				isScared = false;
 				timer = 0f;
 			}
+			transform.right = vectorAwayFromPlayer;
 		}
 	}
 }
