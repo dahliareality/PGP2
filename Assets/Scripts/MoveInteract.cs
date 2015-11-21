@@ -16,7 +16,7 @@ public class MoveInteract : MonoBehaviour {
     private Rigidbody rb;
 	private bool isMovingSoundPlaying;
 
-    public AudioClip pushSound;
+    //public AudioClip pushSound;
 
 
     // Use this for initialization
@@ -47,9 +47,9 @@ public class MoveInteract : MonoBehaviour {
             
         DiagonalMoveClamp();
         CardianlMoveClamp();
-        if (!isMovingSoundPlaying)
+        if (!isMovingSoundPlaying && heading.magnitude != 0.0f)
         {
-            this.GetComponent<AudioSource>().PlayOneShot(pushSound, 1.0f);
+			this.GetComponent<AudioSource>().Play();
             isMovingSoundPlaying = true;
         }
     }
@@ -114,4 +114,8 @@ public class MoveInteract : MonoBehaviour {
         distance = heading.magnitude;
         direction = heading / distance;
     }
+	void Update (){
+		Debug.Log (heading.magnitude);
+	}
+
 }
