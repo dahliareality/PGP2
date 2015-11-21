@@ -22,7 +22,7 @@ public class AnimalAI : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
-		vectorTowardsPlayer = this.gameObject.transform.position - GameObject.Find ("Player_Character").transform.position;
+		vectorTowardsPlayer = this.gameObject.transform.position - GameObject.FindWithTag ("Player").transform.position;
 		distanceToPlayer = vectorTowardsPlayer.magnitude;
 		vectorAwayFromPlayer = vectorTowardsPlayer;
 		
