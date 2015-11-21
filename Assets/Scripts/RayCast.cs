@@ -238,7 +238,7 @@ public class RayCast : MonoBehaviour {
                     }
                 }*/
 
-                else if (objectHit.collider.gameObject.tag == "Rotation")
+                if (objectHit.collider.gameObject.tag == "Rotation")
                 {
                     if (Input.GetButton("PS4_X") || Input.GetKey(KeyCode.E))
                     {

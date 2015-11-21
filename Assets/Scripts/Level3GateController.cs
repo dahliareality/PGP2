@@ -41,7 +41,7 @@ public class Level3GateController : MonoBehaviour
         if ((tilePuzzleSolved == true || sunPuzzleSolved == true) && !isPuzzle1Done)
         {
             isPuzzle1Done = true;
-            Debug.Log("Raaarg!");
+            //Debug.Log("Raaarg!");
             //rollSound1.GetComponent<SECTR_PropagationSource>().Play();
             rollSound1.GetComponent<AudioSource>().Play();
             Destroy(woodenGrate1);
@@ -50,11 +50,10 @@ public class Level3GateController : MonoBehaviour
         if (tilePuzzleSolved == true && sunPuzzleSolved == true && !isPuzzle2Done)
         {
             isPuzzle2Done = true;
-            Debug.Log("Finally!");
+            //Debug.Log("Finally!");
             //rollSound2.GetComponent<SECTR_PropagationSource>().Play();
             rollSound2.GetComponent<AudioSource>().Play();
             Destroy(woodenGrate2);
-            Destroy(GameObject.Find("Safeguard"));
             //nrOfPuzzlesSolved = 2;
         }
         //Debug.Log(nrOfPuzzlesSolved);

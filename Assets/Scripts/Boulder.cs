@@ -45,16 +45,6 @@ public class Boulder : MonoBehaviour {
                 reCollide = true;
             }
         }
-        if (reCollide == true)
-        {
-            if (GameObject.Find("lv3_Breakable_Wall_animation").GetComponent<ExitPoint>().HasEntered)
-            {
-                for (int i = 1; i < 251; i++)
-                {
-                    GameObject.Find("Box006_Part_" + i).GetComponent<Collider>().enabled = true;
-                }
-            }
-        }
 
         if (GameObject.Find("BouldBegone").GetComponent<BoulderTrigger>().HasCollided == true)
         {

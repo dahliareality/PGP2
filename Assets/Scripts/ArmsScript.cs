@@ -147,8 +147,7 @@ public class ArmsScript : MonoBehaviour {
             }
 
             Vector3 armPos = rightArm.transform.localPosition;
-            armPos.x = Mathf.Clamp(armPos.x, -0.5f, 1.2f);
-            armPos.y = Mathf.Clamp(armPos.y, -0.25f, 1.0f);
+
 
 			Vector3 input = new Vector3(Input.GetAxis("PS4_DPadHorizontal"), Input.GetAxis("PS4_DPadVertical"), Input.GetAxis("PS4_DPadVertical")*0.9f) * Time.deltaTime * handSpeed;
 ////			input.Scale(GameObject.FindGameObjectWithTag("BagPack").transform.up);
@@ -157,6 +156,12 @@ public class ArmsScript : MonoBehaviour {
 
 //			armPos = input.Scale( transform.up.x, transform.up.y, transform.up.z );
             armPos += new Vector3(right, up, up*0.9f) * Time.deltaTime * handSpeed;
+
+			float clampValue = 0.25f;
+			armPos.x = Mathf.Clamp(armPos.x, -0.0f, 0.4f);
+			armPos.y = Mathf.Clamp(armPos.y, -0.05f, 0.2f);
+			armPos.z = Mathf.Clamp(armPos.z, -0.6f, -0.3f);
+
             rightArm.transform.localPosition = armPos;
 
         }
@@ -187,7 +192,7 @@ public class ArmsScript : MonoBehaviour {
         }
         else if (obj.tag == "Room1Tablet")
         {
-            obj.transform.localScale = new Vector3(30.0f, 30.0f, 30.0f);
+            obj.transform.localScale = new Vector3(70.0f, 70.0f, 70.0f);
         }
         playerObject.GetComponent<RayCast>().setStoredPickUpItem(obj);
         if (obj.GetComponent<Rigidbody>() != null)

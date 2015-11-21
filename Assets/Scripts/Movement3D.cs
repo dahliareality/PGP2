@@ -44,7 +44,6 @@ public class Movement3D : MonoBehaviour {
 	void Update () {
         counter = Mathf.Clamp(counter, 0.0f, 2.0f);
 //		velocityShow = new Vector3 (0,0,0);
-
 //		controlFall ();
 		controlFall2 ();
 
@@ -92,7 +91,7 @@ public class Movement3D : MonoBehaviour {
 
     public void SetPlayerSpeed(float x)
     {
-        speed = x;
+        speedOriginal = x;
     }
 
     public bool HasRisen
@@ -103,20 +102,25 @@ public class Movement3D : MonoBehaviour {
 
 	void controlFall()
 	{
-		if (GetComponent<Rigidbody> ().velocity.y < -1)
+		if (GetComponent<Rigidbody> ().velocity.y < -1) {
 			speed = speedOriginal * 0.5f;
-		else
+		} 
+		else {
 			speed = speedOriginal;
+		}
 	}
 	void controlFall2()
 	{
 		float yDif = transform.position.y - oldPos.y;
 //		yDifShow = yDif;
 
-		if (yDif < allowedFallSpeed)
+		if (yDif < allowedFallSpeed) {
+			Debug.Log ("falling");
 			speed = speedOriginal * 0.5f;
-		else
+		} 
+		else {
 			speed = speedOriginal;
+		}
 
 		oldPos = transform.position;
 	}
