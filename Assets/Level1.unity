@@ -5685,7 +5685,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 143990873}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -120.839859, y: 136.769012, z: 359.442566}
+  m_LocalPosition: {x: -120.120003, y: 143.100006, z: 329.339996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1970749143}
@@ -17994,6 +17994,11 @@ GameObject:
 Transform:
   m_PrefabParentObject: {fileID: 459638, guid: 9b347ea4fe1973540b4e8cab5d7e59dc, type: 2}
   m_PrefabInternal: {fileID: 828380706}
+--- !u!20 &497030848 stripped
+Camera:
+  m_PrefabParentObject: {fileID: 2031938, guid: bd4536428e563704b942a47ad0ae0acd,
+    type: 2}
+  m_PrefabInternal: {fileID: 1363433073}
 --- !u!1 &499237253
 GameObject:
   m_ObjectHideFlags: 0
@@ -23916,7 +23921,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ShadowmapMode: 0
   m_Cameras:
-  - {fileID: 690055185}
+  - {fileID: 497030848}
   m_CurrentCamera: {fileID: 0}
   m_Size: {x: 10, y: 10, z: 20}
   m_SpotNear: .100000001
@@ -28606,11 +28611,6 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 459638, guid: 9b347ea4fe1973540b4e8cab5d7e59dc, type: 2}
   m_PrefabInternal: {fileID: 72400438}
---- !u!20 &690055185 stripped
-Camera:
-  m_PrefabParentObject: {fileID: 2031938, guid: bd4536428e563704b942a47ad0ae0acd,
-    type: 2}
-  m_PrefabInternal: {fileID: 501952258}
 --- !u!1 &693771036
 GameObject:
   m_ObjectHideFlags: 0
@@ -30673,7 +30673,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ShadowmapMode: 0
   m_Cameras:
-  - {fileID: 690055185}
+  - {fileID: 497030848}
   m_CurrentCamera: {fileID: 0}
   m_Size: {x: 10, y: 10, z: 20}
   m_SpotNear: .100000001
@@ -43224,7 +43224,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ShadowmapMode: 0
   m_Cameras:
-  - {fileID: 690055185}
+  - {fileID: 497030848}
   m_CurrentCamera: {fileID: 0}
   m_Size: {x: 10, y: 10, z: 20}
   m_SpotNear: .100000001
@@ -50131,7 +50131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ShadowmapMode: 0
   m_Cameras:
-  - {fileID: 690055185}
+  - {fileID: 497030848}
   m_CurrentCamera: {fileID: 0}
   m_Size: {x: 10, y: 10, z: 20}
   m_SpotNear: .100000001
