@@ -210,7 +210,7 @@ public class RayCast : MonoBehaviour {
                     }
                 }
 
-                // Rotation
+                // Rotation in level 4
                 else if (objectHit.collider.gameObject.tag == "Rotateable" || objectHit.collider.gameObject.tag == "Mirror")
                 {
                     if (Input.GetButtonDown("PS4_R2") || Input.GetKey(KeyCode.R))
@@ -242,19 +242,25 @@ public class RayCast : MonoBehaviour {
                     }
                 }*/
 
-                if (objectHit.collider.gameObject.tag == "Rotation")
+				if(objectHit.collider.gameObject.tag != null && objectHit.collider.gameObject.tag == "Rotation"){
+					// Too be continued 22/11/2015
+				}
+				
+				if (Input.GetButton("PS4_X") || Input.GetKey(KeyCode.E))
                 {
-                    if (Input.GetButton("PS4_X") || Input.GetKey(KeyCode.E))
-                    {
-                        Debug.Log("Flipped");
-                        objectHit.collider.gameObject.GetComponent<RotateSwitch>().activated = true;
-                    }
-                    else
-                    {
-                        objectHit.collider.gameObject.GetComponent<RotateSwitch>().activated = false;
-                        objectHit.collider.gameObject.GetComponent<RotateSwitch>().hasPlayed = false;
-                    }
+                    Debug.Log("Flipped");
+                    objectHit.collider.gameObject.GetComponent<RotateSwitch>().activated = true;
                 }
+				else if (Input.GetButtonUp("PS4_X") || !Input.GetKeyUp(KeyCode.E))
+                {
+                    objectHit.collider.gameObject.GetComponent<RotateSwitch>().activated = false;
+                    objectHit.collider.gameObject.GetComponent<RotateSwitch>().hasPlayed = false;
+                }
+				else if(objectHit.collider.gameObject.tag != "Rotation")
+				{
+					objectHit.collider.gameObject.GetComponent<RotateSwitch>().activated = false;
+					objectHit.collider.gameObject.GetComponent<RotateSwitch>().hasPlayed = false;
+				}
 
                 // Resets storedPickUpObject
                 else if (storedPickUpObject != null)
