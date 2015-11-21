@@ -14015,7 +14015,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e452eeffed48fa4e812bdc6f8b9a56e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skipLvl2: 1
 --- !u!114 &813412287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31800,7 +31799,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   volume: .192000002
   pitch: 1
-  Cue: {fileID: 0}
+  Cue: {fileID: 11400000, guid: 19f519a32f46505429778ef27482d83c, type: 2}
   Loop: 0
   PlayOnStart: 1
 --- !u!1 &1538244560 stripped
