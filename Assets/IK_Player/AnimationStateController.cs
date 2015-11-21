@@ -72,10 +72,12 @@ public class AnimationStateController : MonoBehaviour {
 			if(walkForwards) 
 			{
 				animator.SetBool ("walking",true);
+				animator.SetBool ("walkingBackwards",false);
 				animator.SetBool ("idle",false);
 			} else if(walkBackwards)
 			{
 				animator.SetBool ("walkingBackwards",true);
+				animator.SetBool ("walking",false);
 				animator.SetBool ("idle",false);
 			}
 			else {
