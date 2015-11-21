@@ -14012,10 +14012,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 813412285}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c9513c671df14d47bd02d0cec895193, type: 3}
+  m_Script: {fileID: 11500000, guid: 8e452eeffed48fa4e812bdc6f8b9a56e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skipLvl2: 0
+  skipLvl2: 1
 --- !u!114 &813412287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14048,7 +14048,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 813412285}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 299d9ff926037924abd37bf9d0e7f787, type: 3}
+  m_Script: {fileID: 11500000, guid: 441364a94c3699449853d22ccdebb163, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &815026532
@@ -31800,7 +31800,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   volume: .192000002
   pitch: 1
-  Cue: {fileID: 11400000, guid: 5f0199a5394638b42964913ffbafe480, type: 2}
+  Cue: {fileID: 0}
   Loop: 0
   PlayOnStart: 1
 --- !u!1 &1538244560 stripped
