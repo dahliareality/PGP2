@@ -23,9 +23,9 @@ RenderSettings:
   m_AmbientSkyColor: {r: .172409683, g: .156790644, b: .367647052, a: 1}
   m_AmbientEquatorColor: {r: .431066155, g: .466718227, b: .492647052, a: 1}
   m_AmbientGroundColor: {r: .256920427, g: .261484325, b: .264705896, a: 1}
-  m_AmbientIntensity: .920000017
+  m_AmbientIntensity: 1
   m_AmbientMode: 3
-  m_SkyboxMaterial: {fileID: 2100000, guid: 5efe04f7a09432246ad46d7149dc2b69, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 7475c8c56de5b3442a15e0e4a58bac64, type: 2}
   m_HaloStrength: .5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -822,6 +822,66 @@ Transform:
 GameObject:
   m_PrefabParentObject: {fileID: 138158, guid: 7e066df477360004cbaa08492ddd31dc, type: 2}
   m_PrefabInternal: {fileID: 1811575584}
+--- !u!1 &125468164
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 125468166}
+  - 108: {fileID: 125468165}
+  m_Layer: 0
+  m_Name: Spotlight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &125468165
+Light:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 125468164}
+  m_Enabled: 1
+  serializedVersion: 6
+  m_Type: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1
+  m_Range: 20.3700008
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_Strength: 1
+    m_Bias: .0500000007
+    m_NormalBias: .400000006
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_BounceIntensity: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_AreaSize: {x: 1, y: 1}
+--- !u!4 &125468166
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 125468164}
+  m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106709}
+  m_LocalPosition: {x: -98.5999985, y: 151.300003, z: 6.30000019}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 78
 --- !u!1001 &131806322
 Prefab:
   m_ObjectHideFlags: 0
@@ -1279,7 +1339,7 @@ MeshRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 7077f7952efa7e1439e5fbd745ff7117, type: 2}
+  - {fileID: 2100000, guid: 3481b67e216d6bc4585b992fb903713e, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -1311,7 +1371,7 @@ Transform:
   m_LocalScale: {x: 10.4016342, y: 10.4016247, z: 10.4016247}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 79
+  m_RootOrder: 77
 --- !u!1 &204499587 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 169018, guid: 7e066df477360004cbaa08492ddd31dc, type: 2}
@@ -4661,22 +4721,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 40
       objectReference: {fileID: 0}
-    - target: {fileID: 472806, guid: d08c83e6b813e324f894e2442c56579a, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 5.24064064
-      objectReference: {fileID: 0}
-    - target: {fileID: 472806, guid: d08c83e6b813e324f894e2442c56579a, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 4.35122204
-      objectReference: {fileID: 0}
-    - target: {fileID: 472806, guid: d08c83e6b813e324f894e2442c56579a, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 11.0347843
-      objectReference: {fileID: 0}
-    - target: {fileID: 6457334, guid: d08c83e6b813e324f894e2442c56579a, type: 2}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 4300000, guid: 4e02d800bb6fc47479355daa37665446, type: 3}
     - target: {fileID: 112720, guid: d08c83e6b813e324f894e2442c56579a, type: 2}
       propertyPath: m_Name
       value: Cliff5 (28)
@@ -6761,7 +6805,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 928020098}
-    gameObjectHash: -325266
+    gameObjectHash: 79788
     member: {fileID: 928020101}
     renderer: {fileID: 0}
     renderHash: 0
@@ -7146,7 +7190,7 @@ MeshRenderer:
   m_CastShadows: 2
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 7077f7952efa7e1439e5fbd745ff7117, type: 2}
+  - {fileID: 2100000, guid: d5165ac3d4f71bd4faacbf6e95d80cd2, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -7522,6 +7566,14 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 609.941711
       objectReference: {fileID: 0}
+    - target: {fileID: 3394338, guid: eff7ce4c73b77d74aafbe03a14983705, type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: 1864b747e2cb2b749bda3e6b76671f43, type: 3}
+    - target: {fileID: 6492986, guid: eff7ce4c73b77d74aafbe03a14983705, type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: 1864b747e2cb2b749bda3e6b76671f43, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eff7ce4c73b77d74aafbe03a14983705, type: 2}
   m_IsPrefabParent: 0
@@ -9008,7 +9060,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 472806, guid: d08c83e6b813e324f894e2442c56579a, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 472806, guid: d08c83e6b813e324f894e2442c56579a, type: 2}
       propertyPath: m_LocalScale.x
@@ -9022,6 +9074,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 4.09425545
       objectReference: {fileID: 0}
+    - target: {fileID: 2353578, guid: d08c83e6b813e324f894e2442c56579a, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a5337cff63bd329409bfa05ffc369a67, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d08c83e6b813e324f894e2442c56579a, type: 2}
   m_IsPrefabParent: 0
@@ -9540,7 +9596,7 @@ MeshRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 7077f7952efa7e1439e5fbd745ff7117, type: 2}
+  - {fileID: 2100000, guid: 2cc4243d13974d849994ac9859cb0859, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -9568,7 +9624,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1356590408}
   m_LocalRotation: {x: .486141413, y: -.513599694, z: .488433152, w: -.511189818}
-  m_LocalPosition: {x: -180.800003, y: 157.600006, z: 33.5}
+  m_LocalPosition: {x: -180.800003, y: 182.699997, z: 33.5}
   m_LocalScale: {x: 10.4016342, y: 10.4016247, z: 10.4016247}
   m_Children: []
   m_Father: {fileID: 0}
@@ -9696,7 +9752,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 1374926450}
-    gameObjectHash: -325240
+    gameObjectHash: 80008
     member: {fileID: 1374926453}
     renderer: {fileID: 1374926457}
     renderHash: 0
@@ -9725,7 +9781,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 1396243943}
-    gameObjectHash: -325256
+    gameObjectHash: 80060
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -9754,7 +9810,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 1140391522}
-    gameObjectHash: -325246
+    gameObjectHash: 79888
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -9783,7 +9839,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 1721301091}
-    gameObjectHash: -325296
+    gameObjectHash: 80238
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -9812,7 +9868,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 159206216}
-    gameObjectHash: -325304
+    gameObjectHash: 79380
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -9841,7 +9897,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 673557947}
-    gameObjectHash: -325170
+    gameObjectHash: 79610
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -9870,7 +9926,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 653564571}
-    gameObjectHash: -325226
+    gameObjectHash: 79600
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -9899,7 +9955,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 1826718977}
-    gameObjectHash: -325148
+    gameObjectHash: 80286
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -9928,7 +9984,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 1913975306}
-    gameObjectHash: -325174
+    gameObjectHash: 80336
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -9957,7 +10013,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 1587424930}
-    gameObjectHash: -325160
+    gameObjectHash: 80174
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -9986,7 +10042,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 211991378}
-    gameObjectHash: -325142
+    gameObjectHash: 79428
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -10015,7 +10071,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 1169210990}
-    gameObjectHash: -325238
+    gameObjectHash: 79914
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -10044,7 +10100,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 424983596}
-    gameObjectHash: -325162
+    gameObjectHash: 79514
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -10073,7 +10129,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 1337045142}
-    gameObjectHash: -325168
+    gameObjectHash: 79980
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -10102,7 +10158,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 879900905}
-    gameObjectHash: -325196
+    gameObjectHash: 79762
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -10131,7 +10187,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 1479382599}
-    gameObjectHash: -325322
+    gameObjectHash: 80108
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -10160,7 +10216,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 587261801}
-    gameObjectHash: -325228
+    gameObjectHash: 79576
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -10189,7 +10245,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 890467406}
-    gameObjectHash: -325178
+    gameObjectHash: 79774
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -10218,7 +10274,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 1963811625}
-    gameObjectHash: -325152
+    gameObjectHash: 80366
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -10247,7 +10303,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 1664523568}
-    gameObjectHash: -325278
+    gameObjectHash: 80198
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -10276,7 +10332,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 1183091699}
-    gameObjectHash: -325264
+    gameObjectHash: 79918
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -10305,7 +10361,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 1698264374}
-    gameObjectHash: -325164
+    gameObjectHash: 80226
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -10334,7 +10390,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 1478497767}
-    gameObjectHash: -325182
+    gameObjectHash: 80102
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -10363,7 +10419,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 1795642291}
-    gameObjectHash: -325258
+    gameObjectHash: 80266
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -10392,7 +10448,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 2047738186}
-    gameObjectHash: -325294
+    gameObjectHash: 80436
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -10421,7 +10477,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 1342737017}
-    gameObjectHash: -325216
+    gameObjectHash: 79986
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -10450,7 +10506,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 464992789}
-    gameObjectHash: -325150
+    gameObjectHash: 79536
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -10479,7 +10535,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 1948688138}
-    gameObjectHash: -325260
+    gameObjectHash: 80358
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -10508,7 +10564,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 1402300342}
-    gameObjectHash: -325310
+    gameObjectHash: 80076
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -10537,7 +10593,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 189727705}
-    gameObjectHash: -325224
+    gameObjectHash: 79394
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -10566,7 +10622,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 616107786}
-    gameObjectHash: -325158
+    gameObjectHash: 79584
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -10595,7 +10651,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 1890281106}
-    gameObjectHash: -325176
+    gameObjectHash: 80324
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -10624,7 +10680,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 76914374}
-    gameObjectHash: -325330
+    gameObjectHash: 79336
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -10653,7 +10709,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 2013151790}
-    gameObjectHash: -325272
+    gameObjectHash: 80416
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -10682,7 +10738,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 1978180216}
-    gameObjectHash: -325298
+    gameObjectHash: 80380
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -10711,7 +10767,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 1773720653}
-    gameObjectHash: -325180
+    gameObjectHash: 80252
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -10740,7 +10796,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 693464006}
-    gameObjectHash: -325248
+    gameObjectHash: 79638
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -10769,7 +10825,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 917473213}
-    gameObjectHash: -325198
+    gameObjectHash: 79782
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -10798,7 +10854,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 1192294286}
-    gameObjectHash: -325222
+    gameObjectHash: 79922
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -10827,7 +10883,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 855164737}
-    gameObjectHash: -325308
+    gameObjectHash: 79748
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -10856,7 +10912,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 454118280}
-    gameObjectHash: -325316
+    gameObjectHash: 79530
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -10885,7 +10941,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 1490689415}
-    gameObjectHash: -325146
+    gameObjectHash: 80114
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -10914,7 +10970,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 1354995151}
-    gameObjectHash: -325156
+    gameObjectHash: 79992
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -10943,7 +10999,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 1873028456}
-    gameObjectHash: -325172
+    gameObjectHash: 80310
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -10972,7 +11028,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 554283989}
-    gameObjectHash: -325214
+    gameObjectHash: 79560
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -11001,7 +11057,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 1908795440}
-    gameObjectHash: -325320
+    gameObjectHash: 80330
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -11030,7 +11086,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 1497398251}
-    gameObjectHash: -325192
+    gameObjectHash: 80140
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -11059,7 +11115,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 89896352}
-    gameObjectHash: -325270
+    gameObjectHash: 79342
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -11088,7 +11144,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 104470582}
-    gameObjectHash: -325254
+    gameObjectHash: 79356
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -11117,7 +11173,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 694922760}
-    gameObjectHash: -325280
+    gameObjectHash: 79644
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -11146,7 +11202,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 2065337884}
-    gameObjectHash: -325302
+    gameObjectHash: 80460
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -11175,7 +11231,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 742368240}
-    gameObjectHash: -325234
+    gameObjectHash: 79690
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -11204,7 +11260,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 409842685}
-    gameObjectHash: -325282
+    gameObjectHash: 79506
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -11233,7 +11289,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 2147028798}
-    gameObjectHash: -325194
+    gameObjectHash: 80486
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -11262,7 +11318,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 1692712018}
-    gameObjectHash: -325306
+    gameObjectHash: 80220
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -11291,7 +11347,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 735579967}
-    gameObjectHash: -325218
+    gameObjectHash: 79680
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -11320,7 +11376,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 1756722248}
-    gameObjectHash: -325292
+    gameObjectHash: 80246
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -11349,7 +11405,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 2059197480}
-    gameObjectHash: -325268
+    gameObjectHash: 80452
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -11378,7 +11434,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 798209322}
-    gameObjectHash: -325230
+    gameObjectHash: 79738
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -11407,7 +11463,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 1324107537}
-    gameObjectHash: -325252
+    gameObjectHash: 79972
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -11436,7 +11492,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 1606513418}
-    gameObjectHash: -325284
+    gameObjectHash: 80178
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -11465,7 +11521,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 2035982671}
-    gameObjectHash: -325220
+    gameObjectHash: 80426
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -11494,7 +11550,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 1385665910}
-    gameObjectHash: -325144
+    gameObjectHash: 80030
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -11523,7 +11579,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 886966094}
-    gameObjectHash: -325242
+    gameObjectHash: 79768
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -11552,7 +11608,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 1148381818}
-    gameObjectHash: -325204
+    gameObjectHash: 79894
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -11581,7 +11637,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 946232185}
-    gameObjectHash: -325186
+    gameObjectHash: 79804
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -11610,7 +11666,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 2103892877}
-    gameObjectHash: -325166
+    gameObjectHash: 80472
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -11639,7 +11695,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 404008988}
-    gameObjectHash: -325250
+    gameObjectHash: 79500
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -11668,7 +11724,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 442588546}
-    gameObjectHash: -325244
+    gameObjectHash: 79522
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -11697,7 +11753,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 377378155}
-    gameObjectHash: -325286
+    gameObjectHash: 79480
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -11726,7 +11782,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 1226271647}
-    gameObjectHash: -325232
+    gameObjectHash: 79930
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -11755,7 +11811,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 324480696}
-    gameObjectHash: -325276
+    gameObjectHash: 79466
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -11784,7 +11840,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 1933942069}
-    gameObjectHash: -325200
+    gameObjectHash: 80346
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -11813,7 +11869,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 1649751443}
-    gameObjectHash: -325202
+    gameObjectHash: 80190
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -11842,7 +11898,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 1449950977}
-    gameObjectHash: -325314
+    gameObjectHash: 80092
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -11871,7 +11927,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 723092071}
-    gameObjectHash: -325184
+    gameObjectHash: 79662
     member: {fileID: 1374926453}
     renderer: {fileID: 723092074}
     renderHash: 0
@@ -11900,7 +11956,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 391214117}
-    gameObjectHash: -325206
+    gameObjectHash: 79486
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -11929,7 +11985,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 1851976244}
-    gameObjectHash: -325262
+    gameObjectHash: 80298
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -11958,7 +12014,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 757508827}
-    gameObjectHash: -325236
+    gameObjectHash: 79716
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -11987,7 +12043,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 309441193}
-    gameObjectHash: -325300
+    gameObjectHash: 79452
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -12016,7 +12072,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 1389586214}
-    gameObjectHash: -325326
+    gameObjectHash: 80036
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -12045,7 +12101,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 1497373941}
-    gameObjectHash: -325212
+    gameObjectHash: 80130
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -12074,7 +12130,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 1391364424}
-    gameObjectHash: -325332
+    gameObjectHash: 80046
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -12103,7 +12159,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 1983726614}
-    gameObjectHash: -325312
+    gameObjectHash: 80386
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -12132,7 +12188,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 754000708}
-    gameObjectHash: -325210
+    gameObjectHash: 79704
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -12161,7 +12217,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 1495417464}
-    gameObjectHash: -325324
+    gameObjectHash: 80120
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -12190,7 +12246,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 693028927}
-    gameObjectHash: -325288
+    gameObjectHash: 79626
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -12219,7 +12275,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 97863396}
-    gameObjectHash: -325290
+    gameObjectHash: 79346
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -12248,7 +12304,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 703493599}
-    gameObjectHash: -325190
+    gameObjectHash: 79656
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -12277,7 +12333,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 1054509355}
-    gameObjectHash: -325188
+    gameObjectHash: 79838
     member: {fileID: 1374926453}
     renderer: {fileID: 1054509357}
     renderHash: 0
@@ -12306,7 +12362,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 1514492175}
-    gameObjectHash: -325274
+    gameObjectHash: 80150
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -12335,7 +12391,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 1231113504}
-    gameObjectHash: -325328
+    gameObjectHash: 79936
     member: {fileID: 1374926453}
     renderer: {fileID: 1231113506}
     renderHash: 0
@@ -12364,7 +12420,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 1798515573}
-    gameObjectHash: -325318
+    gameObjectHash: 80272
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -12393,7 +12449,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 634177484}
-    gameObjectHash: -325154
+    gameObjectHash: 79594
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -12422,7 +12478,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 729397455}
-    gameObjectHash: -325208
+    gameObjectHash: 79676
     member: {fileID: 1374926453}
     renderer: {fileID: 0}
     renderHash: 0
@@ -12452,7 +12508,7 @@ MonoBehaviour:
     processed: 1
   renderers:
   - gameObject: {fileID: 1374926450}
-    gameObjectHash: -325240
+    gameObjectHash: 80008
     member: {fileID: 1374926453}
     renderer: {fileID: 1374926457}
     renderHash: 0
@@ -12481,7 +12537,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 723092071}
-    gameObjectHash: -325184
+    gameObjectHash: 79662
     member: {fileID: 1374926453}
     renderer: {fileID: 723092074}
     renderHash: 0
@@ -12510,7 +12566,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 1054509355}
-    gameObjectHash: -325188
+    gameObjectHash: 79838
     member: {fileID: 1374926453}
     renderer: {fileID: 1054509357}
     renderHash: 0
@@ -12539,7 +12595,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 1231113504}
-    gameObjectHash: -325328
+    gameObjectHash: 79936
     member: {fileID: 1374926453}
     renderer: {fileID: 1231113506}
     renderHash: 0
@@ -15056,7 +15112,7 @@ TerrainCollider:
   m_GameObject: {fileID: 1681561149}
   m_Material: {fileID: 0}
   m_Enabled: 1
-  m_TerrainData: {fileID: 15600000, guid: c73816a591d319b45876d4f4ca14e4aa, type: 2}
+  m_TerrainData: {fileID: 15600000, guid: b25321c38c7e8b1458c9660947bdb5b4, type: 2}
   m_EnableTreeColliders: 1
 --- !u!218 &1681561151
 Terrain:
@@ -15066,7 +15122,7 @@ Terrain:
   m_GameObject: {fileID: 1681561149}
   m_Enabled: 1
   serializedVersion: 3
-  m_TerrainData: {fileID: 15600000, guid: c73816a591d319b45876d4f4ca14e4aa, type: 2}
+  m_TerrainData: {fileID: 15600000, guid: b25321c38c7e8b1458c9660947bdb5b4, type: 2}
   m_TreeDistance: 2000
   m_TreeBillboardDistance: 50
   m_TreeCrossFadeLength: 5
@@ -15440,132 +15496,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b8afc860b1da6884f9773eaa72e4ba39, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1731427567
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1731427570}
-  - 108: {fileID: 1731427569}
-  - 114: {fileID: 1731427568}
-  m_Layer: 0
-  m_Name: Area Light
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1731427568
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1731427567}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0109504c2f6a31b4498a8fd6a490584a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShadowmapMode: 0
-  m_Cameras:
-  - {fileID: 1396243950}
-  m_CurrentCamera: {fileID: 0}
-  m_Size: {x: 10, y: 10, z: 20}
-  m_SpotNear: .0500000007
-  m_SpotFar: .5
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ColorFilterMask:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Brightness: 5
-  m_BrightnessColored: 5
-  m_Extinction: .5
-  m_MinDistFromCamera: 0
-  m_ShadowmapRes: 1024
-  m_DepthShader: {fileID: 4800000, guid: 7e188a1e08ecfae4785bed08b1013219, type: 3}
-  m_ColorFilterShader: {fileID: 4800000, guid: 78da0b5fc3a6e8a469d047d71187e7ef, type: 3}
-  m_Colored: 0
-  m_ColorBalance: 1
-  m_EpipolarLines: 256
-  m_EpipolarSamples: 512
-  m_CoordShader: {fileID: 4800000, guid: 170533b360a07f945b98b5d9d11bff19, type: 3}
-  m_DepthBreaksShader: {fileID: 4800000, guid: 8675ad07e6cda494d977506a7a2a8fbd, type: 3}
-  m_RaymarchShader: {fileID: 4800000, guid: 8b94af9deac0e2d4e9523f6090a3e61e, type: 3}
-  m_InterpolateAlongRaysShader: {fileID: 4800000, guid: b4040e961c997484e824ff979a17c3c0,
-    type: 3}
-  m_SamplePositionsShader: {fileID: 4800000, guid: 328e45223da3ee24a9b9bc2020d76aa4,
-    type: 3}
-  m_FinalInterpolationShader: {fileID: 4800000, guid: 3fe6f8dd2066bc741806972899aa82f6,
-    type: 3}
-  m_DepthThreshold: .5
-  m_InterpolationStep: 32
-  m_ShowSamples: 0
-  m_ShowInterpolatedSamples: 0
-  m_ShowSamplesBackgroundFade: .800000012
-  m_AttenuationCurveOn: 0
-  m_AttenuationCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
---- !u!108 &1731427569
-Light:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1731427567}
-  m_Enabled: 1
-  serializedVersion: 6
-  m_Type: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1.41999996
-  m_Range: 67.5100021
-  m_SpotAngle: 28.2000008
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 2
-    m_Resolution: -1
-    m_Strength: .485000014
-    m_Bias: .0500000007
-    m_NormalBias: .400000006
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_Lightmapping: 4
-  m_BounceIntensity: 1
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
-  m_AreaSize: {x: 1, y: 1}
---- !u!4 &1731427570
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1731427567}
-  m_LocalRotation: {x: .45115158, y: -.184333429, z: .152228698, w: .859831333}
-  m_LocalPosition: {x: -137.720001, y: 168.520004, z: -65.3199997}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 78
 --- !u!1001 &1741839922
 Prefab:
   m_ObjectHideFlags: 0
@@ -17523,66 +17453,6 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
---- !u!1 &1902137765
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1902137769}
-  - 33: {fileID: 1902137768}
-  - 23: {fileID: 1902137766}
-  m_Layer: 0
-  m_Name: Mask_waterfall
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!23 &1902137766
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1902137765}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_Materials:
-  - {fileID: 2100000, guid: 28f14d1ad01834d418e3e55c9c6530a6, type: 2}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!33 &1902137768
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1902137765}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1902137769
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1902137765}
-  m_LocalRotation: {x: .204816371, y: -.0564584248, z: -.97703433, w: .0163290184}
-  m_LocalPosition: {x: -149.539993, y: 158.169998, z: -46.2799988}
-  m_LocalScale: {x: 5.34766245, y: 4.33663082, z: 4.56422329}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 77
 --- !u!1 &1908795440
 GameObject:
   m_ObjectHideFlags: 0
@@ -18365,7 +18235,7 @@ MeshRenderer:
   m_CastShadows: 2
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 7077f7952efa7e1439e5fbd745ff7117, type: 2}
+  - {fileID: 2100000, guid: ce88087837be0f94f931c6386554e32a, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -18954,18 +18824,6 @@ Prefab:
     - target: {fileID: 492342, guid: af3b96e6a8ab01c4b855692fdc9438fc, type: 2}
       propertyPath: m_RootOrder
       value: 41
-      objectReference: {fileID: 0}
-    - target: {fileID: 492342, guid: af3b96e6a8ab01c4b855692fdc9438fc, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 7.86395741
-      objectReference: {fileID: 0}
-    - target: {fileID: 492342, guid: af3b96e6a8ab01c4b855692fdc9438fc, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 6.13328362
-      objectReference: {fileID: 0}
-    - target: {fileID: 492342, guid: af3b96e6a8ab01c4b855692fdc9438fc, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 10.3896599
       objectReference: {fileID: 0}
     - target: {fileID: 124664, guid: af3b96e6a8ab01c4b855692fdc9438fc, type: 2}
       propertyPath: m_Name
