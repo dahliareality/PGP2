@@ -19,6 +19,7 @@ public class Level3AntiBacktrack : MonoBehaviour {
         { 
             this.transform.position = Vector3.Lerp(this.transform.position, slideVector, 0.52f * Time.deltaTime);
             Destroy(GameObject.Find("Level1Mover"));
+            Destroy(GameObject.Find("Level1Mover (1)"));
         }
 
     }

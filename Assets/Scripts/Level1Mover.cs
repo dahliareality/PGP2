@@ -20,7 +20,12 @@ public class Level1Mover : MonoBehaviour {
 	void Update () {
         if (moveIt.skipLvl2 == true)
         {
-            GameObject.Find("Level1Mover").transform.position = new Vector3(-138f, 134f, 804f);
+            GameObject.Find("Level1Mover").SetActive(false);
+            childObject.transform.parent = parentObject.transform;
+        }
+        else
+        {
+            GameObject.Find("Level1Mover (1)").SetActive(false);
             childObject.transform.parent = parentObject.transform;
         }
 	}
