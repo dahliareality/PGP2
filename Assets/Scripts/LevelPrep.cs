@@ -18,7 +18,7 @@ public class LevelPrep : MonoBehaviour
     {
         Debug.LogWarning("ASYNC LOAD STARTED - " +
            "DO NOT EXIT PLAY MODE UNTIL SCENE LOADS... UNITY WILL CRASH");
-        async = Application.LoadLevelAdditiveAsync("Level"+ levelNumber);
+        async = Application.LoadLevelAdditiveAsync("Level"+ levelNumber+"_new");
         async.allowSceneActivation = false;
         yield return async;
     }
