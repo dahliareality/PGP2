@@ -12013,10 +12013,10 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24346862, guid: f7610ad637905484e83d15f4969c06db,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 6c74ab59cb2189d42b12f6d99ee0c6b6, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: .289999992
   m_Pitch: -.389999986
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   Priority: 128
@@ -28845,6 +28845,34 @@ MonoBehaviour:
   Cue: {fileID: 11400000, guid: f0ce1cd3c1b2b8749ba87e37fc921066, type: 2}
   Loop: 0
   PlayOnStart: 0
+--- !u!1 &1389051494
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1389051495}
+  m_Layer: 0
+  m_Name: MusicController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1389051495
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1389051494}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1531414950}
+  m_Father: {fileID: 1397953795}
+  m_RootOrder: 4
 --- !u!1001 &1392568272
 Prefab:
   m_ObjectHideFlags: 0
@@ -29129,6 +29157,7 @@ Transform:
   - {fileID: 1611994622}
   - {fileID: 1445773804}
   - {fileID: 42604359}
+  - {fileID: 1389051495}
   m_Father: {fileID: 722172701}
   m_RootOrder: 0
 --- !u!1 &1403936707
@@ -31730,6 +31759,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df9f338034892c44ebb62d97894772f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1531414949
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1531414950}
+  - 114: {fileID: 1531414951}
+  m_Layer: 0
+  m_Name: Level1Music
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1531414950
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1531414949}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1389051495}
+  m_RootOrder: 0
+--- !u!114 &1531414951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1531414949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6f20b8b60dbb1046b21f167d1303601, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volume: .192000002
+  pitch: 1
+  Cue: {fileID: 11400000, guid: 5f0199a5394638b42964913ffbafe480, type: 2}
+  Loop: 0
+  PlayOnStart: 1
 --- !u!1 &1538244560 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 146988, guid: bd4536428e563704b942a47ad0ae0acd, type: 2}
