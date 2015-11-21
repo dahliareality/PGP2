@@ -11,7 +11,7 @@ public class MouseLook : MonoBehaviour {
 
     // Attach this to the MainCamera
 
-	private float lookSensitivity = 30f;
+	private float lookSensitivity = 35f;
 	private float yRotation;
 	private float xRotation;
 	private float yRotationV;
@@ -38,7 +38,7 @@ public class MouseLook : MonoBehaviour {
             xRotation -= Input.GetAxis("Mouse Y");
 
             yRotation += Input.GetAxis("PS4_RightAnalogHorizontal") * lookSensitivity;
-            xRotation += Input.GetAxis("PS4_RightAnalogVertical") * lookSensitivity;
+            //xRotation += Input.GetAxis("PS4_RightAnalogVertical") * lookSensitivity;
 
             xRotation = Mathf.Clamp(xRotation, -90f, 90f); // let the player have a 180 degree vertical view
 

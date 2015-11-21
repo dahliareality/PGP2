@@ -27520,6 +27520,21 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!1 &652086351 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 135784, guid: bd4536428e563704b942a47ad0ae0acd, type: 2}
+  m_PrefabInternal: {fileID: 1363433073}
+--- !u!114 &652086354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 652086351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6455c313f321214693c8c872d9045bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &652874341
 GameObject:
   m_ObjectHideFlags: 0
@@ -32397,7 +32412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82393b9730e14534991c399a2d065883, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skipLvl2: 0
+  skipLvl2: 1
 --- !u!114 &813412287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51764,13 +51779,13 @@ MonoBehaviour:
   shadowLights: []
   shadowCasters: []
   totalBounds:
-    m_Center: {x: -104.029671, y: 138.159958, z: -126.27948}
+    m_Center: {x: -104.029671, y: 138.159958, z: -126.279472}
     m_Extent: {x: .504999995, y: .504999995, z: .876002192}
   renderBounds:
-    m_Center: {x: -104.029671, y: 138.159958, z: -126.27948}
+    m_Center: {x: -104.029671, y: 138.159958, z: -126.279472}
     m_Extent: {x: .5, y: .5, z: .871002197}
   lightBounds:
-    m_Center: {x: -104.029671, y: 137.438965, z: -126.174477}
+    m_Center: {x: -104.029671, y: 137.438965, z: -126.174469}
     m_Extent: {x: 0, y: 0, z: 0}
   hasRenderBounds: 1
   hasLightBounds: 0
@@ -51781,11 +51796,11 @@ MonoBehaviour:
   bakedOnlyLights: []
   PortalDetermined: 0
   ForceStartSector: {fileID: 0}
-  BoundsUpdateMode: 2
+  BoundsUpdateMode: 3
   ExtraBounds: .00999999978
   OverrideBounds: 0
   BoundsOverride:
-    m_Center: {x: -104.029671, y: 138.159958, z: -126.27948}
+    m_Center: {x: -104.029671, y: 138.159958, z: -126.279472}
     m_Extent: {x: .504999995, y: .504999995, z: .876002192}
   DirShadowCaster: {fileID: 0}
   DirShadowDistance: 100
@@ -59345,9 +59360,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 107116, guid: bd4536428e563704b942a47ad0ae0acd, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11488724, guid: bd4536428e563704b942a47ad0ae0acd, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: bd4536428e563704b942a47ad0ae0acd, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1365195972 stripped
@@ -69741,7 +69757,7 @@ GameObject:
   m_TagString: WoodBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 19
   m_IsActive: 1
 --- !u!4 &1638036586
 Transform:
@@ -79529,13 +79545,13 @@ MonoBehaviour:
   shadowLights: []
   shadowCasters: []
   totalBounds:
-    m_Center: {x: -104.029671, y: 137.438965, z: -126.174477}
+    m_Center: {x: -104.029671, y: 137.438965, z: -126.174469}
     m_Extent: {x: .00499999989, y: .00499999989, z: .00499999989}
   renderBounds:
-    m_Center: {x: -104.029671, y: 137.438965, z: -126.174477}
+    m_Center: {x: -104.029671, y: 137.438965, z: -126.174469}
     m_Extent: {x: 0, y: 0, z: 0}
   lightBounds:
-    m_Center: {x: -104.029671, y: 137.438965, z: -126.174477}
+    m_Center: {x: -104.029671, y: 137.438965, z: -126.174469}
     m_Extent: {x: 0, y: 0, z: 0}
   hasRenderBounds: 0
   hasLightBounds: 0
@@ -79546,11 +79562,11 @@ MonoBehaviour:
   bakedOnlyLights: []
   PortalDetermined: 0
   ForceStartSector: {fileID: 0}
-  BoundsUpdateMode: 2
+  BoundsUpdateMode: 3
   ExtraBounds: .00999999978
   OverrideBounds: 0
   BoundsOverride:
-    m_Center: {x: -104.029671, y: 137.438965, z: -126.174477}
+    m_Center: {x: -104.029671, y: 137.438965, z: -126.174469}
     m_Extent: {x: .00499999989, y: .00499999989, z: .00499999989}
   DirShadowCaster: {fileID: 0}
   DirShadowDistance: 100
