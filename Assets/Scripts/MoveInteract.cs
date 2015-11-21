@@ -7,7 +7,7 @@ public class MoveInteract : MonoBehaviour {
     private GameObject player;
 
     public float force = 795;
-    private float slow = 1.4f;
+    private float slow = 1.0f;
     private float playerSpeed;
 
     private Vector3 heading;
@@ -24,7 +24,7 @@ public class MoveInteract : MonoBehaviour {
     {
         rb = GetComponent<Rigidbody>();
         player = GameObject.FindGameObjectWithTag("Player");
-        playerSpeed = player.GetComponent<Movement3D>().GetPlayerSpeed();
+		playerSpeed = 5.0f;
 
     }
 
@@ -114,8 +114,5 @@ public class MoveInteract : MonoBehaviour {
         distance = heading.magnitude;
         direction = heading / distance;
     }
-	void Update (){
-		Debug.Log (heading.magnitude);
-	}
 
 }
