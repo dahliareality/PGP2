@@ -173,6 +173,10 @@ public class RayCast : MonoBehaviour {
 						objectHit.collider.gameObject.GetComponent<MoveInteract>().OnInteractExit();
 					}
 				}
+                else if (Input.GetButtonUp("PS4_X") || Input.GetKeyUp(KeyCode.E))
+                {
+                    objectHit.collider.gameObject.GetComponent<MoveInteract>().OnInteractExit();
+                }
 
                 // Movement of Woodbox in level 1
                 /*else if (objectHit.collider.gameObject.GetComponent<MoveInteract>() != null && !arms.GetComponent<ArmsScript>().IsCarryingItem)
