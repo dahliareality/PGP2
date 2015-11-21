@@ -192,7 +192,7 @@ public class ArmsScript : MonoBehaviour {
         }
         else if (obj.tag == "Room1Tablet")
         {
-            obj.transform.localScale = new Vector3(30.0f, 30.0f, 30.0f);
+            obj.transform.localScale = new Vector3(70.0f, 70.0f, 70.0f);
         }
         playerObject.GetComponent<RayCast>().setStoredPickUpItem(obj);
         if (obj.GetComponent<Rigidbody>() != null)
