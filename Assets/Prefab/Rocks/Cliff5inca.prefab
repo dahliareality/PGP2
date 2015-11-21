@@ -61,7 +61,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 112720}
-  m_Mesh: {fileID: 4300000, guid: e478429ab39075742a94644d2fce6397, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 86bd4ef8c796aa1468128270d23c344b, type: 3}
 --- !u!64 &6457334
 MeshCollider:
   m_ObjectHideFlags: 1
@@ -73,7 +73,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Convex: 0
-  m_Mesh: {fileID: 4300000, guid: e478429ab39075742a94644d2fce6397, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 86bd4ef8c796aa1468128270d23c344b, type: 3}
 --- !u!95 &9505548
 Animator:
   serializedVersion: 3
@@ -106,6 +106,10 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: 86bd4ef8c796aa1468128270d23c344b, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 112720}
