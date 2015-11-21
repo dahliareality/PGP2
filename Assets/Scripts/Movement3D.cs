@@ -15,6 +15,7 @@ public class Movement3D : MonoBehaviour {
 
 	private float speedOriginal = 5f;
 	private float speed = 5f;
+	public float sprintMultiplier = 2;
 	private float allowedFallSpeed = -0.04f;
 
 	private GameObject cameraObj;
@@ -45,10 +46,12 @@ public class Movement3D : MonoBehaviour {
         counter = Mathf.Clamp(counter, 0.0f, 2.0f);
 //		velocityShow = new Vector3 (0,0,0);
 //		controlFall ();
-		controlFall2 ();
 
+		controlFall2 ();
+		sprintButton ();
         if (hasRisen)
         {
+
             //Rotating with the camera
             rb.transform.rotation = Quaternion.Euler(0f, ml.CurrentYRotation, 0f);
             //Walking the direction, of the camera
@@ -123,6 +126,14 @@ public class Movement3D : MonoBehaviour {
 		}
 
 		oldPos = transform.position;
+	}
+	void sprintButton()
+	{
+		if (Input.GetKey (KeyCode.Space))
+			speed = speedOriginal * sprintMultiplier;
+
+
+
 	}
 
 }

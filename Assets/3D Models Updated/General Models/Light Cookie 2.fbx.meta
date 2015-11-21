@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: c4f9bc7bdabcb6d4591199ba468085da
-timeCreated: 1446038694
+guid: 59cd286da1ffa944da7795b4d30ab191
+timeCreated: 1448126634
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
@@ -9,7 +9,8 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Flower_1
+    4300000: pPlane5
+    9500000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
@@ -33,12 +34,12 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 20
-    meshCompression: 3
+    globalScale: 1
+    meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
@@ -68,7 +69,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
