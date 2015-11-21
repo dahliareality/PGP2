@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 490132}
   - 33: {fileID: 3341484}
   - 23: {fileID: 2392958}
-  - 65: {fileID: 6583868}
+  - 64: {fileID: 6415636}
   m_Layer: 0
   m_Name: lvl2_Kingdom_Of_Shu_Mask
   m_TagString: Untagged
@@ -61,8 +61,8 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 131476}
   m_Mesh: {fileID: 4300000, guid: 3423563ce7b6e9745afe2f0bf47adc15, type: 3}
---- !u!65 &6583868
-BoxCollider:
+--- !u!64 &6415636
+MeshCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -71,8 +71,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: .368335396, y: .184247702, z: .14920947}
-  m_Center: {x: -.00948862918, y: .087647453, z: -.00557316234}
+  m_Convex: 1
+  m_Mesh: {fileID: 4300000, guid: 3423563ce7b6e9745afe2f0bf47adc15, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -99,6 +99,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_LocalScale.x
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Convex
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

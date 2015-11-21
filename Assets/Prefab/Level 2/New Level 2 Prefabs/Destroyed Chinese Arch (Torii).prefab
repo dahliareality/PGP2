@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 402584}
   - 33: {fileID: 3352394}
   - 23: {fileID: 2368430}
-  - 65: {fileID: 6507630}
+  - 64: {fileID: 6455618}
   m_Layer: 0
   m_Name: Destroyed Chinese Arch (Torii)
   m_TagString: Untagged
@@ -40,7 +40,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 0b6b9dc6f2e17a442b0637b1f9d6dfb7, type: 2}
+  - {fileID: 2100000, guid: fb3290e5bf715d447959e3eeca4a0c05, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -61,8 +61,8 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 119846}
   m_Mesh: {fileID: 4300000, guid: 383ae0984eb7307469cdaa0d11dccd53, type: 3}
---- !u!65 &6507630
-BoxCollider:
+--- !u!64 &6455618
+MeshCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -71,15 +71,23 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: .501082778, y: .291580707, z: .122126102}
-  m_Center: {x: 2.10106355e-05, y: .0930207521, z: -.00511827134}
+  m_Convex: 0
+  m_Mesh: {fileID: 4300000, guid: 383ae0984eb7307469cdaa0d11dccd53, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fb3290e5bf715d447959e3eeca4a0c05, type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: 383ae0984eb7307469cdaa0d11dccd53, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 119846}
