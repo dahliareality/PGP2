@@ -18,9 +18,9 @@ public class InventorySystem : MonoBehaviour {
 	//private GameObject equippedBagPackSpace;
 	
 	private bool hasBagOpen = false;
-	private GameObject openSound, closeSound,/* retreiveSound,*/ storeSound;
+	private GameObject openSound, closeSound, retreiveSound, storeSound;
 	
-	void Start () {
+	void Awake () {
 		//equippedBagPackSpace = GameObject.Find("Equipped Bagpack Space");
 		playerObject = GameObject.FindGameObjectWithTag("MainCamera");
 		M3 = GameObject.FindGameObjectWithTag("Player").GetComponent<Movement3D>();
@@ -46,7 +46,7 @@ public class InventorySystem : MonoBehaviour {
 		}
 		openSound = GameObject.Find ("BackpackOpenSound");
 		closeSound = GameObject.Find ("BackpackCloseSound");
-		//retreiveSound = GameObject.Find ("BackpackRetreiveItemSound");
+		retreiveSound = GameObject.Find ("BackpackRetreiveItemSound");
 		storeSound = GameObject.Find ("BackpackStoreItemSound");
 		
 	}
@@ -67,10 +67,12 @@ public class InventorySystem : MonoBehaviour {
                 if (!hasBagOpen)
 				{
 					CloseBag();
+
 				}
 				else
 				{
 					OpenBag();
+
 				}
 			}
 		}
@@ -133,8 +135,9 @@ public class InventorySystem : MonoBehaviour {
 //		this.transform.position = heldBagpackSpace.transform.position;
 //		this.transform.rotation = heldBagpackSpace.transform.rotation;
 		arms.rightArm.transform.localRotation = handDefaultRot;
-		//Debug.Log ("Open Inventory");
 		openSound.GetComponent<SECTR_PointSource>().Play();
+		//Debug.Log ("Open Inventory");
+
 	}
 	
 	public void CloseBag()
@@ -143,9 +146,10 @@ public class InventorySystem : MonoBehaviour {
 		// Reset Right arm position
 		arms.rightArm.transform.localPosition = handStartPos;
         arms.rightArm.transform.localRotation = handDefaultRot;
+		closeSound.GetComponent<SECTR_PointSource>().Play();
 //	this.transform.position = equippedBagPackSpace.transform.position;
 //	this.transform.rotation = equippedBagPackSpace.transform.rotation;
-		closeSound.GetComponent<SECTR_PointSource>().Play();
+
 		//Debug.Log ("Close Inventory");
 	}
 	
