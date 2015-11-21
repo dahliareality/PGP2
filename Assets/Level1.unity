@@ -29594,12 +29594,12 @@ MonoBehaviour:
   BlendNearbySounds: 1
   NearBlendRange: {x: .25, y: .75}
   OcclusionFlags: 0
-  OcclusionDistance: 100
+  OcclusionDistance: 300
   RaycastLayers:
     serializedVersion: 2
     m_Bits: 4294967291
-  OcclusionVolume: .5
-  OcclusionCutoff: 2200
+  OcclusionVolume: .670000017
+  OcclusionCutoff: 2649
   OcclusionResonanceQ: 1
   RetestInterval: {x: .5, y: 1}
   CullingBuffer: 10
