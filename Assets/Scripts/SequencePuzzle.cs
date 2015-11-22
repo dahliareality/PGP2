@@ -112,8 +112,8 @@ public class SequencePuzzle : MonoBehaviour
 
                 if (!cogSoundPlayed)
                 {
-                    //GameObject.Find("Cog1DownSound").GetComponent<SECTR_PointSource>().Play();
-                    //GameObject.Find("Cog3UpSound").GetComponent<SECTR_PointSource>().Play();
+                    GameObject.Find("Gear1DownSound").GetComponent<SECTR_PointSource>().Play();
+                    GameObject.Find("Gear3UpSound").GetComponent<SECTR_PointSource>().Play();
                     cogSoundPlayed = true;
                 }
             }
@@ -128,8 +128,8 @@ public class SequencePuzzle : MonoBehaviour
 
                 if (!cogSoundPlayed)
                 {
-                    //GameObject.Find("Cog2DownSound").GetComponent<SECTR_PointSource>().Play();
-                    //GameObject.Find("Cog3DownSound").GetComponent<SECTR_PointSource>().Play();
+                    GameObject.Find("Gear2DownSound").GetComponent<SECTR_PointSource>().Play();
+                    GameObject.Find("Gear3DownSound").GetComponent<SECTR_PointSource>().Play();
                     cogSoundPlayed = true;
                 }
 
