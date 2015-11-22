@@ -17,9 +17,6 @@ public class StatueCheck : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (curStatue == null) {
-			emptySpot = true;
-		}
 	}
 
 	public void placeStatue (GameObject statue)
