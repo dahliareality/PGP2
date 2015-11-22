@@ -3,10 +3,10 @@
 //Normal map should be the "smallWave" bump map
 Shader "FX/ToonWater" {
 Properties {
-	_Color1("Foam Color", COLOR) = (0.0,0.05,0.1,1.0)
-	_Color2("Foam Color", COLOR) = (0.0,0.1,0.3,1.0)
-	_Color3("Foam Color", COLOR) = (0.0,0.2,0.5,1.0)
-	_Color4("Foam Color", COLOR) = (0.1,0.3,0.7,1.0)
+	_Color1("Foam Color 1", COLOR) = (0.0,0.05,0.1,1.0)
+	_Color2("Foam Color 2", COLOR) = (0.0,0.1,0.3,1.0)
+	_Color3("Foam Color 3", COLOR) = (0.0,0.2,0.5,1.0)
+	_Color4("Foam Color 4", COLOR) = (0.1,0.3,0.7,1.0)
 	_Threshold("Threshold", Range(-0.5,0.5)) = 0
 	_Alpha("Alpha", Range(0,1)) = 1
 	_FoamStrength ("Foam strength", Range (0, 10)) = 2.5
@@ -156,12 +156,12 @@ half4 frag( v2f i ) : SV_Target
 	i.viewDir = normalize(i.viewDir);
 	
 	// combine two scrolling bumpmaps into one
-	half3 bump1 = UnpackNormal(tex2D( _BumpMap, i.bumpuv0 )).rgb;
-	half3 bump2 = UnpackNormal(tex2D( _BumpMap, i.bumpuv1 )).rgb;
-	half3 bump = (bump1 + bump2) * 0.5;
+	half3 bump1 = UnpackNormal(tex2D( _BumpMap, i.bumpuv0 )).xyz;
+	half3 bump2 = UnpackNormal(tex2D( _BumpMap, i.bumpuv1 )).xyz;
+	half3 bump = normalize(half3(bump1.xy * 3 + bump2.xy * 1.5, 1)); // In order to enhance distortion, we have to look at the X, Y coordinates of the normals
 	
 	// fresnel factor
-	half fresnelFac = dot( i.viewDir, bump );
+	half viewAngleOfSurface = dot(i.viewDir, bump);
 	
 	// perturb reflection/refraction UVs by bumpmap, and lookup colors	
 	#if HAS_REFLECTION
@@ -177,24 +177,24 @@ half4 frag( v2f i ) : SV_Target
 	half4 color;
 	
 	#if defined(WATER_REFRACTIVE)
-	half fresnel = UNITY_SAMPLE_1CHANNEL( _Fresnel, float2(fresnelFac,fresnelFac) );
-	color = lerp( refr, refl, fresnel);
+	half fresnel = UNITY_SAMPLE_1CHANNEL( _Fresnel, float2(viewAngleOfSurface,viewAngleOfSurface) );
+	color = lerp( refr, refl, 1-viewAngleOfSurface);
 	#endif
 	
 	#if defined(WATER_REFLECTIVE)
-	half4 water = tex2D( _ReflectiveColor, float2(fresnelFac,fresnelFac) );
+	half4 water = tex2D( _ReflectiveColor, float2(viewAngleOfSurface,viewAngleOfSurface) );
 	color.rgb = lerp( water.rgb, refl.rgb, water.a );
 	color.a = refl.a * water.a;
 	#endif
 	
 	#if defined(WATER_SIMPLE)
-	half4 water = tex2D( _ReflectiveColor, float2(fresnelFac,fresnelFac) );
+	half4 water = tex2D( _ReflectiveColor, float2(viewAngleOfSurface,viewAngleOfSurface) );
 	color.rgb = lerp( water.rgb, _HorizonColor.rgb, water.a );
 	color.a = _HorizonColor.a;
 	#endif
 	
 	#if defined(HAS_FOAM)
-	float sceneZ = LinearEyeDepth (tex2Dproj(_CameraDepthTexture, UNITY_PROJ_COORD(i.ref)).r);
+	/*float sceneZ = LinearEyeDepth (tex2Dproj(_CameraDepthTexture, UNITY_PROJ_COORD(i.ref)).r);
 	float objectZ = i.ref.z;
 	float intensityFactor = 1 - saturate((sceneZ - objectZ)  / _FoamStrength);    
 	half3 foamGradient = 1 - tex2D(_FoamGradient, float2(intensityFactor - _Time.y*0.2, 0) + bump.xy * 0.15);
@@ -206,12 +206,11 @@ half4 frag( v2f i ) : SV_Target
 	else if((((color.r + color.g + color.b) / 3) < 0.2+_Threshold)  && ((color.r + color.g + color.b) / 3) > 0.1+_Threshold) color.rgb = _Color2;
 	else if((((color.r + color.g + color.b) / 3) > 0.2+_Threshold) && ((color.r + color.g + color.b) / 3) < 0.5+_Threshold) color.rgb = _Color3;
 	else if((((color.r + color.g + color.b) / 3) > 0.5+_Threshold) && ((color.r + color.g + color.b) / 3) < 0.8+_Threshold) color.rgb = _Color4;
-	color.a = _Alpha;
-
+	color.a = _Alpha;*/
 	#endif
-	
+
 	UNITY_APPLY_FOG(i.fogCoord, color);
-	return color;
+	return half4(color.xyz, 1);
 }
 ENDCG
 
