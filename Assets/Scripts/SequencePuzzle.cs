@@ -131,7 +131,7 @@ public class SequencePuzzle : MonoBehaviour
                 if (!cogThirdSoundPlayed)
                 {
                     GameObject.Find("Gear2DownSound").GetComponent<SECTR_PointSource>().Play();
-                    GameObject.Find("Gears3DownSound").GetComponent<SECTR_PointSource>().Play();
+                    GameObject.Find("Gear3DownSound").GetComponent<SECTR_PointSource>().Play();
                     cogThirdSoundPlayed = true;
                 }
 
