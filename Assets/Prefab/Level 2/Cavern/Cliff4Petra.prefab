@@ -16,7 +16,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &412210
 Transform:
@@ -24,9 +24,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 134590}
-  m_LocalRotation: {x: -.707106829, y: 0, z: -0, w: .707106829}
-  m_LocalPosition: {x: 20.4005051, y: 1.58894944, z: 6.94551829e-08}
-  m_LocalScale: {x: 329.21402, y: 329.21402, z: 329.21402}
+  m_LocalRotation: {x: -.710306823, y: .0554085448, z: .0472990982, w: .700112104}
+  m_LocalPosition: {x: 4.0436821, y: -81.1131821, z: 63.8412285}
+  m_LocalScale: {x: 1113.42139, y: 895.792358, z: 196.20433}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -40,18 +40,18 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 7f0b0069d1718834aada8914d5148678, type: 2}
+  - {fileID: 2100000, guid: 0dadea5af09c11d4b8cf91209884de23, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
+  m_UseLightProbes: 0
+  m_ReflectionProbeUsage: 0
   m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
+  m_ScaleInLightmap: .5
   m_PreserveUVs: 0
   m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
+  m_AutoUVMaxDistance: 50
+  m_AutoUVMaxAngle: 180
+  m_LightmapParameters: {fileID: 15201, guid: 0000000000000000f000000000000000, type: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
 --- !u!33 &3394338
@@ -60,7 +60,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 134590}
-  m_Mesh: {fileID: 4300000, guid: e393a0db2675fe04fa974eb66f9a5411, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 1864b747e2cb2b749bda3e6b76671f43, type: 3}
 --- !u!64 &6492986
 MeshCollider:
   m_ObjectHideFlags: 1
@@ -72,7 +72,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Convex: 0
-  m_Mesh: {fileID: 4300000, guid: e393a0db2675fe04fa974eb66f9a5411, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 1864b747e2cb2b749bda3e6b76671f43, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -83,7 +83,7 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 7f0b0069d1718834aada8914d5148678, type: 2}
+      objectReference: {fileID: 2100000, guid: 0dadea5af09c11d4b8cf91209884de23, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 134590}
