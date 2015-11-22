@@ -30,8 +30,12 @@ public class RayCast : MonoBehaviour {
 
     void Update()
     {
-
-		// Physical representation of the Raycast for testing purposes
+        if (stopBeingSlow == true)
+        {
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Movement3D>().SetPlayerSpeed(5f);
+            stopBeingSlow = false;
+        }
+        // Physical representation of the Raycast for testing purposes
         // Debug.DrawRay(this.transform.position, this.transform.forward * distance, Color.magenta);
 
         // For normal interactable objects
@@ -280,11 +284,6 @@ public class RayCast : MonoBehaviour {
                     arms.GetComponent<ArmsScript>().DropItem(storedPickUpObject);
                 }
             }
-        }
-        if (stopBeingSlow == true)
-        {
-            GameObject.FindGameObjectWithTag("Player").GetComponent<Movement3D>().SetPlayerSpeed(5f);
-            stopBeingSlow = false;
         }
     }
 
