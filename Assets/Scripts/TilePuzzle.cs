@@ -20,6 +20,7 @@ public class TilePuzzle : MonoBehaviour {
         set { count = value; }
     }
     public bool reset;
+    public GameObject[] tilePath;
 
     void  Start()
     {
@@ -54,6 +55,7 @@ public class TilePuzzle : MonoBehaviour {
                 if (isCorrect)
                 {
                     tilePuzzleSolved = true;
+                    MovePathDown();
                 }
                 else
                 {
@@ -86,5 +88,17 @@ public class TilePuzzle : MonoBehaviour {
 
         yield return new WaitForSeconds(0.5f);
         yield return reset = false;
+    }
+
+    public void MovePathDown()
+    {
+        for (int i = 0; i < tilePath.Length; i++)
+        {
+            if (!tilePath[i].GetComponent<TileSequence>().pathDown)
+            {
+                tilePath[i].transform.position = new Vector3(tilePath[i].transform.position.x, tilePath[i].transform.position.y - 0.20f, tilePath[i].transform.position.z);
+                tilePath[i].GetComponent<TileSequence>().pathDown = true;
+            }
+        }
     }
 }
