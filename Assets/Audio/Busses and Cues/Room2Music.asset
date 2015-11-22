@@ -9,12 +9,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e53b6803754c30d4fafeac19b23db57b, type: 3}
-  m_Name: Room1Music
+  m_Name: Room2Music
   m_EditorClassIdentifier: 
   template: {fileID: 0}
   bus: {fileID: 11400000, guid: 415e39823b7141646967558bf7b8fbda, type: 2}
   AudioClips:
-  - clip: {fileID: 8300000, guid: 3143d44ade9dbdf4aa8346df2b2e5c4a, type: 3}
+  - clip: {fileID: 8300000, guid: 2dc9771d0f490144fa131c26ec55c22c, type: 3}
     playedInShuffle: 0
     volume: 1
     bakeTimestamp:
@@ -28,16 +28,16 @@ MonoBehaviour:
   PlaybackMode: 0
   HDR: 0
   Loudness: {x: 50, y: 50}
-  Volume: {x: .422535211, y: .422535211}
+  Volume: {x: 1, y: 1}
   Pitch: {x: 1, y: 1}
   Loops: 0
   Priority: 128
-  BypassEffects: 1
-  MaxInstances: 1
+  BypassEffects: 0
+  MaxInstances: 10
   FadeInTime: 0
   FadeOutTime: 0
-  Spatialization: 0
-  Spread: 182
+  Spatialization: 2
+  Spread: 0
   Pan2D: 0
   Falloff: 0
   MaxDistance: 100
