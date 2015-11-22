@@ -5,6 +5,7 @@ public class StatueCheck : MonoBehaviour {
 	
 	public GameObject correctStatue = null;
 	private GameObject curStatue = null;
+	public bool emptySpot = true;
 
 	// Use this for initialization
 	void Start () {
@@ -17,7 +18,9 @@ public class StatueCheck : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		if (curStatue == null) {
+			emptySpot = true;
+		}
 	}
 
 	public void placeStatue (GameObject statue)

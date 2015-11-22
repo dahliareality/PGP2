@@ -248,7 +248,7 @@ public class RayCast : MonoBehaviour {
 				
 				if (Input.GetButton("PS4_X") || Input.GetKey(KeyCode.E))
                 {
-                    Debug.Log("Flipped");
+                    //Debug.Log("Flipped");
                     objectHit.collider.gameObject.GetComponent<RotateSwitch>().activated = true;
                 }
 				else if (Input.GetButtonUp("PS4_X") || !Input.GetKeyUp(KeyCode.E))
