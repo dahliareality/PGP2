@@ -81,8 +81,6 @@ public class RayCast : MonoBehaviour {
 							objectHit.collider.gameObject.GetComponent<SequenceNumber>().alreadyUsed = true;
 						}
 
-
-						
 						objectHit.collider.gameObject.GetComponent<SECTR_PointSource>().Play();
                     }
 
