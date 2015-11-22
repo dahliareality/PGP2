@@ -25,7 +25,7 @@ public class Step : MonoBehaviour {
 	private InputRound god;
 	private GameObject[] RData, MData, AData, SData, PData, KData, WData;
 	private int d8, d8old;
-	//public Texture2D kenny;
+	public Texture2D kenny;
 
 	void Start () {
 		god = GameObject.Find ("InputRound").GetComponent<InputRound> ();
@@ -94,13 +94,13 @@ public class Step : MonoBehaviour {
 		WData[7] = GameObject.Find ("W8");
 
 	}
-    //void OnGUI(){
-    //    if (isAnythingPlaying) {
-    //        GUI.DrawTexture (new Rect(0,0, Screen.width/10, Screen.height/10), kenny);
-    //    }
-    //}
+    void OnGUI(){
+        if (isAnythingPlaying) {
+            //GUI.DrawTexture (new Rect(0,0, Screen.width/10, Screen.height/10), kenny);
+        }
+    }
 	void Update () {
-
+		Debug.Log (isAnythingPlaying);
 		//Checks if player is walking
 		if (god.LH != 0.0f || god.LV != 0.0f) {
 			//Debug.Log ("Walking, bitch");
@@ -150,9 +150,9 @@ public class Step : MonoBehaviour {
 					break;
 				case "Sand Floor":
 					isSPlaying = true;
-					ShutUp();
+					//ShutUp();
 					SData[d8].GetComponent<AudioSource>().Play ();
-					SData[d8].GetComponent<AudioSource>().volume=1;
+					//SData[d8].GetComponent<AudioSource>().volume=1;
 					StartCoroutine(SPlayer());
 					break;
 				case "Puddle Floor":
@@ -181,7 +181,7 @@ public class Step : MonoBehaviour {
 					StartCoroutine(WPlayer());
 					break;
 				default:
-					isAnythingPlaying=false;
+					StartCoroutine(NPlayer());
 					break;
 				}
 				isAnythingPlaying=true;
@@ -246,6 +246,13 @@ public class Step : MonoBehaviour {
 			WData [d8].GetComponent<AudioSource> ().Play ();
 		}
 		isWPlaying = false;
+		isAnythingPlaying = false;
+	}
+	private IEnumerator NPlayer(){
+		yield return new WaitForSeconds (0.5f);
+		if (isRPlaying) {
+			Debug.Log ("Waiting for real surface");
+		}
 		isAnythingPlaying = false;
 	}
 	//Stops all sounds
