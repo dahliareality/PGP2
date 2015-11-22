@@ -18,6 +18,8 @@ public class RayCast : MonoBehaviour {
     public SequencePuzzle sqnPzl;
     private int count = 0;
 
+    private bool stopBeingSlow;
+
     void Start()
     {
         layerMask = ~layerMask;
@@ -167,6 +169,7 @@ public class RayCast : MonoBehaviour {
 					if (objectHit.collider.gameObject.GetComponent<MoveInteract>() != null && !arms.GetComponent<ArmsScript>().IsCarryingItem){
 						if (objectHit.collider.gameObject.tag == "WoodBox"){
 							objectHit.collider.gameObject.GetComponent<MoveInteract>().OnInteractHold();
+                            stopBeingSlow = true;
 						}
 					} 
 				} else if (!Input.GetButton("PS4_X") || !Input.GetKey(KeyCode.E)){
@@ -281,6 +284,11 @@ public class RayCast : MonoBehaviour {
                     arms.GetComponent<ArmsScript>().DropItem(storedPickUpObject);
                 }
             }
+        }
+        if (stopBeingSlow == true)
+        {
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Movement3D>().SetPlayerSpeed(5f);
+            stopBeingSlow = false;
         }
     }
 

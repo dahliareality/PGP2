@@ -26,7 +26,7 @@ public class armAnimationController : MonoBehaviour {
 		if(animator)
 		{
 		
-			AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+			//AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
 
 
 			if(Input.GetKey(KeyCode.T))

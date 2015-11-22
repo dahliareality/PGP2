@@ -157,7 +157,7 @@ public class ArmsScript : MonoBehaviour {
 			//			armPos = input.Scale( transform.up.x, transform.up.y, transform.up.z );
 			armPos += new Vector3(right, up, up*0.9f) * Time.deltaTime * handSpeed;
 			
-			float clampValue = 0.25f;
+			//float clampValue = 0.25f;
 			armPos.x = Mathf.Clamp(armPos.x, -0.0f, 0.4f);
 			armPos.y = Mathf.Clamp(armPos.y, -0.05f, 0.2f);
 			armPos.z = Mathf.Clamp(armPos.z, -0.6f, -0.3f);

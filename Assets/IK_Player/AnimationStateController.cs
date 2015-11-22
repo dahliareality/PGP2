@@ -21,7 +21,7 @@ public class AnimationStateController : MonoBehaviour {
 	public bool handOpen;
 	public bool handGrab;
 
-	bool animateOnce = false;
+	//bool animateOnce = false;
 
 
 	void Start () 
@@ -95,7 +95,7 @@ public class AnimationStateController : MonoBehaviour {
 				equippedInventory = true;
 				bagAnimation["openBag"].speed = 1f;
 				bagAnimation.Play();
-				animateOnce = false;
+				//animateOnce = false;
 			}
 			else
 				animator.SetBool ("backpackEquip",false);

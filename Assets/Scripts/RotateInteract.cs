@@ -7,15 +7,15 @@ using System.Collections;
 //occulus and not the right analog stick
 public class RotateInteract : MonoBehaviour {
 
-    private float lookSensitivity = 2f;
+    //private float lookSensitivity = 2f;
     private float yRotation;
     private float xRotation;
     private float yRotationV;
     private float xRotationV;
     private float lookSmoothDamp = 0.1f;
     private float currentYRotation;
-	private bool isSoundPlaying = false;
-	private int testInt = 0;
+	//private bool isSoundPlaying = false;
+	//private int testInt = 0;
     public GameObject leftSwitch;
     public GameObject rightSwitch;
 
