@@ -1,7 +1,7 @@
 //The water object needs the "water" script for this shader to work.
 //Fresnel (a) need the "waterFresnel" texture
 //Normal map should be the "smallWave" bump map
-Shader "FX/ToonWater" {
+Shader "FX/ToonWater_next" {
 Properties {
 	_Color1("Foam Color 1", COLOR) = (0.0,0.05,0.1,1.0)
 	_Color2("Foam Color 2", COLOR) = (0.0,0.1,0.3,1.0)
