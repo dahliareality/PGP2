@@ -7,7 +7,7 @@ public class MoveInteract : MonoBehaviour {
     private GameObject player;
 
     public float force = 795;
-    private float slow = 1.0f;
+    private float slow = 1.4f;
     private float playerSpeed;
 
     private Vector3 heading;
