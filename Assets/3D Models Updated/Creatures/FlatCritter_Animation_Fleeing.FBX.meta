@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 95681d98d4110c74b824568c3f99e863
-timeCreated: 1448220127
+guid: 3d2b2308bd09a3a4ea9e7260aa2308bd
+timeCreated: 1448221994
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
@@ -16,8 +16,9 @@ ModelImporter:
     100016: Bone009
     100018: Bone010
     100020: Bone011
-    100022: //RootNode
+    100022: Dummy001
     100024: FlatCritter
+    100026: //RootNode
     400000: Bone001
     400002: Bone002
     400004: Bone003
@@ -29,10 +30,11 @@ ModelImporter:
     400016: Bone009
     400018: Bone010
     400020: Bone011
-    400022: //RootNode
+    400022: Dummy001
     400024: FlatCritter
+    400026: //RootNode
     4300000: FlatCritter
-    7400000: Take 001
+    7400000: FlatCritterFleeing
     9500000: //RootNode
     13700000: FlatCritter
   materials:
@@ -46,8 +48,8 @@ ModelImporter:
     motionNodeName: 
     animationImportErrors: '
 
-      Imported file ''FlatCritter'' conversion failed: Required human bone ''LeftUpperLeg''
-      not found
+      Imported file ''FlatCritter_Animation_Fleeing'' conversion failed: Required
+      human bone ''LeftUpperLeg'' not found
 
 
 '
@@ -60,7 +62,61 @@ ModelImporter:
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: FlatCritterFleeing
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 80
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Dummy001
+        weight: 1
+      - path: Dummy001/Bone001
+        weight: 1
+      - path: Dummy001/Bone001/Bone002
+        weight: 1
+      - path: Dummy001/Bone001/Bone002/Bone003
+        weight: 1
+      - path: Dummy001/Bone001/Bone002/Bone003/Bone004
+        weight: 1
+      - path: Dummy001/Bone001/Bone002/Bone003/Bone004/Bone005
+        weight: 1
+      - path: Dummy001/Bone001/Bone002/Bone003/Bone004/Bone005/Bone006
+        weight: 1
+      - path: Dummy001/Bone001/Bone002/Bone003/Bone004/Bone005/Bone006/Bone007
+        weight: 1
+      - path: Dummy001/Bone001/Bone002/Bone003/Bone004/Bone005/Bone006/Bone007/Bone008
+        weight: 1
+      - path: Dummy001/Bone001/Bone002/Bone003/Bone004/Bone005/Bone006/Bone007/Bone008/Bone009
+        weight: 1
+      - path: Dummy001/Bone001/Bone002/Bone003/Bone004/Bone005/Bone006/Bone007/Bone008/Bone009/Bone010
+        weight: 1
+      - path: Dummy001/Bone001/Bone002/Bone003/Bone004/Bone005/Bone006/Bone007/Bone008/Bone009/Bone010/Bone011
+        weight: 1
+      - path: FlatCritter
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []
