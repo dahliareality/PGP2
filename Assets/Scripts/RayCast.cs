@@ -81,7 +81,7 @@ public class RayCast : MonoBehaviour {
                     }
 
                     // Chinese Optional Greatdoor
-                    if (storedPickUpObject != null && !GameObject.Find ("lvl2_Chinese_Greatdoor_(Optional)").GetComponent<Lvl2ChineseGreatdoor> ().puzzleDone)
+                    if (storedPickUpObject != null /*&& !GameObject.Find ("lvl2_Chinese_Greatdoor_(Optional)").GetComponent<Lvl2ChineseGreatdoor> ().puzzleDone*/)
 					{
 						if (objectHit.collider.gameObject.tag == "ChineseGreatdoor" && storedPickUpObject.tag == "KeyFrag")
 						{
@@ -245,23 +245,25 @@ public class RayCast : MonoBehaviour {
 
 				if(objectHit.collider.gameObject.tag != null && objectHit.collider.gameObject.tag == "Rotation"){
 					// Too be continued 22/11/2015
+
+					if (Input.GetButton("PS4_X") || Input.GetKey(KeyCode.E))
+					{
+						//Debug.Log("Flipped");
+						objectHit.collider.gameObject.GetComponent<RotateSwitch>().activated = true;
+					}
+					else if (Input.GetButtonUp("PS4_X") || !Input.GetKeyUp(KeyCode.E))
+					{
+						objectHit.collider.gameObject.GetComponent<RotateSwitch>().activated = false;
+						objectHit.collider.gameObject.GetComponent<RotateSwitch>().hasPlayed = false;
+					}
+					else if(objectHit.collider.gameObject.tag != "Rotation")
+					{
+						objectHit.collider.gameObject.GetComponent<RotateSwitch>().activated = false;
+						objectHit.collider.gameObject.GetComponent<RotateSwitch>().hasPlayed = false;
+					}
 				}
 				
-				if (Input.GetButton("PS4_X") || Input.GetKey(KeyCode.E))
-                {
-                    //Debug.Log("Flipped");
-                    objectHit.collider.gameObject.GetComponent<RotateSwitch>().activated = true;
-                }
-				else if (Input.GetButtonUp("PS4_X") || !Input.GetKeyUp(KeyCode.E))
-                {
-                    objectHit.collider.gameObject.GetComponent<RotateSwitch>().activated = false;
-                    objectHit.collider.gameObject.GetComponent<RotateSwitch>().hasPlayed = false;
-                }
-				else if(objectHit.collider.gameObject.tag != "Rotation")
-				{
-					objectHit.collider.gameObject.GetComponent<RotateSwitch>().activated = false;
-					objectHit.collider.gameObject.GetComponent<RotateSwitch>().hasPlayed = false;
-				}
+
 
                 // Resets storedPickUpObject
                 else if (storedPickUpObject != null)

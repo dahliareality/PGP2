@@ -11,9 +11,8 @@ public class StatueCheck : MonoBehaviour {
 	void Start () {
 
 		if (this.gameObject.name == "StatueSpot (2)") {
-			placeStatue (GameObject.Find ("Lv2_Statue_VermillionBird"));
+			//placeStatue (GameObject.Find ("Lv2_Statue_VermillionBird"));
 		}
-	
 	}
 	
 	// Update is called once per frame
