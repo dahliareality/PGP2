@@ -12,9 +12,7 @@ public class SequencePuzzle : MonoBehaviour
 	private bool gongHasPlayed;
 	private bool bellHasPlayed;
 	private bool chimesHasPlayed;
-    private bool cog1correcet;
-    private bool cog2correcet;
-    private bool cog3correcet;
+	private bool animationStarted;
 
     public bool cogSoundPlayed;
     public bool magicSoundStarted;
@@ -22,7 +20,7 @@ public class SequencePuzzle : MonoBehaviour
     private RayCast rc;
     private GameObject button;
 
-	private int instrumentsPlayed = 0;
+	public int instrumentsPlayed = 0;
     public int count = 0;
 	private float delayCount;
     public int countValue
@@ -87,7 +85,7 @@ public class SequencePuzzle : MonoBehaviour
         //Debug.Log(count);
         if (!isCorrect)
         {
-            if (rc.sequenceButton == 1)
+            if (instrumentsPlayed == 1)
             {
 
                 // Moves gear1 up, and gear2 up
@@ -96,8 +94,7 @@ public class SequencePuzzle : MonoBehaviour
 				gear3.transform.position = Vector3.Lerp(gear3.transform.position, top3.transform.position, Time.deltaTime * 5);
 				gear4.transform.position = Vector3.Lerp(gear4.transform.position, top4.transform.position, Time.deltaTime * 5);
 				gear5.transform.position = Vector3.Lerp(gear5.transform.position, mid5.transform.position, Time.deltaTime * 5);
-                cog1correcet = false;
-                cog2correcet = false;
+
                 if (!cogSoundPlayed)
                 {
                     //GameObject.Find("Cog1UpSound").GetComponent<SECTR_PointSource>().Play();
@@ -106,14 +103,13 @@ public class SequencePuzzle : MonoBehaviour
                 }
 
             }
-            else if (rc.sequenceButton == 2)
+			else if (instrumentsPlayed == 2)
             {
                 // Moves gear1 down, and gear3 up
 				gear1.transform.position = Vector3.Lerp(gear1.transform.position, top1.transform.position, Time.deltaTime * 5);
 				gear2.transform.position = Vector3.Lerp(gear2.transform.position, top2.transform.position, Time.deltaTime * 5);
 				gear5.transform.position = Vector3.Lerp(gear5.transform.position, top5.transform.position, Time.deltaTime * 5);
-                cog1correcet = true;
-                cog3correcet = false;
+
                 if (!cogSoundPlayed)
                 {
                     //GameObject.Find("Cog1DownSound").GetComponent<SECTR_PointSource>().Play();
@@ -121,25 +117,24 @@ public class SequencePuzzle : MonoBehaviour
                     cogSoundPlayed = true;
                 }
             }
-            else if (rc.sequenceButton == 3)
+			else if (instrumentsPlayed == 3)
             {
                 // Moves gear2 down, and gear3 down
 				gear1.transform.position = Vector3.Lerp(gear1.transform.position, bot1.transform.position, Time.deltaTime * 5);
 				gear3.transform.position = Vector3.Lerp(gear3.transform.position, bot3.transform.position, Time.deltaTime * 5);
 				gear5.transform.position = Vector3.Lerp(gear5.transform.position, bot5.transform.position, Time.deltaTime * 5);
-                cog2correcet = true;
-                cog3correcet = true;
+
+
+
                 if (!cogSoundPlayed)
                 {
                     //GameObject.Find("Cog2DownSound").GetComponent<SECTR_PointSource>().Play();
                     //GameObject.Find("Cog3DownSound").GetComponent<SECTR_PointSource>().Play();
                     cogSoundPlayed = true;
                 }
-            }
-            if (cog1correcet && cog2correcet && cog3correcet)
-            {
+
 				delayCount += Time.deltaTime;
-				if(delayCount >= 3f){
+				if(delayCount >= 1f){
 					isCorrect = true;
 				}
             }
@@ -149,6 +144,12 @@ public class SequencePuzzle : MonoBehaviour
         {
             //Debug.Log("Done!");
             spawnObject.SetActive(true);
+			if(!animationStarted){
+				GameObject.Find("Gear_Puzzle").GetComponent<Animation>().Play();
+				GameObject.Find("Group18561").GetComponent<SECTR_PointSource>().Play();
+				animationStarted = true;
+			}
+
             if (!magicSoundStarted)
             {
                 //spawnObject.GetComponent<SECTR_PropagationSource>().Play();
