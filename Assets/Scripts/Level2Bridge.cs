@@ -5,8 +5,6 @@ public class Level2Bridge : MonoBehaviour
 {
     // Put this on the part of the bridge that should lift up on puzzle completion
 
-    public GameObject level1Object;
-    public GameObject exitObject;
     public int correctStatues = 0;
     public bool puzzleDone = false;
 
@@ -15,19 +13,19 @@ public class Level2Bridge : MonoBehaviour
     private bool soundHasPlayed = false;
     private int requiredStatues = 3;
 
+    public GameObject endItem;
     public GameObject Bridge1;
-    public GameObject Bridge2;
     public GameObject invisWall;
+    private GameObject parenting;
     private bool finished;
 
     void Start()
     {
-
-        if (level1Object.GetComponent<Pickable>() == null)
+        if(endItem.GetComponent<Pickable>() == null)
         {
-            Debug.Log("Pickable.cs is missing in the GameObject!");
+            Debug.Log("Wrong Object, or this object needs a pickable script");
         }
-
+        parenting = GameObject.Find("Lv2_Nabatean_Sunstone_Circle_Engraving_Floor");
       /*  slideVector = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z + 5f);
         startVector = this.transform.position;*/
     }
@@ -35,7 +33,7 @@ public class Level2Bridge : MonoBehaviour
 
     void Update()
     {
-        if (correctStatues == requiredStatues)
+        if (endItem.transform.parent != parenting && !endItem.GetComponent<Pickable>().CanPickUp)
         {
             puzzleDone = true;
             //DestroyObject(gameObject);
@@ -43,27 +41,15 @@ public class Level2Bridge : MonoBehaviour
             if (!finished)
             {
                 Bridge1.GetComponent<Animation>().Play();
-                Bridge2.GetComponent<Animation>().Play();
                 finished = true;
+                nowOpen = false;
             }
             if (finished)
             {
                 Destroy(invisWall);
+                nowOpen = true;
             }
 			this.gameObject.GetComponent<SECTR_PropagationSource>().Play();
-        }
-
-
-        if (!level1Object.GetComponent<Pickable>().CanPickUp && !exitObject.GetComponent<ExitPoint>().HasEntered)
-        {
-            //this.transform.position = Vector3.Lerp(this.transform.position, slideVector, 1.45f * Time.deltaTime);
-            //Destroy(gameObject);
-            nowOpen = true;
-        }
-        else if (exitObject.GetComponent<ExitPoint>().HasEntered)
-        {
-            //this.transform.position = Vector3.Lerp(this.transform.position, startVector, 1.45f * Time.deltaTime);
-            nowOpen = false;
         }
 
         if (nowOpen && !soundHasPlayed)
