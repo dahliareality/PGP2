@@ -3,8 +3,9 @@ using System.Collections;
 
 public class Level2firstDoor : MonoBehaviour {
 
-	public bool firstStatuePlaced = false;
-	private bool soundplayed = false;
+	public bool firstStatuePlaced;
+	private bool animationStarted;
+	private bool soundplayed;
 
 
 	// Use this for initialization
@@ -16,8 +17,11 @@ public class Level2firstDoor : MonoBehaviour {
 	void Update () {
 		if (GameObject.Find ("lvl2_Chinese_Gate").GetComponent<Level2CaveDoor> ().correctStatues == 1) {
 			firstStatuePlaced = true;
-			this.gameObject.GetComponent<Animation>().Play();
-			this.gameObject.GetComponent<SECTR_PointSource>().Play ();
+			if(!animationStarted){
+				this.gameObject.GetComponent<Animation>().Play();
+				this.gameObject.GetComponent<SECTR_PointSource>().Play ();
+				animationStarted = true;
+			}
 
 			if(GameObject.Find ("lvl2_Chinese_Gate").GetComponent<Level2CaveDoor> ().correctStatues == 0){
 				soundplayed = false;
