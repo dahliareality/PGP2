@@ -110,6 +110,7 @@ public class RayCast : MonoBehaviour {
                             else
                             {
                                 storedPickUpObject = objectHit.collider.gameObject.GetComponent<StatueCheck>().switchStatue(storedPickUpObject);
+								GameObject.Find("PlaceItemSoundSource").GetComponent<SECTR_PointSource>().Play();
                             }
                         }
                     }
