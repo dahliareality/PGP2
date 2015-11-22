@@ -31722,6 +31722,14 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11487936, guid: bd4536428e563704b942a47ad0ae0acd, type: 2}
+      propertyPath: xStartRotation
+      value: 360
+      objectReference: {fileID: 0}
+    - target: {fileID: 11487936, guid: bd4536428e563704b942a47ad0ae0acd, type: 2}
+      propertyPath: hasRisen
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11488724, guid: bd4536428e563704b942a47ad0ae0acd, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: bd4536428e563704b942a47ad0ae0acd, type: 2}
