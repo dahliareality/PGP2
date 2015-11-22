@@ -43,8 +43,9 @@ public class Level1Door : MonoBehaviour {
                 nowOpen = true;
                 puzzleSolved = true;
 				if(!soundHasPlayed){
-					this.GetComponent<SECTR_PointSource>().Play();
+					this.GetComponent<AudioSource>().Play();
 					soundHasPlayed = true;
+					GameObject.Find("WaterfallSound").GetComponent<SECTR_PropagationSource>().Play();
 				}
             }
             else if (exitObject.GetComponent<ExitPoint>().HasEntered)
@@ -54,7 +55,7 @@ public class Level1Door : MonoBehaviour {
                 if (!doorHasClosedAgain)
                 {
                     //Sectr exterminatus
-                    this.GetComponent<SECTR_PointSource>().Play();
+					this.GetComponent<AudioSource>().Play();
                     //this.GetComponent<AudioSource>().PlayOneShot(doorSlide, 1.0f);
                     doorHasClosedAgain = true;
                 }
