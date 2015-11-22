@@ -49,7 +49,7 @@ public class MoveInteract : MonoBehaviour {
         CardianlMoveClamp();
         if (!isMovingSoundPlaying && heading.magnitude != 0.0f)
         {
-			this.GetComponent<AudioSource>().Play();
+			this.GetComponent<SECTR_PointSource>().Play();
             isMovingSoundPlaying = true;
         }
     }
@@ -61,7 +61,7 @@ public class MoveInteract : MonoBehaviour {
         player.GetComponent<Movement3D>().SetPlayerSpeed(playerSpeed);
         transform.parent = null;
 		isMovingSoundPlaying = false;
-        this.GetComponent<AudioSource>().Stop();
+        this.GetComponent<SECTR_PointSource>().Stop(true);
     }
 
     //Limits the diagonal velocity of the object

@@ -281,6 +281,7 @@ GameObject:
   - 54: {fileID: 7679335}
   - 114: {fileID: 7679334}
   - 82: {fileID: 7679339}
+  - 114: {fileID: 7679340}
   m_Layer: 0
   m_Name: lvl1_Egyptian_Wood_Chest
   m_TagString: WoodBox
@@ -381,7 +382,7 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 7679332}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24344120, guid: f7610ad637905484e83d15f4969c06db,
     type: 2}
@@ -446,6 +447,22 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!114 &7679340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 7679332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6f20b8b60dbb1046b21f167d1303601, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volume: 1
+  pitch: 1
+  Cue: {fileID: 11400000, guid: c4dbd8dff19430b42a4c1b01953857d3, type: 2}
+  Loop: 0
+  PlayOnStart: 0
 --- !u!1 &13280096
 GameObject:
   m_ObjectHideFlags: 0
@@ -62377,7 +62394,6 @@ GameObject:
   - 65: {fileID: 1433790146}
   - 23: {fileID: 1433790144}
   - 114: {fileID: 1433790147}
-  - 82: {fileID: 1433790145}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -62422,76 +62438,6 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 15200, guid: 0000000000000000f000000000000000, type: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!82 &1433790145
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1433790142}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: .289999992
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
 --- !u!65 &1433790146
 BoxCollider:
   m_ObjectHideFlags: 0
