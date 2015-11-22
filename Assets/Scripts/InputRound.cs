@@ -34,6 +34,7 @@ public class InputRound : MonoBehaviour {
 		if (Input.GetAxis ("PS4_RightAnalogVertical") < 0.01f && Input.GetAxis ("PS4_RightAnalogVertical") > -0.01f) {
 			RV = 0.0f;
 		}
+		Debug.Log (LV);
 		/*
 
 		*/
