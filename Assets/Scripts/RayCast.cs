@@ -139,39 +139,44 @@ public class RayCast : MonoBehaviour {
 							GameObject.Find ("PickUpSoundSource").GetComponent<SECTR_PointSource>().Play();
                         }
                     }
+                    else if (GameObject.Find("lvl2_Chinese_Gate").GetComponent<Level2CaveDoor>().puzzleDone){
+                        GameObject.Find("Lv2_Statue_AzureDragon").layer = LayerMask.NameToLayer("Invisible Wall");
+                        GameObject.Find("Lv2_Statue_WhiteTiger").layer = LayerMask.NameToLayer("Invisible Wall");
+                        GameObject.Find("Lv2_Statue_YellowDragon").layer = LayerMask.NameToLayer("Invisible Wall");
+                    }
                     
-                    // Level 2 Bridge
-                    if (storedPickUpObject != null && !GameObject.Find("Nabatean Bridge").GetComponent<Level2Bridge>().puzzleDone)
-                    {
-                        // Coin Puzzle
-                        if (objectHit.collider.gameObject.tag == "CoinSpot" && storedPickUpObject.tag == "Coin")
-                        {
-                            // Place Coin
-                            if (objectHit.collider.gameObject.GetComponent<CoinCheck>().isEmpty())
-                            {
-                                objectHit.collider.gameObject.GetComponent<CoinCheck>().placeStatue(storedPickUpObject);
-                                arms.GetComponent<ArmsScript>().RemoveItem(storedPickUpObject);
-                                arms.GetComponent<ArmsScript>().IsCarryingItem = false;
-                                storedPickUpObject.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
-                                storedPickUpObject.GetComponent<Pickable>().CanPickUp = true;
-                                storedPickUpObject = null;
-								GameObject.Find("PlaceItemSoundSource").GetComponent<SECTR_PointSource>().Play();
-                            }
-                            // Switch Coin
-                            else
-                            {
-                                storedPickUpObject = objectHit.collider.gameObject.GetComponent<CoinCheck>().switchStatue(storedPickUpObject);
-                            }
-                        }
-                    }
-                    // Remove Coin
-                    else if (objectHit.collider.gameObject.tag == "CoinSpot" && !GameObject.Find("Nabatean Bridge").GetComponent<Level2Bridge>().puzzleDone)
-                    {
-                        if (!objectHit.collider.gameObject.GetComponent<CoinCheck>().isEmpty()) 
-                        {
-                            objectHit.collider.gameObject.GetComponent<CoinCheck>().removeStatue();
-                        }
-                    }
+        //            // Level 2 Bridge
+        //            if (storedPickUpObject != null && !GameObject.Find("Nabatean Bridge").GetComponent<Level2Bridge>().puzzleDone)
+        //            {
+        //                // Coin Puzzle
+        //                if (objectHit.collider.gameObject.tag == "CoinSpot" && storedPickUpObject.tag == "Coin")
+        //                {
+        //                    // Place Coin
+        //                    if (objectHit.collider.gameObject.GetComponent<CoinCheck>().isEmpty())
+        //                    {
+        //                        objectHit.collider.gameObject.GetComponent<CoinCheck>().placeStatue(storedPickUpObject);
+        //                        arms.GetComponent<ArmsScript>().RemoveItem(storedPickUpObject);
+        //                        arms.GetComponent<ArmsScript>().IsCarryingItem = false;
+        //                        storedPickUpObject.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+        //                        storedPickUpObject.GetComponent<Pickable>().CanPickUp = true;
+        //                        storedPickUpObject = null;
+								//GameObject.Find("PlaceItemSoundSource").GetComponent<SECTR_PointSource>().Play();
+        //                    }
+        //                    // Switch Coin
+        //                    else
+        //                    {
+        //                        storedPickUpObject = objectHit.collider.gameObject.GetComponent<CoinCheck>().switchStatue(storedPickUpObject);
+        //                    }
+        //                }
+        //            }
+                    //// Remove Coin
+                    //else if (objectHit.collider.gameObject.tag == "CoinSpot" && !GameObject.Find("Nabatean Bridge").GetComponent<Level2Bridge>().puzzleDone)
+                    //{
+                    //    if (!objectHit.collider.gameObject.GetComponent<CoinCheck>().isEmpty()) 
+                    //    {
+                    //        objectHit.collider.gameObject.GetComponent<CoinCheck>().removeStatue();
+                    //    }
+                    //}
 
 
 				}
@@ -179,7 +184,8 @@ public class RayCast : MonoBehaviour {
 				//Push coffin with x-button
 				if(Input.GetButton("PS4_X") || Input.GetKey(KeyCode.E)){
 					if (objectHit.collider.gameObject.GetComponent<MoveInteract>() != null && !arms.GetComponent<ArmsScript>().IsCarryingItem){
-						if (objectHit.collider.gameObject.tag == "WoodBox" || objectHit.collider.gameObject.name == "stonetablet"){
+						if (objectHit.collider.gameObject.tag == "WoodBox" || objectHit.collider.gameObject.tag == "Mirror")
+                        {
 							objectHit.collider.gameObject.GetComponent<MoveInteract>().OnInteractHold();
                             stopBeingSlow = true;
 						}
