@@ -22,6 +22,7 @@ public class SequencePuzzle : MonoBehaviour
     private RayCast rc;
     private GameObject button;
 
+	private int instrumentsPlayed = 0;
     public int count = 0;
 	private float delayCount;
     public int countValue
@@ -30,33 +31,57 @@ public class SequencePuzzle : MonoBehaviour
         set { count = value; }
     }
 
-    private GameObject gear1, gear2, gear3;
-    private GameObject top1, bot1;
-    private GameObject top2, bot2;
-    private GameObject top3, bot3;
+    private GameObject gear1, gear2, gear3, gear4, gear5;
+    private GameObject top1, mid1, bot1;
+    private GameObject top2, mid2, bot2;
+    private GameObject top3, mid3, bot3;
+	private GameObject top4, mid4, bot4;
+	private GameObject top5, mid5, bot5;
 
     public GameObject spawnObject;
 
-    void Start()
+    void Awake()
     {
         spawnObject.SetActive(false);
         rc = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<RayCast>();
-        rc.SqnPzl = GameObject.Find("Cogwheel Puzzle").GetComponent<SequencePuzzle>();
-        GameObject.Find("DragonEye1").GetComponent<Light>().intensity = 0.0f;
-        GameObject.Find("DragonEye2").GetComponent<Light>().intensity = 0.0f;
+        //rc.SqnPzl = GameObject.Find("Cogwheel Puzzle").GetComponent<SequencePuzzle>();
+        //GameObject.Find("DragonEye1").GetComponent<Light>().intensity = 0.0f;
+        //GameObject.Find("DragonEye2").GetComponent<Light>().intensity = 0.0f;
 
-        gear1 = GameObject.Find("Cog 1");
-        gear2 = GameObject.Find("Cog 2");
-        gear3 = GameObject.Find("Cog 3");
-        // 3 points for left lane
+        gear1 = GameObject.Find("Gear01");
+		gear2 = GameObject.Find("Gear02");
+		gear3 = GameObject.Find("Gear03");
+		gear4 = GameObject.Find("Gear04");
+		gear5 = GameObject.Find("Gear05");
+
+        // 3 points for 1st lane
         top1 = GameObject.Find("Trigger 1 - Top");
+		mid1 = GameObject.Find("Trigger 1 - Middle");
         bot1 = GameObject.Find("Trigger 1 - Bottom");
-        // 3 points for mid lane
+        // 3 points for 2nd lane
         top2 = GameObject.Find("Trigger 2 - Top");
+		mid2 = GameObject.Find("Trigger 2 - Middle");
         bot2 = GameObject.Find("Trigger 2 - Bottom");
-        // 3 points for left lane
+        // 3 points for 3rd lane
         top3 = GameObject.Find("Trigger 3 - Top");
+		mid3 = GameObject.Find("Trigger 3 - Middle");
         bot3 = GameObject.Find("Trigger 3 - Bottom");
+		// 3 points for 4th lane
+		top4 = GameObject.Find("Trigger 4 - Top");
+		mid4 = GameObject.Find("Trigger 4 - Middle");
+		bot4 = GameObject.Find("Trigger 4 - Bottom");
+		// 3 points for 5th lane
+		top5 = GameObject.Find("Trigger 5 - Top");
+		mid5 = GameObject.Find("Trigger 5 - Middle");
+		bot5 = GameObject.Find("Trigger 5 - Bottom");
+
+		gear1.transform.position = bot1.transform.position;
+		gear2.transform.position = bot2.transform.position;
+		gear3.transform.position = mid3.transform.position;
+		gear4.transform.position = mid4.transform.position;
+		gear5.transform.position = bot5.transform.position;
+
+
     }
 
     void Update()
@@ -66,9 +91,13 @@ public class SequencePuzzle : MonoBehaviour
         {
             if (rc.sequenceButton == 1)
             {
+				Debug.Log("bimmelim");
                 // Moves gear1 up, and gear2 up
-                gear1.transform.position = Vector3.Lerp(gear1.transform.position, top1.transform.position, Time.deltaTime * 5);
-                gear2.transform.position = Vector3.Lerp(gear2.transform.position, top2.transform.position, Time.deltaTime * 5);
+                gear1.transform.position = Vector3.Lerp(gear1.transform.position, mid1.transform.position, Time.deltaTime * 5);
+                gear2.transform.position = Vector3.Lerp(gear2.transform.position, mid2.transform.position, Time.deltaTime * 5);
+				gear3.transform.position = Vector3.Lerp(gear3.transform.position, top3.transform.position, Time.deltaTime * 5);
+				gear4.transform.position = Vector3.Lerp(gear4.transform.position, top4.transform.position, Time.deltaTime * 5);
+				gear5.transform.position = Vector3.Lerp(gear5.transform.position, mid5.transform.position, Time.deltaTime * 5);
                 cog1correcet = false;
                 cog2correcet = false;
                 if (!cogSoundPlayed)
@@ -82,8 +111,9 @@ public class SequencePuzzle : MonoBehaviour
             else if (rc.sequenceButton == 2)
             {
                 // Moves gear1 down, and gear3 up
-                gear1.transform.position = Vector3.Lerp(gear1.transform.position, bot1.transform.position, Time.deltaTime * 5);
-                gear3.transform.position = Vector3.Lerp(gear3.transform.position, top3.transform.position, Time.deltaTime * 5);
+				gear1.transform.position = Vector3.Lerp(gear1.transform.position, top1.transform.position, Time.deltaTime * 5);
+				gear2.transform.position = Vector3.Lerp(gear2.transform.position, top2.transform.position, Time.deltaTime * 5);
+				gear5.transform.position = Vector3.Lerp(gear5.transform.position, top5.transform.position, Time.deltaTime * 5);
                 cog1correcet = true;
                 cog3correcet = false;
                 if (!cogSoundPlayed)
@@ -96,8 +126,9 @@ public class SequencePuzzle : MonoBehaviour
             else if (rc.sequenceButton == 3)
             {
                 // Moves gear2 down, and gear3 down
-                gear2.transform.position = Vector3.Lerp(gear2.transform.position, bot2.transform.position, Time.deltaTime * 5);
-                gear3.transform.position = Vector3.Lerp(gear3.transform.position, bot3.transform.position, Time.deltaTime * 5);
+				gear1.transform.position = Vector3.Lerp(gear1.transform.position, bot1.transform.position, Time.deltaTime * 5);
+				gear3.transform.position = Vector3.Lerp(gear3.transform.position, bot3.transform.position, Time.deltaTime * 5);
+				gear5.transform.position = Vector3.Lerp(gear5.transform.position, bot5.transform.position, Time.deltaTime * 5);
                 cog2correcet = true;
                 cog3correcet = true;
                 if (!cogSoundPlayed)
@@ -120,8 +151,8 @@ public class SequencePuzzle : MonoBehaviour
         {
             //Debug.Log("Done!");
             spawnObject.SetActive(true);
-            GameObject.Find("DragonEye1").GetComponent<Light>().intensity = 1.0f;
-            GameObject.Find("DragonEye2").GetComponent<Light>().intensity = 1.0f;
+            //GameObject.Find("DragonEye1").GetComponent<Light>().intensity = 1.0f;
+            //GameObject.Find("DragonEye2").GetComponent<Light>().intensity = 1.0f;
             if (!magicSoundStarted)
             {
                 spawnObject.GetComponent<SECTR_PropagationSource>().Play();
