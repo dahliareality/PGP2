@@ -18,6 +18,7 @@ public class ArmsScript : MonoBehaviour {
 	private RaycastHit hit;
 	private float handSpeed;
 	private bool isCarryingItem;
+	private GameObject retreiveSound;
 	
 	private RigidbodyConstraints originalConstraints;
 	
@@ -28,6 +29,7 @@ public class ArmsScript : MonoBehaviour {
 		inventory = GameObject.FindGameObjectWithTag("Bagpack").GetComponent<InventorySystem>();
 		bagSlots = GameObject.FindGameObjectsWithTag("BagSlot");
 		playerObject = GameObject.FindGameObjectWithTag("MainCamera");
+		retreiveSound = GameObject.Find ("BackpackRetreiveItemSound");
 	}
 	
 	void Update () {
@@ -74,7 +76,7 @@ public class ArmsScript : MonoBehaviour {
 						else if (hit.collider.transform.tag == "BagSlot" && !isCarryingItem)
 						{
 							hit.collider.gameObject.GetComponent<BagSlot>().HasOpenSpot = true;
-							PickUpItem(hit.collider.gameObject.transform.GetChild(0).gameObject);
+							PickUpItem(hit.collider.gameObject.transform.GetChild(0).gameObject, true);
 							isCarryingItem = true;
 							hit.collider.gameObject.transform.GetChild(0).transform.parent = null;
 							
@@ -210,6 +212,14 @@ public class ArmsScript : MonoBehaviour {
 		if (!obj.GetComponent<BoxCollider>().isTrigger)
 		{
 			obj.GetComponent<BoxCollider>().isTrigger = true;
+		}
+		//Plays sound
+		if (isFromBackpack == true){
+			retreiveSound.GetComponent<SECTR_PointSource>().Play ();
+			Debug.Log ("Retreive Item");
+		}
+		if (isFromBackpack == false){
+			
 		}
 	}
 	

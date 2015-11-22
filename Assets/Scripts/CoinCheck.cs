@@ -29,7 +29,7 @@ public class CoinCheck : MonoBehaviour
         GameObject mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
         mainCamera.GetComponent<RayCast>().setStoredPickUpItem(curStatue);
         GameObject arm = GameObject.FindGameObjectWithTag("Arm");
-        arm.GetComponent<ArmsScript>().PickUpItem(curStatue);
+        arm.GetComponent<ArmsScript>().PickUpItem(curStatue, false);
         arm.GetComponent<ArmsScript>().IsCarryingItem = true;
         curStatue.GetComponent<Pickable>().CanPickUp = false;
         curStatue = null;
@@ -42,7 +42,7 @@ public class CoinCheck : MonoBehaviour
         GameObject temp = curStatue;
         GameObject arm = GameObject.FindGameObjectWithTag("Arm");
         arm.GetComponent<ArmsScript>().RemoveItem(statueIn);
-        arm.GetComponent<ArmsScript>().PickUpItem(temp);
+		arm.GetComponent<ArmsScript>().PickUpItem(temp, false);
         placeStatue(statueIn);
         return temp;
     }
