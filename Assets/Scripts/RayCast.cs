@@ -175,7 +175,7 @@ public class RayCast : MonoBehaviour {
 				//Push coffin with x-button
 				if(Input.GetButton("PS4_X") || Input.GetKey(KeyCode.E)){
 					if (objectHit.collider.gameObject.GetComponent<MoveInteract>() != null && !arms.GetComponent<ArmsScript>().IsCarryingItem){
-						if (objectHit.collider.gameObject.tag == "WoodBox"){
+						if (objectHit.collider.gameObject.tag == "WoodBox" || objectHit.collider.gameObject.name == "stonetablet"){
 							objectHit.collider.gameObject.GetComponent<MoveInteract>().OnInteractHold();
                             stopBeingSlow = true;
 						}

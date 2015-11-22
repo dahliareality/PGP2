@@ -97,7 +97,7 @@ public class SequencePuzzle : MonoBehaviour
 				gear4.transform.position = Vector3.Lerp(gear4.transform.position, top4.transform.position, Time.deltaTime * 5);
 				gear5.transform.position = Vector3.Lerp(gear5.transform.position, mid5.transform.position, Time.deltaTime * 5);
 
-                if (!cogfirstSoundPlayed)
+                if (!cogFirstSoundPlayed)
                 {
                     GameObject.Find("Gear1UpSound").GetComponent<SECTR_PointSource>().Play();
                     GameObject.Find("Gear2UpSound").GetComponent<SECTR_PointSource>().Play();
@@ -128,7 +128,7 @@ public class SequencePuzzle : MonoBehaviour
 
 
 
-                if (!cogSoundPlayed)
+                if (!cogThirdSoundPlayed)
                 {
                     GameObject.Find("Gear2DownSound").GetComponent<SECTR_PointSource>().Play();
                     GameObject.Find("Gears3DownSound").GetComponent<SECTR_PointSource>().Play();
