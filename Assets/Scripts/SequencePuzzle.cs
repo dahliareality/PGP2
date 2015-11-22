@@ -129,7 +129,7 @@ public class SequencePuzzle : MonoBehaviour
                 if (!cogSoundPlayed)
                 {
                     GameObject.Find("Gear2DownSound").GetComponent<SECTR_PointSource>().Play();
-                    GameObject.Find("Gear3DownSound").GetComponent<SECTR_PointSource>().Play();
+                    GameObject.Find("Gears3DownSound").GetComponent<SECTR_PointSource>().Play();
                     cogSoundPlayed = true;
                 }
 
