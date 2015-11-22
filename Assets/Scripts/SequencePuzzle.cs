@@ -44,9 +44,7 @@ public class SequencePuzzle : MonoBehaviour
     {
         spawnObject.SetActive(false);
         rc = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<RayCast>();
-        //rc.SqnPzl = GameObject.Find("Cogwheel Puzzle").GetComponent<SequencePuzzle>();
-        //GameObject.Find("DragonEye1").GetComponent<Light>().intensity = 0.0f;
-        //GameObject.Find("DragonEye2").GetComponent<Light>().intensity = 0.0f;
+        //rc.SqnPzl = GameObject.Find("Gear_Cliff").GetComponent<SequencePuzzle>();
 
         gear1 = GameObject.Find("Gear01");
 		gear2 = GameObject.Find("Gear02");
@@ -91,7 +89,7 @@ public class SequencePuzzle : MonoBehaviour
         {
             if (rc.sequenceButton == 1)
             {
-				Debug.Log("bimmelim");
+
                 // Moves gear1 up, and gear2 up
                 gear1.transform.position = Vector3.Lerp(gear1.transform.position, mid1.transform.position, Time.deltaTime * 5);
                 gear2.transform.position = Vector3.Lerp(gear2.transform.position, mid2.transform.position, Time.deltaTime * 5);
@@ -102,8 +100,8 @@ public class SequencePuzzle : MonoBehaviour
                 cog2correcet = false;
                 if (!cogSoundPlayed)
                 {
-                    GameObject.Find("Cog1UpSound").GetComponent<SECTR_PointSource>().Play();
-                    GameObject.Find("Cog2UpSound").GetComponent<SECTR_PointSource>().Play();
+                    //GameObject.Find("Cog1UpSound").GetComponent<SECTR_PointSource>().Play();
+                    //GameObject.Find("Cog2UpSound").GetComponent<SECTR_PointSource>().Play();
                     cogSoundPlayed = true;
                 }
 
@@ -118,8 +116,8 @@ public class SequencePuzzle : MonoBehaviour
                 cog3correcet = false;
                 if (!cogSoundPlayed)
                 {
-                    GameObject.Find("Cog1DownSound").GetComponent<SECTR_PointSource>().Play();
-                    GameObject.Find("Cog3UpSound").GetComponent<SECTR_PointSource>().Play();
+                    //GameObject.Find("Cog1DownSound").GetComponent<SECTR_PointSource>().Play();
+                    //GameObject.Find("Cog3UpSound").GetComponent<SECTR_PointSource>().Play();
                     cogSoundPlayed = true;
                 }
             }
@@ -133,8 +131,8 @@ public class SequencePuzzle : MonoBehaviour
                 cog3correcet = true;
                 if (!cogSoundPlayed)
                 {
-                    GameObject.Find("Cog2DownSound").GetComponent<SECTR_PointSource>().Play();
-                    GameObject.Find("Cog3DownSound").GetComponent<SECTR_PointSource>().Play();
+                    //GameObject.Find("Cog2DownSound").GetComponent<SECTR_PointSource>().Play();
+                    //GameObject.Find("Cog3DownSound").GetComponent<SECTR_PointSource>().Play();
                     cogSoundPlayed = true;
                 }
             }
@@ -151,12 +149,10 @@ public class SequencePuzzle : MonoBehaviour
         {
             //Debug.Log("Done!");
             spawnObject.SetActive(true);
-            //GameObject.Find("DragonEye1").GetComponent<Light>().intensity = 1.0f;
-            //GameObject.Find("DragonEye2").GetComponent<Light>().intensity = 1.0f;
             if (!magicSoundStarted)
             {
-                spawnObject.GetComponent<SECTR_PropagationSource>().Play();
-                GameObject.Find("Dragonstatue").GetComponent<SECTR_PointSource>().Play();
+                //spawnObject.GetComponent<SECTR_PropagationSource>().Play();
+                //GameObject.Find("Dragonstatue").GetComponent<SECTR_PointSource>().Play();
                 magicSoundStarted = true;
             }
         }
