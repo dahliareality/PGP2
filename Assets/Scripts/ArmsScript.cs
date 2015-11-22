@@ -34,14 +34,7 @@ public class ArmsScript : MonoBehaviour {
 		// Carry object at this point.
 		if (inventory.HasBagOpen)
 		{
-			// If bag is open, make rightArm select in the bag.
-			
-			
-			
-			
-			
-			
-			
+			// If bag is open, make rightArm select in the bag.			
 			
 			Debug.DrawLine(rightArm.transform.position, rightArm.transform.position + rightArm.transform.forward, Color.cyan);
 			
@@ -85,7 +78,6 @@ public class ArmsScript : MonoBehaviour {
 							isCarryingItem = true;
 							hit.collider.gameObject.transform.GetChild(0).transform.parent = null;
 							
-							
 						}
 						
 						
@@ -105,7 +97,7 @@ public class ArmsScript : MonoBehaviour {
 									break;
 								}
 							}
-							PickUpItem(hit.collider.gameObject);
+							PickUpItem(hit.collider.gameObject, true);
 							isCarryingItem = true;
 							
 						}
@@ -115,9 +107,7 @@ public class ArmsScript : MonoBehaviour {
 				{
 					//Debug.Log("Empty space in bag.");
 				}
-				
-				
-				
+
 			}
 			// Movement of Right Arm
 			float up, right;
@@ -152,7 +142,6 @@ public class ArmsScript : MonoBehaviour {
 			Vector3 input = new Vector3(Input.GetAxis("PS4_DPadHorizontal"), Input.GetAxis("PS4_DPadVertical"), Input.GetAxis("PS4_DPadVertical")*0.9f) * Time.deltaTime * handSpeed;
 			////			input.Scale(GameObject.FindGameObjectWithTag("BagPack").transform.up);
 			armPos += input;
-			
 			
 			//			armPos = input.Scale( transform.up.x, transform.up.y, transform.up.z );
 			armPos += new Vector3(right, up, up*0.9f) * Time.deltaTime * handSpeed;
@@ -190,7 +179,7 @@ public class ArmsScript : MonoBehaviour {
 		set { isCarryingItem = value;}
 	}
 	
-	public void PickUpItem(GameObject obj)
+	public void PickUpItem(GameObject obj, bool isFromBackpack)
 	{
 		originalConstraints = obj.GetComponent<Rigidbody>().constraints;
 		isCarryingItem = true;
