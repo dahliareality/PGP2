@@ -20,8 +20,6 @@ public class ArmsScript : MonoBehaviour {
 	private bool isCarryingItem;
 	private GameObject retreiveSound;
 	
-	private RigidbodyConstraints originalConstraints;
-	
 	public AnimationStateController animState;
 	
 	void Start () {
@@ -183,7 +181,6 @@ public class ArmsScript : MonoBehaviour {
 	
 	public void PickUpItem(GameObject obj, bool isFromBackpack)
 	{
-		originalConstraints = obj.GetComponent<Rigidbody>().constraints;
 		isCarryingItem = true;
 		objInRightArm = obj;
 		obj.GetComponent<Pickable>().IsInInventory = false;
@@ -201,14 +198,6 @@ public class ArmsScript : MonoBehaviour {
 			obj.transform.localScale = new Vector3(70.0f, 70.0f, 70.0f);
 		}
 		playerObject.GetComponent<RayCast>().setStoredPickUpItem(obj);
-		if (obj.GetComponent<Rigidbody>() != null)
-		{
-			if (obj.GetComponent<Rigidbody>().useGravity)
-			{
-				obj.GetComponent<Rigidbody>().useGravity = false;
-			}
-			obj.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-		}
 		if (!obj.GetComponent<BoxCollider>().isTrigger)
 		{
 			obj.GetComponent<BoxCollider>().isTrigger = true;
@@ -246,25 +235,6 @@ public class ArmsScript : MonoBehaviour {
 		else
 		{
 			Debug.Log(item.name + ": needs the Pickable Script!");
-		}
-		// Checks for Rigidbody
-		if (item.GetComponent<Rigidbody>() != null)
-		{
-			item.GetComponent<Rigidbody>().useGravity = true;
-			item.GetComponent<Rigidbody>().constraints = originalConstraints;
-		}
-		else
-		{
-			Debug.Log(item.name + ": needs a rigidbody!");
-		}
-		
-		if (item.GetComponent<BoxCollider>() != null)
-		{
-			item.GetComponent<BoxCollider>().isTrigger = false;
-		}
-		else
-		{
-			Debug.Log(item.name + ": needs a 3D BoxCollider!");
 		}
 		playerObject.GetComponent<RayCast>().setStoredPickUpItem(null);
 	}

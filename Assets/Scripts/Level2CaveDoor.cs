@@ -52,11 +52,11 @@ public class Level2CaveDoor : MonoBehaviour
             //Destroy(gameObject);
             //nowOpen = true;
         }
-        else if (exitObject.GetComponent<ExitPoint>().HasEntered)
-        {
-            this.transform.position = Vector3.Lerp(this.transform.position, startVector, 1.45f * Time.deltaTime);
-            //nowOpen = false;
-        }
+        //else if (exitObject.GetComponent<ExitPoint>().HasEntered)
+        //{
+        //    this.transform.position = Vector3.Lerp(this.transform.position, startVector, 1.45f * Time.deltaTime);
+        //    //nowOpen = false;
+        //}
 
 
     }

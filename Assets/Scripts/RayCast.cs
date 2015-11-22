@@ -72,6 +72,10 @@ public class RayCast : MonoBehaviour {
                     {
                         objectHit.collider.gameObject.GetComponent<SwitchScript>().isActive = !objectHit.collider.gameObject.GetComponent<SwitchScript>().isActive;
                     }
+                    else if (objectHit.collider.gameObject.tag == "Island Switch")
+                    {
+                        objectHit.collider.gameObject.GetComponent<lv4Switch>().isActive = true;
+                    }
 
                     // Sequence puzzle
                     else if (objectHit.collider.gameObject.tag == "Sequence Switch")
