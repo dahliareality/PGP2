@@ -10,7 +10,7 @@ public class SequenceTrigger : MonoBehaviour
     void Start()
     {
         //count = GameObject.Find("Puzzle Controller").GetComponent<SequencePuzzle>();
-        sequenceController = GameObject.Find("Cogwheel Puzzle");
+        sequenceController = GameObject.Find("Cear_Cliff");
     }
 
     void Update()

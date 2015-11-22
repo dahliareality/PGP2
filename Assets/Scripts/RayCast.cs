@@ -56,7 +56,7 @@ public class RayCast : MonoBehaviour {
 							if(storedPickUpObject.tag == "Statue" || storedPickUpObject.tag == "Coin"){
 								storedPickUpObject.GetComponent<SECTR_PropagationSource>().Stop(true);
 							}
-                            arms.GetComponent<ArmsScript>().PickUpItem(storedPickUpObject);
+                            arms.GetComponent<ArmsScript>().PickUpItem(storedPickUpObject, false);
                             arms.GetComponent<ArmsScript>().IsCarryingItem = true;
                             storedPickUpObject.GetComponent<Pickable>().CanPickUp = false;
 							GameObject.Find("PickUpSoundSource").GetComponent<SECTR_PointSource>().Play();
@@ -76,7 +76,11 @@ public class RayCast : MonoBehaviour {
                     // Sequence puzzle
                     else if (objectHit.collider.gameObject.tag == "Sequence Switch")
                     {
-                        moveNumber = objectHit.collider.gameObject.GetComponent<SequenceNumber>().NumberForSequence;
+						if(!objectHit.collider.gameObject.GetComponent<SequenceNumber>().alreadyUsed){
+							GameObject.Find("Gear_Cliff").GetComponent<SequencePuzzle>().instrumentsPlayed++;
+							objectHit.collider.gameObject.GetComponent<SequenceNumber>().alreadyUsed = true;
+						}
+
 						objectHit.collider.gameObject.GetComponent<SECTR_PointSource>().Play();
                     }
 
@@ -171,7 +175,7 @@ public class RayCast : MonoBehaviour {
 				//Push coffin with x-button
 				if(Input.GetButton("PS4_X") || Input.GetKey(KeyCode.E)){
 					if (objectHit.collider.gameObject.GetComponent<MoveInteract>() != null && !arms.GetComponent<ArmsScript>().IsCarryingItem){
-						if (objectHit.collider.gameObject.tag == "WoodBox"){
+						if (objectHit.collider.gameObject.tag == "WoodBox" || objectHit.collider.gameObject.name == "stonetablet"){
 							objectHit.collider.gameObject.GetComponent<MoveInteract>().OnInteractHold();
                             stopBeingSlow = true;
 						}

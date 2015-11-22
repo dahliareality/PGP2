@@ -36,7 +36,7 @@ public class StatueCheck : MonoBehaviour {
 		GameObject mainCamera = GameObject.FindGameObjectWithTag ("MainCamera");
 		mainCamera.GetComponent<RayCast> ().setStoredPickUpItem (curStatue);
 		GameObject arm = GameObject.FindGameObjectWithTag ("Arm");
-		arm.GetComponent<ArmsScript>().PickUpItem(curStatue);
+		arm.GetComponent<ArmsScript>().PickUpItem(curStatue, false);
 		arm.GetComponent<ArmsScript>().IsCarryingItem = true;
 		curStatue.GetComponent<Pickable>().CanPickUp = false;
         curStatue.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
@@ -50,7 +50,7 @@ public class StatueCheck : MonoBehaviour {
 		GameObject temp = curStatue;
 		GameObject arm = GameObject.FindGameObjectWithTag ("Arm");
 		arm.GetComponent<ArmsScript>().RemoveItem(statueIn);
-		arm.GetComponent<ArmsScript>().PickUpItem(temp);
+		arm.GetComponent<ArmsScript>().PickUpItem(temp, false);
 		placeStatue (statueIn);
         statueIn.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
         temp.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);

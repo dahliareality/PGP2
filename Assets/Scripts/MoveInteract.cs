@@ -7,7 +7,7 @@ public class MoveInteract : MonoBehaviour {
     private GameObject player;
 
     public float force = 795;
-    private float slow = 1.0f;
+    private float slow = 1.4f;
     private float playerSpeed;
 
     private Vector3 heading;
@@ -15,6 +15,7 @@ public class MoveInteract : MonoBehaviour {
     private Vector3 direction;
     private Rigidbody rb;
 	private bool isMovingSoundPlaying;
+	private InputRound inputRound;
 
     //public AudioClip pushSound;
 
@@ -25,6 +26,7 @@ public class MoveInteract : MonoBehaviour {
         rb = GetComponent<Rigidbody>();
         player = GameObject.FindGameObjectWithTag("Player");
 		playerSpeed = 5.0f;
+		inputRound = GameObject.Find ("InputRound").GetComponent<InputRound> ();
 
     }
 
@@ -47,11 +49,16 @@ public class MoveInteract : MonoBehaviour {
             
         DiagonalMoveClamp();
         CardianlMoveClamp();
-        if (!isMovingSoundPlaying)
+        if (!isMovingSoundPlaying && inputRound.LV > 0.1f)
         {
 			this.GetComponent<SECTR_PointSource>().Play();
             isMovingSoundPlaying = true;
         }
+		if (isMovingSoundPlaying && inputRound.LV < 0.1f)
+		{
+			this.GetComponent<SECTR_PointSource>().Stop(true);
+			isMovingSoundPlaying = false;
+		}
     }
 
     //When interaction ends.
@@ -96,7 +103,6 @@ public class MoveInteract : MonoBehaviour {
         {
             rb.velocity = new Vector3(-1.4f, rb.velocity.y, rb.velocity.z);
         }
-
         if (rb.velocity.z > 1.4f)
         {
             rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y, 1.4f);

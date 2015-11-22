@@ -5,5 +5,5 @@ using System.Collections;
 
 public class SequenceNumber : MonoBehaviour {
 
-    public int NumberForSequence;
+    public bool alreadyUsed;
 }
