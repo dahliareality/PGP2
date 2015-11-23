@@ -19,8 +19,8 @@ public class Lammasu : MonoBehaviour {
         tilPzl = GameObject.Find("Tile Puzzle Controller").GetComponent<TilePuzzle>();
         sunPuzzle = GameObject.Find("Sun Room").GetComponent<TriggerFromSunLight>();
         lifted = 20;
-        riseLamma = new Vector3(this.transform.position.x, 132.5535f, this.transform.position.z);
-        riseLamma2 = new Vector3(GameObject.Find("Lammasu").transform.position.x, 132.97f, GameObject.Find("Lammasu").transform.position.z);
+        riseLamma = new Vector3(this.transform.position.x, 130.14f, this.transform.position.z);
+        riseLamma2 = new Vector3(GameObject.Find("Lammasu").transform.position.x, 132.519979f, GameObject.Find("Lammasu").transform.position.z);
 
     }
 	
