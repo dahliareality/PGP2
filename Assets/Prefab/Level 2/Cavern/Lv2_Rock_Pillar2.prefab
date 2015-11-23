@@ -10,13 +10,13 @@ GameObject:
   - 4: {fileID: 408118}
   - 33: {fileID: 3374458}
   - 23: {fileID: 2367382}
-  - 64: {fileID: 6422902}
+  - 136: {fileID: 13681774}
   m_Layer: 0
   m_Name: Lv2_Rock_Pillar2
-  m_TagString: Untagged
+  m_TagString: Stone Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &408118
 Transform:
@@ -25,8 +25,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 163940}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.38621235, y: .400954574, z: -10.1538086}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -82.6958923, y: 126, z: 155.44809}
+  m_LocalScale: {x: 11.7293806, y: 19.2361507, z: 11.7293777}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -43,15 +43,15 @@ MeshRenderer:
   - {fileID: 2100000, guid: 8fb6bbf4567a83a468d130d613aabd0c, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
+  m_UseLightProbes: 0
+  m_ReflectionProbeUsage: 0
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
   m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
+  m_AutoUVMaxDistance: 50
+  m_AutoUVMaxAngle: 180
+  m_LightmapParameters: {fileID: 15201, guid: 0000000000000000f000000000000000, type: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
 --- !u!33 &3374458
@@ -60,9 +60,9 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 163940}
-  m_Mesh: {fileID: 4300000, guid: cea6e9b40ba93c443ba177924b42342e, type: 3}
---- !u!64 &6422902
-MeshCollider:
+  m_Mesh: {fileID: 4300000, guid: ebbc5885c439cd34689ee5b2ff299420, type: 3}
+--- !u!136 &13681774
+CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -70,9 +70,10 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 1
-  m_Mesh: {fileID: 4300000, guid: cea6e9b40ba93c443ba177924b42342e, type: 3}
+  m_Radius: 1.21210814
+  m_Height: 6.41263771
+  m_Direction: 1
+  m_Center: {x: .0311011076, y: 2.80536413, z: .0362927318}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
