@@ -2,6 +2,8 @@
 using System.Collections;
 
 public class StatueCheck : MonoBehaviour {
+
+ 	// Now works with no prober places for the statues to be placed in.
 	
 	public GameObject correctStatue = null;
 	private GameObject curStatue = null;
@@ -21,18 +23,16 @@ public class StatueCheck : MonoBehaviour {
 
 	public void placeStatue (GameObject statue)
 	{
+		GameObject.Find ("lvl2_Chinese_Gate").GetComponent<Level2CaveDoor> ().correctStatues++;
 		statue.transform.position = this.transform.position;
 		statue.transform.rotation = this.transform.rotation;
 		curStatue = statue;
-		if (curStatue.name == this.correctStatue.name)
-			GameObject.Find ("lvl2_Chinese_Gate").GetComponent<Level2CaveDoor> ().correctStatues++;
 	}
 
 	public void removeStatue ()
 	{
 		//Debug.Log (curStatue.ToString() + "  " + correctStatue.ToString());
-		if (curStatue.name == correctStatue.name)
-			GameObject.Find ("lvl2_Chinese_Gate").GetComponent<Level2CaveDoor> ().correctStatues--;
+		GameObject.Find ("lvl2_Chinese_Gate").GetComponent<Level2CaveDoor> ().correctStatues--;
 		GameObject mainCamera = GameObject.FindGameObjectWithTag ("MainCamera");
 		mainCamera.GetComponent<RayCast> ().setStoredPickUpItem (curStatue);
 		GameObject arm = GameObject.FindGameObjectWithTag ("Arm");
