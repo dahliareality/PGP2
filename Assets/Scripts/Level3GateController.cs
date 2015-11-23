@@ -7,7 +7,6 @@ public class Level3GateController : MonoBehaviour
     // Put this on the first gate object on the boulder progression
     public bool sunPuzzleSolved = false;
     public bool tilePuzzleSolved = false;
-    //private int nrOfPuzzlesSolved = 0;
     private TriggerFromSunLight sunPuzzle;
     private TilePuzzle tilPzl;
     private bool isPuzzle1Done, isPuzzle2Done;
@@ -38,7 +37,7 @@ public class Level3GateController : MonoBehaviour
             sunPuzzleSolved = true;
         }
 
-        if ((tilePuzzleSolved == true || sunPuzzleSolved == true) && !isPuzzle1Done)
+        if ((tilePuzzleSolved == true && sunPuzzleSolved == true) && !isPuzzle1Done)
         {
             isPuzzle1Done = true;
             //Debug.Log("Raaarg!");
@@ -47,7 +46,7 @@ public class Level3GateController : MonoBehaviour
             Destroy(woodenGrate1);
             //nrOfPuzzlesSolved = 1;
         }
-        if (tilePuzzleSolved == true && sunPuzzleSolved == true && !isPuzzle2Done)
+        if (GameObject.Find("Lammasu Platform").GetComponent<Lammasu>().lammasuTaken == true && isPuzzle1Done)
         {
             isPuzzle2Done = true;
             //Debug.Log("Finally!");
