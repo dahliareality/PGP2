@@ -16,7 +16,7 @@ public class IslandDoor : MonoBehaviour {
 
         for (int i = 0; i < switches.Length; i++)
         {
-            Debug.Log("test");
+            //Debug.Log("test");
             if (switches[i].GetComponent<lv4Switch>().isActive == true)
             {
                 //Destroy(gameObject);

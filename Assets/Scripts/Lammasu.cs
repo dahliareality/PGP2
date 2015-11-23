@@ -20,7 +20,7 @@ public class Lammasu : MonoBehaviour {
         sunPuzzle = GameObject.Find("Sun Room").GetComponent<TriggerFromSunLight>();
         lifted = 20;
         riseLamma = new Vector3(this.transform.position.x, 130.14f, this.transform.position.z);
-        riseLamma2 = new Vector3(GameObject.Find("Lammasu").transform.position.x, 132.519979f, GameObject.Find("Lammasu").transform.position.z);
+        riseLamma2 = new Vector3(GameObject.Find("Lammasu").transform.position.x, 130.5565f, GameObject.Find("Lammasu").transform.position.z);
 
     }
 	
@@ -31,6 +31,7 @@ public class Lammasu : MonoBehaviour {
         {
             this.transform.position = Vector3.Lerp(this.transform.position, riseLamma, 0.52f * Time.deltaTime);
             GameObject.Find("Lammasu").transform.position = Vector3.Lerp(GameObject.Find("Lammasu").transform.position, riseLamma2, 0.52f * Time.deltaTime);
+           
 
 
         }
