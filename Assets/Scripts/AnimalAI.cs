@@ -35,7 +35,6 @@ public class AnimalAI : MonoBehaviour {
 			isScared = true;
 		}
 		
-
 		if(isScared){
 
 			animator.SetBool("fleeing",true);
@@ -61,13 +60,5 @@ public class AnimalAI : MonoBehaviour {
 		}
 		else
 			animator.SetBool("fleeing",false);
-
-
-		if (transform.eulerAngles.x != 0)
-			transform.eulerAngles = new Vector3 (0,transform.localEulerAngles.y,0);
-
-		if (transform.eulerAngles.z != 0)
-			transform.eulerAngles = new Vector3 (0,transform.localEulerAngles.y,0);
-
 	}
 }
