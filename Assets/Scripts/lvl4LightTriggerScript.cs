@@ -10,6 +10,7 @@ public class lvl4LightTriggerScript : MonoBehaviour
 
     public bool isLite;
 	public bool simulateIsLit = false;
+    private bool hasPlayedSound;
     public GameObject movingObj;
     public Transform endPos;
 	public Material litMaterial;
@@ -44,6 +45,11 @@ public class lvl4LightTriggerScript : MonoBehaviour
             {
                 //movingObj.transform.position = new Vector3(movingObj.transform.position.x, movingObj.transform.position.y + 0.04f, movingObj.transform.position.z);
                 movingObj.transform.position = Vector3.Lerp(this.movingObj.transform.position, endPos.position, 0.3f * Time.deltaTime);
+                if (!hasPlayedSound)
+                {
+                    movingObj.GetComponent<SECTR_PointSource>().Play();
+                    hasPlayedSound = true;
+                }
             }
             
         }

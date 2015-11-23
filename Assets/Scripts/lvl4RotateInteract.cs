@@ -9,39 +9,34 @@ public class lvl4RotateInteract : MonoBehaviour
 {
 
     //private float lookSensitivity = 2f;
-    private float yRotation;
-    private float xRotation;
-    private float yRotationV;
-    private float xRotationV;
-    private float lookSmoothDamp = 0.1f;
     private float currentYRotation;
     //private bool isSoundPlaying = false;
     //private int testInt = 0;
-    public GameObject tileSwitch;
-    public float xRot, zRot;
+    public GameObject tileSwitch1, tileSwitch2;
+    public float xRot;
 
     void Awake()
     {
-        currentYRotation = transform.rotation.y;
+        //currentYRotation = transform.rotation.y;
     }
 
     public void FixedUpdate()
     {
-        float x = 0f;
-        if (tileSwitch.GetComponent<lv4Tiles>().activated)
+        if (tileSwitch1.GetComponent<lv4Tiles>().activated)
         {
-            x = -1;
+            currentYRotation -= 0.15f;
+        }
+        else if (tileSwitch2.GetComponent<lv4Tiles>().activated)
+        {
+            currentYRotation += 0.15f;
         }
 
         // Getting inputs from mouse, and storing the values
         //yRotation += x * lookSensitivity;
-        yRotation += x;
 
         /* xRotation = Mathf.Clamp(xRotation, -90f + startRotation.x, 90f + startRotation.x); // Clamping X
          yRotation = Mathf.Clamp(yRotation, -90f + startRotation.y, 90f + startRotation.y); // Clamping Y*/
 
-        currentYRotation = Mathf.SmoothDamp(currentYRotation, yRotation, ref yRotationV, lookSmoothDamp);
-
-        transform.rotation = Quaternion.Euler(xRot, currentYRotation * 0.75f, zRot);
+        transform.rotation = Quaternion.Euler(xRot,transform.position.y + currentYRotation, 0.0f);
     }
 }

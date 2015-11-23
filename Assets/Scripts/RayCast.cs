@@ -291,13 +291,6 @@ public class RayCast : MonoBehaviour {
                     }
                 }
             }
-            if (Input.GetButtonDown("PS4_O") || Input.GetKeyDown(KeyCode.F))
-            {
-                if (arms.GetComponent<ArmsScript>().IsCarryingItem)
-                {
-                    arms.GetComponent<ArmsScript>().DropItem(storedPickUpObject);
-                }
-            }
         }
     }
 

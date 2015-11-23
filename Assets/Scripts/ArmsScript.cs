@@ -188,7 +188,7 @@ public class ArmsScript : MonoBehaviour {
 		obj.transform.parent = objectSpaceInHand.transform;
 		obj.transform.position = objectSpaceInHand.transform.position;
 		obj.transform.rotation = objectSpaceInHand.transform.rotation;
-		obj.layer = 2;
+		obj.layer = LayerMask.NameToLayer("Invisible Wall");
 		if (obj.tag == "Coin")
 		{
 			obj.transform.localScale = new Vector3(5.0f, 5.0f, 5.0f);
@@ -218,25 +218,6 @@ public class ArmsScript : MonoBehaviour {
 		objInRightArm = null;
 		item.transform.parent = null;
 		item.layer = 0;
-	}
-	
-	public void DropItem(GameObject item)
-	{
-		isCarryingItem = false;
-		objInRightArm = null;
-		item.transform.parent = null;
-		item.transform.rotation = Quaternion.identity;
-		item.layer = 0;
-		// Checks for Pickable Scripts
-		if (item.GetComponent<Pickable>() != null)
-		{
-			item.GetComponent<Pickable>().CanPickUp = true;
-		}
-		else
-		{
-			Debug.Log(item.name + ": needs the Pickable Script!");
-		}
-		playerObject.GetComponent<RayCast>().setStoredPickUpItem(null);
 	}
 	
 }

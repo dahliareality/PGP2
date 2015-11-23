@@ -11,7 +11,7 @@ public class LoadLevel3 : MonoBehaviour {
     void Start()
     {
         giantDoor = GameObject.Find("lvl2_Chinese_Gate").GetComponent<Level2CaveDoor>();
-        prepare3 = GameObject.Find("Level3Loader").GetComponent<Level3Prep>();
+        prepare3 = GameObject.Find("lvl2_Chinese_Gate").GetComponent<Level3Prep>();
         prepare3.StartLoading();
     }
 

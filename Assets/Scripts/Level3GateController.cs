@@ -46,7 +46,7 @@ public class Level3GateController : MonoBehaviour
             Destroy(woodenGrate1);
             //nrOfPuzzlesSolved = 1;
         }
-        if (GameObject.Find("Lv3_Nabatean_Sandstone_Statue_Platform").GetComponent<Lammasu>().lammasuTaken == true && isPuzzle1Done)
+        if (GameObject.Find("Lammasu Platform").GetComponent<Lammasu>().lammasuTaken == true && isPuzzle1Done)
         {
             isPuzzle2Done = true;
             //Debug.Log("Finally!");
