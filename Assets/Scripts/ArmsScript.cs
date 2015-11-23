@@ -210,7 +210,7 @@ public class ArmsScript : MonoBehaviour {
 		//			obj.GetComponent<BoxCollider>().isTrigger = true;
 		//		}
 		obj.GetComponent<BoxCollider> ().enabled = false;
-		obj.GetComponent<Rigidbody>().useGravity = false;
+		//obj.GetComponent<Rigidbody>().useGravity = false;
 		
 		//Plays sound
 		if (isFromBackpack == true){
@@ -229,7 +229,7 @@ public class ArmsScript : MonoBehaviour {
 		item.transform.parent = null;
 		item.layer = 0;
 		item.GetComponent<BoxCollider> ().enabled = true;
-		item.GetComponent<Rigidbody>().useGravity = true;
+		//item.GetComponent<Rigidbody>().useGravity = true;
 	}
 	
 	public void DropItem(GameObject item)
@@ -240,7 +240,7 @@ public class ArmsScript : MonoBehaviour {
 		item.transform.rotation = Quaternion.identity;
 		item.layer = 0;
 		item.GetComponent<BoxCollider> ().enabled = true;
-		item.GetComponent<Rigidbody>().useGravity = true;
+		//item.GetComponent<Rigidbody>().useGravity = true;
 		// Checks for Pickable Scripts
 		if (item.GetComponent<Pickable>() != null)
 		{
