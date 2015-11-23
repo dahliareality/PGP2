@@ -1,7 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
+
 public class TurnDownTheLayer : StateMachineBehaviour {
+
 
 	 // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
 	//override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
@@ -29,7 +32,9 @@ public class TurnDownTheLayer : StateMachineBehaviour {
 	//}
 
 	public int layerNr = 0;
-	
+
+	public bool enableAtExit = true;
+
 	override public void OnStateEnter (Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 	{
 		animator.SetLayerWeight (layerNr, 0);
@@ -38,6 +43,7 @@ public class TurnDownTheLayer : StateMachineBehaviour {
 	
 	override public void OnStateExit (Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 	{
+		if (enableAtExit)
 		animator.SetLayerWeight (layerNr, 1);
 	}
 }

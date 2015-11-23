@@ -28,6 +28,7 @@ public class turnUpTheLayer : StateMachineBehaviour {
 	//
 	//}
 	public int layerNr = 0;
+	public bool disableAtExit = true;
 
 	override public void OnStateEnter (Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 	{
@@ -37,6 +38,7 @@ public class turnUpTheLayer : StateMachineBehaviour {
 	
 	override public void OnStateExit (Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 	{
+		if(disableAtExit)
 		animator.SetLayerWeight (layerNr, 0);
 	}
 

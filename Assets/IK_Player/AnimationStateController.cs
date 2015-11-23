@@ -21,6 +21,8 @@ public class AnimationStateController : MonoBehaviour {
 	public bool handOpen;
 	public bool handGrab;
 
+	public bool endAnimation;
+
 	//bool animateOnce = false;
 
 
@@ -36,7 +38,8 @@ public class AnimationStateController : MonoBehaviour {
 			//get the current state
 			//AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
 
-
+			if (endAnimation)
+				animator.SetBool("ending", true);
 
 			walkForwards = Input.GetKey(KeyCode.W);
 			walkBackwards = Input.GetKey(KeyCode.S);
