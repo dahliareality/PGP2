@@ -14,10 +14,10 @@ public class AnimalAI : MonoBehaviour {
 	public bool isScared;
 	public bool hasRunAway = true;
 	private float timer;
-
+	
 	private Rigidbody rigidbodyR;
 	private Animator animator;
-
+	
 	// Use this for initialization
 	void Start () {
 		rigidbodyR = GetComponent<Rigidbody>();
@@ -35,30 +35,39 @@ public class AnimalAI : MonoBehaviour {
 			isScared = true;
 		}
 		
+		
 		if(isScared){
-
+			
 			animator.SetBool("fleeing",true);
-
+			
 			timer += Time.deltaTime;
-
+			
 			hasRunAway = false;
-
+			
 			if (timer >= scaredTime)
 			{
 				hasRunAway = true;
 				isScared = false;
 				timer = 0f;
 			}
-
+			
 			vectorAwayFromPlayer.Normalize();
-
+			
 			Vector3 directionToGo = new Vector3(vectorAwayFromPlayer.x, 0, vectorAwayFromPlayer.z);
-
+			
 			transform.right  = Vector3.Lerp(transform.right, directionToGo, 0.1f);
 			transform.position += new Vector3(vectorAwayFromPlayer.x, 0, vectorAwayFromPlayer.z)/30f;
-//			rigidbodyR.AddForce(new Vector3(vectorAwayFromPlayer.x, 0, vectorAwayFromPlayer.z)*moveSpeed);
+			//			rigidbodyR.AddForce(new Vector3(vectorAwayFromPlayer.x, 0, vectorAwayFromPlayer.z)*moveSpeed);
 		}
 		else
 			animator.SetBool("fleeing",false);
+		
+		
+		if (transform.eulerAngles.x != 0)
+			transform.eulerAngles = new Vector3 (0,transform.localEulerAngles.y,0);
+		
+		if (transform.eulerAngles.z != 0)
+			transform.eulerAngles = new Vector3 (0,transform.localEulerAngles.y,0);
+		
 	}
 }

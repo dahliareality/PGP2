@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿
+		using UnityEngine;
 using System.Collections;
 
 // Attach to the arms on the player character
@@ -107,7 +108,7 @@ public class ArmsScript : MonoBehaviour {
 				{
 					//Debug.Log("Empty space in bag.");
 				}
-
+				
 			}
 			// Movement of Right Arm
 			float up, right;
@@ -171,6 +172,12 @@ public class ArmsScript : MonoBehaviour {
 				GameObject.FindGameObjectWithTag("Animator").GetComponent<IKControl>().movement = 0;
 		}
 		
+		if (isCarryingItem)
+			if (objInRightArm.transform.position != objectSpaceInHand.transform.position)
+				objInRightArm.transform.position = objectSpaceInHand.transform.position;
+		
+		
+		
 	}
 	
 	public bool IsCarryingItem
@@ -188,7 +195,7 @@ public class ArmsScript : MonoBehaviour {
 		obj.transform.parent = objectSpaceInHand.transform;
 		obj.transform.position = objectSpaceInHand.transform.position;
 		obj.transform.rotation = objectSpaceInHand.transform.rotation;
-		obj.layer = LayerMask.NameToLayer("Invisible Wall");
+		obj.layer = 2;
 		if (obj.tag == "Coin")
 		{
 			obj.transform.localScale = new Vector3(5.0f, 5.0f, 5.0f);
@@ -198,10 +205,13 @@ public class ArmsScript : MonoBehaviour {
 			obj.transform.localScale = new Vector3(70.0f, 70.0f, 70.0f);
 		}
 		playerObject.GetComponent<RayCast>().setStoredPickUpItem(obj);
-		if (!obj.GetComponent<BoxCollider>().isTrigger)
-		{
-			obj.GetComponent<BoxCollider>().isTrigger = true;
-		}
+		//		if (!obj.GetComponent<BoxCollider>().isTrigger)
+		//		{
+		//			obj.GetComponent<BoxCollider>().isTrigger = true;
+		//		}
+		obj.GetComponent<BoxCollider> ().enabled = false;
+		obj.GetComponent<Rigidbody>().useGravity = false;
+		
 		//Plays sound
 		if (isFromBackpack == true){
 			retreiveSound.GetComponent<SECTR_PointSource>().Play ();
@@ -218,6 +228,29 @@ public class ArmsScript : MonoBehaviour {
 		objInRightArm = null;
 		item.transform.parent = null;
 		item.layer = 0;
+		item.GetComponent<BoxCollider> ().enabled = true;
+		item.GetComponent<Rigidbody>().useGravity = true;
+	}
+	
+	public void DropItem(GameObject item)
+	{
+		isCarryingItem = false;
+		objInRightArm = null;
+		item.transform.parent = null;
+		item.transform.rotation = Quaternion.identity;
+		item.layer = 0;
+		item.GetComponent<BoxCollider> ().enabled = true;
+		item.GetComponent<Rigidbody>().useGravity = true;
+		// Checks for Pickable Scripts
+		if (item.GetComponent<Pickable>() != null)
+		{
+			item.GetComponent<Pickable>().CanPickUp = true;
+		}
+		else
+		{
+			Debug.Log(item.name + ": needs the Pickable Script!");
+		}
+		playerObject.GetComponent<RayCast>().setStoredPickUpItem(null);
 	}
 	
 }
