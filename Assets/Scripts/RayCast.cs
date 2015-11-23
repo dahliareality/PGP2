@@ -139,11 +139,11 @@ public class RayCast : MonoBehaviour {
 							GameObject.Find ("PickUpSoundSource").GetComponent<SECTR_PointSource>().Play();
                         }
                     }
-                    else if (GameObject.Find("lvl2_Chinese_Gate").GetComponent<Level2CaveDoor>().puzzleDone){
-                        GameObject.Find("Lv2_Statue_AzureDragon").layer = LayerMask.NameToLayer("Invisible Wall");
-                        GameObject.Find("Lv2_Statue_WhiteTiger").layer = LayerMask.NameToLayer("Invisible Wall");
-                        GameObject.Find("Lv2_Statue_YellowDragon").layer = LayerMask.NameToLayer("Invisible Wall");
-                    }
+//                    else if (GameObject.Find("lvl2_Chinese_Gate").GetComponent<Level2CaveDoor>().puzzleDone){
+//                        GameObject.Find("Lv2_Statue_AzureDragon").layer = LayerMask.NameToLayer("Invisible Wall");
+//                        GameObject.Find("Lv2_Statue_WhiteTiger").layer = LayerMask.NameToLayer("Invisible Wall");
+//                        GameObject.Find("Lv2_Statue_YellowDragon").layer = LayerMask.NameToLayer("Invisible Wall");
+//                    }
 
                     // Test
                     if (storedPickUpObject != null && !GameObject.Find("World Reset Cube").GetComponent<Lv4EndPuzzle>().puzzleDone)

@@ -5,30 +5,35 @@ using System.Collections;
 // for most efficient rotation with PS4 controller, turn off
 // MouseLook as normal gameplay camera rotation is done by the
 //occulus and not the right analog stick
-public class lvl4RotateInteract : MonoBehaviour
-{
+public class lvl4RotateInteract : MonoBehaviour{
 
     //private float lookSensitivity = 2f;
     private float currentYRotation;
+	private Quaternion endPos;
     //private bool isSoundPlaying = false;
     //private int testInt = 0;
-    public GameObject tileSwitch1, tileSwitch2;
-    public float xRot;
+	public GameObject lever;
+	public float[] rot = new float[3];
 
-    void Awake()
+    void Start()
     {
-        //currentYRotation = transform.rotation.y;
+		if (lever.GetComponent<lv4Switch> () == null) {
+			Debug.Log ("wrong object");
+		} else {
+			Debug.Log ("right object");
+		}
+		endPos = Quaternion.Euler (rot [0], rot [1], rot [2]);
+
     }
 
     public void FixedUpdate()
     {
-        if (tileSwitch1.GetComponent<lv4Tiles>().activated)
-        {
-            currentYRotation -= 0.15f;
-        }
-        else if (tileSwitch2.GetComponent<lv4Tiles>().activated)
-        {
-            currentYRotation += 0.15f;
+        if (lever.GetComponent<lv4Switch>().isActive)
+		{
+			if(this.transform.rotation != endPos)
+			{
+				this.transform.rotation = Quaternion.Lerp (this.transform.rotation, endPos, Time.fixedDeltaTime * 0.75f);
+			}
         }
 
         // Getting inputs from mouse, and storing the values
@@ -36,7 +41,5 @@ public class lvl4RotateInteract : MonoBehaviour
 
         /* xRotation = Mathf.Clamp(xRotation, -90f + startRotation.x, 90f + startRotation.x); // Clamping X
          yRotation = Mathf.Clamp(yRotation, -90f + startRotation.y, 90f + startRotation.y); // Clamping Y*/
-
-        transform.rotation = Quaternion.Euler(xRot,transform.position.y + currentYRotation, 0.0f);
     }
 }
