@@ -10,6 +10,7 @@ public class Lammasu : MonoBehaviour {
     private TriggerFromSunLight sunPuzzle;
     private TilePuzzle tilPzl;
     Vector3 riseLamma;
+    Vector3 riseLamma2;
 
 
     // Use this for initialization
@@ -18,7 +19,8 @@ public class Lammasu : MonoBehaviour {
         tilPzl = GameObject.Find("Tile Puzzle Controller").GetComponent<TilePuzzle>();
         sunPuzzle = GameObject.Find("Sun Room").GetComponent<TriggerFromSunLight>();
         lifted = 20;
-        riseLamma = new Vector3(this.transform.position.x, this.transform.position.y + lifted, this.transform.position.z);
+        riseLamma = new Vector3(this.transform.position.x, 132.5535f, this.transform.position.z);
+        riseLamma2 = new Vector3(GameObject.Find("Lammasu").transform.position.x, 132.97f, GameObject.Find("Lammasu").transform.position.z);
 
     }
 	
@@ -28,18 +30,15 @@ public class Lammasu : MonoBehaviour {
         if ((tilPzl.tilePuzzleSolved == true && sunPuzzle.sunPuzzleSolved == true) && hasRisenOnceAgain == false)
         {
             this.transform.position = Vector3.Lerp(this.transform.position, riseLamma, 0.52f * Time.deltaTime);
+            GameObject.Find("Lammasu").transform.position = Vector3.Lerp(GameObject.Find("Lammasu").transform.position, riseLamma2, 0.52f * Time.deltaTime);
 
-        }
-        if (this.gameObject.transform.position == riseLamma)
-        {
-            GameObject.Find("Lv3_Nabatean_Sandstone_Statue_Platform").GetComponent<Collider>().enabled = true;
-            Debug.Log("is this happening?");
-            hasRisenOnceAgain = true;
+
         }
 
         if (!GameObject.Find("Lammasu").GetComponent<Pickable>().CanPickUp)
         {
             lammasuTaken = true;
+            hasRisenOnceAgain = true;
         }
     }
 }
