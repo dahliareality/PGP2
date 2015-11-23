@@ -892,6 +892,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4607103918e89cf41a4707ea81843d63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  kenny: {fileID: 0}
 --- !u!1 &48391753 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 176522, guid: f923953e49efaa842adda4537e4916f7, type: 2}
@@ -1811,7 +1812,7 @@ GameObject:
   - 65: {fileID: 73739835}
   m_Layer: 0
   m_Name: lv1_Sand_Floor 7
-  m_TagString: Moss Floor
+  m_TagString: Stone Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -3182,7 +3183,7 @@ Transform:
   - {fileID: 813412288}
   - {fileID: 348317695}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 7
 --- !u!1 &147232500
 GameObject:
   m_ObjectHideFlags: 0
@@ -5182,6 +5183,52 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8f4cd14efbb70b84ea80957fcbdfd4b0, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &249681287
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 402946, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -102.878128
+      objectReference: {fileID: 0}
+    - target: {fileID: 402946, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 142.690384
+      objectReference: {fileID: 0}
+    - target: {fileID: 402946, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -143.472382
+      objectReference: {fileID: 0}
+    - target: {fileID: 402946, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 402946, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -.745655
+      objectReference: {fileID: 0}
+    - target: {fileID: 402946, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 402946, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: .666332304
+      objectReference: {fileID: 0}
+    - target: {fileID: 402946, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 118046, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_Name
+      value: FlatCritter (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &252423038
 GameObject:
   m_ObjectHideFlags: 0
@@ -6484,7 +6531,53 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 8
+--- !u!1001 &316078815
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 402946, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -99.7809143
+      objectReference: {fileID: 0}
+    - target: {fileID: 402946, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 142.690384
+      objectReference: {fileID: 0}
+    - target: {fileID: 402946, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -141.028
+      objectReference: {fileID: 0}
+    - target: {fileID: 402946, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 402946, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -.962680936
+      objectReference: {fileID: 0}
+    - target: {fileID: 402946, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 402946, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: .270638973
+      objectReference: {fileID: 0}
+    - target: {fileID: 402946, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 118046, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_Name
+      value: FlatCritter (5)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &316119044
 Prefab:
   m_ObjectHideFlags: 0
@@ -9856,7 +9949,7 @@ GameObject:
   - 65: {fileID: 501312724}
   m_Layer: 0
   m_Name: lv1_Sand_Floor 13
-  m_TagString: Moss Floor
+  m_TagString: Stone Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -11217,7 +11310,7 @@ GameObject:
   - 65: {fileID: 549100112}
   m_Layer: 0
   m_Name: lv1_Sand_Floor
-  m_TagString: Moss Floor
+  m_TagString: Stone Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -11574,7 +11667,7 @@ GameObject:
   - 65: {fileID: 560513433}
   m_Layer: 0
   m_Name: lv1_Sand_Floor 8
-  m_TagString: Moss Floor
+  m_TagString: Stone Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -11655,6 +11748,52 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.98395395, y: 2.27657294, z: .199504912}
   m_Center: {x: 5.71436871e-08, y: 2.51860022e-09, z: -.0845101476}
+--- !u!1001 &560613162
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 402946, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -104.584877
+      objectReference: {fileID: 0}
+    - target: {fileID: 402946, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 142.690384
+      objectReference: {fileID: 0}
+    - target: {fileID: 402946, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -140.953522
+      objectReference: {fileID: 0}
+    - target: {fileID: 402946, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 402946, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: .130281582
+      objectReference: {fileID: 0}
+    - target: {fileID: 402946, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 402946, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: .991477072
+      objectReference: {fileID: 0}
+    - target: {fileID: 402946, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 118046, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_Name
+      value: FlatCritter (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &565048422
 GameObject:
   m_ObjectHideFlags: 0
@@ -12115,7 +12254,7 @@ GameObject:
   - 65: {fileID: 618119033}
   m_Layer: 0
   m_Name: lv1_Sand_Floor 1
-  m_TagString: Moss Floor
+  m_TagString: Stone Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -13998,6 +14137,52 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!1001 &731669332
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 402946, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -107.963638
+      objectReference: {fileID: 0}
+    - target: {fileID: 402946, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 142.690384
+      objectReference: {fileID: 0}
+    - target: {fileID: 402946, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -146.774261
+      objectReference: {fileID: 0}
+    - target: {fileID: 402946, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 402946, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -.745655
+      objectReference: {fileID: 0}
+    - target: {fileID: 402946, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 402946, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: .666332304
+      objectReference: {fileID: 0}
+    - target: {fileID: 402946, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 118046, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_Name
+      value: FlatCritter (7)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &743792195
 GameObject:
   m_ObjectHideFlags: 0
@@ -14098,6 +14283,52 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!1001 &756070236
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 402946, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -107.632179
+      objectReference: {fileID: 0}
+    - target: {fileID: 402946, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 142.690384
+      objectReference: {fileID: 0}
+    - target: {fileID: 402946, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -146.754105
+      objectReference: {fileID: 0}
+    - target: {fileID: 402946, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 402946, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -.915078223
+      objectReference: {fileID: 0}
+    - target: {fileID: 402946, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 402946, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: .403276592
+      objectReference: {fileID: 0}
+    - target: {fileID: 402946, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 118046, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_Name
+      value: FlatCritter (4)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &758620869
 GameObject:
   m_ObjectHideFlags: 0
@@ -14476,6 +14707,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4607103918e89cf41a4707ea81843d63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  kenny: {fileID: 0}
 --- !u!1 &774100072 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 155814, guid: bd4536428e563704b942a47ad0ae0acd, type: 2}
@@ -15420,7 +15652,7 @@ GameObject:
   - 65: {fileID: 835600621}
   m_Layer: 0
   m_Name: lv1_Sand_Floor 3
-  m_TagString: Moss Floor
+  m_TagString: Stone Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -17417,7 +17649,7 @@ GameObject:
   - 65: {fileID: 944141369}
   m_Layer: 0
   m_Name: lv1_Sand_Floor 11
-  m_TagString: Moss Floor
+  m_TagString: Stone Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -17932,7 +18164,7 @@ GameObject:
   - 65: {fileID: 971550372}
   m_Layer: 0
   m_Name: lv1_Sand_Floor 9
-  m_TagString: Moss Floor
+  m_TagString: Stone Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -18212,6 +18444,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4607103918e89cf41a4707ea81843d63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  kenny: {fileID: 0}
 --- !u!4 &982316022 stripped
 Transform:
   m_PrefabParentObject: {fileID: 459638, guid: 9b347ea4fe1973540b4e8cab5d7e59dc, type: 2}
@@ -18756,7 +18989,7 @@ GameObject:
   - 65: {fileID: 1007513899}
   m_Layer: 0
   m_Name: lv1_Sand_Floor 5
-  m_TagString: Moss Floor
+  m_TagString: Stone Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -20419,6 +20652,52 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1059120891}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1061998753
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 402946, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -100.50264
+      objectReference: {fileID: 0}
+    - target: {fileID: 402946, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 142.690384
+      objectReference: {fileID: 0}
+    - target: {fileID: 402946, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -140.297302
+      objectReference: {fileID: 0}
+    - target: {fileID: 402946, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 402946, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -.436899394
+      objectReference: {fileID: 0}
+    - target: {fileID: 402946, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 402946, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: .899510443
+      objectReference: {fileID: 0}
+    - target: {fileID: 402946, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 118046, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_Name
+      value: FlatCritter (6)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1063605084
 GameObject:
   m_ObjectHideFlags: 0
@@ -21039,7 +21318,7 @@ GameObject:
   - 65: {fileID: 1092116554}
   m_Layer: 0
   m_Name: lv1_Sand_Floor 2
-  m_TagString: Moss Floor
+  m_TagString: Stone Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -32282,7 +32561,7 @@ GameObject:
   - 65: {fileID: 1394132164}
   m_Layer: 0
   m_Name: lv1_Sand_Floor 4
-  m_TagString: Moss Floor
+  m_TagString: Stone Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -37850,7 +38129,7 @@ GameObject:
   - 65: {fileID: 1739094468}
   m_Layer: 0
   m_Name: lv1_Sand_Floor 10
-  m_TagString: Moss Floor
+  m_TagString: Stone Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -39434,7 +39713,7 @@ GameObject:
   - 65: {fileID: 1850245063}
   m_Layer: 0
   m_Name: lv1_Sand_Floor 12
-  m_TagString: Moss Floor
+  m_TagString: Stone Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -41292,7 +41571,7 @@ GameObject:
   - 65: {fileID: 1971773774}
   m_Layer: 0
   m_Name: lv1_Sand_Floor 6
-  m_TagString: Moss Floor
+  m_TagString: Stone Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -43610,6 +43889,52 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2085825536}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &2101448806
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 402946, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -102.00676
+      objectReference: {fileID: 0}
+    - target: {fileID: 402946, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 142.690384
+      objectReference: {fileID: 0}
+    - target: {fileID: 402946, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -141.173553
+      objectReference: {fileID: 0}
+    - target: {fileID: 402946, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 402946, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -.99719733
+      objectReference: {fileID: 0}
+    - target: {fileID: 402946, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 402946, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: .0748166442
+      objectReference: {fileID: 0}
+    - target: {fileID: 402946, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 118046, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+      propertyPath: m_Name
+      value: FlatCritter (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 454913df0cac7c549b48d1898184ae70, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &2102861272 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 167628, guid: bd4536428e563704b942a47ad0ae0acd, type: 2}
