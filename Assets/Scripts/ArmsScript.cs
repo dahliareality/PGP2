@@ -170,12 +170,6 @@ public class ArmsScript : MonoBehaviour {
 			else if (!inventory.HasBagOpen && !isCarryingItem)
 				GameObject.FindGameObjectWithTag("Animator").GetComponent<IKControl>().movement = 0;
 		}
-
-		if (isCarryingItem)
-		if (objInRightArm.transform.position != objectSpaceInHand.transform.position)
-			objInRightArm.transform.position = objectSpaceInHand.transform.position;
-
-
 		
 	}
 	
@@ -204,13 +198,10 @@ public class ArmsScript : MonoBehaviour {
 			obj.transform.localScale = new Vector3(70.0f, 70.0f, 70.0f);
 		}
 		playerObject.GetComponent<RayCast>().setStoredPickUpItem(obj);
-//		if (!obj.GetComponent<BoxCollider>().isTrigger)
-//		{
-//			obj.GetComponent<BoxCollider>().isTrigger = true;
-//		}
-		obj.GetComponent<BoxCollider> ().enabled = false;
-		obj.GetComponent<Rigidbody>().useGravity = false;
-
+		if (!obj.GetComponent<BoxCollider>().isTrigger)
+		{
+			obj.GetComponent<BoxCollider>().isTrigger = true;
+		}
 		//Plays sound
 		if (isFromBackpack == true){
 			retreiveSound.GetComponent<SECTR_PointSource>().Play ();
@@ -227,8 +218,6 @@ public class ArmsScript : MonoBehaviour {
 		objInRightArm = null;
 		item.transform.parent = null;
 		item.layer = 0;
-		item.GetComponent<BoxCollider> ().enabled = true;
-		item.GetComponent<Rigidbody>().useGravity = true;
 	}
 	
 	public void DropItem(GameObject item)
@@ -238,8 +227,6 @@ public class ArmsScript : MonoBehaviour {
 		item.transform.parent = null;
 		item.transform.rotation = Quaternion.identity;
 		item.layer = 0;
-		item.GetComponent<BoxCollider> ().enabled = true;
-		item.GetComponent<Rigidbody>().useGravity = true;
 		// Checks for Pickable Scripts
 		if (item.GetComponent<Pickable>() != null)
 		{
