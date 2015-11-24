@@ -23,6 +23,8 @@ public class Well : MonoBehaviour {
             {
                 basket.GetComponent<Animation>().Play();
                 this.GetComponent<Animation>().Play();
+				GetComponent<BoxCollider>().enabled = false;
+
 
                 finished = true;
             }
