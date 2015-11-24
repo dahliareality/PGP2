@@ -121,11 +121,11 @@ public class RayCast : MonoBehaviour {
 								GameObject.Find("PlaceItemSoundSource").GetComponent<SECTR_PointSource>().Play();
                             }
                             // Switch Statues
-                            else
-                            {
-                                storedPickUpObject = objectHit.collider.gameObject.GetComponent<StatueCheck>().switchStatue(storedPickUpObject);
-								GameObject.Find("PlaceItemSoundSource").GetComponent<SECTR_PointSource>().Play();
-                            }
+//                            else
+//                            {
+//                                storedPickUpObject = objectHit.collider.gameObject.GetComponent<StatueCheck>().switchStatue(storedPickUpObject);
+//								GameObject.Find("PlaceItemSoundSource").GetComponent<SECTR_PointSource>().Play();
+//                            }
                         }
                     }
                     // Remove statue
@@ -163,11 +163,11 @@ public class RayCast : MonoBehaviour {
                                 GameObject.Find("PlaceItemSoundSource").GetComponent<SECTR_PointSource>().Play();
                             }
                             // Switch Statues
-                            else
-                            {
-                                storedPickUpObject = objectHit.collider.gameObject.GetComponent<StatueCheck>().switchStatue(storedPickUpObject);
-                                GameObject.Find("PlaceItemSoundSource").GetComponent<SECTR_PointSource>().Play();
-                            }
+//                            else
+//                            {
+//                                storedPickUpObject = objectHit.collider.gameObject.GetComponent<StatueCheck>().switchStatue(storedPickUpObject);
+//                                GameObject.Find("PlaceItemSoundSource").GetComponent<SECTR_PointSource>().Play();
+//                            }
                         }
                     }
                     // Remove statue
