@@ -13,24 +13,13 @@ public class SunPuzzle : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
-        
-
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        drawLaser(transform.position, rayJumps); //the number rayJumps is the ammount of bounces
-
-
-
-            //counter += .1f / lineDrawSpeed;
-
-           
-
-        
-
+		drawLaser(transform.position, rayJumps); //the number rayJumps is the ammount of bounces
+        //counter += .1f / lineDrawSpeed;
     }
 
     public void drawLaser(Vector3 startPoint, int n)
@@ -52,10 +41,8 @@ public class SunPuzzle : MonoBehaviour {
 
         for (int i = 0; i < n; i++) //goes through itself for the ammount of bounces
         {
-
                 if (Physics.Raycast(startPoint, rayDir, out hit, 10000)) //checks for collision with any object
                 {
-
                     //this if-statement checks if the light-ray hits any object with the reflection tag
                     //and then adds more "bounces" to the light
                     if (hit.collider.gameObject.tag == reflect && hit.point != storePoint)
@@ -63,7 +50,6 @@ public class SunPuzzle : MonoBehaviour {
                         n += 1; //increases the value of rayJumps
                         //Debug.Log(n);
                         //hit.collider.gameObject.tag = "Tagged";
-                        
                     }
                 storePoint = startPoint;
                 //this thing draws the lines to show how the light bounces.

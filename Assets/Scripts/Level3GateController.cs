@@ -9,7 +9,7 @@ public class Level3GateController : MonoBehaviour
     public bool tilePuzzleSolved = false;
     private TriggerFromSunLight sunPuzzle;
     private TilePuzzle tilPzl;
-    private bool isPuzzle1Done, isPuzzle2Done;
+    private bool arePuzzlesDone, isRoomDone;
 
     public GameObject woodenGrate1, woodenGrate2;
     private GameObject rollSound1, rollSound2;
@@ -37,18 +37,18 @@ public class Level3GateController : MonoBehaviour
             sunPuzzleSolved = true;
         }
 
-        if ((tilePuzzleSolved == true && sunPuzzleSolved == true) && !isPuzzle1Done)
+        if ((tilePuzzleSolved == true && sunPuzzleSolved == true) && !arePuzzlesDone)
         {
-            isPuzzle1Done = true;
+            arePuzzlesDone = true;
             //Debug.Log("Raaarg!");
             //rollSound1.GetComponent<SECTR_PropagationSource>().Play();
             rollSound1.GetComponent<AudioSource>().Play();
             Destroy(woodenGrate1);
             //nrOfPuzzlesSolved = 1;
         }
-        if (GameObject.Find("Lammasu Platform").GetComponent<Lammasu>().lammasuTaken == true && isPuzzle1Done)
+        if (GameObject.Find("Lammasu Platform").GetComponent<Lammasu>().lammasuTaken == true && arePuzzlesDone)
         {
-            isPuzzle2Done = true;
+			isRoomDone = true;
             //Debug.Log("Finally!");
             //rollSound2.GetComponent<SECTR_PropagationSource>().Play();
             rollSound2.GetComponent<AudioSource>().Play();
