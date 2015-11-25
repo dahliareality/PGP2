@@ -150,9 +150,9 @@ public class Step : MonoBehaviour {
 					break;
 				case "Sand Floor":
 					isSPlaying = true;
-					//ShutUp();
+					ShutUp();
 					SData[d8].GetComponent<AudioSource>().Play ();
-					//SData[d8].GetComponent<AudioSource>().volume=1;
+					SData[d8].GetComponent<AudioSource>().volume=1;
 					StartCoroutine(SPlayer());
 					break;
 				case "Puddle Floor":
