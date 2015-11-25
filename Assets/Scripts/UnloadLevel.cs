@@ -16,11 +16,11 @@ public class UnloadLevel : MonoBehaviour {
 
         if (col.gameObject.tag == "Player")
         {
-            if (GameObject.Find("EntireLevel3"))
+            if (GameObject.Find("EntireLevel3") && GameObject.Find("Entire Level 4"))
             {
                 level = GameObject.Find("EntireLevel3");
             }
-            else if (GameObject.Find("Level 2"))
+            else if (GameObject.Find("Level 2") && GameObject.Find("EntireLevel3"))
             {
                 level = GameObject.Find("Level 2");
             }
