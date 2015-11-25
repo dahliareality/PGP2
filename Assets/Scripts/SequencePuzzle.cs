@@ -153,7 +153,8 @@ public class SequencePuzzle : MonoBehaviour
 			}
 
             if (!magicSoundStarted)
-            {
+			{
+				GameObject.Find ("Lv2_Statue_YellowDragon").GetComponent<SECTR_PropagationSource>().Play();
                 //spawnObject.GetComponent<SECTR_PropagationSource>().Play();
                 //GameObject.Find("Dragonstatue").GetComponent<SECTR_PointSource>().Play();
                 magicSoundStarted = true;
