@@ -2785,6 +2785,59 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1280142001}
   m_RootOrder: 1
+--- !u!1 &172610698
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 172610701}
+  - 65: {fileID: 172610700}
+  - 114: {fileID: 172610699}
+  m_Layer: 0
+  m_Name: Lvl3MusicStart
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &172610699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 172610698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7c33780c5e9bad4d97d7a2960dc61d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicNum: 3
+--- !u!65 &172610700
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 172610698}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &172610701
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 172610698}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -76.8199997, y: 129.559998, z: 330.813995}
+  m_LocalScale: {x: 6.95824051, y: 4.50487566, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
 --- !u!1001 &174028591
 Prefab:
   m_ObjectHideFlags: 0
@@ -3618,7 +3671,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 234194637}
-    gameObjectHash: 65578
+    gameObjectHash: 31088
     member: {fileID: 234194639}
     renderer: {fileID: 0}
     renderHash: 0
@@ -4570,7 +4623,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 14
 --- !u!1001 &290741169
 Prefab:
   m_ObjectHideFlags: 0
@@ -4723,7 +4776,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 292332072}
-    gameObjectHash: 65644
+    gameObjectHash: 31154
     member: {fileID: 292332074}
     renderer: {fileID: 0}
     renderHash: 0
@@ -15778,7 +15831,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 490025330}
-    gameObjectHash: 65868
+    gameObjectHash: 31378
     member: {fileID: 490025333}
     renderer: {fileID: 0}
     renderHash: 0
@@ -15807,7 +15860,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 2088855}
-    gameObjectHash: 65366
+    gameObjectHash: 30876
     member: {fileID: 490025333}
     renderer: {fileID: 0}
     renderHash: 0
@@ -15836,7 +15889,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 136494986}
-    gameObjectHash: 65492
+    gameObjectHash: 31002
     member: {fileID: 490025333}
     renderer: {fileID: 0}
     renderHash: 0
@@ -15865,7 +15918,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 545419814}
-    gameObjectHash: 65936
+    gameObjectHash: 31446
     member: {fileID: 490025333}
     renderer: {fileID: 0}
     renderHash: 0
@@ -15894,7 +15947,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 1731602653}
-    gameObjectHash: 67382
+    gameObjectHash: 32894
     member: {fileID: 490025333}
     renderer: {fileID: 0}
     renderHash: 0
@@ -15923,7 +15976,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 648284078}
-    gameObjectHash: 66014
+    gameObjectHash: 31524
     member: {fileID: 490025333}
     renderer: {fileID: 0}
     renderHash: 0
@@ -15952,7 +16005,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 1429189884}
-    gameObjectHash: 66980
+    gameObjectHash: 32492
     member: {fileID: 490025333}
     renderer: {fileID: 0}
     renderHash: 0
@@ -15981,7 +16034,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 549058625}
-    gameObjectHash: 65944
+    gameObjectHash: 31454
     member: {fileID: 490025333}
     renderer: {fileID: 0}
     renderHash: 0
@@ -16010,7 +16063,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 647858415}
-    gameObjectHash: 66008
+    gameObjectHash: 31518
     member: {fileID: 490025333}
     renderer: {fileID: 0}
     renderHash: 0
@@ -16039,7 +16092,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 1238968334}
-    gameObjectHash: 66726
+    gameObjectHash: 32238
     member: {fileID: 490025333}
     renderer: {fileID: 0}
     renderHash: 0
@@ -16068,7 +16121,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 709092031}
-    gameObjectHash: 66106
+    gameObjectHash: 31616
     member: {fileID: 490025333}
     renderer: {fileID: 0}
     renderHash: 0
@@ -16097,7 +16150,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 990348475}
-    gameObjectHash: 66444
+    gameObjectHash: 31956
     member: {fileID: 490025333}
     renderer: {fileID: 0}
     renderHash: 0
@@ -16126,7 +16179,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 317972973}
-    gameObjectHash: 65684
+    gameObjectHash: 31194
     member: {fileID: 490025333}
     renderer: {fileID: 0}
     renderHash: 0
@@ -16155,7 +16208,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 1268367055}
-    gameObjectHash: 66756
+    gameObjectHash: 32268
     member: {fileID: 490025333}
     renderer: {fileID: 0}
     renderHash: 0
@@ -16309,7 +16362,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 497412913}
-    gameObjectHash: 65880
+    gameObjectHash: 31390
     member: {fileID: 497412915}
     renderer: {fileID: 0}
     renderHash: 0
@@ -25668,7 +25721,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 1125178978}
-    gameObjectHash: 66616
+    gameObjectHash: 32128
     member: {fileID: 1125178980}
     renderer: {fileID: 0}
     renderHash: 0
@@ -33459,7 +33512,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 1609499209}
-    gameObjectHash: 67192
+    gameObjectHash: 32704
     member: {fileID: 1609499211}
     renderer: {fileID: 0}
     renderHash: 0
@@ -35089,7 +35142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 1689410879}
-    gameObjectHash: 67332
+    gameObjectHash: 32844
     member: {fileID: 1689410884}
     renderer: {fileID: 1689410881}
     renderHash: 0
@@ -35118,7 +35171,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 2145365207}
-    gameObjectHash: 67878
+    gameObjectHash: 33390
     member: {fileID: 1689410884}
     renderer: {fileID: 2145365209}
     renderHash: 0
@@ -35147,7 +35200,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 79204898}
-    gameObjectHash: 65468
+    gameObjectHash: 30978
     member: {fileID: 1689410884}
     renderer: {fileID: 79204900}
     renderHash: 0
@@ -35176,7 +35229,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 525380528}
-    gameObjectHash: 65920
+    gameObjectHash: 31430
     member: {fileID: 1689410884}
     renderer: {fileID: 0}
     renderHash: 0
@@ -35206,7 +35259,7 @@ MonoBehaviour:
     processed: 1
   renderers:
   - gameObject: {fileID: 1689410879}
-    gameObjectHash: 67332
+    gameObjectHash: 32844
     member: {fileID: 1689410884}
     renderer: {fileID: 1689410881}
     renderHash: 0
@@ -35235,7 +35288,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 2145365207}
-    gameObjectHash: 67878
+    gameObjectHash: 33390
     member: {fileID: 1689410884}
     renderer: {fileID: 2145365209}
     renderHash: 0
@@ -35264,7 +35317,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 79204898}
-    gameObjectHash: 65468
+    gameObjectHash: 30978
     member: {fileID: 1689410884}
     renderer: {fileID: 79204900}
     renderHash: 0
@@ -35294,7 +35347,7 @@ MonoBehaviour:
     processed: 1
   lights:
   - gameObject: {fileID: 525380528}
-    gameObjectHash: 65920
+    gameObjectHash: 31430
     member: {fileID: 1689410884}
     renderer: {fileID: 0}
     renderHash: 0
@@ -37489,7 +37542,7 @@ Transform:
   - {fileID: 1466620765}
   - {fileID: 1187970183}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 11
 --- !u!4 &1806859770 stripped
 Transform:
   m_PrefabParentObject: {fileID: 498216, guid: 207648134b377aa41b66fae593676495, type: 2}
@@ -38272,7 +38325,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 1835774048}
-    gameObjectHash: 67528
+    gameObjectHash: 33040
     member: {fileID: 1835774054}
     renderer: {fileID: 1835774057}
     renderHash: 0
@@ -38301,7 +38354,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 1636224919}
-    gameObjectHash: 67244
+    gameObjectHash: 32756
     member: {fileID: 1835774054}
     renderer: {fileID: 0}
     renderHash: 0
@@ -38330,7 +38383,7 @@ MonoBehaviour:
     shadowCullingMask: 0
     processed: 1
   - gameObject: {fileID: 2032280948}
-    gameObjectHash: 67790
+    gameObjectHash: 33302
     member: {fileID: 1835774054}
     renderer: {fileID: 0}
     renderHash: 0
@@ -38360,7 +38413,7 @@ MonoBehaviour:
     processed: 1
   renderers:
   - gameObject: {fileID: 1835774048}
-    gameObjectHash: 67528
+    gameObjectHash: 33040
     member: {fileID: 1835774054}
     renderer: {fileID: 1835774057}
     renderHash: 0
@@ -39102,7 +39155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 1868660365}
-    gameObjectHash: 67580
+    gameObjectHash: 33092
     member: {fileID: 1868660367}
     renderer: {fileID: 0}
     renderHash: 0
@@ -40893,6 +40946,59 @@ MonoBehaviour:
   - {fileID: 15914177}
   - {fileID: 1317036328}
   - {fileID: 1226762573}
+--- !u!1 &1984200120
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1984200123}
+  - 65: {fileID: 1984200122}
+  - 114: {fileID: 1984200121}
+  m_Layer: 0
+  m_Name: Lvl4MusicStart
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1984200121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1984200120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7c33780c5e9bad4d97d7a2960dc61d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicNum: 4
+--- !u!65 &1984200122
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1984200120}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1984200123
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1984200120}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -87, y: 132.300003, z: 480.309998}
+  m_LocalScale: {x: 8.5502367, y: 5.33937025, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
 --- !u!1001 &1984329195
 Prefab:
   m_ObjectHideFlags: 0
@@ -42730,7 +42836,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - gameObject: {fileID: 2105927394}
-    gameObjectHash: 67832
+    gameObjectHash: 33344
     member: {fileID: 2105927396}
     renderer: {fileID: 0}
     renderHash: 0
