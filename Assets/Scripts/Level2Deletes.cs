@@ -15,7 +15,7 @@ public class Level2Deletes : MonoBehaviour {
         if (GameObject.Find("L2Deleter").GetComponent<ExitPoint>().HasEntered)
         {
             Destroy(GameObject.Find("1 to 2 transition"));
-            Destroy(GameObject.Find("Entire level 2"));
+            Destroy(GameObject.Find("Level 2"));
         }
 
     }
