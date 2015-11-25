@@ -118,7 +118,6 @@ public class Movement3D : MonoBehaviour {
 //		yDifShow = yDif;
 
 		if (yDif < allowedFallSpeed) {
-			Debug.Log ("falling");
 			speed = speedOriginal * 0.5f;
 		} 
 		else {

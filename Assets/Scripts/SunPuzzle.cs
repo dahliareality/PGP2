@@ -67,7 +67,6 @@ public class SunPuzzle : MonoBehaviour {
                     }
                 storePoint = startPoint;
                 //this thing draws the lines to show how the light bounces.
-                Debug.DrawLine(startPoint, hit.point);
                 rayDir = Vector3.Reflect((hit.point - startPoint).normalized, hit.normal);
             }
          }

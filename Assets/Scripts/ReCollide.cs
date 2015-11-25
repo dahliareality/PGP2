@@ -13,7 +13,6 @@ public class ReCollide : MonoBehaviour {
 
         if (GameObject.Find("Colls").GetComponent<ExitPoint>().HasEntered)
         {
-            Debug.Log("hai");
             for (int i = 1; i < 251; i++)
             {
                 GameObject.Find("Box006_Part_" + i).GetComponent<Collider>().enabled = true;

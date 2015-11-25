@@ -40,7 +40,7 @@ public class InputRound : MonoBehaviour {
 		*/
 		//R1
 		if (Input.GetKey ("joystick button 4") == true) {
-			Debug.Log ("Click, ho");
+			//Debug.Log ("Click, ho");
 			//masterBus.Volume -= 0.1f;
 		}
 	}

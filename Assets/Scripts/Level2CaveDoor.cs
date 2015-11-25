@@ -20,11 +20,6 @@ public class Level2CaveDoor : MonoBehaviour
     void Start()
     {
 
-        if (level1Object.GetComponent<Pickable>() == null)
-        {
-            Debug.Log("Pickable.cs is missing in the GameObject!");
-        }
-
         //slideVector = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z + 5f);
         startVector = this.transform.position;
     }

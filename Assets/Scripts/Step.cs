@@ -100,7 +100,7 @@ public class Step : MonoBehaviour {
         }
     }
 	void Update () {
-		Debug.Log (isAnythingPlaying);
+		//Debug.Log (isAnythingPlaying);
 		//Checks if player is walking
 		if (god.LH != 0.0f || god.LV != 0.0f) {
 			//Debug.Log ("Walking, bitch");
@@ -186,7 +186,7 @@ public class Step : MonoBehaviour {
 				}
 				isAnythingPlaying=true;
 				//Debug.Log ("Walking in a puddle");
-				Debug.Log (d8);
+				//Debug.Log (d8);
 
 			}
 		}
@@ -250,9 +250,7 @@ public class Step : MonoBehaviour {
 	}
 	private IEnumerator NPlayer(){
 		yield return new WaitForSeconds (0.5f);
-		if (isRPlaying) {
-			Debug.Log ("Waiting for real surface");
-		}
+
 		isAnythingPlaying = false;
 	}
 	//Stops all sounds

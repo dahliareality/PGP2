@@ -24,11 +24,8 @@ public class UnloadLevel : MonoBehaviour {
             {
                 level = GameObject.Find("Level 2");
             }
-            else
-            {
-                Debug.Log("Cannot find level 2 or level 3");
-            }
-            Debug.Log(level.name);
+
+            //Debug.Log(level.name);
             lvlLoadItem.SetActive(true);
             Destroy(level);
             Destroy(this);

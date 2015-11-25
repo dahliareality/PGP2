@@ -17,11 +17,6 @@ public class lvl4RotateInteract : MonoBehaviour{
 
     void Start()
     {
-		if (lever.GetComponent<lv4Switch> () == null) {
-			Debug.Log ("wrong object");
-		} else {
-			Debug.Log ("right object");
-		}
 		endPos = Quaternion.Euler (rot [0], rot [1], rot [2]);
 
     }

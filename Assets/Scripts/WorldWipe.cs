@@ -13,7 +13,7 @@ public class WorldWipe : MonoBehaviour {
     {
 
         if (Input.GetKeyDown(KeyCode.L)) { Application.LoadLevel("Level1");
-            Debug.Log("R is pressed");
+
         }
 
     }

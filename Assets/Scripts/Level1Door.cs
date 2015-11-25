@@ -25,7 +25,7 @@ public class Level1Door : MonoBehaviour {
 
         if (level1Object.GetComponent<Pickable>() == null)
         {
-            Debug.Log("Pickable.cs is missing in the GameObject!");
+            //Debug.Log("Pickable.cs is missing in the GameObject!");
         }
 
         slideVector = new Vector3(this.transform.position.x + 5f, this.transform.position.y, this.transform.position.z);

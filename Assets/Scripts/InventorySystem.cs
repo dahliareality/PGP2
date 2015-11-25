@@ -41,7 +41,7 @@ public class InventorySystem : MonoBehaviour {
 		{
 			if (bagSlots[i] == null)
 			{
-				Debug.Log("ERROR: Missing Object at Inventory System.");
+				//Debug.Log("ERROR: Missing Object at Inventory System.");
 			}
 		}
 		openSound = GameObject.Find ("BackpackOpenSound");
@@ -110,7 +110,7 @@ public class InventorySystem : MonoBehaviour {
                     playerObject.GetComponent<RayCast>().setStoredPickUpItem(null);
                     bagSlots[i].GetComponent<BagSlot>().HasOpenSpot = false;
                     arms.IsCarryingItem = false;
-					Debug.Log ("Store Item");
+					//Debug.Log ("Store Item");
                     storeSound.GetComponent<SECTR_PointSource>().Play();
                     break;
                 }

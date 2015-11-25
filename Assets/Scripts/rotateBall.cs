@@ -24,12 +24,7 @@ public class rotateBall : MonoBehaviour {
 	}
 	
 	
-	void Update () {
-		
-		
-		Debug.DrawRay (transform.position, cToP * activationDist, Color.white);
-		Debug.DrawRay (transform.position, rotV * activationDist, Color.red);
-		
+	void Update () {	
 		
 		if (Physics.Raycast ( playerCam.position, playerCam.forward, out hit, activationDist ) && Input.GetKeyDown(KeyCode.Mouse0)) 
 		{

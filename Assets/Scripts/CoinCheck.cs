@@ -21,7 +21,7 @@ public class CoinCheck : MonoBehaviour
 
     public void removeStatue()
     {
-        Debug.Log(curStatue.ToString() + "  " + correctStatue.ToString());
+        //Debug.Log(curStatue.ToString() + "  " + correctStatue.ToString());
         if (curStatue.name == correctStatue.name)
         {
             GameObject.Find("Nabatean Bridge").GetComponent<Level2Bridge>().correctStatues--;

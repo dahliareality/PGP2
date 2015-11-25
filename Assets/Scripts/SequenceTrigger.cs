@@ -19,7 +19,7 @@ public class SequenceTrigger : MonoBehaviour
         if (sequenceController.GetComponent<SequencePuzzle>().countValue == 3)
         {
             // Function should go here. Currently when all 3 segments are in the triggers, they will all destroy
-            Debug.Log("Puzzle completed: Destroying triggers");
+            //Debug.Log("Puzzle completed: Destroying triggers");
             Destroy(gameObject);
         }
     }
@@ -29,7 +29,7 @@ public class SequenceTrigger : MonoBehaviour
     {
         if (GameObject.FindWithTag("Sequence Mover"))
         {
-            Debug.Log("Segment: In");
+            //Debug.Log("Segment: In");
             sequenceController.GetComponent<SequencePuzzle>().countValue++;
         }
     }
@@ -39,7 +39,7 @@ public class SequenceTrigger : MonoBehaviour
     {
         if (GameObject.FindWithTag("Sequence Mover"))
         {
-            Debug.Log("Segment: Out");
+            //Debug.Log("Segment: Out");
             sequenceController.GetComponent<SequencePuzzle>().countValue--;
         }
     }

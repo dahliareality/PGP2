@@ -23,7 +23,7 @@ public class Level2Bridge : MonoBehaviour
     {
         if(endItem.GetComponent<Pickable>() == null)
         {
-            Debug.Log("Wrong Object, or this object needs a pickable script");
+            //Debug.Log("Wrong Object, or this object needs a pickable script");
         }
         parenting = GameObject.Find("Lv2_Nabatean_Sunstone_Circle_Engraving_Floor");
       /*  slideVector = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z + 5f);

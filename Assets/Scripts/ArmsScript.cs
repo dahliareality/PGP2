@@ -37,7 +37,7 @@ public class ArmsScript : MonoBehaviour {
 		{
 			// If bag is open, make rightArm select in the bag.			
 			
-			Debug.DrawLine(rightArm.transform.position, rightArm.transform.position + rightArm.transform.forward, Color.cyan);
+			//Debug.DrawLine(rightArm.transform.position, rightArm.transform.position + rightArm.transform.forward, Color.cyan);
 			
 			if (Physics.Raycast(rightArm.transform.position, rightArm.transform.forward, out hit, 2.2f))
 			{
@@ -61,7 +61,7 @@ public class ArmsScript : MonoBehaviour {
 				
 				if (Input.GetButtonUp("PS4_X") || Input.GetKeyDown(KeyCode.E))
 				{
-					Debug.Log(hit.collider.gameObject.name);
+					//Debug.Log(hit.collider.gameObject.name);
 					
 					if (hit.collider.transform.tag == "Bagpack" || hit.collider.transform.tag == "BagSlot")
 					{
@@ -215,7 +215,7 @@ public class ArmsScript : MonoBehaviour {
 		//Plays sound
 		if (isFromBackpack == true){
 			retreiveSound.GetComponent<SECTR_PointSource>().Play ();
-			Debug.Log ("Retreive Item");
+			//Debug.Log ("Retreive Item");
 		}
 		if (isFromBackpack == false){
 			
@@ -248,7 +248,7 @@ public class ArmsScript : MonoBehaviour {
 		}
 		else
 		{
-			Debug.Log(item.name + ": needs the Pickable Script!");
+			//Debug.Log(item.name + ": needs the Pickable Script!");
 		}
 		playerObject.GetComponent<RayCast>().setStoredPickUpItem(null);
 	}

@@ -20,22 +20,22 @@ public class MusicTrigger : MonoBehaviour {
 		case 1:
 			music1.GetComponent<SECTR_PointSource>().Play ();
 			hasMusic1Played = true;
-			Debug.Log ("Playing Music for lvl 1");
+			//Debug.Log ("Playing Music for lvl 1");
 			break;
 		case 2:
 			music2.GetComponent<SECTR_PointSource>().Play ();
 			hasMusic2Played = true;
-			Debug.Log ("Playing Music for lvl 2");
+			//Debug.Log ("Playing Music for lvl 2");
 			break;
 		case 3:
 			music3.GetComponent<SECTR_PointSource>().Play ();
 			hasMusic3Played = true;
-			Debug.Log ("Playing Music for lvl 3");
+			//Debug.Log ("Playing Music for lvl 3");
 			break;
 		case 4:
 			music4.GetComponent<SECTR_PointSource>().Play ();
 			hasMusic4Played = true;
-			Debug.Log ("Playing Music for lvl 4");
+			//Debug.Log ("Playing Music for lvl 4");
 			break;
 		}
 	}

@@ -40,7 +40,7 @@ public class lvl4LightTriggerScript : MonoBehaviour
         // placeholder incase of object should react to something.
         if (isLite /*&& inTrigger*/)
         {
-            Debug.Log("dong");
+            //Debug.Log("dong");
             if (movingObj.transform.position.y < 279.67)
             {
                 //movingObj.transform.position = new Vector3(movingObj.transform.position.x, movingObj.transform.position.y + 0.04f, movingObj.transform.position.z);

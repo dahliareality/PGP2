@@ -59,7 +59,7 @@ public class LightReflection : MonoBehaviour {
                 }
 
                 //this whole thing draws the lines to show how the light bounces.
-                Debug.DrawLine(startPoint, hit.point);
+                //Debug.DrawLine(startPoint, hit.point);
                 rayDir = Vector3.Reflect((hit.point - startPoint).normalized, hit.normal);
                 
                 //this blob creates the lights which is used as the reflected light
