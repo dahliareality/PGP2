@@ -17,7 +17,8 @@ public class RotateInteract : MonoBehaviour {
 	//private bool isSoundPlaying = false;
 	//private int testInt = 0;
     public GameObject leftSwitch;
-    public GameObject rightSwitch;
+	public GameObject rightSwitch;
+	private bool isSoundPlaying = false;
 
     void Awake()
     {
@@ -30,12 +31,44 @@ public class RotateInteract : MonoBehaviour {
         if (leftSwitch.GetComponent<RotateSwitch>().activated)
         {
             x = -1;
+			if(!isSoundPlaying){
+				//this.GetComponent<AudioSource> ().Play ();
+				isSoundPlaying = true;
+				Debug.Log ("Playing sound");
+
+			}
+			Debug.Log ("Turning counter clockwise");
         }
         else if (rightSwitch.GetComponent<RotateSwitch>().activated)
         {
             x = 1;
+			if(!isSoundPlaying){
+				//this.GetComponent<AudioSource> ().Play ();
+				isSoundPlaying = true;
+				Debug.Log ("Playing sound");
+			}
+			Debug.Log ("Turning clockwise");
         }
-        
+		/*
+		//Stops the sound
+		if (leftSwitch.GetComponent<RotateSwitch>().activated==false)
+		{
+			if(isSoundPlaying){
+				this.GetComponent<SECTR_PointSource> ().Stop (true);
+				isSoundPlaying = false;
+				Debug.Log ("Stopping sound");
+			}
+			Debug.Log ("Boop!");
+		}
+		else if (rightSwitch.GetComponent<RotateSwitch>().activated==false)
+		{
+			if(isSoundPlaying){
+				this.GetComponent<SECTR_PointSource> ().Stop (true);
+				isSoundPlaying = false;
+				Debug.Log ("Stopping sound");
+			}
+			Debug.Log ("Boop!");
+		}*/
         // Getting inputs from mouse, and storing the values
         //yRotation += x * lookSensitivity;
         yRotation += x;
@@ -47,4 +80,5 @@ public class RotateInteract : MonoBehaviour {
 
         transform.rotation = Quaternion.Euler(0, currentYRotation * 1.5f, 90);
     }
+
 }

@@ -52,6 +52,7 @@ public class Level3GateController : MonoBehaviour
             //Debug.Log("Finally!");
             //rollSound2.GetComponent<SECTR_PropagationSource>().Play();
             rollSound2.GetComponent<AudioSource>().Play();
+			Debug.Log ("RollSound2 playing");
             Destroy(woodenGrate2);
             //nrOfPuzzlesSolved = 2;
         }
