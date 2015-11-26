@@ -5,7 +5,7 @@ public class endActionActivation : MonoBehaviour {
 
 	public bool gravitation = false;
 
-	float speed = 0.01f;
+	float speed = 0.015f;
 
 	GameObject player;
 
