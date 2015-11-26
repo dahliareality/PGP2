@@ -49,12 +49,12 @@ public class Level2Bridge : MonoBehaviour
                 Destroy(invisWall);
                 nowOpen = true;
             }
-			this.gameObject.GetComponent<SECTR_PropagationSource>().Play();
+			//this.gameObject.GetComponent<SECTR_PointSource>().Play();
         }
 
         if (nowOpen && !soundHasPlayed)
         {
-            //this.GetComponent<SECTR_PropagationSource>().Play();
+            this.GetComponent<SECTR_PropagationSource>().Play();
             soundHasPlayed = true;
         }
     }
