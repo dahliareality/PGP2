@@ -25,6 +25,7 @@ public class SequencePuzzle : MonoBehaviour
 	public int instrumentsPlayed = 0;
     public int count = 0;
 	private float delayCount;
+    private float moveSpeed = 1f;
     public int countValue
     {
         get { return count; }
@@ -91,11 +92,11 @@ public class SequencePuzzle : MonoBehaviour
             {
 
                 // Moves gear1 up, and gear2 up
-                gear1.transform.position = Vector3.Lerp(gear1.transform.position, mid1.transform.position, Time.deltaTime * 5);
-                gear2.transform.position = Vector3.Lerp(gear2.transform.position, mid2.transform.position, Time.deltaTime * 5);
-				gear3.transform.position = Vector3.Lerp(gear3.transform.position, top3.transform.position, Time.deltaTime * 5);
-				gear4.transform.position = Vector3.Lerp(gear4.transform.position, top4.transform.position, Time.deltaTime * 5);
-				gear5.transform.position = Vector3.Lerp(gear5.transform.position, mid5.transform.position, Time.deltaTime * 5);
+                gear1.transform.position = Vector3.Lerp(gear1.transform.position, mid1.transform.position, Time.deltaTime * moveSpeed);
+                gear2.transform.position = Vector3.Lerp(gear2.transform.position, mid2.transform.position, Time.deltaTime * moveSpeed);
+                gear3.transform.position = Vector3.Lerp(gear3.transform.position, top3.transform.position, Time.deltaTime * moveSpeed);
+                gear4.transform.position = Vector3.Lerp(gear4.transform.position, top4.transform.position, Time.deltaTime * moveSpeed);
+                gear5.transform.position = Vector3.Lerp(gear5.transform.position, mid5.transform.position, Time.deltaTime * moveSpeed);
 
                 if (!cogFirstSoundPlayed)
                 {
@@ -108,9 +109,9 @@ public class SequencePuzzle : MonoBehaviour
 			else if (instrumentsPlayed == 2)
             {
                 // Moves gear1 down, and gear3 up
-				gear1.transform.position = Vector3.Lerp(gear1.transform.position, top1.transform.position, Time.deltaTime * 5);
-				gear2.transform.position = Vector3.Lerp(gear2.transform.position, top2.transform.position, Time.deltaTime * 5);
-				gear5.transform.position = Vector3.Lerp(gear5.transform.position, top5.transform.position, Time.deltaTime * 5);
+                gear1.transform.position = Vector3.Lerp(gear1.transform.position, top1.transform.position, Time.deltaTime * moveSpeed);
+                gear2.transform.position = Vector3.Lerp(gear2.transform.position, top2.transform.position, Time.deltaTime * moveSpeed);
+                gear5.transform.position = Vector3.Lerp(gear5.transform.position, top5.transform.position, Time.deltaTime * moveSpeed);
 
                 if (!cogSecondSoundPlayed)
                 {
@@ -122,9 +123,9 @@ public class SequencePuzzle : MonoBehaviour
 			else if (instrumentsPlayed == 3)
             {
                 // Moves gear2 down, and gear3 down
-				gear1.transform.position = Vector3.Lerp(gear1.transform.position, bot1.transform.position, Time.deltaTime * 5);
-				gear3.transform.position = Vector3.Lerp(gear3.transform.position, bot3.transform.position, Time.deltaTime * 5);
-				gear5.transform.position = Vector3.Lerp(gear5.transform.position, bot5.transform.position, Time.deltaTime * 5);
+                gear1.transform.position = Vector3.Lerp(gear1.transform.position, bot1.transform.position, Time.deltaTime * moveSpeed * 3.5f);
+                gear3.transform.position = Vector3.Lerp(gear3.transform.position, bot3.transform.position, Time.deltaTime * moveSpeed * 3.5f);
+                gear5.transform.position = Vector3.Lerp(gear5.transform.position, bot5.transform.position, Time.deltaTime * moveSpeed * 3.5f);
 
 
 
