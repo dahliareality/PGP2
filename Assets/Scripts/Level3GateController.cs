@@ -9,7 +9,7 @@ public class Level3GateController : MonoBehaviour
     public bool tilePuzzleSolved = false;
     private TriggerFromSunLight sunPuzzle;
     private TilePuzzle tilPzl;
-    private bool arePuzzlesDone, isRoomDone;
+    private bool isPuzzleDone, arePuzzlesDone, isRoomDone;
 
     public GameObject woodenGrate1, woodenGrate2;
     private GameObject rollSound1, rollSound2;
@@ -37,6 +37,11 @@ public class Level3GateController : MonoBehaviour
             sunPuzzleSolved = true;
         }
 
+		if ((sunPuzzle.sunPuzzleSolved || tilPzl.tilePuzzleSolved) && !isPuzzleDone) {
+			isPuzzleDone=true;
+			Debug.Log ("Pling!");
+		}
+
         if ((tilePuzzleSolved == true && sunPuzzleSolved == true) && !arePuzzlesDone)
         {
             arePuzzlesDone = true;
@@ -46,7 +51,7 @@ public class Level3GateController : MonoBehaviour
             Destroy(woodenGrate1);
             //nrOfPuzzlesSolved = 1;
         }
-        if (GameObject.Find("Lammasu Platform").GetComponent<Lammasu>().lammasuTaken == true && arePuzzlesDone)
+        if ((GameObject.Find("Lammasu Platform").GetComponent<Lammasu>().lammasuTaken == true && arePuzzlesDone) && !isRoomDone)
         {
 			isRoomDone = true;
             //Debug.Log("Finally!");
