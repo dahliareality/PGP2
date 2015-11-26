@@ -11,19 +11,20 @@ public class credits : MonoBehaviour {
 	// Use this for initialization
 	void Awake ()
     {
-        creditText += "Project Manager\nJonatan Salling Hvass\n\n";
+        creditText += "Created by\n Medialogy 5th Semester 2015\nProduction Group 2\n\n\n\n";
+        creditText += "Project Manager\nJonatan Salling Hvass\n";
 		creditText += "\n\n";
-        creditText += "Art Direction & Level Design\nTheis Berthelsen\n\n";
+        creditText += "Art Director\nTheis Berthelsen\n\n\nLevel Design\nTheis Berthelsen\nJacob Friis Nielsen\n\n";
 		creditText += "\n\n";
         creditText += "Music\nMax Uldahl\n\n";
 		creditText += "\n\n";
         creditText += "Lead Programmer\nJacob Friis Nielsen\n\n";
 		creditText += "\n\n";
+        creditText += "Lead 3D Artist\nKasper Vendelbo\n\n";
+        creditText += "\n\n";
         creditText += "Programming\nBenjamin Ejlertsen\nJannik V Reffstrup\nKristoffer Piper\nMark Leonhard Olsen\nRasmus Olesen\n\n";
 		creditText += "\n\n";
-        creditText += "Lead 3D Artist\nKasper Vendelbo\n\n";
-		creditText += "\n\n";
-        creditText += "3D Artists\nCasper Vollmers\nTuan-Viet Tran-Duc\n\n";
+        creditText += "3D Artists\nCasper Vollmers\nTuan-Viet Tran-Duc\nKasper Vendelbo\n\n";
 		creditText += "\n\n";
         creditText += "2D Artists\nJannik V Reffstrup\nOliver Stevns Larsen\n\n";
 		creditText += "\n\n";
