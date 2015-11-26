@@ -47,6 +47,7 @@ GameObject:
   - 111: {fileID: 11194586}
   - 82: {fileID: 8261996}
   - 114: {fileID: 11433786}
+  - 114: {fileID: 11496808}
   m_Layer: 0
   m_Name: Lever
   m_TagString: Switch
@@ -133,15 +134,15 @@ MeshRenderer:
   - {fileID: 2100000, guid: 9fd6d97df131095418351a042d80ba0f, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
+  m_UseLightProbes: 0
+  m_ReflectionProbeUsage: 0
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
   m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxDistance: 2
   m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
+  m_LightmapParameters: {fileID: 15200, guid: 0000000000000000f000000000000000, type: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
 --- !u!23 &2317608
@@ -157,15 +158,15 @@ MeshRenderer:
   - {fileID: 2100000, guid: d2ebb628665c35647b595be35e2632fa, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
+  m_UseLightProbes: 0
+  m_ReflectionProbeUsage: 0
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
   m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxDistance: 2
   m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
+  m_LightmapParameters: {fileID: 15200, guid: 0000000000000000f000000000000000, type: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
 --- !u!33 &3306562
@@ -312,6 +313,18 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+--- !u!114 &11496808
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 197918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b902469f53f60f948a8987108b6f12d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activated: 0
 --- !u!136 &13685942
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -321,8 +334,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: .850000024
-  m_Height: 2.14399338
+  m_Radius: 1.10000002
+  m_Height: 3.16000009
   m_Direction: 1
   m_Center: {x: -3.19003099e-08, y: 1.07036638, z: 3.05096037e-05}
 --- !u!1001 &100100000
