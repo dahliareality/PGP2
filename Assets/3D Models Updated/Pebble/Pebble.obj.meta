@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 625d113af8709684daa70035c8570332
-timeCreated: 1448099230
-licenseType: Free
+guid: 87d74bfb08b0cd1429f2b890306692c8
+timeCreated: 1430832886
+licenseType: Store
 ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: cliff03
-    7400000: Take 001
-    9500000: //RootNode
+    100000: Pebble
+    100002: //RootNode
+    400000: Pebble
+    400002: //RootNode
+    2300000: Pebble
+    3300000: Pebble
+    4300000: Pebble
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 0
     materialSearch: 1
   animations:
@@ -35,8 +35,8 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
-    meshCompression: 0
+    globalScale: .00999999978
+    meshCompression: 3
     addColliders: 0
     importBlendShapes: 1
     swapUVChannels: 0
@@ -70,7 +70,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
