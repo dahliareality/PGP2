@@ -8,6 +8,8 @@ public class credits : MonoBehaviour {
     private string creditText;
     private bool startCredits;
 
+    private float count;
+
 	// Use this for initialization
 	void Awake ()
     {
@@ -30,6 +32,8 @@ public class credits : MonoBehaviour {
 		creditText += "\n\n";
         creditText += "Sound Design\nPeter Rossing\nAnders Laursen\n\n";
 		creditText += "\n\n";
+        creditText += "QA Tester\nJonatan Salling Hvass\nTheis Berthelsen\n\n";
+        creditText += "\n\n";
         creditText += "Supervisors\nLars Reng\nNiels Christian Nilsson\n\n";
 
         this.gameObject.GetComponent<GUIText>().text = creditText;
@@ -38,6 +42,15 @@ public class credits : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
         transform.position = transform.position + new Vector3 (0, speed, 0) * Time.fixedDeltaTime;
+        if (count < 12.0f)
+        {
+            count += Time.fixedDeltaTime;
+        }
+        else
+        {
+            // Run level 1
+            // Resets the game
+        }
     }
 
     IEnumerator WaitFor()
