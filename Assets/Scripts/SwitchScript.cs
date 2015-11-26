@@ -17,22 +17,39 @@ public class SwitchScript : MonoBehaviour
 
     private bool hasPlayed = false;
 	private Animation anima;
+	private Interact interact;
+
+
+
 
 	void Start()
 	{
 		anima = GetComponent<Animation> ();
+		interact = GetComponent <Interact>();
 	}
+
+
 
     void Update()
     {
-        if (isActive) {
-//			transform.GetComponent<Renderer> ().material.color = Color.red;
+        if (interact.activated && !isActive ) {
 			activateObjects ();
 			playSound ();
 			anima.Play ("LeverDown");
-		} else
+			isActive = true;
+
+		}
+		else if (!interact.activated && isActive)
+		{
 			anima.Play ("LeverUp");
+			isActive = false;
+
+		}
     }
+
+
+	//--------------------------------------------------------
+
 
     void activateObjects()
     {

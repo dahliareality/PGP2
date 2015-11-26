@@ -68,10 +68,10 @@ public class RayCast : MonoBehaviour {
                         // Proper action here. Activate object
                         // objectHit.collider.gameObject.GetComponent...
                     }
-                    else if (objectHit.collider.gameObject.tag == "Switch")
-                    {
-                        objectHit.collider.gameObject.GetComponent<SwitchScript>().isActive = !objectHit.collider.gameObject.GetComponent<SwitchScript>().isActive;
-                    }
+//                    else if (objectHit.collider.gameObject.tag == "Switch")
+//                    {
+//                        objectHit.collider.gameObject.GetComponent<SwitchScript>().isActive = !objectHit.collider.gameObject.GetComponent<SwitchScript>().isActive;
+//                    }
                     else if (objectHit.collider.gameObject.tag == "Island Switch")
                     {
                         objectHit.collider.gameObject.GetComponent<lv4Switch>().isActive = true;
