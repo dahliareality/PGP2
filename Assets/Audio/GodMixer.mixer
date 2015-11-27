@@ -59,6 +59,7 @@ AudioMixerController:
     - a65107abf89717343bfffab09859f158
     - 2e6b59adb2583cf4e9fc8ad6640765e5
     - 41226531684a10947a81918889a4e763
+    - 7b3f13b167537c840b3a54d64a08b975
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500003}
@@ -348,6 +349,7 @@ AudioMixerGroupController:
   - {fileID: 24304656}
   - {fileID: 24357020}
   - {fileID: 24370834}
+  - {fileID: 24341808}
   m_Volume: 284e53d9d1ed92f40bce7ad8f18962b0
   m_Pitch: 127ae314f7528f24996add15373f2877
   m_Effects:
@@ -409,6 +411,23 @@ AudioMixerGroupController:
   m_Pitch: 6398d9a4fc9be6746b1375d483f32733
   m_Effects:
   - {fileID: 24450052}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!243 &24341808
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: PuzzleSolvedPling
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 7b3f13b167537c840b3a54d64a08b975
+  m_Children: []
+  m_Volume: 0d76d57391e83e94588e54ed1cabb30f
+  m_Pitch: 05f790231af6b47469832d722a5c9d12
+  m_Effects:
+  - {fileID: 24459646}
   m_UserColorIndex: 0
   m_Mute: 0
   m_Solo: 0
@@ -1143,6 +1162,19 @@ AudioMixerEffectController:
   m_EffectID: e27a480566edeab4ca14f3f1c1c0bd17
   m_EffectName: Attenuation
   m_MixLevel: a3bd2d0558ec9b846b47c0d7aa796383
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!244 &24459646
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_EffectID: 2312cf487487b874cb9a484175cfbc11
+  m_EffectName: Attenuation
+  m_MixLevel: 2ca344c4edacfcf4d9d30251c04f13b3
   m_Parameters: []
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0

@@ -9,9 +9,9 @@ public class Level3GateController : MonoBehaviour
     public bool tilePuzzleSolved = false;
     private TriggerFromSunLight sunPuzzle;
     private TilePuzzle tilPzl;
-    private bool isPuzzleDone, arePuzzlesDone, isRoomDone;
+    private bool isSunDone, isTileDone, arePuzzlesDone, isRoomDone;
 
-    public GameObject woodenGrate1, woodenGrate2;
+	public GameObject woodenGrate1, woodenGrate2, plingSoundSun, plingSoundTile;
     private GameObject rollSound1, rollSound2;
 
     void Start()
@@ -21,6 +21,8 @@ public class Level3GateController : MonoBehaviour
         //Debug.Log("Starting, yo!");
         tilPzl = GameObject.Find("Tile Puzzle Controller").GetComponent<TilePuzzle>();
         sunPuzzle = GameObject.Find("Sun Room").GetComponent<TriggerFromSunLight>();
+		plingSoundSun = GameObject.Find ("PlingSoundSun");
+		plingSoundTile = GameObject.Find ("PlingSoundTile");
     }
 
     void Update()
@@ -36,10 +38,20 @@ public class Level3GateController : MonoBehaviour
         {
             sunPuzzleSolved = true;
         }
-
+		/*
 		if ((sunPuzzle.sunPuzzleSolved || tilPzl.tilePuzzleSolved) && !isPuzzleDone) {
 			isPuzzleDone=true;
 			Debug.Log ("Pling!");
+		}*/
+		if ((sunPuzzle.sunPuzzleSolved && !tilPzl.tilePuzzleSolved) && !isSunDone) {
+			isSunDone=true;
+			//Debug.Log ("Sun is done");
+			plingSoundSun.GetComponent<AudioSource>().Play();
+		}
+		if ((!sunPuzzle.sunPuzzleSolved && tilPzl.tilePuzzleSolved) && !isTileDone) {
+			isTileDone=true;
+			//Debug.Log ("Tile is done");
+			plingSoundTile.GetComponent<AudioSource>().Play();
 		}
 
         if ((tilePuzzleSolved == true && sunPuzzleSolved == true) && !arePuzzlesDone)
@@ -57,7 +69,7 @@ public class Level3GateController : MonoBehaviour
             //Debug.Log("Finally!");
             //rollSound2.GetComponent<SECTR_PropagationSource>().Play();
             rollSound2.GetComponent<AudioSource>().Play();
-			Debug.Log ("RollSound2 playing");
+			//Debug.Log ("RollSound2 playing");
             Destroy(woodenGrate2);
             //nrOfPuzzlesSolved = 2;
         }
