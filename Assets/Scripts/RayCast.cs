@@ -145,43 +145,6 @@ public class RayCast : MonoBehaviour {
 //                        GameObject.Find("Lv2_Statue_YellowDragon").layer = LayerMask.NameToLayer("Invisible Wall");
 //                    }
 
-                    // Test
-                    if (storedPickUpObject != null && !GameObject.Find("World Reset Cube").GetComponent<Lv4EndPuzzle>().puzzleDone)
-                    {
-
-                        if (objectHit.collider.gameObject.tag == "CollectiblesSpot" && storedPickUpObject.tag == "Collectibles")
-                        {
-                            // Place Statue
-                            if (objectHit.collider.gameObject.GetComponent<StatueCheck>().isEmpty())
-                            {
-                                objectHit.collider.gameObject.GetComponent<StatueCheck>().placeStatue(storedPickUpObject);
-                                arms.GetComponent<ArmsScript>().RemoveItem(storedPickUpObject);
-                                arms.GetComponent<ArmsScript>().IsCarryingItem = false;
-                                storedPickUpObject.GetComponent<Pickable>().CanPickUp = true;
-                                storedPickUpObject.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
-                                storedPickUpObject = null;
-                                GameObject.Find("PlaceItemSoundSource").GetComponent<SECTR_PointSource>().Play();
-                            }
-                            // Switch Statues
-//                            else
-//                            {
-//                                storedPickUpObject = objectHit.collider.gameObject.GetComponent<StatueCheck>().switchStatue(storedPickUpObject);
-//                                GameObject.Find("PlaceItemSoundSource").GetComponent<SECTR_PointSource>().Play();
-//                            }
-                        }
-                    }
-                    // Remove statue
-                    else if (objectHit.collider.gameObject.tag == "CollectiblesSpot" && !GameObject.Find("World Reset Cube").GetComponent<Lv4EndPuzzle>().puzzleDone)
-                    {
-                        if (!objectHit.collider.gameObject.GetComponent<StatueCheck>().isEmpty())
-                        {
-                            grabbedStatue = objectHit.collider.gameObject.GetComponent<StatueCheck>().getCurrentStatue();
-                            grabbedStatue.GetComponent<SECTR_PropagationSource>().Stop(true);
-                            objectHit.collider.gameObject.GetComponent<StatueCheck>().removeStatue();
-                            GameObject.Find("PickUpSoundSource").GetComponent<SECTR_PointSource>().Play();
-                        }
-                    }
-
                     //            // Level 2 Bridge
                     //            if (storedPickUpObject != null && !GameObject.Find("Nabatean Bridge").GetComponent<Level2Bridge>().puzzleDone)
                     //            {

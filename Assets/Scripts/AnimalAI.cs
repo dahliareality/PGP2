@@ -6,8 +6,8 @@ public class AnimalAI : MonoBehaviour {
 	private float distanceToPlayer;
 	private Vector3 vectorTowardsPlayer;
 	private Vector3 vectorAwayFromPlayer;
-	private float moveSpeed = 15;
-	private float maxSpeed = 2;
+	//private float moveSpeed = 15;
+	//private float maxSpeed = 2;
 	private float triggerDist = 3.0f;
 	private float scaredTime = 3.0f;
 	
@@ -15,12 +15,12 @@ public class AnimalAI : MonoBehaviour {
 	public bool hasRunAway = true;
 	private float timer;
 	
-	private Rigidbody rigidbodyR;
+	//private Rigidbody rigidbodyR;
 	private Animator animator;
 	
 	// Use this for initialization
 	void Start () {
-		rigidbodyR = GetComponent<Rigidbody>();
+		//rigidbodyR = GetComponent<Rigidbody>();
 		animator = GetComponent<Animator>();
 	}
 	
