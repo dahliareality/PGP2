@@ -43,12 +43,12 @@ public class Level3GateController : MonoBehaviour
 			isPuzzleDone=true;
 			Debug.Log ("Pling!");
 		}*/
-		if ((sunPuzzle.sunPuzzleSolved && !tilPzl.tilePuzzleSolved) && !isSunDone) {
+		if ((sunPuzzle.sunPuzzleSolved) && !isSunDone) {
 			isSunDone=true;
 			//Debug.Log ("Sun is done");
 			plingSoundSun.GetComponent<AudioSource>().Play();
 		}
-		if ((!sunPuzzle.sunPuzzleSolved && tilPzl.tilePuzzleSolved) && !isTileDone) {
+		if ((tilPzl.tilePuzzleSolved) && !isTileDone) {
 			isTileDone=true;
 			//Debug.Log ("Tile is done");
 			plingSoundTile.GetComponent<AudioSource>().Play();
