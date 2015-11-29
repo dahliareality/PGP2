@@ -195,7 +195,7 @@ public class ArmsScript : MonoBehaviour {
 		obj.transform.parent = objectSpaceInHand.transform;
 		obj.transform.position = objectSpaceInHand.transform.position;
 		obj.transform.rotation = objectSpaceInHand.transform.rotation;
-		obj.layer = 2;
+		obj.layer = LayerMask.NameToLayer("Invisible Wall");
 		if (obj.tag == "Coin")
 		{
 			obj.transform.localScale = new Vector3(5.0f, 5.0f, 5.0f);

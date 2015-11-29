@@ -24,24 +24,24 @@ public class StatueCheck : MonoBehaviour {
 	public void placeStatue (GameObject statue)
 	{
 		GameObject.Find ("lvl2_Chinese_Gate").GetComponent<Level2CaveDoor> ().correctStatues++;
-		statue.transform.position = this.transform.position;
+        statue.transform.parent = this.gameObject.transform.parent;
+        statue.transform.position = this.transform.position;
 		statue.transform.rotation = this.transform.rotation;
-		curStatue = statue;
 	}
 
-	public void removeStatue ()
-	{
-		//Debug.Log (curStatue.ToString() + "  " + correctStatue.ToString());
-		GameObject.Find ("lvl2_Chinese_Gate").GetComponent<Level2CaveDoor> ().correctStatues--;
-		GameObject mainCamera = GameObject.FindGameObjectWithTag ("MainCamera");
-		mainCamera.GetComponent<RayCast> ().setStoredPickUpItem (curStatue);
-		GameObject arm = GameObject.FindGameObjectWithTag ("Arm");
-		arm.GetComponent<ArmsScript>().PickUpItem(curStatue, false);
-		arm.GetComponent<ArmsScript>().IsCarryingItem = true;
-		curStatue.GetComponent<Pickable>().CanPickUp = false;
-        curStatue.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
-		curStatue = null;
-	}
+    //public void removeStatue ()
+    //{
+    //    //Debug.Log (curStatue.ToString() + "  " + correctStatue.ToString());
+    //    GameObject.Find ("lvl2_Chinese_Gate").GetComponent<Level2CaveDoor> ().correctStatues--;
+    //    GameObject mainCamera = GameObject.FindGameObjectWithTag ("MainCamera");
+    //    mainCamera.GetComponent<RayCast> ().setStoredPickUpItem (curStatue);
+    //    GameObject arm = GameObject.FindGameObjectWithTag ("Arm");
+    //    arm.GetComponent<ArmsScript>().PickUpItem(curStatue, false);
+    //    arm.GetComponent<ArmsScript>().IsCarryingItem = true;
+    //    curStatue.GetComponent<Pickable>().CanPickUp = false;
+    //    curStatue.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+    //    curStatue = null;
+    //}
 
 //	public GameObject switchStatue(GameObject statueIn)
 //	{

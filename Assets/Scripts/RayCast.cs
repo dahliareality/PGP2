@@ -55,6 +55,7 @@ public class RayCast : MonoBehaviour {
                             storedPickUpObject = objectHit.collider.gameObject;
 							if(storedPickUpObject.tag == "Statue" || storedPickUpObject.tag == "Coin"){
 								storedPickUpObject.GetComponent<SECTR_PropagationSource>().Stop(true);
+
 							}
                             arms.GetComponent<ArmsScript>().PickUpItem(storedPickUpObject, false);
                             arms.GetComponent<ArmsScript>().IsCarryingItem = true;
@@ -113,6 +114,7 @@ public class RayCast : MonoBehaviour {
                             if (objectHit.collider.gameObject.GetComponent<StatueCheck>().isEmpty())
                             {
                                 objectHit.collider.gameObject.GetComponent<StatueCheck>().placeStatue(storedPickUpObject);
+                                storedPickUpObject.transform.parent = objectHit.collider.gameObject.transform;
                                 arms.GetComponent<ArmsScript>().RemoveItem(storedPickUpObject);
                                 arms.GetComponent<ArmsScript>().IsCarryingItem = false;
                                 storedPickUpObject.GetComponent<Pickable>().CanPickUp = true;
@@ -129,16 +131,16 @@ public class RayCast : MonoBehaviour {
                         }
                     }
                     // Remove statue
-                    else if (objectHit.collider.gameObject.tag == "StatueSpot" && !GameObject.Find("lvl2_Chinese_Gate").GetComponent<Level2CaveDoor>().puzzleDone)
-                    {
-                        if (!objectHit.collider.gameObject.GetComponent<StatueCheck>().isEmpty())
-                        {
-							grabbedStatue = objectHit.collider.gameObject.GetComponent<StatueCheck>().getCurrentStatue();
-							grabbedStatue.GetComponent<SECTR_PropagationSource>().Stop(true);
-                            objectHit.collider.gameObject.GetComponent<StatueCheck>().removeStatue();
-							GameObject.Find ("PickUpSoundSource").GetComponent<SECTR_PointSource>().Play();
-                        }
-                    }
+                    //if (objectHit.collider.gameObject.tag == "StatueSpot" && !GameObject.Find("lvl2_Chinese_Gate").GetComponent<Level2CaveDoor>().puzzleDone)
+                    //{
+                    //    if (!objectHit.collider.gameObject.GetComponent<StatueCheck>().isEmpty())
+                    //    {
+                    //        grabbedStatue = objectHit.collider.gameObject.GetComponent<StatueCheck>().getCurrentStatue();
+                    //        grabbedStatue.GetComponent<SECTR_PropagationSource>().Stop(true);
+                    //        objectHit.collider.gameObject.GetComponent<StatueCheck>().removeStatue();
+                    //        GameObject.Find ("PickUpSoundSource").GetComponent<SECTR_PointSource>().Play();
+                    //    }
+                    //}
 //                    else if (GameObject.Find("lvl2_Chinese_Gate").GetComponent<Level2CaveDoor>().puzzleDone){
 //                        GameObject.Find("Lv2_Statue_AzureDragon").layer = LayerMask.NameToLayer("Invisible Wall");
 //                        GameObject.Find("Lv2_Statue_WhiteTiger").layer = LayerMask.NameToLayer("Invisible Wall");
@@ -186,6 +188,7 @@ public class RayCast : MonoBehaviour {
 					if (objectHit.collider.gameObject.GetComponent<MoveInteract>() != null && !arms.GetComponent<ArmsScript>().IsCarryingItem){
 						if (objectHit.collider.gameObject.tag == "WoodBox" || objectHit.collider.gameObject.tag == "Mirror")
                         {
+                            Debug.Log("BAM!");
 							objectHit.collider.gameObject.GetComponent<MoveInteract>().OnInteractHold();
                             stopBeingSlow = true;
 						}
