@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class RaycastInteract : MonoBehaviour {
-
+	
 	
 	public float interactDist = 2.5f;
 	
@@ -20,29 +20,30 @@ public class RaycastInteract : MonoBehaviour {
 		
 		Debug.DrawRay (transform.position, transform.forward * interactDist);
 		
-
-
-		if (Input.GetKeyDown(KeyCode.R))
-		if (Physics.Raycast (transform.position, transform.forward, out hit, interactDist )) 
+		
+		
+		if (Input.GetButton("PS4_X") || Input.GetKeyDown(KeyCode.E))
+			if (Physics.Raycast (transform.position, transform.forward, out hit, interactDist )) 
 		{
-
-//			Debug.Log(hit.collider.gameObject.name);
-
-			if (hit.collider.gameObject.GetComponent<Interact>() != null )  // check if the object has the interact component
+			GameObject hitObject = hit.collider.gameObject;
+			//			Debug.Log(hit.collider.gameObject.name);
+			
+			if (hitObject.GetComponent<Interact>() != null )  // check if the object has the interact component
 			{
-				hit.collider.gameObject.GetComponent<Interact>().interact();
-//				Debug.Log("Interacted");
+				if (hitObject.GetComponent<Interact>().interactableByPlayer)  // check if the player is allowed to interact with object
+					hit.collider.gameObject.GetComponent<Interact>().interact();
+				//				Debug.Log("Interacted");
 			}
 			
 		}
-
-
-
+		
+		
+		
 	}
-
-
-
-
+	
+	
+	
+	
 	public GameObject rayTrace()
 	{
 		if (Physics.Raycast (transform.position, transform.forward, out hit, interactDist )) 
