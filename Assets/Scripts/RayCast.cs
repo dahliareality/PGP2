@@ -12,7 +12,6 @@ public class RayCast : MonoBehaviour {
 	private GameObject grabbedStatue;
 
     private float distance = 3f;
-    private LayerMask layerMask = 1 << 8;
     RaycastHit objectHit;
 
     public SequencePuzzle sqnPzl;
@@ -22,7 +21,6 @@ public class RayCast : MonoBehaviour {
 
     void Start()
     {
-        layerMask = ~layerMask;
         //sqnPzl = GameObject.Find("Cogwheel Puzzle").GetComponent<SequencePuzzle>();
         arms = GameObject.FindGameObjectWithTag("Arm");
         inventory = GameObject.FindGameObjectWithTag("Bagpack").GetComponent<InventorySystem>();
@@ -41,7 +39,7 @@ public class RayCast : MonoBehaviour {
         // For normal interactable objects
         if (!inventory.HasBagOpen)
         {
-            if (Physics.Raycast(this.transform.position, this.transform.forward, out objectHit, distance, layerMask) && objectHit.collider.gameObject.tag != "Player" && objectHit.collider.gameObject.tag != "Right Arm" && objectHit.collider.gameObject.tag != "Arm")
+            if (Physics.Raycast(this.transform.position, this.transform.forward, out objectHit, distance) && objectHit.collider.gameObject.tag != "Player" && objectHit.collider.gameObject.tag != "Right Arm" && objectHit.collider.gameObject.tag != "Arm")
             {
                 //Debug.Log(objectHit.collider.gameObject);
                 //Debug.Log("Looking at object");
@@ -114,7 +112,6 @@ public class RayCast : MonoBehaviour {
                             if (objectHit.collider.gameObject.GetComponent<StatueCheck>().isEmpty())
                             {
                                 objectHit.collider.gameObject.GetComponent<StatueCheck>().placeStatue(storedPickUpObject);
-                                storedPickUpObject.transform.parent = objectHit.collider.gameObject.transform;
                                 arms.GetComponent<ArmsScript>().RemoveItem(storedPickUpObject);
                                 arms.GetComponent<ArmsScript>().IsCarryingItem = false;
                                 storedPickUpObject.GetComponent<Pickable>().CanPickUp = true;
