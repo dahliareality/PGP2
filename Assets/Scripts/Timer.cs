@@ -22,27 +22,14 @@ public class Timer : MonoBehaviour
     private string level2CompletionTime;
     private string level3CompletionTime;
     private string level4CompletionTime;
+    public int count;
 
     void Update()
     {
         if (startUp)
         {
-            Debug.Log("Timer started");
+            //Debug.Log("Timer started");
             playedTime += Time.deltaTime;
-            Level1Timer();
-
-            if (logLevel2)
-            {
-                Level2Timer();
-            }
-            else if (logLevel3)
-            {
-                Level3Timer();
-            }
-            else if (logLevel4)
-            {
-                Level4Timer();
-            }
 
             if (Input.GetButton("PS4_PSN"))
             {
@@ -65,25 +52,25 @@ public class Timer : MonoBehaviour
     public void Level2Timer()
     {
         level2Time += Time.deltaTime;
-        level1CompletionTime += "Level 1 completion time: " + level1Time + "\r\n";
+        level1CompletionTime = "Level 1 completion time: " + level1Time + "\r\n";
     }
 
     public void Level3Timer()
     {
         level3Time += Time.deltaTime;
-        level2CompletionTime += "Level 2 completion time: " + level2Time + "\r\n";
+        level2CompletionTime = "Level 2 completion time: " + level2Time + "\r\n";
     }
 
     public void Level4Timer()
     {
         level4Time += Time.deltaTime;
-        level3CompletionTime += "Level 3 completion time: " + level3Time + "\r\n";
+        level3CompletionTime = "Level 3 completion time: " + level3Time + "\r\n";
     }
 
     // Used to create a log when the game session ends, and then load a new level
     public void createLog()
     {
-        level4CompletionTime += "Level 4 completion time: " + level4Time + "\r\n";
+        level4CompletionTime = "Level 4 completion time: " + level4Time + "\r\n";
         System.IO.Directory.CreateDirectory("C:\\Logs\\");
         System.IO.File.WriteAllText("C:\\Logs\\" + System.DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss") + ".txt",
                                     presenceBrokenWhen + "\r\n"

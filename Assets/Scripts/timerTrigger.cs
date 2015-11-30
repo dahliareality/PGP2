@@ -3,28 +3,46 @@ using System.Collections;
 
 public class timerTrigger : MonoBehaviour
 {
-    private bool hasActivated;
+    private Timer timer;
+    public bool hasActivated;
+
+    void Start()
+    {
+        timer = GameObject.FindWithTag("Player").GetComponent<Timer>();
+    }
       
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.gameObject.tag == "Player")
         {
             if (!hasActivated)
             {
                 hasActivated = true;
                 //Debug.Log("Trigger entered");
-                if (!GameObject.FindWithTag("Player").GetComponent<Timer>().startUp)
+
+                timer.count++;
+
+                switch (timer.count)
                 {
-                    GameObject.FindWithTag("Player").GetComponent<Timer>().startUp = true;
-                } else if (!GameObject.FindWithTag("Player").GetComponent<Timer>().logLevel2)
-                {
-                    GameObject.FindWithTag("Player").GetComponent<Timer>().logLevel2 = true;
-                } else if (!GameObject.FindWithTag("Player").GetComponent<Timer>().logLevel3)
-                {
-                    GameObject.FindWithTag("Player").GetComponent<Timer>().logLevel3 = true;
-                } else if (!GameObject.FindWithTag("Player").GetComponent<Timer>().logLevel4)
-                {
-                    GameObject.FindWithTag("Player").GetComponent<Timer>().logLevel4 = true;
+                    case 1:
+                        //Debug.Log("Startup");
+                        timer.startUp = true;
+                        timer.Level1Timer();
+                        break;
+                    case 2:
+                        //Debug.Log("Time level 2");
+                        timer.Level2Timer();
+                        break;
+                    case 3:
+                        //Debug.Log("Time level 3");
+                        timer.Level3Timer();
+                        break;
+                    case 4:
+                        //Debug.Log("Time level 4");
+                        timer.Level4Timer();
+                        break;
+                    default:
+                        break;
                 }
             }
         }
