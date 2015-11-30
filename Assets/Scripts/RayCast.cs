@@ -55,6 +55,14 @@ public class RayCast : MonoBehaviour {
 								storedPickUpObject.GetComponent<SECTR_PropagationSource>().Stop(true);
 
 							}
+                            else if(storedPickUpObject.name == "Lammasu")
+                            {
+                                storedPickUpObject.transform.localScale = new Vector3(25.0f, 25.0f, 25.0f);
+                            }
+                            else if(storedPickUpObject.name == "Golden_Lama")
+                            {
+                                storedPickUpObject.transform.localScale = new Vector3(7.0f, 7.0f, 7.0f);
+                            }
                             arms.GetComponent<ArmsScript>().PickUpItem(storedPickUpObject, false);
                             arms.GetComponent<ArmsScript>().IsCarryingItem = true;
                             storedPickUpObject.GetComponent<Pickable>().CanPickUp = false;
