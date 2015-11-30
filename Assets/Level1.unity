@@ -4351,6 +4351,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 557265955}
     m_Modifications:
+    - target: {fileID: 11433786, guid: 8f4cd14efbb70b84ea80957fcbdfd4b0, type: 2}
+      propertyPath: objectsToActivate.Array.size
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 474012, guid: 8f4cd14efbb70b84ea80957fcbdfd4b0, type: 2}
       propertyPath: m_LocalPosition.x
       value: -24.3868427
@@ -4386,43 +4390,43 @@ Prefab:
     - target: {fileID: 11433786, guid: 8f4cd14efbb70b84ea80957fcbdfd4b0, type: 2}
       propertyPath: objectsToActivate.Array.data[0]
       value: 
-      objectReference: {fileID: 1155155332}
+      objectReference: {fileID: 863270710}
     - target: {fileID: 11433786, guid: 8f4cd14efbb70b84ea80957fcbdfd4b0, type: 2}
       propertyPath: objectsToActivate.Array.data[1]
       value: 
-      objectReference: {fileID: 529499721}
+      objectReference: {fileID: 1002762035}
     - target: {fileID: 11433786, guid: 8f4cd14efbb70b84ea80957fcbdfd4b0, type: 2}
       propertyPath: objectsToActivate.Array.data[2]
       value: 
-      objectReference: {fileID: 1406521429}
+      objectReference: {fileID: 464361695}
     - target: {fileID: 11433786, guid: 8f4cd14efbb70b84ea80957fcbdfd4b0, type: 2}
       propertyPath: objectsToActivate.Array.data[3]
       value: 
-      objectReference: {fileID: 1757387808}
+      objectReference: {fileID: 1800619644}
     - target: {fileID: 11433786, guid: 8f4cd14efbb70b84ea80957fcbdfd4b0, type: 2}
       propertyPath: objectsToActivate.Array.data[4]
       value: 
-      objectReference: {fileID: 464361695}
+      objectReference: {fileID: 793075935}
     - target: {fileID: 11433786, guid: 8f4cd14efbb70b84ea80957fcbdfd4b0, type: 2}
       propertyPath: objectsToActivate.Array.data[5]
       value: 
-      objectReference: {fileID: 793075935}
+      objectReference: {fileID: 1406521429}
     - target: {fileID: 11433786, guid: 8f4cd14efbb70b84ea80957fcbdfd4b0, type: 2}
       propertyPath: objectsToActivate.Array.data[6]
       value: 
-      objectReference: {fileID: 995890589}
+      objectReference: {fileID: 48391753}
     - target: {fileID: 11433786, guid: 8f4cd14efbb70b84ea80957fcbdfd4b0, type: 2}
       propertyPath: objectsToActivate.Array.data[7]
       value: 
-      objectReference: {fileID: 48391753}
+      objectReference: {fileID: 995890589}
     - target: {fileID: 11433786, guid: 8f4cd14efbb70b84ea80957fcbdfd4b0, type: 2}
       propertyPath: objectsToActivate.Array.data[8]
       value: 
-      objectReference: {fileID: 1002762035}
+      objectReference: {fileID: 1757387808}
     - target: {fileID: 11433786, guid: 8f4cd14efbb70b84ea80957fcbdfd4b0, type: 2}
       propertyPath: objectsToActivate.Array.data[9]
       value: 
-      objectReference: {fileID: 1800619644}
+      objectReference: {fileID: 529499721}
     - target: {fileID: 11433786, guid: 8f4cd14efbb70b84ea80957fcbdfd4b0, type: 2}
       propertyPath: objectsToActivate.Array.data[10]
       value: 
@@ -4430,7 +4434,7 @@ Prefab:
     - target: {fileID: 11433786, guid: 8f4cd14efbb70b84ea80957fcbdfd4b0, type: 2}
       propertyPath: objectsToActivate.Array.data[11]
       value: 
-      objectReference: {fileID: 863270710}
+      objectReference: {fileID: 1155155332}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8f4cd14efbb70b84ea80957fcbdfd4b0, type: 2}
   m_IsPrefabParent: 0
@@ -30011,6 +30015,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09c3bf69d8d030042a8d8ffd315a0bd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  logCreated: 0
   startUp: 0
 --- !u!1 &1835851930
 GameObject:
