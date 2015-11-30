@@ -37,7 +37,7 @@ public class Movement3D : MonoBehaviour {
         this.gameObject.layer = 2;
         startRot = new Vector3(xStartRotation, 0.0f, 0.0f);
         transform.rotation = Quaternion.Euler(startRot);
-		ml = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<MouseLook>();
+        ml = GameObject.Find("OVRCameraRig").GetComponent<MouseLook>();
 		rb = GetComponent<Rigidbody>();
 		speed = speedOriginal;
     }
