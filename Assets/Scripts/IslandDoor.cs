@@ -11,6 +11,8 @@ public class IslandDoor : MonoBehaviour {
 	public GameObject switch2;
 	public GameObject switch3;
 
+	private bool soundPlayed;
+
     public int count;
 
 	
@@ -21,6 +23,10 @@ public class IslandDoor : MonoBehaviour {
 		if (switch1.GetComponent<Interact> ().activated && switch2.GetComponent<Interact> ().activated && switch3.GetComponent<Interact> ().activated)
 		{
 			this.transform.position = Vector3.Lerp (this.transform.position, endPos.position, 0.4f * Time.deltaTime);
+			if(!soundPlayed){
+				this.gameObject.GetComponent<SECTR_PointSource>().Play();
+				soundPlayed = true;
+			}
 		}
 	}
 }
