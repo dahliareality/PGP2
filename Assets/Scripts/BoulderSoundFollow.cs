@@ -16,7 +16,7 @@ public class BoulderSoundFollow : MonoBehaviour {
 		if (boulder != null) {
 			this.transform.position = boulder.transform.position;
 		} else {
-			Debug.Log ("Should not see this");
+			//Debug.Log ("Should not see this");
 			Destroy (this);
 		}
 	}
