@@ -35,6 +35,7 @@ public class Movement3D : MonoBehaviour {
     // ------------------------------
 
     void Start () {
+        this.gameObject.layer = 2;
         startRot = new Vector3(xStartRotation, 0.0f, 0.0f);
         transform.rotation = Quaternion.Euler(startRot);
 		ml = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<MouseLook>();
@@ -47,8 +48,8 @@ public class Movement3D : MonoBehaviour {
 //		velocityShow = new Vector3 (0,0,0);
 //		controlFall ();
 
-		if (Input.GetKeyDown (KeyCode.Escape))
-			Application.Quit ();
+		//if (Input.GetKeyDown (KeyCode.Escape))
+		//	Application.Quit ();
 
 		controlFall2 ();
 		sprintButton ();
