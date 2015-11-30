@@ -31,7 +31,7 @@ public class Timer : MonoBehaviour
             //Debug.Log("Timer started");
             playedTime += Time.deltaTime;
 
-            if (Input.GetButton("PS4_PSN"))
+            if (Input.GetButtonDown("PS4_PSN"))
             {
                 presenceBroken++;
                 presenceBrokenWhen += "Presence broken at: " + playedTime + "\r\n";
