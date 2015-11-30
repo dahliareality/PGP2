@@ -13,7 +13,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   template: {fileID: 0}
   bus: {fileID: 11400000, guid: ac4cde3c27c19d94c8388d178a102e11, type: 2}
-  AudioClips: []
+  AudioClips:
+  - clip: {fileID: 8300000, guid: 1817f48e9d6b03f4e973bc350c895ba2, type: 3}
+    playedInShuffle: 0
+    volume: 1
+    bakeTimestamp:
+      first: 0
+      second: 0
+    HDRCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
   PlaybackMode: 0
   HDR: 0
   Loudness: {x: 50, y: 50}
@@ -29,8 +40,8 @@ MonoBehaviour:
   Spread: 0
   Pan2D: 0
   Falloff: 0
-  MaxDistance: 100
-  MinDistance: 10
+  MaxDistance: 223.240005
+  MinDistance: 46.4000015
   DopplerLevel: 0
   ProximityLimit: 0
   ProximityRange: 10
