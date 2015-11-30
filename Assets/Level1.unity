@@ -11692,6 +11692,51 @@ Light:
   m_ShadowRadius: 0
   m_ShadowAngle: 0
   m_AreaSize: {x: 1, y: 1}
+--- !u!1 &705958466
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 188876, guid: bd4536428e563704b942a47ad0ae0acd, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 705958467}
+  - 114: {fileID: 705958468}
+  m_Layer: 0
+  m_Name: Level4Music
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &705958467
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 492792, guid: bd4536428e563704b942a47ad0ae0acd, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 705958466}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 804031833}
+  m_RootOrder: 3
+--- !u!114 &705958468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11462856, guid: bd4536428e563704b942a47ad0ae0acd,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 705958466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6f20b8b60dbb1046b21f167d1303601, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volume: 1
+  pitch: 1
+  Cue: {fileID: 11400000, guid: ca101b81a102f5c47acccd405f4d968d, type: 2}
+  Loop: 0
+  PlayOnStart: 0
 --- !u!1 &709914947
 GameObject:
   m_ObjectHideFlags: 0
@@ -14461,6 +14506,10 @@ Prefab:
       propertyPath: children.Array.data[262].processed
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11462856, guid: bd4536428e563704b942a47ad0ae0acd, type: 2}
+      propertyPath: volume
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bd4536428e563704b942a47ad0ae0acd, type: 2}
   m_IsPrefabParent: 0
@@ -14777,6 +14826,10 @@ GameObject:
 --- !u!1 &804031832 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 184770, guid: bd4536428e563704b942a47ad0ae0acd, type: 2}
+  m_PrefabInternal: {fileID: 804031754}
+--- !u!4 &804031833 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 456854, guid: bd4536428e563704b942a47ad0ae0acd, type: 2}
   m_PrefabInternal: {fileID: 804031754}
 --- !u!4 &805229926 stripped
 Transform:
