@@ -4,7 +4,7 @@ using System.Collections;
 public class RaycastInteract : MonoBehaviour {
 	
 	
-	public float interactDist = 2.5f;
+	public float interactDist = 3.0f;
 	
 	public RaycastHit hit = new RaycastHit();
 	
@@ -18,11 +18,11 @@ public class RaycastInteract : MonoBehaviour {
 	void Update () {
 		
 		
-		Debug.DrawRay (transform.position, transform.forward * interactDist);
+		//Debug.DrawRay (transform.position, transform.forward * interactDist);
 		
 		
 		
-		if (Input.GetButton("PS4_X") || Input.GetKeyDown(KeyCode.E))
+		if (Input.GetButtonDown("PS4_X") || Input.GetKeyDown(KeyCode.E))
 			if (Physics.Raycast (transform.position, transform.forward, out hit, interactDist )) 
 		{
 			GameObject hitObject = hit.collider.gameObject;
