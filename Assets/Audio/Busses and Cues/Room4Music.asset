@@ -13,7 +13,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   template: {fileID: 0}
   bus: {fileID: 11400000, guid: 415e39823b7141646967558bf7b8fbda, type: 2}
-  AudioClips: []
+  AudioClips:
+  - clip: {fileID: 8300000, guid: 53d49579f34e59f4fb252c5a49e9629d, type: 3}
+    playedInShuffle: 0
+    volume: 1
+    bakeTimestamp:
+      first: 0
+      second: 0
+    HDRCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
   PlaybackMode: 0
   HDR: 0
   Loudness: {x: 50, y: 50}
