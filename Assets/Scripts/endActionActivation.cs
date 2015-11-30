@@ -55,7 +55,10 @@ public class endActionActivation : MonoBehaviour {
 	void goToNextScene()
 	{
 		Debug.Log ("Next Scene");
-        player.GetComponent<Timer>().createLog();
+        if (player.GetComponent<Timer>().logCreated == false)
+        {
+            player.GetComponent<Timer>().createLog();
+        }
         Application.LoadLevel (sceneToGoTo);
 //		AutoFade.LoadLevel(0 ,3,3,Color.white);
 	}

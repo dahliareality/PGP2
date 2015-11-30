@@ -6,6 +6,7 @@ public class Timer : MonoBehaviour
 
     // Used to control the time, and tempo parameters in the sudoku game.
     // Use the Unity Editor to change the values
+    public bool logCreated;
     public bool startUp;
     private float playedTime;
     private int presenceBroken;
@@ -23,6 +24,11 @@ public class Timer : MonoBehaviour
                 presenceBroken++;
                 presenceBrokenWhen += "Presence broken at: " + playedTime + "\r\n";
             }
+
+            if (playedTime >= 1800f)
+            {
+                createLog();
+            }
         }
     }
 
@@ -34,5 +40,6 @@ public class Timer : MonoBehaviour
                                     presenceBrokenWhen + "\r\n"
                                     + "Total time played: " + playedTime + "\r\n"
                                     + "How many times was presence broken? " + presenceBroken + "\r\n");
+        logCreated = true;
     }
 }
