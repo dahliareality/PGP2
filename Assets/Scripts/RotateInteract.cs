@@ -20,6 +20,8 @@ public class RotateInteract : MonoBehaviour {
 	public GameObject rightSwitch;
 	private bool isSoundPlaying = false;
 
+	private float rotateSpeed = 0.5f;
+
     void Awake()
     {
         currentYRotation = transform.rotation.y;
@@ -78,7 +80,7 @@ public class RotateInteract : MonoBehaviour {
 
         currentYRotation = Mathf.SmoothDamp(currentYRotation, yRotation, ref yRotationV, lookSmoothDamp);
 
-        transform.rotation = Quaternion.Euler(0, currentYRotation * 1.5f, 90);
+        transform.rotation = Quaternion.Euler(0, currentYRotation * rotateSpeed, 90);
     }
 
 }

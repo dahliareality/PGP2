@@ -17,20 +17,20 @@ public class lvl4RotateInteract : MonoBehaviour{
 	public bool rotating;
 	public float misRot = 0;
 
-	private lv4Switch lv4Switch;
+	private Interact Interact;
 
     void Start()
     {
 		endPos = Quaternion.Euler (rot [0], rot [1], rot [2]);
 
-		lv4Switch = lever.GetComponent<lv4Switch> ();
+		Interact = lever.GetComponent<Interact> ();
     }
 
     public void FixedUpdate()
     {
 
 
-		if (lv4Switch.isActive)
+		if (Interact.activated)
 		{
 			misRot = Mathf.Abs(endPos.y) - Mathf.Abs(transform.rotation.y);
 
@@ -41,7 +41,7 @@ public class lvl4RotateInteract : MonoBehaviour{
 			}
 			if (misRot <  0.0005f)
 			{
-				lever.GetComponent<lv4Switch>().isActive = false;
+				Interact.activated = false;
 				rotating = false;
 			}
 
