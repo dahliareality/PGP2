@@ -4,6 +4,7 @@ using System.Collections;
 public class BoulderSoundFollow : MonoBehaviour {
 
 	private GameObject boulder;
+	public bool shouldMove;
 
 	// Use this for initialization
 	void Start () {
@@ -12,6 +13,11 @@ public class BoulderSoundFollow : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		this.transform.position = boulder.transform.position;
+		if (boulder != null) {
+			this.transform.position = boulder.transform.position;
+		} else {
+			Debug.Log ("Should not see this");
+			Destroy (this);
+		}
 	}
 }
