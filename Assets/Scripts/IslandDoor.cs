@@ -18,9 +18,9 @@ public class IslandDoor : MonoBehaviour {
 		
         //Debug.Log(count)
 
-		if (switch1.GetComponent<lv4Switch> ().isActive && switch2.GetComponent<lv4Switch> ().isActive && switch3.GetComponent<lv4Switch> ().isActive)
+		if (switch1.GetComponent<Interact> ().activated && switch2.GetComponent<Interact> ().activated && switch3.GetComponent<Interact> ().activated)
 		{
-			this.transform.position = Vector3.Lerp (this.transform.position, endPos.position, 1.0f * Time.deltaTime);
+			this.transform.position = Vector3.Lerp (this.transform.position, endPos.position, 0.4f * Time.deltaTime);
 		}
 	}
 }

@@ -12,6 +12,7 @@ public class endActionActivation : MonoBehaviour {
 	float timer = 0;
 	float endTime = 20;
 
+	public int sceneToGoTo = 5;
 
 
 	void Start () {
@@ -54,7 +55,7 @@ public class endActionActivation : MonoBehaviour {
 	void goToNextScene()
 	{
 		Debug.Log ("Next Scene");
-		Application.LoadLevel (4);
+		Application.LoadLevel (sceneToGoTo);
 //		AutoFade.LoadLevel(0 ,3,3,Color.white);
 	}
 
