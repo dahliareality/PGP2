@@ -42,7 +42,7 @@ public class RayCast : MonoBehaviour {
             if (Physics.Raycast(this.transform.position, this.transform.forward, out objectHit, distance) && objectHit.collider.gameObject.tag != "Player" && objectHit.collider.gameObject.tag != "Right Arm" && objectHit.collider.gameObject.tag != "Arm")
             {
                 //Debug.Log(objectHit.collider.gameObject);
-                Debug.Log("Looking at object");
+                //Debug.Log("Looking at object");
 				if (Input.GetButtonDown("PS4_X") || Input.GetKeyDown(KeyCode.E))
                 {
                     if (objectHit.collider.gameObject.GetComponent<Pickable>() != null)
@@ -193,7 +193,7 @@ public class RayCast : MonoBehaviour {
 					if (objectHit.collider.gameObject.GetComponent<MoveInteract>() != null && !arms.GetComponent<ArmsScript>().IsCarryingItem){
 						if (objectHit.collider.gameObject.tag == "WoodBox" || objectHit.collider.gameObject.tag == "Mirror")
                         {
-                            Debug.Log("BAM!");
+                            //Debug.Log("BAM!");
 							objectHit.collider.gameObject.GetComponent<MoveInteract>().OnInteractHold();
                             stopBeingSlow = true;
 						}
