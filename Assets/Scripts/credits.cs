@@ -16,7 +16,7 @@ public class credits : MonoBehaviour {
         creditText += "Created by\n Medialogy 5th Semester 2015\nProduction Group 2\n\n\n\n";
         creditText += "Project Manager\nJonatan Salling Hvass\n";
 		creditText += "\n\n";
-        creditText += "Art Director\nTheis Berthelsen\n\n\nLevel Design\nTheis Berthelsen\nJacob Friis Nielsen\n\n";
+        creditText += "Art Director\nTheis Berthelsen\n\n\nLevel Design\nTheis Berthelsen\nJacob Friis Nielsen\nOliver Stevns Larsen\n\n";
 		creditText += "\n\n";
         creditText += "Music\nMax Uldahl\n\n";
 		creditText += "\n\n";
@@ -42,14 +42,14 @@ public class credits : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
         transform.position = transform.position + new Vector3 (0, speed, 0) * Time.fixedDeltaTime;
-        if (count < 12.0f)
+        if (count < 75.0f)
         {
             count += Time.fixedDeltaTime;
         }
         else
         {
-            // Run level 1
             // Resets the game
+            Application.LoadLevel(0);
         }
     }
 
