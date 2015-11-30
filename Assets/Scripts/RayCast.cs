@@ -34,7 +34,7 @@ public class RayCast : MonoBehaviour {
             stopBeingSlow = false;
         }
         // Physical representation of the Raycast for testing purposes
-        // Debug.DrawRay(this.transform.position, this.transform.forward * distance, Color.magenta);
+        Debug.DrawRay(this.transform.position, this.transform.forward * distance, Color.magenta);
 
         // For normal interactable objects
         if (!inventory.HasBagOpen)
@@ -42,7 +42,7 @@ public class RayCast : MonoBehaviour {
             if (Physics.Raycast(this.transform.position, this.transform.forward, out objectHit, distance) && objectHit.collider.gameObject.tag != "Player" && objectHit.collider.gameObject.tag != "Right Arm" && objectHit.collider.gameObject.tag != "Arm")
             {
                 //Debug.Log(objectHit.collider.gameObject);
-                //Debug.Log("Looking at object");
+                Debug.Log("Looking at object");
 				if (Input.GetButtonDown("PS4_X") || Input.GetKeyDown(KeyCode.E))
                 {
                     if (objectHit.collider.gameObject.GetComponent<Pickable>() != null)
