@@ -98,7 +98,7 @@ RenderSettings:
   m_AmbientGroundColor: {r: .0469999984, g: .0430000015, b: .0350000001, a: 1}
   m_AmbientIntensity: .970000029
   m_AmbientMode: 0
-  m_SkyboxMaterial: {fileID: 2100000, guid: a5337cff63bd329409bfa05ffc369a67, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 7475c8c56de5b3442a15e0e4a58bac64, type: 2}
   m_HaloStrength: .5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -115,7 +115,7 @@ LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 5
   m_GIWorkflowMode: 1
-  m_LightmapsMode: 1
+  m_LightmapsMode: 0
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -9147,7 +9147,7 @@ MonoBehaviour:
   m_ShadowmapMode: 0
   m_Cameras:
   - {fileID: 1352792643}
-  m_CurrentCamera: {fileID: 1352792643}
+  m_CurrentCamera: {fileID: 0}
   m_Size: {x: 10, y: 10, z: 20}
   m_SpotNear: .100000001
   m_SpotFar: 1
@@ -20686,7 +20686,7 @@ MonoBehaviour:
   m_ShadowmapMode: 0
   m_Cameras:
   - {fileID: 1352792643}
-  m_CurrentCamera: {fileID: 1352792643}
+  m_CurrentCamera: {fileID: 0}
   m_Size: {x: 10, y: 10, z: 20}
   m_SpotNear: .100000001
   m_SpotFar: 1
