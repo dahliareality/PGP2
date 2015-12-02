@@ -11,6 +11,8 @@ public class RayCast : MonoBehaviour {
     private InventorySystem inventory;
 	private GameObject grabbedStatue;
 
+	public Transform rayCastObject;
+
     private float distance = 3f;
     RaycastHit objectHit;
 
@@ -34,12 +36,12 @@ public class RayCast : MonoBehaviour {
             stopBeingSlow = false;
         }
         // Physical representation of the Raycast for testing purposes
-        Debug.DrawRay(this.transform.position, this.transform.forward * distance, Color.magenta);
+		Debug.DrawRay(rayCastObject.position, rayCastObject.forward * distance, Color.magenta);
 
         // For normal interactable objects
         if (!inventory.HasBagOpen)
         {
-            if (Physics.Raycast(this.transform.position, this.transform.forward, out objectHit, distance) && objectHit.collider.gameObject.tag != "Player" && objectHit.collider.gameObject.tag != "Right Arm" && objectHit.collider.gameObject.tag != "Arm")
+			if (Physics.Raycast(rayCastObject.position, rayCastObject.forward, out objectHit, distance) && objectHit.collider.gameObject.tag != "Player" && objectHit.collider.gameObject.tag != "Right Arm" && objectHit.collider.gameObject.tag != "Arm")
             {
                 //Debug.Log(objectHit.collider.gameObject);
                 //Debug.Log("Looking at object");

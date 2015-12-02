@@ -8,7 +8,7 @@ public class RaycastInteract : MonoBehaviour {
 	
 	public RaycastHit hit = new RaycastHit();
 	
-	
+	public Transform raycastDirection;
 	
 	void Start () {
 		
@@ -18,12 +18,13 @@ public class RaycastInteract : MonoBehaviour {
 	void Update () {
 		
 		
-		//Debug.DrawRay (transform.position, transform.forward * interactDist);
+		Debug.DrawRay (transform.position, transform.forward * interactDist, Color.red);
+		Debug.DrawRay (raycastDirection.position, raycastDirection.forward * interactDist, Color.yellow);
 		
 		
 		
 		if (Input.GetButtonDown("PS4_X") || Input.GetKeyDown(KeyCode.E))
-			if (Physics.Raycast (transform.position, transform.forward, out hit, interactDist )) 
+			if (Physics.Raycast (raycastDirection.position, raycastDirection.forward, out hit, interactDist )) 
 		{
 			GameObject hitObject = hit.collider.gameObject;
 			//			Debug.Log(hit.collider.gameObject.name);
