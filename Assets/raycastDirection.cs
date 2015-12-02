@@ -4,6 +4,7 @@ using System.Collections;
 public class raycastDirection : MonoBehaviour {
 
 	public float multiplier = 0.25f;
+	public float offset = 0;
 
 	public Transform parent;
 
@@ -18,9 +19,9 @@ public class raycastDirection : MonoBehaviour {
 	void Update () {
 	
 		if (parent.localEulerAngles.x > 0 && parent.localEulerAngles.x < 90 )
-			value = parent.localEulerAngles.x * multiplier;
+			value = (parent.localEulerAngles.x * multiplier) + offset;
 		else
-			value = 0;
+			value = offset;
 
 		transform.localEulerAngles = new Vector3 (value,0,0);
 
